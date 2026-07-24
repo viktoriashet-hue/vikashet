@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Виктория Щетинина — Growth Marketing Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101010;--card:#1A1A1A;--card2:#222222;--border:rgba(255,255,255,.08);--glow:#2D0A3F;--accent:#E8372C;--accent-hover:#FF5A4E;--violet:#A855F7;--text:#FFFFFF;--muted:#CCCCCC;--faint:#888888}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:Manrope,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:var(--accent)}
+.container{max-width:1120px;margin:0 auto;padding:0 32px}
+.pill{display:inline-flex;align-items:center;gap:6px;font:700 .68rem/1 Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3);padding:.4rem .8rem;border-radius:100px}
+h1,h2,h3{font-weight:800;line-height:1.08}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+em.hl{font-style:normal;color:var(--violet)}
+em.hl2{font-style:normal;color:var(--accent)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:radial-gradient(ellipse 60% 55% at 78% 15%,var(--glow) 0%,transparent 70%),radial-gradient(ellipse 45% 40% at 5% 95%,var(--glow) 0%,transparent 70%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;width:100%}
+.hero-photo{aspect-ratio:3/4;-webkit-mask-image:linear-gradient(to bottom,#000 75%,transparent 100%),linear-gradient(to left,#000 85%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 75%,transparent 100%),linear-gradient(to left,#000 85%,transparent 100%);mask-composite:intersect}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero h1{font-size:clamp(2rem,4vw,3.1rem);margin:20px 0 22px}
+.hero p.lead{font-size:1.08rem;color:var(--muted);max-width:520px;margin-bottom:32px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font:700 .8rem/1 Manrope;letter-spacing:.04em;padding:1rem 2rem;border-radius:8px;text-decoration:none;transition:background .2s}
+.cta:hover{background:var(--accent-hover)}
+.cta.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+.cta.ghost:hover{border-color:var(--violet)}
+
+section{padding:88px 0}
+.section-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.section-eyebrow .line{width:32px;height:2px;background:var(--accent)}
+.label-tag{font:700 .7rem/1 Manrope;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.section-title{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:16px}
+.section-lead{color:var(--muted);max-width:640px;font-size:1rem;margin-bottom:44px}
+
+/* TRACTION */
+.traction{background:var(--card2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.traction-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tstat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 18px;text-align:center}
+.tstat b{display:block;font:800 1.7rem Manrope;color:var(--text);margin-bottom:6px}
+.tstat span{font:600 .66rem Manrope;letter-spacing:.04em;color:var(--faint);text-transform:uppercase}
+.niches-box{margin-top:32px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 32px}
+.niches-box .niches-label{display:block;font:700 .7rem Manrope;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);margin-bottom:14px}
+.niches-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.niche-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:16px;font-size:.85rem;color:var(--muted)}
+.niche-item b{display:block;color:var(--text);font-size:.92rem;margin-bottom:4px}
+@media(max-width:900px){.niches-grid{grid-template-columns:1fr 1fr}}
+
+/* FILTER TABS */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.tab{background:var(--card);border:1px solid var(--border);color:var(--muted);font:600 .78rem Manrope;padding:.6rem 1.1rem;border-radius:100px;cursor:pointer;transition:all .15s}
+.tab.active{background:var(--violet);border-color:var(--violet);color:#fff}
+
+/* CASES */
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.case-card .tag-row{display:flex;justify-content:space-between;align-items:center}
+.case-card h3{font-size:1.3rem;color:var(--text)}
+.bottleneck{color:var(--faint);font-size:.88rem}
+.bottleneck b{color:var(--muted);font-weight:700}
+.solution{color:var(--muted);font-size:.9rem}
+.solution b{color:var(--text)}
+.impact{display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:14px}
+.impact .r b{display:block;font:800 1.3rem Manrope;color:var(--accent)}
+.impact .r span{font:600 .6rem Manrope;letter-spacing:.03em;color:var(--faint);text-transform:uppercase}
+.proof-shot{border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden;background:var(--card);cursor:zoom-in;transition:border-color .15s}
+.proof-shot:hover{border-color:var(--violet)}
+.proof-shot img{width:100%;display:block;border-radius:0}
+.proof-cap{font-size:.72rem;color:var(--faint);margin-top:6px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:999;padding:40px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+
+/* SCALE */
+.scale{background:var(--card2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.scale-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:20px}
+.scount{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:26px 14px;text-align:center}
+.scount b{display:block;font:800 1.9rem Manrope;color:var(--violet);margin-bottom:8px}
+.scount span{font:600 .68rem Manrope;color:var(--muted);text-transform:uppercase;letter-spacing:.02em}
+.who-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:8px}
+.who-item{text-align:center}
+.who-avatar{width:96px;height:96px;border-radius:50%;overflow:hidden;margin:0 auto 12px;border:2px solid var(--border)}
+.who-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.who-item b{display:block;font-size:.88rem;color:var(--text);margin-bottom:2px}
+.who-item span{font-size:.76rem;color:var(--faint)}
+@media(max-width:900px){.who-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.about-photo{aspect-ratio:1;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.about-copy p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+.about-copy strong{color:var(--text)}
+.about-facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:20px}
+.about-facts .f{display:flex;flex-direction:column;gap:2px}
+.about-facts .f b{font:800 1.1rem Manrope;color:var(--violet)}
+.about-facts .f span{font:600 .7rem Manrope;color:var(--faint);text-transform:uppercase}
+
+/* LOGOS MARQUEE */
+.logos-wrap{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.logos-track{display:flex;gap:48px;width:max-content;animation:scrollx 28s linear infinite}
+.logos-track span{font:700 1rem Manrope;color:var(--faint);white-space:nowrap;letter-spacing:.02em}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.proof-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.proof-strip .proof-shot{margin:0}
+.proof-strip .proof-shot img{aspect-ratio:auto;object-fit:contain}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px}
+.testi-card p{color:var(--muted);font-size:.92rem;margin-bottom:16px;font-style:italic}
+.testi-who{display:flex;flex-direction:column;gap:2px}
+.testi-who b{color:var(--text);font-size:.85rem}
+.testi-who span{color:var(--faint);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
+
+/* CALCULATOR */
+.calc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.calc-inputs label{display:block;font:600 .72rem Manrope;color:var(--faint);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.calc-field{margin-bottom:22px}
+.calc-field input[type=range]{width:100%;accent-color:var(--violet)}
+.calc-field .val{color:var(--violet);font:800 1.1rem Manrope}
+.calc-result{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:28px;text-align:center}
+.calc-result .big{font:800 2.4rem Manrope;color:var(--accent);margin-bottom:6px}
+.calc-result span{font:600 .7rem Manrope;color:var(--faint);text-transform:uppercase;letter-spacing:.04em}
+
+/* FORM */
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px;max-width:560px;margin:0 auto;text-align:left}
+.form-card label{display:block;font:600 .72rem Manrope;color:var(--faint);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.form-field{margin-bottom:18px}
+.form-field input,.form-field textarea{width:100%;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem;color:var(--text);font:500 .92rem Manrope}
+.form-field textarea{resize:vertical;min-height:80px}
+.form-field input:focus,.form-field textarea:focus{outline:1px solid var(--violet)}
+.form-submit{width:100%;justify-content:center;border:none;font-family:Manrope;cursor:pointer}
+
+/* PRODUCT */
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.product-card .proof-shot{margin:0}
+.product-copy h3{font-size:1.5rem;margin-bottom:12px}
+.product-copy p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+.product-stats{display:flex;gap:20px;flex-wrap:wrap}
+.product-stats .r b{display:block;font:800 1.4rem Manrope;color:var(--violet)}
+.product-stats .r span{font:600 .62rem Manrope;color:var(--faint);text-transform:uppercase}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.svc-price{font:800 1.6rem Manrope;color:var(--accent)}
+.svc-card h3{font-size:1.15rem}
+.svc-card p{color:var(--muted);font-size:.88rem}
+
+.final{background:var(--card2);text-align:center;border-top:1px solid var(--border);position:relative}
+.final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 50% 0%,var(--glow) 0%,transparent 70%)}
+.final .container{position:relative}
+.final h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px}
+.final p{color:var(--muted);max-width:520px;margin:0 auto 32px}
+
+footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero{padding:100px 0 56px;min-height:auto}
+  .hero-photo{max-width:260px;margin:0 auto}
+  .cases-grid,.services-grid{grid-template-columns:1fr}
+  .traction-grid,.scale-grid{grid-template-columns:repeat(2,1fr)}
+  .product-card{grid-template-columns:1fr}
+  .container{padding:0 20px}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="pill reveal">Growth Marketing Manager · 9+ лет опыта</span>
+      <h1 class="reveal" style="--rev-delay:80ms">Выстраиваю Growth-воронки и снижаю <em class="hl">CAC</em>. Архитектура монетизации с <em class="hl2">ROAS до 300–600% на холодном трафике</em></h1>
+      <p class="lead reveal" style="--rev-delay:160ms">+500 000 Acquired Users (привлечённых пользователей). Создатель B2C SaaS TopKontent. Работаю на языке продуктовых метрик: CAC (цена привлечения), LTV (пожизненная ценность клиента), Retention (удержание), ROAS (окупаемость рекламы), Funnel Conversion (конверсия воронки).</p>
+      <div class="cta-row reveal" style="--rev-delay:220ms">
+        <a class="cta" href="https://t.me/vikashet" target="_blank">Написать в Telegram →</a>
+        <a class="cta ghost" href="https://t.me/vikashet" target="_blank">Рассчитать потенциал блога</a>
+      </div>
+    </div>
+    <div class="hero-photo reveal" style="--rev-delay:120ms"><img src="images/vika-hero-new.jpg" alt="Виктория Щетинина"></div>
+  </div>
+</section>
+
+<section class="traction">
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Traction &amp; Scale — Масштаб</span></div>
+    <h2 class="section-title reveal">Масштаб работы <em class="hl">в цифрах</em></h2>
+    <div class="traction-grid">
+      <div class="tstat reveal"><b>500 000+</b><span>подписчиков платным трафиком (таргет + блогеры)</span></div>
+      <div class="tstat reveal" style="--rev-delay:60ms"><b>350 000+</b><span>подписчиков за счёт органики соцсетей</span></div>
+      <div class="tstat reveal" style="--rev-delay:120ms"><b>67+</b><span>Growth Campaigns · Кампаний</span></div>
+      <div class="tstat reveal" style="--rev-delay:180ms"><b>15 000</b><span>человек привлечено в 1 воронку за 7 дней</span></div>
+      <div class="tstat reveal" style="--rev-delay:240ms"><b>от 50₽</b><span>стоимость привлечения</span></div>
+      <div class="tstat reveal" style="--rev-delay:280ms"><b>от 500₽</b><span>стоимость заявки</span></div>
+      <div class="tstat reveal" style="--rev-delay:320ms"><b>от 3 000₽</b><span>стоимость клиента</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="scale">
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Trusted by — С кем я работала</span></div>
+    <h2 class="section-title reveal">ТОР-эксперты, которые <em class="hl">росли в моих проектах</em></h2>
+    <div class="who-grid">
+      <div class="who-item reveal"><div class="who-avatar"><img src="images/who-diet-nutriciolog.png" alt="Диетолог-нутрициолог"></div><b>Диетолог-нутрициолог</b><span>184 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:40ms"><div class="who-avatar"><img src="images/who-probuzhdayushiy-couch.png" alt="Пробуждающий коуч"></div><b>Пробуждающий коуч</b><span>413 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:80ms"><div class="who-avatar"><img src="images/who-baronova-irina.png" alt="Баронова Ирина"></div><b>Баронова Ирина</b><span>691 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:120ms"><div class="who-avatar"><img src="images/who-kvant-psiholog.png" alt="Квантовый психолог"></div><b>Квантовый психолог</b><span>956 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:160ms"><div class="who-avatar"><img src="images/who-dietolog.png" alt="Диетолог"></div><b>Диетолог</b><span>957 тыс. подписчиков</span></div>
+      <div class="who-item reveal"><div class="who-avatar"><img src="images/who-zhenskoe-zdorovie.png" alt="По женское здоровье"></div><b>По женское здоровье</b><span>32 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:40ms"><div class="who-avatar"><img src="images/who-endokrinolog.png" alt="Эндокринолог"></div><b>Эндокринолог</b><span>169 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:80ms"><div class="who-avatar"><img src="images/who-umniy-fitnes.png" alt="Умный фитнес"></div><b>Умный фитнес</b><span>164 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:120ms"><div class="who-avatar"><img src="images/who-zhivoy-collagen.png" alt="Живой коллаген"></div><b>Живой коллаген</b><span>539 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:160ms"><div class="who-avatar"><img src="images/who-dietolog-trener.png" alt="Диетолог и тренер"></div><b>Диетолог и тренер</b><span>192 тыс. подписчиков</span></div>
+    </div>
+    <div class="niches-box reveal" style="--rev-delay:80ms;margin-top:32px">
+      <span class="niches-label">За счёт чего был кратный рост?</span>
+      <p style="color:var(--muted);font-size:.95rem;max-width:720px">Тематические марафоны, привлекающие свою целевую аудиторию и прогревающие её до заявок на услуги и продукты экспертов.</p>
+    </div>
+    <div class="proof-strip" style="grid-template-columns:repeat(4,1fr);margin-top:20px">
+      <div class="proof-shot reveal" onclick="openLightbox(this)"><img src="images/case-money-1.jpg" alt="Кейс Психология денег: приход на канал, активность"></div>
+      <div class="proof-shot reveal" style="--rev-delay:40ms" onclick="openLightbox(this)"><img src="images/case-money-2.jpg" alt="Кейс Психология денег: активность аудитории"></div>
+      <div class="proof-shot reveal" style="--rev-delay:80ms" onclick="openLightbox(this)"><img src="images/case-pohudei-1.jpg" alt="Кейс Школа похудения 8"></div>
+      <div class="proof-shot reveal" style="--rev-delay:120ms" onclick="openLightbox(this)"><img src="images/case-money-3.jpg" alt="Кейс марафон Школа денег"></div>
+      <div class="proof-shot reveal" onclick="openLightbox(this)"><img src="images/case-pohudei-2.jpg" alt="Кейс Школа похудения"></div>
+      <div class="proof-shot reveal" style="--rev-delay:40ms" onclick="openLightbox(this)"><img src="images/case-protelo.jpg" alt="Кейс PROtelo"></div>
+      <div class="proof-shot reveal" style="--rev-delay:80ms" onclick="openLightbox(this)"><img src="images/case-protrend.jpg" alt="Кейс PROTrend Content"></div>
+      <div class="proof-shot reveal" style="--rev-delay:120ms" onclick="openLightbox(this)"><img src="images/case-financial-freedom.jpg" alt="Кейс курс Финансовая свобода"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Testimonials — Отзывы</span></div>
+    <h2 class="section-title reveal">Что говорят <em class="hl">клиенты</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <p>«Цена заявки упала почти в 3 раза, а запись выросла с 20% до 35% — впервые видим прозрачную воронку от клика до оплаты».</p>
+        <div class="testi-who"><b>Медицинский центр</b><span>Кемерово</span></div>
+      </div>
+      <div class="testi-card reveal" style="--rev-delay:60ms">
+        <p>«За 3 дня сделали выручку, на которую раньше уходил месяц. Средний чек вырос в 7 раз — и аудитория осталась довольна».</p>
+        <div class="testi-who"><b>Фудблогер</b><span>@mamangurman</span></div>
+      </div>
+      <div class="testi-card reveal" style="--rev-delay:120ms">
+        <p>«Виктория выстроила воронку, которая сама приводит целевых подписчиков — без хаотичных вложений в рекламу».</p>
+        <div class="testi-who"><b>Эксперт</b><span>Психология денег</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Case Studies — Кейсы</span></div>
+    <h2 class="section-title reveal">Проблема → <em class="hl">решение</em> → метрики</h2>
+    <p class="section-lead reveal" style="--rev-delay:80ms">Ядро работы — Growth-фреймворки, адаптированные под нишу: от EdTech и психологии до медицины и B2B.</p>
+    <div class="tabs reveal" style="--rev-delay:100ms">
+      <button class="tab active" data-f="all">Все кейсы</button>
+      <button class="tab" data-f="psy">Психология &amp; Коучинг</button>
+      <button class="tab" data-f="zozh">ЗОЖ &amp; Нутрициология</button>
+      <button class="tab" data-f="fin">Финансы &amp; Инфобизнес</button>
+      <button class="tab" data-f="med">Медицина &amp; Оффлайн</button>
+      <button class="tab" data-f="b2b">B2B &amp; SMM</button>
+    </div>
+    <div class="cases-grid" id="cases">
+
+      <div class="case-card reveal" data-n="psy">
+        <div class="tag-row"><span class="pill">Психология</span></div>
+        <h3>PLG-марафон «Предназначение»</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> низкая конверсия холодного трафика, высокая цена лида.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> вирусная механика через Telegram-бота с распределением трафика между экспертами.</p>
+        <div class="impact">
+          <div class="r"><b>1477</b><span>активаций бота</span></div>
+          <div class="r"><b>93%</b><span>Retention · удержание на 7-й день</span></div>
+          <div class="r"><b>+1323</b><span>подписчика на канал</span></div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-n="psy" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">Психология</span></div>
+        <h3>Nurture-воронка «Психология Денег»</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> отток аудитории на этапе прогрева.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> многоканальная закупка (Telegram, FB Ads) и оптимизация онбординга.</p>
+        <div class="impact">
+          <div class="r"><b>1016</b><span>лидов, top-of-funnel</span></div>
+          <div class="r"><b>27–41₽</b><span>CAC · цена привлечения</span></div>
+          <div class="r"><b>24.7%</b><span>CR подписки на экспертов</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-psych.png" alt="Отчёт по марафону Психология Денег"></div>
+        <div class="proof-cap">Скриншот отчёта: приход на канал, стоимость подписчика, активность аудитории</div>
+      </div>
+
+      <div class="case-card reveal" data-n="zozh">
+        <div class="tag-row"><span class="pill">ЗОЖ</span></div>
+        <h3>Рост LTV фудблогера @mamangurman</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> низкий ARPU · средний чек (190–290₽), выгорание базы.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> customer development · опрос аудитории (3800 анкет) и запуск нового high-ticket продукта.</p>
+        <div class="impact">
+          <div class="r"><b>×7</b><span>рост ARPU · среднего чека (290→1490₽)</span></div>
+          <div class="r"><b>290 000₽</b><span>Revenue · выручка за 3 дня</span></div>
+          <div class="r"><b>41%</b><span>CR · конверсия предзаписи</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-testimonial.png" alt="Отзыв клиента о запуске"></div>
+        <div class="proof-cap">Отзыв клиента в Telegram-чате команды запуска</div>
+      </div>
+
+      <div class="case-card reveal" data-n="fin" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">Финансы</span></div>
+        <h3>Авторская PLG-воронка (ROI-кейс)</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> долгий цикл сделки, дорогой холодный трафик.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> продукт-микроворонка как инструмент окупаемости трафика.</p>
+        <div class="impact">
+          <div class="r"><b>600%</b><span>ROAS · окупаемость рекламы</span></div>
+          <div class="r"><b>20 000₽ → 120 000₽</b><span>инвестиции → выручка</span></div>
+          <div class="r"><b>7–10 дней</b><span>Payback period · срок окупаемости</span></div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-n="med">
+        <div class="tag-row"><span class="pill">Медицина</span></div>
+        <h3>Сквозная аналитика клиники — Кемерово</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> слепые зоны в маркетинге, неизвестный CAC (цена лида) по каналам.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> аналитика воронки, бандлирование услуг, performance-каналы.</p>
+        <div class="impact">
+          <div class="r"><b>600₽</b><span>цена заявки (было 1800₽)</span></div>
+          <div class="r"><b>35%</b><span>конверсия в запись (было 20%)</span></div>
+          <div class="r"><b>1 080 000₽</b><span>выручка с сайта / мес</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-kemerovo.png" alt="Дашборд клиники Кемерово"></div>
+        <div class="proof-cap">Дашборд воронки: цена заявки, конверсии, выручка до/после</div>
+      </div>
+
+      <div class="case-card reveal" data-n="med" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">Медицина</span></div>
+        <h3>Сквозная аналитика клиники — Ростов</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> высокая цена заявки, низкая конверсия в запись.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> та же архитектура воронки, адаптированная под вторую клинику.</p>
+        <div class="impact">
+          <div class="r"><b>380₽</b><span>цена заявки (было 5000₽)</span></div>
+          <div class="r"><b>35%</b><span>конверсия в запись (было 10%)</span></div>
+          <div class="r"><b>600 000₽</b><span>выручка / мес, 40 оплат</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-rostov.png" alt="Дашборд клиники Ростов"></div>
+        <div class="proof-cap">Дашборд воронки: цена заявки, конверсии, выручка до/после</div>
+      </div>
+
+      <div class="case-card reveal" data-n="b2b">
+        <div class="tag-row"><span class="pill">B2B / SMM</span></div>
+        <h3>Снижение CAC в нише SMM</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> перегретый аукцион, рыночный CAC (цена лида) 50–80₽.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> A/B тестирование креативов и аудиторий.</p>
+        <div class="impact">
+          <div class="r"><b>15–20₽</b><span>CAC · цена привлечения (в 2.5–4× дешевле рынка)</span></div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-n="b2b" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">B2B / SMM</span></div>
+        <h3>Монетизация эксперта с нуля</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> 0 аудитории, 0 выручки на старте.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> быстрая сборка MVP · тестовой версии воронки на low-ticket продуктах.</p>
+        <div class="impact">
+          <div class="r"><b>200 000₽</b><span>выручка за 1.5 месяца</span></div>
+          <div class="r"><b>0 → MRR</b><span>от старта до стабильного дохода</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">High-Load Experience — Крупные аудитории</span></div>
+    <h2 class="section-title reveal">Работа с <em class="hl">инфлюенсерами-миллионниками</em></h2>
+    <p class="section-lead reveal" style="--rev-delay:80ms">Не только стартапы — Enterprise-уровень инфобизнеса, где цена ошибки в закупке трафика критически высока.</p>
+    <div class="scale-grid">
+      <div class="scount reveal"><b>956k</b><span>Квантовый психолог</span></div>
+      <div class="scount reveal" style="--rev-delay:60ms"><b>957k</b><span>Диетолог</span></div>
+      <div class="scount reveal" style="--rev-delay:120ms"><b>691k</b><span>Баронова Ирина</span></div>
+      <div class="scount reveal" style="--rev-delay:180ms"><b>539k</b><span>Живой коллаген</span></div>
+      <div class="scount reveal" style="--rev-delay:240ms"><b>413k</b><span>Пробуждающий коуч</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Product Portfolio — Продукты</span></div>
+    <h2 class="section-title reveal">Собственные <em class="hl">IT-продукты</em></h2>
+    <div class="product-card reveal">
+      <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-topkontent.png" alt="TopKontent — SaaS продукт"></div>
+      <div class="product-copy">
+        <h3>TopKontent — B2C SaaS</h3>
+        <p>Платформа для поиска вирусного контента: парсинг и аналитика постов по нишам, freemium-модель монетизации. Плюс AI-бот <a href="https://t.me/TopKont_bot" target="_blank">@TopKont_bot</a> в Telegram для автоматизации анализа контента.</p>
+        <div class="product-stats">
+          <div class="r"><b>3.2M+</b><span>постов проанализировано</span></div>
+          <div class="r"><b>150+</b><span>ниш в базе</span></div>
+          <div class="r"><b>8 400+</b><span>пользователей</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Services &amp; Pricing — Услуги</span></div>
+    <h2 class="section-title reveal">Форматы <em class="hl">работы</em></h2>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <h3>Troubleshooting Session</h3>
+        <div class="svc-price">12 000₽</div>
+        <p>60 минут. Поиск узких мест в воронке, аудит текущих рекламных связок.</p>
+      </div>
+      <div class="svc-card reveal" style="--rev-delay:60ms">
+        <h3>Growth Strategy Audit</h3>
+        <div class="svc-price">30 000₽</div>
+        <p>1.5–2 часа. Глубокий аудит Customer Journey. Экономия до 200 000₽ на тестах нерабочих гипотез.</p>
+      </div>
+      <div class="svc-card reveal" style="--rev-delay:120ms">
+        <h3>Full-Stack Growth Management</h3>
+        <div class="svc-price">По запросу</div>
+        <p>Архитектура монетизации с нуля: от закупки трафика до автоматизации retention-воронок.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Calculator — Калькулятор</span></div>
+    <h2 class="section-title reveal">Сколько заявок <em class="hl">приносит ваш блог</em>?</h2>
+    <p class="section-lead reveal" style="--rev-delay:80ms">Ориентировочный расчёт на основе среднерыночных конверсий из кейсов выше — покажет потенциал при текущем охвате.</p>
+    <div class="calc-card reveal">
+      <div class="calc-inputs">
+        <div class="calc-field">
+          <label>Охват в месяц: <span class="val" id="reachVal">10 000</span></label>
+          <input type="range" id="reachRange" min="1000" max="200000" step="1000" value="10000">
+        </div>
+        <div class="calc-field">
+          <label>Средний чек, ₽: <span class="val" id="checkVal">5 000</span></label>
+          <input type="range" id="checkRange" min="1000" max="100000" step="1000" value="5000">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="big" id="calcRevenue">50 000₽</div>
+        <span>потенциальная выручка / мес</span>
+        <p style="color:var(--faint);font-size:.78rem;margin-top:16px">При конверсии 1% из охвата в оплату — среднее значение по кейсам выше</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2 class="reveal">Готовы снизить <em class="hl2">CAC</em> и масштабировать <em class="hl">Revenue</em>?</h2>
+    <p class="reveal" style="--rev-delay:80ms">Оставьте ссылку на проект, текущие метрики и задачу — отвечу с диагнозом воронки.</p>
+    <form class="form-card reveal" style="--rev-delay:120ms" id="leadForm">
+      <div class="form-field"><label>Ссылка на проект</label><input type="text" id="fProject" placeholder="instagram.com/... или сайт" required></div>
+      <div class="form-field"><label>Текущие метрики (если есть)</label><input type="text" id="fMetrics" placeholder="CAC, охваты, конверсия..."></div>
+      <div class="form-field"><label>Задача</label><textarea id="fTask" placeholder="Что хотите вырасти или починить?" required></textarea></div>
+      <button type="submit" class="cta form-submit">Отправить в Telegram →</button>
+    </form>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img" src="" alt=""></div>
+<footer>© Виктория Щетинина · Growth Marketing Manager · <a href="https://teletype.in/@viktoria.shet" target="_blank">teletype.in/@viktoria.shet</a></footer>
+
+<script>
+document.querySelectorAll('.reveal').forEach(el=>{
+  const d=el.style.getPropertyValue('--rev-delay');if(d)el.style.transitionDelay=d;
+});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>{
+  const r=el.getBoundingClientRect();
+  if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('in');}else{io.observe(el);}
+});
+function openLightbox(el){const src=el.querySelector('img').src;document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');}
+function animateCount(el){
+  const target=el.textContent.trim();
+  const m=target.match(/^([^\d]*)([\d\s]+)(.*)$/);
+  if(!m)return;
+  const prefix=m[1],num=parseInt(m[2].replace(/\s/g,''),10),suffix=m[3];
+  if(isNaN(num))return;
+  let cur=0;const dur=1200,start=performance.now();
+  function step(t){
+    const p=Math.min((t-start)/dur,1);
+    cur=Math.floor(num*(1-Math.pow(1-p,3)));
+    el.textContent=prefix+cur.toLocaleString('ru-RU')+suffix;
+    if(p<1)requestAnimationFrame(step);else el.textContent=target;
+  }
+  requestAnimationFrame(step);
+}
+const countIo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);countIo.unobserve(e.target);}});},{threshold:.4});
+document.querySelectorAll('.tstat b, .scount b').forEach(el=>countIo.observe(el));
+const reachRange=document.getElementById('reachRange'),checkRange=document.getElementById('checkRange');
+function updateCalc(){
+  const reach=+reachRange.value,check=+checkRange.value;
+  document.getElementById('reachVal').textContent=reach.toLocaleString('ru-RU');
+  document.getElementById('checkVal').textContent=check.toLocaleString('ru-RU');
+  const revenue=Math.round(reach*0.01*check);
+  document.getElementById('calcRevenue').textContent=revenue.toLocaleString('ru-RU')+'₽';
+}
+if(reachRange){reachRange.addEventListener('input',updateCalc);checkRange.addEventListener('input',updateCalc);updateCalc();}
+const leadForm=document.getElementById('leadForm');
+if(leadForm){leadForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const text=`Проект: ${document.getElementById('fProject').value}\nМетрики: ${document.getElementById('fMetrics').value}\nЗадача: ${document.getElementById('fTask').value}`;
+  window.open('https://t.me/vikashet?text='+encodeURIComponent(text),'_blank');
+});}
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.f;
+    document.querySelectorAll('#cases .case-card').forEach(c=>{
+      c.style.display=(f==='all'||c.dataset.n===f)?'':'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
