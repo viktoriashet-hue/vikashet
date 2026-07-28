@@ -59,7 +59,7 @@ section{padding:88px 0}
 
 /* CASES */
 .cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.case-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.case-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .case-card .tag-row{display:flex;justify-content:space-between;align-items:center}
 .case-card h3{font-size:1.3rem;color:var(--text)}
 .bottleneck{color:var(--faint);font-size:.88rem}
@@ -73,6 +73,8 @@ section{padding:88px 0}
 .proof-shot:hover{border-color:var(--violet)}
 .proof-shot img{width:100%;display:block;border-radius:0}
 .proof-cap{font-size:.72rem;color:var(--faint);margin-top:6px}
+.case-card > *{align-self:stretch}
+.case-card .cta.ghost{align-self:flex-start}
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:999;padding:40px;cursor:zoom-out}
 .lightbox.open{display:flex}
 .lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
@@ -187,7 +189,7 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
         <a class="cta ghost" href="https://t.me/vikashet" target="_blank">Рассчитать потенциал блога</a>
       </div>
     </div>
-    <div class="hero-photo reveal" style="--rev-delay:120ms"><img src="vika-hero-new.jpg" alt="Виктория Щетинина"></div>
+    <div class="hero-photo reveal" style="--rev-delay:120ms"><img src="images/vika-hero-new.jpg" alt="Виктория Щетинина"></div>
   </div>
 </section>
 
@@ -212,30 +214,30 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
     <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Trusted by — С кем я работала</span></div>
     <h2 class="section-title reveal">ТОР-эксперты, которые <em class="hl">росли в моих проектах</em></h2>
     <div class="who-grid">
-      <div class="who-item reveal"><div class="who-avatar"><img src="who-diet-nutriciolog.png" alt="Диетолог-нутрициолог"></div><b>Диетолог-нутрициолог</b><span>184 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:40ms"><div class="who-avatar"><img src="who-probuzhdayushiy-couch.png" alt="Пробуждающий коуч"></div><b>Пробуждающий коуч</b><span>413 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:80ms"><div class="who-avatar"><img src="who-baronova-irina.png" alt="Баронова Ирина"></div><b>Баронова Ирина</b><span>691 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:120ms"><div class="who-avatar"><img src="who-kvant-psiholog.png" alt="Квантовый психолог"></div><b>Квантовый психолог</b><span>956 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:160ms"><div class="who-avatar"><img src="who-dietolog.png" alt="Диетолог"></div><b>Диетолог</b><span>957 тыс. подписчиков</span></div>
-      <div class="who-item reveal"><div class="who-avatar"><img src="who-zhenskoe-zdorovie.png" alt="По женское здоровье"></div><b>По женское здоровье</b><span>32 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:40ms"><div class="who-avatar"><img src="who-endokrinolog.png" alt="Эндокринолог"></div><b>Эндокринолог</b><span>169 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:80ms"><div class="who-avatar"><img src="who-umniy-fitnes.png" alt="Умный фитнес"></div><b>Умный фитнес</b><span>164 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:120ms"><div class="who-avatar"><img src="who-zhivoy-collagen.png" alt="Живой коллаген"></div><b>Живой коллаген</b><span>539 тыс. подписчиков</span></div>
-      <div class="who-item reveal" style="--rev-delay:160ms"><div class="who-avatar"><img src="who-dietolog-trener.png" alt="Диетолог и тренер"></div><b>Диетолог и тренер</b><span>192 тыс. подписчиков</span></div>
+      <div class="who-item reveal"><div class="who-avatar"><img src="images/who-diet-nutriciolog.png" alt="Диетолог-нутрициолог"></div><b>Диетолог-нутрициолог</b><span>184 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:40ms"><div class="who-avatar"><img src="images/who-probuzhdayushiy-couch.png" alt="Пробуждающий коуч"></div><b>Пробуждающий коуч</b><span>413 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:80ms"><div class="who-avatar"><img src="images/who-baronova-irina.png" alt="Баронова Ирина"></div><b>Баронова Ирина</b><span>691 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:120ms"><div class="who-avatar"><img src="images/who-kvant-psiholog.png" alt="Квантовый психолог"></div><b>Квантовый психолог</b><span>956 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:160ms"><div class="who-avatar"><img src="images/who-dietolog.png" alt="Диетолог"></div><b>Диетолог</b><span>957 тыс. подписчиков</span></div>
+      <div class="who-item reveal"><div class="who-avatar"><img src="images/who-zhenskoe-zdorovie.png" alt="По женское здоровье"></div><b>По женское здоровье</b><span>32 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:40ms"><div class="who-avatar"><img src="images/who-endokrinolog.png" alt="Эндокринолог"></div><b>Эндокринолог</b><span>169 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:80ms"><div class="who-avatar"><img src="images/who-umniy-fitnes.png" alt="Умный фитнес"></div><b>Умный фитнес</b><span>164 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:120ms"><div class="who-avatar"><img src="images/who-zhivoy-collagen.png" alt="Живой коллаген"></div><b>Живой коллаген</b><span>539 тыс. подписчиков</span></div>
+      <div class="who-item reveal" style="--rev-delay:160ms"><div class="who-avatar"><img src="images/who-dietolog-trener.png" alt="Диетолог и тренер"></div><b>Диетолог и тренер</b><span>192 тыс. подписчиков</span></div>
     </div>
     <div class="niches-box reveal" style="--rev-delay:80ms;margin-top:32px">
       <span class="niches-label">За счёт чего был кратный рост?</span>
       <p style="color:var(--muted);font-size:.95rem;max-width:720px">Тематические марафоны, привлекающие свою целевую аудиторию и прогревающие её до заявок на услуги и продукты экспертов.</p>
     </div>
     <div class="proof-strip" style="grid-template-columns:repeat(4,1fr);margin-top:20px">
-      <div class="proof-shot reveal" onclick="openLightbox(this)"><img src="case-money-1.jpg" alt="Кейс Психология денег: приход на канал, активность"></div>
-      <div class="proof-shot reveal" style="--rev-delay:40ms" onclick="openLightbox(this)"><img src="case-money-2.jpg" alt="Кейс Психология денег: активность аудитории"></div>
-      <div class="proof-shot reveal" style="--rev-delay:80ms" onclick="openLightbox(this)"><img src="case-pohudei-1.jpg" alt="Кейс Школа похудения 8"></div>
-      <div class="proof-shot reveal" style="--rev-delay:120ms" onclick="openLightbox(this)"><img src="case-money-3.jpg" alt="Кейс марафон Школа денег"></div>
-      <div class="proof-shot reveal" onclick="openLightbox(this)"><img src="case-pohudei-2.jpg" alt="Кейс Школа похудения"></div>
-      <div class="proof-shot reveal" style="--rev-delay:40ms" onclick="openLightbox(this)"><img src="case-protelo.jpg" alt="Кейс PROtelo"></div>
-      <div class="proof-shot reveal" style="--rev-delay:80ms" onclick="openLightbox(this)"><img src="case-protrend.jpg" alt="Кейс PROTrend Content"></div>
-      <div class="proof-shot reveal" style="--rev-delay:120ms" onclick="openLightbox(this)"><img src="case-financial-freedom.jpg" alt="Кейс курс Финансовая свобода"></div>
+      <div class="proof-shot reveal" onclick="openLightbox(this)"><img src="images/case-money-1.jpg" alt="Кейс Психология денег: приход на канал, активность"></div>
+      <div class="proof-shot reveal" style="--rev-delay:40ms" onclick="openLightbox(this)"><img src="images/case-money-2.jpg" alt="Кейс Психология денег: активность аудитории"></div>
+      <div class="proof-shot reveal" style="--rev-delay:80ms" onclick="openLightbox(this)"><img src="images/case-pohudei-1.jpg" alt="Кейс Школа похудения 8"></div>
+      <div class="proof-shot reveal" style="--rev-delay:120ms" onclick="openLightbox(this)"><img src="images/case-money-3.jpg" alt="Кейс марафон Школа денег"></div>
+      <div class="proof-shot reveal" onclick="openLightbox(this)"><img src="images/case-pohudei-2.jpg" alt="Кейс Школа похудения"></div>
+      <div class="proof-shot reveal" style="--rev-delay:40ms" onclick="openLightbox(this)"><img src="images/case-protelo.jpg" alt="Кейс PROtelo"></div>
+      <div class="proof-shot reveal" style="--rev-delay:80ms" onclick="openLightbox(this)"><img src="images/case-protrend.jpg" alt="Кейс PROTrend Content"></div>
+      <div class="proof-shot reveal" style="--rev-delay:120ms" onclick="openLightbox(this)"><img src="images/case-financial-freedom.jpg" alt="Кейс курс Финансовая свобода"></div>
     </div>
   </div>
 </section>
@@ -276,30 +278,35 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
     </div>
     <div class="cases-grid" id="cases">
 
-      <div class="case-card reveal" data-n="psy">
-        <div class="tag-row"><span class="pill">Психология</span></div>
-        <h3>PLG-марафон «Предназначение»</h3>
-        <p class="bottleneck"><b>Bottleneck (проблема):</b> низкая конверсия холодного трафика, высокая цена лида.</p>
-        <p class="solution"><b>Growth Solution (решение):</b> вирусная механика через Telegram-бота с распределением трафика между экспертами.</p>
+      <div class="case-card reveal" data-n="med">
+        <div class="tag-row"><span class="pill">Медицина &amp; HealthTech</span></div>
+        <h3>Сквозная аналитика и Growth-стратегия для сети медицинских клиник</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> непрозрачность воронки, неэффективный трафик и высокая цена заявки в двух клиниках.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> внедрение сквозной аналитики, оптимизация рекламных каналов и Customer Journey.</p>
         <div class="impact">
-          <div class="r"><b>1477</b><span>активаций бота</span></div>
-          <div class="r"><b>93%</b><span>Retention · удержание на 7-й день</span></div>
-          <div class="r"><b>+1323</b><span>подписчика на канал</span></div>
+          <div class="r"><b>380₽</b><span>CAC (цена заявки), было 5000₽</span></div>
+          <div class="r"><b>35%</b><span>CR (конверсия в запись), было 10–20%</span></div>
+          <div class="r"><b>1 680 000₽</b><span>общая выручка / мес</span></div>
         </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-kemerovo.png" alt="Дашборд клиники Кемерово"></div>
+        <div class="proof-cap">Дашборд воронки: цена заявки, конверсии, выручка до/после</div>
+        <a class="cta ghost" style="align-self:flex-start;margin-top:4px" href="cases/medical-center.html">Читать кейс полностью →</a>
       </div>
 
-      <div class="case-card reveal" data-n="psy" style="--rev-delay:60ms">
-        <div class="tag-row"><span class="pill">Психология</span></div>
-        <h3>Nurture-воронка «Психология Денег»</h3>
-        <p class="bottleneck"><b>Bottleneck (проблема):</b> отток аудитории на этапе прогрева.</p>
-        <p class="solution"><b>Growth Solution (решение):</b> многоканальная закупка (Telegram, FB Ads) и оптимизация онбординга.</p>
+      <div class="case-card reveal" data-n="med" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">Медицина &amp; HealthTech</span></div>
+        <h3>Система роста «Онлайн-поликлиника»: марафоны для врачей</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> высокий CAC (150–300₽) и низкая вовлечённость холодной аудитории в медицинские блоги.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> комплексная архитектура марафона от идеи до ROI 1:5–1:10 для экспертов.</p>
         <div class="impact">
-          <div class="r"><b>1016</b><span>лидов, top-of-funnel</span></div>
-          <div class="r"><b>27–41₽</b><span>CAC · цена привлечения</span></div>
-          <div class="r"><b>24.7%</b><span>CR подписки на экспертов</span></div>
+          <div class="r"><b>7 715+</b><span>новых подписчиков (Main + Reserve)</span></div>
+          <div class="r"><b>2.2–5.2₽</b><span>CAC, в 30–50 раз ниже рынка</span></div>
+          <div class="r"><b>748</b><span>сверхактивных лоялистов</span></div>
+          <div class="r"><b>1:5–1:10</b><span>ROI для экспертов</span></div>
         </div>
-        <div class="proof-shot" onclick="openLightbox(this)"><img src="proof-psych.png" alt="Отчёт по марафону Психология Денег"></div>
-        <div class="proof-cap">Скриншот отчёта: приход на канал, стоимость подписчика, активность аудитории</div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/case-online-poliklinika-1.jpg" alt="До/после: рост подписчиков online_poliklinika"></div>
+        <div class="proof-cap">До/после марафона: рост подписчиков и вовлечённости врачей-спикеров</div>
+        <a class="cta ghost" style="align-self:flex-start;margin-top:4px" href="cases/doctors-marathon.html">Читать кейс полностью →</a>
       </div>
 
       <div class="case-card reveal" data-n="zozh">
@@ -312,11 +319,37 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
           <div class="r"><b>290 000₽</b><span>Revenue · выручка за 3 дня</span></div>
           <div class="r"><b>41%</b><span>CR · конверсия предзаписи</span></div>
         </div>
-        <div class="proof-shot" onclick="openLightbox(this)"><img src="proof-testimonial.png" alt="Отзыв клиента о запуске"></div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-testimonial.png" alt="Отзыв клиента о запуске"></div>
         <div class="proof-cap">Отзыв клиента в Telegram-чате команды запуска</div>
       </div>
 
-      <div class="case-card reveal" data-n="fin" style="--rev-delay:60ms">
+      <div class="case-card reveal" data-n="b2b" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">B2B / SMM</span></div>
+        <h3>Монетизация эксперта по коучингу с нуля</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> 0 аудитории, 0 выручки на старте.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> быстрая сборка MVP · тестовой версии воронки на low-ticket продуктах.</p>
+        <div class="impact">
+          <div class="r"><b>200 000₽</b><span>выручка за 1.5 месяца</span></div>
+          <div class="r"><b>0 → MRR</b><span>от старта до стабильного дохода</span></div>
+        </div>
+      </div>
+
+      <div class="case-card reveal" data-n="zozh" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">ЗОЖ &amp; Инфобизнес</span></div>
+        <h3>Марафон «Школа похудения»: рост с нуля до 35,8 тыс.</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> сезонный high-CAC ниши похудения, риск потери аудитории при блокировке основного аккаунта.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> та же архитектура Main + Reserve, розыгрыши без денежных призов, привлечение врачей-диетологов как спикеров.</p>
+        <div class="impact">
+          <div class="r"><b>28,1 → 35,8 тыс.</b><span>рост подписчиков основного аккаунта</span></div>
+          <div class="r"><b>4 638</b><span>подписчиков резервного аккаунта</span></div>
+          <div class="r"><b>33 041</b><span>посещений профиля за 7 дней</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/case-pohydei-do-posle-1.jpg" alt="До/после: рост подписчиков school_pohydei"></div>
+        <div class="proof-cap">До/после марафона: рост подписчиков и вовлечённости</div>
+        <a class="cta ghost" style="align-self:flex-start;margin-top:4px" href="cases/pohydei-marathon.html">Читать кейс полностью →</a>
+      </div>
+
+      <div class="case-card reveal" data-n="fin">
         <div class="tag-row"><span class="pill">Финансы</span></div>
         <h3>Авторская PLG-воронка (ROI-кейс)</h3>
         <p class="bottleneck"><b>Bottleneck (проблема):</b> долгий цикл сделки, дорогой холодный трафик.</p>
@@ -328,35 +361,7 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
         </div>
       </div>
 
-      <div class="case-card reveal" data-n="med">
-        <div class="tag-row"><span class="pill">Медицина</span></div>
-        <h3>Сквозная аналитика клиники — Кемерово</h3>
-        <p class="bottleneck"><b>Bottleneck (проблема):</b> слепые зоны в маркетинге, неизвестный CAC (цена лида) по каналам.</p>
-        <p class="solution"><b>Growth Solution (решение):</b> аналитика воронки, бандлирование услуг, performance-каналы.</p>
-        <div class="impact">
-          <div class="r"><b>600₽</b><span>цена заявки (было 1800₽)</span></div>
-          <div class="r"><b>35%</b><span>конверсия в запись (было 20%)</span></div>
-          <div class="r"><b>1 080 000₽</b><span>выручка с сайта / мес</span></div>
-        </div>
-        <div class="proof-shot" onclick="openLightbox(this)"><img src="proof-kemerovo.png" alt="Дашборд клиники Кемерово"></div>
-        <div class="proof-cap">Дашборд воронки: цена заявки, конверсии, выручка до/после</div>
-      </div>
-
-      <div class="case-card reveal" data-n="med" style="--rev-delay:60ms">
-        <div class="tag-row"><span class="pill">Медицина</span></div>
-        <h3>Сквозная аналитика клиники — Ростов</h3>
-        <p class="bottleneck"><b>Bottleneck (проблема):</b> высокая цена заявки, низкая конверсия в запись.</p>
-        <p class="solution"><b>Growth Solution (решение):</b> та же архитектура воронки, адаптированная под вторую клинику.</p>
-        <div class="impact">
-          <div class="r"><b>380₽</b><span>цена заявки (было 5000₽)</span></div>
-          <div class="r"><b>35%</b><span>конверсия в запись (было 10%)</span></div>
-          <div class="r"><b>600 000₽</b><span>выручка / мес, 40 оплат</span></div>
-        </div>
-        <div class="proof-shot" onclick="openLightbox(this)"><img src="proof-rostov.png" alt="Дашборд клиники Ростов"></div>
-        <div class="proof-cap">Дашборд воронки: цена заявки, конверсии, выручка до/после</div>
-      </div>
-
-      <div class="case-card reveal" data-n="b2b">
+      <div class="case-card reveal" data-n="b2b" style="--rev-delay:60ms">
         <div class="tag-row"><span class="pill">B2B / SMM</span></div>
         <h3>Снижение CAC в нише SMM</h3>
         <p class="bottleneck"><b>Bottleneck (проблема):</b> перегретый аукцион, рыночный CAC (цена лида) 50–80₽.</p>
@@ -366,15 +371,75 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
         </div>
       </div>
 
-      <div class="case-card reveal" data-n="b2b" style="--rev-delay:60ms">
-        <div class="tag-row"><span class="pill">B2B / SMM</span></div>
-        <h3>Монетизация эксперта с нуля</h3>
-        <p class="bottleneck"><b>Bottleneck (проблема):</b> 0 аудитории, 0 выручки на старте.</p>
-        <p class="solution"><b>Growth Solution (решение):</b> быстрая сборка MVP · тестовой версии воронки на low-ticket продуктах.</p>
+      <div class="case-card reveal" data-n="psy">
+        <div class="tag-row"><span class="pill">Психология · Коучинг</span></div>
+        <h3>PLG-марафон «Предназначение»</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> низкая конверсия холодного трафика, высокая цена лида.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> вирусная механика через Telegram-бота с распределением трафика между экспертами.</p>
         <div class="impact">
-          <div class="r"><b>200 000₽</b><span>выручка за 1.5 месяца</span></div>
-          <div class="r"><b>0 → MRR</b><span>от старта до стабильного дохода</span></div>
+          <div class="r"><b>1477</b><span>активаций бота</span></div>
+          <div class="r"><b>93%</b><span>Retention · удержание на 7-й день</span></div>
+          <div class="r"><b>+1323</b><span>подписчика на канал</span></div>
         </div>
+      </div>
+
+      <div class="case-card reveal" data-n="psy" style="--rev-delay:60ms">
+        <div class="tag-row"><span class="pill">Психология · Коучинг</span></div>
+        <h3>Nurture-воронка «Психология Денег»</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> отток аудитории на этапе прогрева.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> многоканальная закупка (Telegram, FB Ads) и оптимизация онбординга.</p>
+        <div class="impact">
+          <div class="r"><b>1016</b><span>лидов, top-of-funnel</span></div>
+          <div class="r"><b>27–41₽</b><span>CAC · цена привлечения</span></div>
+          <div class="r"><b>24.7%</b><span>CR подписки на экспертов</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-psych.png" alt="Отчёт по марафону Психология Денег"></div>
+        <div class="proof-cap">Скриншот отчёта: приход на канал, стоимость подписчика, активность аудитории</div>
+      </div>
+
+      <div class="case-card reveal" data-n="psy" style="--rev-delay:120ms">
+        <div class="tag-row"><span class="pill">Психология &amp; Гипноз</span></div>
+        <h3>Монетизация эксперта-гипнолога: заявки с 4-го дня</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> нерегулярный контент, ноль новых подписчиков и заявок с блога (Zero Organic Growth).</p>
+        <p class="solution"><b>Growth Solution (решение):</b> автоматизированная контент-воронка — лид-магнит с трипваером, посты-карусели, Telegram-бот на BotHelp со сквозной аналитикой.</p>
+        <div class="impact">
+          <div class="r"><b>4-й день</b><span>Time-to-Value · первые целевые заявки</span></div>
+          <div class="r"><b>171,9 тыс.</b><span>просмотров после теста (было 59,9 тыс.)</span></div>
+          <div class="r"><b>+250</b><span>заявок с 7 постов за неделю</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/case-hypnosis-1.jpg" alt="До/после: рост просмотров и заявок"></div>
+        <div class="proof-cap">Тестовая неделя: рост просмотров, взаимодействий и подписчиков до/после</div>
+        <a class="cta ghost" style="align-self:flex-start;margin-top:4px" href="cases/hypnosis-expert.html">Читать кейс полностью →</a>
+      </div>
+
+      <div class="case-card reveal" data-n="b2b" style="--rev-delay:180ms">
+        <div class="tag-row"><span class="pill">Офлайн-мероприятия &amp; Творческие ниши</span></div>
+        <h3>Танцевальный эксперт: от 0 заявок с блога к входящим запросам в директ</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> миллионы просмотров развлекательного контента — 0 заявок с блога, набор в группу только через выступления на чужих площадках.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> воронка «целевые карусели → бесплатный урок → продающий сайт тренинга → скрипт продаж».</p>
+        <div class="impact">
+          <div class="r"><b>0 → заявки</b><span>блог впервые стал каналом продаж</span></div>
+          <div class="r"><b>0₽</b><span>рекламный бюджет — рост на смысле контента</span></div>
+          <div class="r"><b>сама</b><span>аудитория инициирует диалог по кодовому слову</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/case-relationships-do-posle.jpg" alt="До/после: развлекательный контент против целевых постов"></div>
+        <div class="proof-cap">До: комментарии только на визуал, 0 заявок. После: живые обсуждения и входящие запросы в директ</div>
+        <a class="cta ghost" style="align-self:flex-start;margin-top:4px" href="cases/dance-expert.html">Читать кейс полностью →</a>
+      </div>
+
+      <div class="case-card reveal" data-n="psy" style="--rev-delay:240ms">
+        <div class="tag-row"><span class="pill">Психология &amp; Личный бренд &amp; Офлайн-события</span></div>
+        <h3>«Квантовые разборы»: запуск офлайн-мероприятия нового формата с нуля</h3>
+        <p class="bottleneck"><b>Bottleneck (проблема):</b> сильный эксперт (10 лет практики, 5000+ клиентов), но продажи мероприятий — хаотично через сторис, без базы и системы.</p>
+        <p class="solution"><b>Growth Solution (решение):</b> авторская концепция продукта «3D-сканирование с трёх подходов» + воронка «карусели → кодовые слова → Telegram-бот» + продающий сайт с динамическим ценообразованием.</p>
+        <div class="impact">
+          <div class="r"><b>~200</b><span>заинтересованных откликов с 4 постов</span></div>
+          <div class="r"><b>74–98</b><span>комментариев с кодовыми словами под постом</span></div>
+          <div class="r"><b>продукт с нуля</b><span>концепция, название, команда из 3 экспертов</span></div>
+        </div>
+        <div class="proof-shot" onclick="openLightbox(this)"><img src="images/case-kuzmich-infographic.jpg" alt="Кейс: система сбора заинтересованной базы через контент и Telegram-бота"></div>
+        <div class="proof-cap">Люди оставляют кодовые слова в комментариях и переходят в личные сообщения</div>
+        <a class="cta ghost" style="align-self:flex-start;margin-top:4px" href="cases/quantum-razbory.html">Читать кейс полностью →</a>
       </div>
 
     </div>
@@ -401,7 +466,7 @@ footer{padding:36px 0;text-align:center;color:var(--faint);font-size:.8rem}
     <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Product Portfolio — Продукты</span></div>
     <h2 class="section-title reveal">Собственные <em class="hl">IT-продукты</em></h2>
     <div class="product-card reveal">
-      <div class="proof-shot" onclick="openLightbox(this)"><img src="proof-topkontent.png" alt="TopKontent — SaaS продукт"></div>
+      <div class="proof-shot" onclick="openLightbox(this)"><img src="images/proof-topkontent.png" alt="TopKontent — SaaS продукт"></div>
       <div class="product-copy">
         <h3>TopKontent — B2C SaaS</h3>
         <p>Платформа для поиска вирусного контента: парсинг и аналитика постов по нишам, freemium-модель монетизации. Плюс AI-бот <a href="https://t.me/TopKont_bot" target="_blank">@TopKont_bot</a> в Telegram для автоматизации анализа контента.</p>
