@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс: Growth-стратегия марафонов «Онлайн-поликлиника» — Виктория Щетинина</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101010;--card:#1A1A1A;--card2:#222222;--border:rgba(255,255,255,.08);--glow:#2D0A3F;--accent:#E8372C;--accent-hover:#FF5A4E;--violet:#A855F7;--text:#FFFFFF;--muted:#CCCCCC;--faint:#888888}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:Manrope,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:var(--accent)}
+.container{max-width:820px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-weight:800;line-height:1.15}
+em.hl{font-style:normal;color:var(--violet)}
+.topbar{position:sticky;top:0;background:rgba(16,16,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.topbar .container{display:flex;align-items:center;padding:18px 32px}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font:600 .85rem Manrope}
+.back:hover{color:var(--text)}
+header.hero{padding:64px 0 40px}
+.pill{display:inline-flex;align-items:center;gap:6px;font:700 .68rem/1 Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3);padding:.4rem .8rem;border-radius:100px;margin-bottom:20px}
+h1{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:20px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:680px}
+article{padding-bottom:80px}
+article h2{font-size:1.5rem;margin:52px 0 18px;color:var(--text)}
+article h2 span.num{color:var(--violet);margin-right:10px}
+article p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+article strong{color:var(--text)}
+.metric-row{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;flex:1;min-width:160px}
+.metric b{display:block;font:800 1.5rem Manrope;color:var(--violet);margin-bottom:4px}
+.metric span{font:600 .68rem Manrope;color:var(--faint);text-transform:uppercase}
+.arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.arch-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:20px}
+.arch-card b{display:block;color:var(--violet);font-size:.95rem;margin-bottom:8px}
+.arch-card span{color:var(--muted);font-size:.85rem}
+.proof-shot{border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden;margin:20px 0 8px;cursor:zoom-in}
+.proof-shot img{width:100%;display:block}
+.proof-cap{font-size:.8rem;color:var(--faint);margin-bottom:20px}
+.proof-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ul.bullets{margin:0 0 16px 0;padding-left:20px;color:var(--muted)}
+ul.bullets li{margin-bottom:10px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:999;padding:40px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px}
+.final{background:var(--card2);text-align:center;border-top:1px solid var(--border);padding:64px 0;border-radius:14px}
+.final h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:16px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font:700 .8rem/1 Manrope;letter-spacing:.04em;padding:1rem 2rem;border-radius:8px;text-decoration:none}
+.cta:hover{background:var(--accent-hover)}
+@media(max-width:600px){.container{padding:0 20px}.metric-row,.arch-grid,.proof-pair{grid-template-columns:1fr;flex-direction:column}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="container"><a class="back" href="../Виктория Шет - визитка.html">← Назад к кейсам</a></div></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="pill">Медицина &amp; Инфобизнес</span>
+    <h1>Growth-стратегия тематических марафонов для врачей: «Онлайн-поликлиника»</h1>
+    <p class="lead">Масштабируемая система роста, которую Виктория выстроила как <em class="hl">Product &amp; Growth Architect</em> — от идеи и контентной стратегии до 7715+ подписчиков по цене от 2,2₽ и ROI 1:5–1:10 для экспертов.</p>
+  </div>
+</header>
+
+<article class="container">
+
+  <h2><span class="num">01</span>Введение: масштабируемая система роста</h2>
+  <p>В условиях высокой стоимости прямого трафика на экспертные блоги, тематические марафоны становятся мощным инструментом привлечения и прогрева целевой аудитории. Кейс «Онлайн-поликлиника» — пример реализации комплексной Growth-системы, которая позволяет врачам и медицинским экспертам получать поток лояльных подписчиков по экстремально низкой цене, выстраивая долгосрочные отношения с аудиторией.</p>
+  <p>Основная задача — создать механику, обеспечивающую массовый приток целевых пользователей (<strong>Top-of-Funnel</strong>) и их эффективное удержание (<strong>Retention</strong>) внутри экосистемы марафона. Виктория выступила как <strong>Product &amp; Growth Architect</strong> проекта — спроектировала механику от идеи до готовой воронки, отвечая и за продукт, и за рост.</p>
+
+  <h2><span class="num">02</span>Проблема (Bottleneck): дорогой подписчик, низкая вовлечённость</h2>
+  <ul class="bullets">
+    <li><strong>Высокий CAC:</strong> привлечение одного подписчика в узкоспециализированный медицинский блог через стандартный таргет может достигать 150–300₽.</li>
+    <li><strong>Сложность прогрева:</strong> холодная аудитория неохотно подписывается на экспертов и ещё менее охотно покупает их услуги без этапа формирования доверия.</li>
+    <li><strong>Отсутствие системы удержания:</strong> большинство рекламных кампаний работают на разовый приток, не создавая базы для повторных касаний.</li>
+  </ul>
+
+  <h2><span class="num">03</span>Growth Solution: архитектура марафона</h2>
+  <p>Для проекта была разработана архитектура, основанная на принципе виральности и многоканального распределения трафика.</p>
+  <div class="arch-grid">
+    <div class="arch-card"><b>Main Channel</b><span>Основной хаб для контента и взаимодействия с аудиторией.</span></div>
+    <div class="arch-card"><b>Reserve Channel</b><span>Страховочный актив для сохранения аудитории и отказоустойчивости.</span></div>
+    <div class="arch-card"><b>Bot Ecosystem</b><span>Telegram-боты для онбординга, проверки подписок на экспертов и сегментации базы.</span></div>
+  </div>
+  <p>Дополнительно — оптимизация стоимости привлечения через протестированные рекламные связки и партнёрские сети, а также фокус не только на количестве (Gross Adds), но и на качестве: выделение ядра активных подписчиков, готовых к взаимодействию и покупкам.</p>
+  <p><strong>Роль Product &amp; Growth Architect</strong> в проекте включала: разработку идеи и механики марафона, контентную стратегию для всех каналов, создание рекламных материалов, организацию неденежных розыгрышей для виральности, проведение прямых эфиров с экспертами и сбор Email-базы для долгосрочного удержания аудитории.</p>
+
+  <h2><span class="num">04</span>Результаты (Impact): рекордные показатели</h2>
+  <div class="metric-row">
+    <div class="metric"><b>5 490</b><span>подписчиков на основной аккаунт</span></div>
+    <div class="metric"><b>2 225</b><span>подписчиков на резервный аккаунт</span></div>
+    <div class="metric"><b>2,2–5,2₽</b><span>CAC, в 30–50 раз ниже рынка</span></div>
+    <div class="metric"><b>748</b><span>сверхактивных лоялистов в базе</span></div>
+    <div class="metric"><b>1:5–1:10</b><span>ROI для экспертов-участников</span></div>
+  </div>
+  <p>Создана воспроизводимая модель «Онлайн-поликлиники», которую можно масштабировать на различные медицинские специализации и смежные ниши.</p>
+  <div class="proof-pair">
+    <div><div class="proof-shot" onclick="openLightbox(this)"><img src="../images/case-online-poliklinika-1.jpg" alt="До/после: рост подписчиков online_poliklinika"></div><div class="proof-cap">Основной аккаунт: рост с 3 601 до 9 092 подписчиков</div></div>
+    <div><div class="proof-shot" onclick="openLightbox(this)"><img src="../images/case-online-poliklinika-2.jpg" alt="До/после: рост подписчиков резервного аккаунта"></div><div class="proof-cap">Резервный аккаунт: рост с 23 до 2 225 подписчиков</div></div>
+  </div>
+
+  <h2><span class="num">05</span>Заключение: марафон как инструмент доминирования в нише</h2>
+  <p>Кейс «Онлайн-поликлиника» доказывает, что правильно спроектированный тематический марафон — это не просто рекламная кампания, а полноценная Growth-машина. Она позволяет экспертам обходить проблему дорогого трафика, быстро собирать многотысячную лояльную аудиторию и закладывать фундамент для стабильных продаж высокочековых продуктов и услуг. А роль <strong>Product &amp; Growth Architect</strong> — спроектировать эту машину целиком: от идеи и контента до итогового ROI для каждого эксперта-участника.</p>
+
+  <div class="final">
+    <h2>Хотите внедрить систему марафонов для своего проекта?</h2>
+    <a class="cta" href="https://t.me/vikashet" target="_blank">Записаться на стратегическую сессию →</a>
+  </div>
+
+</article>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img" src="" alt=""></div>
+
+<script>
+function openLightbox(el){const src=el.querySelector('img').src;document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
+</script>
+</body>
+</html>

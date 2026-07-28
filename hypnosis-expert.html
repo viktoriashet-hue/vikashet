@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс: Монетизация эксперта-гипнолога — Виктория Щетинина</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101010;--card:#1A1A1A;--card2:#222222;--border:rgba(255,255,255,.08);--glow:#2D0A3F;--accent:#E8372C;--accent-hover:#FF5A4E;--violet:#A855F7;--text:#FFFFFF;--muted:#CCCCCC;--faint:#888888}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:Manrope,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:var(--accent)}
+.container{max-width:820px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-weight:800;line-height:1.15}
+em.hl{font-style:normal;color:var(--violet)}
+.topbar{position:sticky;top:0;background:rgba(16,16,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.topbar .container{display:flex;align-items:center;padding:18px 32px}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font:600 .85rem Manrope}
+.back:hover{color:var(--text)}
+header.hero{padding:64px 0 40px}
+.pill{display:inline-flex;align-items:center;gap:6px;font:700 .68rem/1 Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3);padding:.4rem .8rem;border-radius:100px;margin-bottom:20px}
+h1{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:20px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:680px}
+article{padding-bottom:80px}
+article h2{font-size:1.5rem;margin:52px 0 18px;color:var(--text)}
+article h2 span.num{color:var(--violet);margin-right:10px}
+article p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+article strong{color:var(--text)}
+.metric-row{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;flex:1;min-width:160px}
+.metric b{display:block;font:800 1.4rem Manrope;color:var(--violet);margin-bottom:4px}
+.metric span{font:600 .68rem Manrope;color:var(--faint);text-transform:uppercase}
+.sys-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0}
+.sys-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:20px}
+.sys-card b{display:block;color:var(--violet);font-size:.95rem;margin-bottom:8px}
+.sys-card span{color:var(--muted);font-size:.85rem}
+.funnel{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.funnel .stage{flex:1;min-width:150px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.funnel .stage b{display:block;color:var(--violet);font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.funnel .stage span{display:block;color:var(--muted);font-size:.85rem;margin-bottom:4px}
+.proof-shot{border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden;margin:20px 0 8px;cursor:zoom-in}
+.proof-shot img{width:100%;display:block}
+.proof-cap{font-size:.8rem;color:var(--faint);margin-bottom:20px}
+.proof-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ul.bullets{margin:0 0 16px 0;padding-left:20px;color:var(--muted)}
+ul.bullets li{margin-bottom:10px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:999;padding:40px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px}
+.final{background:var(--card2);text-align:center;border-top:1px solid var(--border);padding:64px 0;border-radius:14px}
+.final h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:16px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font:700 .8rem/1 Manrope;letter-spacing:.04em;padding:1rem 2rem;border-radius:8px;text-decoration:none}
+.cta:hover{background:var(--accent-hover)}
+@media(max-width:600px){.container{padding:0 20px}.metric-row,.sys-grid,.funnel,.proof-pair{flex-direction:column;grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="container"><a class="back" href="../Виктория Шет - визитка.html">← Назад к кейсам</a></div></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="pill">Психология &amp; Гипноз</span>
+    <h1>Монетизация эксперта-гипнолога: от мёртвого контента к автоматизированной системе заявок</h1>
+    <p class="lead">Как эксперт по психологии и гипнозу получил целевые заявки уже на 4-й день работы новой системы — без роста рекламного бюджета.</p>
+  </div>
+</header>
+
+<article class="container">
+
+  <h2><span class="num">01</span>Введение: экспертность не равна клиентам</h2>
+  <p>В нише психологии и гипноза особенно остро стоит проблема: глубокая экспертность специалиста никак не конвертируется в поток клиентов, если контент выходит хаотично, а блог не выстроен как система. Аудитория читает, но не подписывается и не оставляет заявки — и эксперт остаётся один на один с «мёртвым» блогом.</p>
+
+  <h2><span class="num">02</span>Проблема (Bottleneck): Zero Organic Growth</h2>
+  <ul class="bullets">
+    <li><strong>Нерегулярный контент:</strong> публикации выходили без системы и контент-плана.</li>
+    <li><strong>Ноль новых подписчиков:</strong> блог не рос органически — просмотры не конвертировались в аудиторию.</li>
+    <li><strong>Ноль заявок:</strong> даже вовлечённые читатели не доходили до целевого действия.</li>
+    <li><strong>Отсутствие базы:</strong> не было накопительного актива (email/Telegram) для повторных касаний.</li>
+  </ul>
+
+  <h2><span class="num">03</span>Growth Solution: четыре подсистемы</h2>
+  <div class="sys-grid">
+    <div class="sys-card"><b>1. Лид-магнит с трипваером</b><span>Бесплатный продукт с встроенной микро-продажей — монетизация уже на первом шаге воронки.</span></div>
+    <div class="sys-card"><b>2. Контент-стратегия «посты-карусели»</b><span>Формат, который системно повышает досматриваемость, сохранения и целевые комментарии.</span></div>
+    <div class="sys-card"><b>3. Telegram-бот на BotHelp</b><span>Автоматический онбординг, выдача лид-магнита и сегментация базы без ручной работы.</span></div>
+    <div class="sys-card"><b>4. Сквозная аналитика</b><span>Связка «пост → заявка → выручка» для прозрачных решений по контенту.</span></div>
+  </div>
+
+  <h2><span class="num">04</span>Архитектура воронки</h2>
+  <div class="funnel">
+    <div class="stage"><b>TOFU</b><span>Посты-карусели</span><span>Reach, Views</span></div>
+    <div class="stage"><b>MOFU</b><span>Лид-магнит + бот BotHelp</span><span>Подписка, выдача материала</span></div>
+    <div class="stage"><b>BOFU</b><span>Трипваер внутри лид-магнита</span><span>Первая покупка, заявка</span></div>
+    <div class="stage"><b>Retention</b><span>База в Telegram-боте</span><span>LTV, повторные касания</span></div>
+  </div>
+
+  <h2><span class="num">05</span>Результаты (Impact)</h2>
+  <div class="metric-row">
+    <div class="metric"><b>4-й день</b><span>Time-to-Value · первые целевые заявки</span></div>
+    <div class="metric"><b>171,9 тыс.</b><span>просмотров, было 59,9 тыс.</span></div>
+    <div class="metric"><b>+250</b><span>заявок с 7 постов за неделю</span></div>
+    <div class="metric"><b>85</b><span>заявок с 2-х постов-каруселей</span></div>
+  </div>
+  <p>Тестовая неделя (публикации раз в 2 дня) показала кратный рост вовлечённости: взаимодействия выросли с 880 до 5,9 тыс., новые подписчики — с 22 до 68 за пост. Воронка вышла на самоокупаемость уже на этапе трипваера, а Telegram-бот сформировал накопительную базу для долгосрочного LTV.</p>
+  <div class="proof-pair">
+    <div><div class="proof-shot" onclick="openLightbox(this)"><img src="../images/case-hypnosis-1.jpg" alt="До/после: рост просмотров и заявок"></div><div class="proof-cap">До/после тестовой недели: просмотры, взаимодействия, подписчики</div></div>
+    <div><div class="proof-shot" onclick="openLightbox(this)"><img src="../images/case-hypnosis-2.jpg" alt="+250 заявок с 7 постов за неделю"></div><div class="proof-cap">+250 заявок с 7 постов за неделю — комментарии с кодовым словом «Опора»</div></div>
+  </div>
+  <div class="proof-shot" onclick="openLightbox(this)"><img src="../images/case-hypnosis-3.jpg" alt="85 заявок с 2-х постов-каруселей"></div>
+  <div class="proof-cap">85 заявок с 2-х постов-каруселей — контент, который системно работает на заявки</div>
+
+  <h2><span class="num">06</span>Заключение: система вместо хаоса</h2>
+  <p>Кейс доказывает: даже в «мягких» нишах — психологии, гипнозе, коучинге — экспертность превращается в клиентов только через системную архитектуру воронки. Лид-магнит с трипваером, контент-стратегия, автоматизация в боте и сквозная аналитика работают вместе — и результат становится предсказуемым, а не случайным.</p>
+
+  <div class="final">
+    <h2>Хотите такую же систему заявок для вашей практики?</h2>
+    <a class="cta" href="https://t.me/vikashet" target="_blank">Записаться на стратегическую сессию →</a>
+  </div>
+
+</article>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img" src="" alt=""></div>
+
+<script>
+function openLightbox(el){const src=el.querySelector('img').src;document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
+</script>
+</body>
+</html>
