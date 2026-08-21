@@ -15,12 +15,14 @@ em.hl{font-style:normal;color:var(--violet)}
 em.hl2{font-style:normal;color:var(--accent)}
 
 /* LANG SWITCHER */
-.langbar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:flex-end;padding:14px 32px;background:linear-gradient(to bottom,rgba(16,16,16,.92),rgba(16,16,16,0));pointer-events:none}
+.langbar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 32px;background:linear-gradient(to bottom,rgba(16,16,16,.92),rgba(16,16,16,0));pointer-events:none}
 .langbar nav{display:flex;gap:4px;background:rgba(26,26,26,.9);border:1px solid var(--border);border-radius:100px;padding:4px;backdrop-filter:blur(10px);pointer-events:auto}
 .langbar a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:32px;padding:.3rem .7rem;border-radius:100px;font:700 .74rem Manrope;letter-spacing:.06em;color:var(--muted);text-decoration:none;transition:background .15s,color .15s}
 .langbar a:hover{color:#fff;background:rgba(255,255,255,.07)}
 .langbar a[aria-current=true]{background:var(--violet);color:#fff}
 .langbar a:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.blog-link{pointer-events:auto;display:inline-flex;align-items:center;min-height:32px;padding:.3rem .9rem;border-radius:100px;font:700 .74rem Manrope;letter-spacing:.06em;color:var(--text);background:rgba(26,26,26,.9);border:1px solid var(--border);backdrop-filter:blur(10px);text-decoration:none;transition:border-color .15s}
+.blog-link:hover{border-color:var(--violet);color:#fff}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:radial-gradient(ellipse 60% 55% at 78% 15%,var(--glow) 0%,transparent 70%),radial-gradient(ellipse 45% 40% at 5% 95%,var(--glow) 0%,transparent 70%),var(--bg)}
