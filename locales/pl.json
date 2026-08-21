@@ -1,0 +1,595 @@
+{
+ "lang": "pl",
+ "htmlLang": "pl",
+ "locale": "pl-PL",
+ "meta": {
+  "title": "Viktoria Shchetinina — Growth Marketing Manager | Systemy pozyskiwania i konwersji",
+  "desc": "Portfolio Viktorii Shchetininy: growth marketing, pozyskiwanie klientów, konwersja i strategia treści dla firm usługowych oraz marek eksperckich."
+ },
+ "switcher": {
+  "aria": "Język strony"
+ },
+ "hero": {
+  "badge": "Growth Marketing Manager · ponad 9 lat doświadczenia",
+  "h1": "Buduję <em class=\"hl\">systemy pozyskiwania i konwersji</em>, które zamieniają treści oraz płatny ruch w <em class=\"hl2\">mierzalny popyt</em>",
+  "lead": "Strategia growth dla firm usługowych i marek eksperckich: pozyskiwanie, aktywacja, monetyzacja i retencja. Ponad 500 tys. użytkowników pozyskanych w kampaniach płatnych i organicznych. Twórczyni TopKontent — SaaS B2C. Pracuję na metrykach CAC (koszt pozyskania klienta), LTV (wartość klienta w czasie), retencji, ROAS (zwrot z wydatków reklamowych) i konwersji lejka.",
+  "cta1": "Zobacz wybrane case studies",
+  "cta2": "Porozmawiajmy o projekcie",
+  "availability": "Jestem otwarta na zdalne projekty z zakresu growth marketingu, strategii treści i lead generation w Polsce oraz Europie."
+ },
+ "traction": {
+  "eyebrow": "Skala i wyniki",
+  "title": "Skala pracy <em class=\"hl\">w liczbach</em>",
+  "stats": [
+   {
+    "v": "500 000+",
+    "l": "użytkowników pozyskanych z płatnego ruchu (reklamy + twórcy)"
+   },
+   {
+    "v": "350 000+",
+    "l": "użytkowników pozyskanych organicznie w social media"
+   },
+   {
+    "v": "67+",
+    "l": "zrealizowanych kampanii growth"
+   },
+   {
+    "v": "15 000",
+    "l": "osób wprowadzonych do jednego lejka w 7 dni"
+   },
+   {
+    "v": "od 0,5 €",
+    "l": "koszt pozyskania obserwującego"
+   },
+   {
+    "v": "od 5 €",
+    "l": "koszt leada"
+   },
+   {
+    "v": "od 30 €",
+    "l": "koszt pozyskania klienta"
+   }
+  ]
+ },
+ "trusted": {
+  "eyebrow": "Zaufali mi",
+  "title": "Czołowi eksperci, którzy <em class=\"hl\">rośli w moich projektach</em>",
+  "subsWord": "tys. obserwujących",
+  "who": [
+   {
+    "img": "who-diet-nutriciolog.png",
+    "n": "Dietetyk i nutricjonista",
+    "s": "184"
+   },
+   {
+    "img": "who-probuzhdayushiy-couch.png",
+    "n": "Coach transformacyjny",
+    "s": "413"
+   },
+   {
+    "img": "who-baronova-irina.png",
+    "n": "Irina Baronova",
+    "s": "691"
+   },
+   {
+    "img": "who-kvant-psiholog.png",
+    "n": "Psycholog kwantowy",
+    "s": "956"
+   },
+   {
+    "img": "who-dietolog.png",
+    "n": "Dietetyk",
+    "s": "957"
+   },
+   {
+    "img": "who-zhenskoe-zdorovie.png",
+    "n": "Ekspertka zdrowia kobiet",
+    "s": "32"
+   },
+   {
+    "img": "who-endokrinolog.png",
+    "n": "Endokrynolog",
+    "s": "169"
+   },
+   {
+    "img": "who-umniy-fitnes.png",
+    "n": "Smart fitness",
+    "s": "164"
+   },
+   {
+    "img": "who-zhivoy-collagen.png",
+    "n": "Living Collagen",
+    "s": "539"
+   },
+   {
+    "img": "who-dietolog-trener.png",
+    "n": "Dietetyk i trener",
+    "s": "192"
+   }
+  ],
+  "growthLabel": "Co napędziło wielokrotny wzrost?",
+  "growthText": "Kampanie growth oparte na treściach, które przyciągają właściwą grupę odbiorców i prowadzą ją aż do zapytań o usługi i produkty eksperta.",
+  "proofs": [
+   {
+    "img": "case-money-1.jpg",
+    "alt": "Raport kampanii: nowi obserwujący i aktywność kanału"
+   },
+   {
+    "img": "case-money-2.jpg",
+    "alt": "Raport kampanii: zaangażowanie odbiorców"
+   },
+   {
+    "img": "case-pohudei-1.jpg",
+    "alt": "Raport kampanii szkoły odchudzania"
+   },
+   {
+    "img": "case-money-3.jpg",
+    "alt": "Raport kampanii szkoły finansów"
+   },
+   {
+    "img": "case-pohudei-2.jpg",
+    "alt": "Raport kampanii szkoły odchudzania"
+   },
+   {
+    "img": "case-protelo.jpg",
+    "alt": "Raport kampanii PROtelo"
+   },
+   {
+    "img": "case-protrend.jpg",
+    "alt": "Raport kampanii PROTrend Content"
+   },
+   {
+    "img": "case-financial-freedom.jpg",
+    "alt": "Raport kampanii kursu Financial Freedom"
+   }
+  ]
+ },
+ "testimonials": {
+  "eyebrow": "Opinie",
+  "title": "Co mówią <em class=\"hl\">klienci</em>",
+  "items": [
+   {
+    "q": "„Koszt leada spadł niemal trzykrotnie, a konwersja na wizytę wzrosła z 20% do 35% — po raz pierwszy widzimy przejrzysty lejek od kliknięcia do płatności”.",
+    "w": "Centrum medyczne",
+    "p": "Kemerowo"
+   },
+   {
+    "q": "„W 3 dni wygenerowaliśmy przychód, na który wcześniej potrzebowaliśmy miesiąca. Średnia wartość zamówienia wzrosła 7-krotnie — a odbiorcy byli zadowoleni”.",
+    "w": "Twórczyni kulinarna",
+    "p": "@mamangurman"
+   },
+   {
+    "q": "„Viktoria zbudowała lejek, który sam przyciąga właściwych odbiorców — bez chaotycznych wydatków na reklamę”.",
+    "w": "Ekspertka",
+    "p": "Psychologia pieniędzy"
+   }
+  ]
+ },
+ "cases": {
+  "eyebrow": "Case studies",
+  "title": "Wyzwanie → <em class=\"hl\">podejście</em> → rezultat",
+  "lead": "Rdzeniem mojej pracy są frameworki growth dopasowane do branży: od EdTech i psychologii po ochronę zdrowia i B2B.",
+  "tabs": [
+   {
+    "id": "all",
+    "l": "Wszystkie case studies"
+   },
+   {
+    "id": "psy",
+    "l": "Psychologia i coaching"
+   },
+   {
+    "id": "zozh",
+    "l": "Zdrowie i żywienie"
+   },
+   {
+    "id": "fin",
+    "l": "Finanse i edukacja online"
+   },
+   {
+    "id": "med",
+    "l": "Ochrona zdrowia i offline"
+   },
+   {
+    "id": "b2b",
+    "l": "B2B i social media"
+   }
+  ],
+  "lbl": {
+   "challenge": "Wyzwanie:",
+   "approach": "Podejście:",
+   "readMore": "Przeczytaj pełne case study →"
+  },
+  "items": [
+   {
+    "cat": "med",
+    "pill": "Ochrona zdrowia i HealthTech",
+    "t": "Analityka end-to-end i strategia growth dla sieci klinik medycznych",
+    "c": "nieprzejrzysty lejek, nieefektywny ruch i wysoki koszt leada w dwóch klinikach.",
+    "a": "wdrożenie analityki end-to-end, optymalizacja kanałów reklamowych i ścieżki klienta.",
+    "i": [
+     {
+      "v": "−92%",
+      "l": "CAC (koszt leada) po optymalizacji"
+     },
+     {
+      "v": "35%",
+      "l": "CR (konwersja na wizytę), było 10–20%"
+     },
+     {
+      "v": "×3–13",
+      "l": "wzrost przychodu na klinikę miesięcznie"
+     }
+    ],
+    "img": "proof-kemerovo.png",
+    "alt": "Dashboard lejka kliniki",
+    "cap": "Dashboard lejka: koszt leada, konwersje i przychód przed/po",
+    "link": "medical-center.html"
+   },
+   {
+    "cat": "med",
+    "pill": "Ochrona zdrowia i HealthTech",
+    "t": "System wzrostu „Klinika online”: kampanie treściowe dla lekarzy",
+    "c": "wysoki CAC i niskie zaangażowanie zimnych odbiorców w kanałach eksperckich z obszaru medycyny.",
+    "a": "kompletna architektura kampanii — od koncepcji do zwrotu 1:5–1:10 dla uczestniczących ekspertów.",
+    "i": [
+     {
+      "v": "7 715+",
+      "l": "nowych obserwujących (kanał główny + zapasowy)"
+     },
+     {
+      "v": "30–50×",
+      "l": "niższy CAC niż benchmark rynkowy"
+     },
+     {
+      "v": "748",
+      "l": "wysoce aktywnych, lojalnych odbiorców"
+     },
+     {
+      "v": "1:5–1:10",
+      "l": "ROI dla uczestniczących ekspertów"
+     }
+    ],
+    "img": "case-online-poliklinika-1.jpg",
+    "alt": "Przed/po: wzrost liczby obserwujących kanału kliniki online",
+    "cap": "Przed/po kampanii: wzrost obserwujących i zaangażowania ekspertów-prelegentów",
+    "link": "doctors-marathon.html"
+   },
+   {
+    "cat": "zozh",
+    "pill": "Zdrowie i żywienie",
+    "t": "Wzrost LTV twórczyni kulinarnej @mamangurman",
+    "c": "niski ARPU (średni przychód na użytkownika), wypalona baza odbiorców.",
+    "a": "customer development — badanie odbiorców (3 800 odpowiedzi) i wprowadzenie nowego produktu high-ticket.",
+    "i": [
+     {
+      "v": "×7",
+      "l": "wzrost ARPU (średniej wartości zamówienia)"
+     },
+     {
+      "v": "3 dni",
+      "l": "na wygenerowanie wcześniejszego miesięcznego przychodu"
+     },
+     {
+      "v": "41%",
+      "l": "CR (konwersja) na liście zapisów"
+     }
+    ],
+    "img": "proof-testimonial.png",
+    "alt": "Opinia klientki o wdrożeniu",
+    "cap": "Opinia klientki na czacie zespołu w Telegramie",
+    "link": ""
+   },
+   {
+    "cat": "b2b",
+    "pill": "B2B / social media",
+    "t": "Monetyzacja ekspertki coachingowej od zera",
+    "c": "zero odbiorców i zero przychodu na start.",
+    "a": "szybkie zbudowanie lejka MVP opartego na produktach low-ticket.",
+    "i": [
+     {
+      "v": "1,5 miesiąca",
+      "l": "od startu do pierwszego istotnego przychodu"
+     },
+     {
+      "v": "0 → MRR",
+      "l": "od zera do powtarzalnego przychodu miesięcznego"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "zozh",
+    "pill": "Zdrowie i edukacja online",
+    "t": "Kampania „Szkoła odchudzania”: wzrost do 35,8 tys. obserwujących",
+    "c": "sezonowo wysoki CAC w branży odchudzania i ryzyko utraty odbiorców przy ograniczeniu konta głównego.",
+    "a": "ta sama architektura kanał główny + zapasowy, konkursy bez nagród pieniężnych i dietetycy zaproszeni jako prelegenci.",
+    "i": [
+     {
+      "v": "28,1 tys. → 35,8 tys.",
+      "l": "wzrost obserwujących konta głównego"
+     },
+     {
+      "v": "4 638",
+      "l": "obserwujących konta zapasowego"
+     },
+     {
+      "v": "33 041",
+      "l": "wizyt w profilu w 7 dni"
+     }
+    ],
+    "img": "case-pohydei-do-posle-1.jpg",
+    "alt": "Przed/po: wzrost obserwujących kanału szkoły odchudzania",
+    "cap": "Przed/po kampanii: wzrost obserwujących i zaangażowania",
+    "link": "pohydei-marathon.html"
+   },
+   {
+    "cat": "fin",
+    "pill": "Finanse",
+    "t": "Autorski lejek product-led (case ROI)",
+    "c": "długi cykl sprzedaży i drogi zimny ruch.",
+    "a": "mikroprodukt jako mechanizm zwrotu kosztów ruchu.",
+    "i": [
+     {
+      "v": "600%",
+      "l": "ROAS (zwrot z wydatków reklamowych)"
+     },
+     {
+      "v": "×6",
+      "l": "przychód względem inwestycji w reklamę"
+     },
+     {
+      "v": "7–10 dni",
+      "l": "okres zwrotu inwestycji"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "b2b",
+    "pill": "B2B / social media",
+    "t": "Obniżenie CAC w branży usług social media",
+    "c": "przegrzana aukcja reklamowa z rynkowym CAC wyższym 2,5–4×.",
+    "a": "testy A/B kreacji i grup odbiorców.",
+    "i": [
+     {
+      "v": "2,5–4×",
+      "l": "niższy CAC niż benchmark rynkowy"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychologia · coaching",
+    "t": "Kampania product-led „Przeznaczenie”",
+    "c": "niska konwersja zimnego ruchu i wysoki koszt leada.",
+    "a": "mechanika wiralowa oparta na bocie Telegram rozdzielającym ruch między uczestniczących ekspertów.",
+    "i": [
+     {
+      "v": "1 477",
+      "l": "aktywacji bota"
+     },
+     {
+      "v": "93%",
+      "l": "retencja w 7. dniu"
+     },
+     {
+      "v": "+1 323",
+      "l": "nowych obserwujących kanału"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychologia · coaching",
+    "t": "Lejek nurture „Psychologia pieniędzy”",
+    "c": "odpływ odbiorców na etapie budowania zaufania.",
+    "a": "wielokanałowy zakup mediów (Telegram, FB Ads) i optymalizacja onboardingu.",
+    "i": [
+     {
+      "v": "1 016",
+      "l": "leadów na górze lejka"
+     },
+     {
+      "v": "niski CAC",
+      "l": "wyraźnie poniżej benchmarków branżowych"
+     },
+     {
+      "v": "24,7%",
+      "l": "CR (konwersja) na obserwowanie ekspertów"
+     }
+    ],
+    "img": "proof-psych.png",
+    "alt": "Raport kampanii: Psychologia pieniędzy",
+    "cap": "Zrzut raportu: nowi obserwujący kanału, koszt obserwującego, aktywność odbiorców",
+    "link": ""
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychologia i hipnoterapia",
+    "t": "Monetyzacja hipnoterapeuty: zapytania od 4. dnia",
+    "c": "nieregularne treści, zero nowych obserwujących i zero zapytań z kanału eksperckiego (brak wzrostu organicznego).",
+    "a": "zautomatyzowany lejek treściowy — lead magnet z tripwire, posty-karuzele i bot Telegram na BotHelp z analityką end-to-end.",
+    "i": [
+     {
+      "v": "4. dzień",
+      "l": "time-to-value · pierwsze wartościowe zapytania"
+     },
+     {
+      "v": "171,9 tys.",
+      "l": "wyświetleń po tygodniu testowym (z 59,9 tys.)"
+     },
+     {
+      "v": "+250",
+      "l": "zapytań z 7 postów w ciągu tygodnia"
+     }
+    ],
+    "img": "case-hypnosis-1.jpg",
+    "alt": "Przed/po: wzrost wyświetleń i zapytań",
+    "cap": "Tydzień testowy: wzrost wyświetleń, interakcji i obserwujących przed/po",
+    "link": "hypnosis-expert.html"
+   },
+   {
+    "cat": "b2b",
+    "pill": "Wydarzenia offline i branże kreatywne",
+    "t": "Ekspertka tańca: od zera zapytań do zgłoszeń przychodzących w wiadomościach",
+    "c": "miliony wyświetleń treści rozrywkowych — zero zapytań z kanału; nabór do grupy odbywał się wyłącznie przez występy na obcych scenach.",
+    "a": "lejek „ukierunkowane karuzele → darmowa lekcja → landing page treningu → skrypt sprzedaży”.",
+    "i": [
+     {
+      "v": "0 → zapytania",
+      "l": "kanał po raz pierwszy stał się kanałem sprzedaży"
+     },
+     {
+      "v": "0 €",
+      "l": "budżet reklamowy — wzrost oparty na sensie treści"
+     },
+     {
+      "v": "przychodzące",
+      "l": "odbiorcy sami zaczynają rozmowę hasłem"
+     }
+    ],
+    "img": "case-relationships-do-posle.jpg",
+    "alt": "Przed/po: treści rozrywkowe kontra posty ukierunkowane",
+    "cap": "Przed: komentarze tylko o wizualnej stronie, zero zapytań. Po: realne dyskusje i zgłoszenia przychodzące w wiadomościach",
+    "link": "dance-expert.html"
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychologia, marka osobista i wydarzenia offline",
+    "t": "„Rozbiory kwantowe”: uruchomienie nowego formatu wydarzenia offline od zera",
+    "c": "silna ekspertka (10 lat praktyki, 5 000+ klientów), ale sprzedaż wydarzeń prowadzona chaotycznie przez stories, bez bazy odbiorców i bez systemu.",
+    "a": "autorska koncepcja produktu — „skan 3D z trzech perspektyw” — plus lejek „karuzele → hasła → bot Telegram” i landing page z dynamicznym cennikiem.",
+    "i": [
+     {
+      "v": "~200",
+      "l": "wartościowych odpowiedzi z pierwszych 4 postów"
+     },
+     {
+      "v": "74–98",
+      "l": "komentarzy z hasłem pod jednym postem"
+     },
+     {
+      "v": "produkt od zera",
+      "l": "koncepcja, nazwa i zespół 3 ekspertów"
+     }
+    ],
+    "img": "case-kuzmich-infographic.jpg",
+    "alt": "Infografika case study: budowanie zaangażowanej bazy odbiorców przez treści i bota Telegram",
+    "cap": "Odbiorcy zostawiają hasła w komentarzach i przechodzą do wiadomości prywatnych",
+    "link": "quantum-razbory.html"
+   }
+  ]
+ },
+ "highload": {
+  "eyebrow": "Projekty o dużej skali",
+  "title": "Praca z <em class=\"hl\">twórcami o milionowych zasięgach</em>",
+  "lead": "Nie tylko startupy — projekty eksperckie na poziomie enterprise, gdzie błąd w zakupie mediów jest bardzo kosztowny.",
+  "items": [
+   {
+    "v": "956k",
+    "l": "Psycholog kwantowy"
+   },
+   {
+    "v": "957k",
+    "l": "Dietetyk"
+   },
+   {
+    "v": "691k",
+    "l": "Irina Baronova"
+   },
+   {
+    "v": "539k",
+    "l": "Living Collagen"
+   },
+   {
+    "v": "413k",
+    "l": "Coach transformacyjny"
+   }
+  ]
+ },
+ "product": {
+  "eyebrow": "Portfolio produktowe",
+  "title": "Moje własne <em class=\"hl\">produkty cyfrowe</em>",
+  "name": "TopKontent — SaaS B2C",
+  "desc": "Platforma do wyszukiwania wiralowych treści: parsowanie i analityka postów według branż, model monetyzacji freemium. Do tego bot AI <a href=\"https://t.me/TopKont_bot\" target=\"_blank\" rel=\"noopener\">@TopKont_bot</a> na Telegramie do zautomatyzowanej analizy treści.",
+  "stats": [
+   {
+    "v": "3.2M+",
+    "l": "przeanalizowanych postów"
+   },
+   {
+    "v": "150+",
+    "l": "branż w bazie"
+   },
+   {
+    "v": "8 400+",
+    "l": "użytkowników"
+   }
+  ]
+ },
+ "services": {
+  "eyebrow": "Usługi",
+  "title": "Formy <em class=\"hl\">współpracy</em>",
+  "note": "Zakres projektu i wycena są ustalane indywidualnie.",
+  "items": [
+   {
+    "n": "Sesja diagnostyczna",
+    "p": "",
+    "d": "60 minut. Znalezienie wąskich gardeł w lejku i audyt aktualnych ustawień reklamowych."
+   },
+   {
+    "n": "Audyt strategii growth",
+    "p": "",
+    "d": "1,5–2 godziny. Pogłębiony audyt ścieżki klienta — żeby budżet nie szedł na testowanie hipotez bez szans na wynik."
+   },
+   {
+    "n": "Kompleksowe prowadzenie growth",
+    "p": "",
+    "d": "Architektura monetyzacji od zera: od zakupu mediów do zautomatyzowanych lejków retencyjnych."
+   }
+  ]
+ },
+ "calc": {
+  "enabled": false
+ },
+ "contactBlock": {
+  "eyebrow": "Następny krok",
+  "title": "Potrzebujesz jaśniejszego obrazu swojego <em class=\"hl\">lejka pozyskiwania klientów</em>?",
+  "text": "Wyślij link do projektu, aktualne metryki i wyzwanie biznesowe. Przeanalizuję kontekst i zaproponuję najbardziej użyteczny kolejny krok.",
+  "button": "Porozmawiajmy o projekcie"
+ },
+ "final": {
+  "title": "Gotowi obniżyć <em class=\"hl2\">CAC</em> i skalować <em class=\"hl\">przychód</em>?",
+  "lead": "Wyślij link do projektu, aktualne metryki i wyzwanie — odpowiem z diagnozą lejka.",
+  "fProject": "Link do projektu",
+  "phProject": "instagram.com/... lub strona",
+  "fMetrics": "Aktualne metryki (jeśli są)",
+  "phMetrics": "CAC, zasięgi, konwersja...",
+  "fTask": "Wyzwanie",
+  "phTask": "Co chcesz rozwinąć albo naprawić?",
+  "submit": "Wyślij przez Telegram →",
+  "tgProject": "Projekt",
+  "tgMetrics": "Metryki",
+  "tgTask": "Wyzwanie"
+ },
+ "contacts": {
+  "languages": "Języki: rosyjski — ojczysty; angielski — komunikacja pisemna; polski — poziom podstawowy.",
+  "linkedin": "https://www.linkedin.com/in/viktoria-shchetinina-699017156/"
+ },
+ "footer": "© Viktoria Shchetinina · Growth Marketing Manager · <a href=\"https://www.linkedin.com/in/viktoria-shchetinina-699017156/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> · <a href=\"https://t.me/vikashet\" target=\"_blank\" rel=\"noopener\">Telegram</a>"
+}

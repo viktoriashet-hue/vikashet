@@ -1,0 +1,595 @@
+{
+ "lang": "en",
+ "htmlLang": "en",
+ "locale": "en-US",
+ "meta": {
+  "title": "Viktoria Shchetinina — Growth Marketing Manager | Acquisition & Conversion Systems",
+  "desc": "Growth marketing portfolio of Viktoria Shchetinina: acquisition, conversion, content-led growth and measurable funnel strategy for expert-led and service businesses."
+ },
+ "switcher": {
+  "aria": "Site language"
+ },
+ "hero": {
+  "badge": "Growth Marketing Manager · 9+ years of experience",
+  "h1": "I build <em class=\"hl\">acquisition and conversion systems</em> that turn content and paid traffic into <em class=\"hl2\">measurable demand</em>",
+  "lead": "Growth strategy for expert-led and service businesses: acquisition, activation, monetisation and retention. 500K+ users acquired across paid and organic campaigns. Creator of TopKontent, a B2C SaaS. I work with CAC (customer acquisition cost), LTV (lifetime value), retention, ROAS (return on ad spend) and funnel conversion.",
+  "cta1": "View selected case studies",
+  "cta2": "Discuss a project",
+  "availability": "Open to remote growth marketing, content strategy and lead-generation projects across Poland and Europe."
+ },
+ "traction": {
+  "eyebrow": "Traction &amp; Scale",
+  "title": "Scale of work <em class=\"hl\">in numbers</em>",
+  "stats": [
+   {
+    "v": "500 000+",
+    "l": "users acquired via paid traffic (ads + creators)"
+   },
+   {
+    "v": "350 000+",
+    "l": "users acquired organically on social"
+   },
+   {
+    "v": "67+",
+    "l": "growth campaigns delivered"
+   },
+   {
+    "v": "15 000",
+    "l": "people brought into one funnel in 7 days"
+   },
+   {
+    "v": "from €0.5",
+    "l": "cost per acquired follower"
+   },
+   {
+    "v": "from €5",
+    "l": "cost per lead"
+   },
+   {
+    "v": "from €30",
+    "l": "cost per acquired customer"
+   }
+  ]
+ },
+ "trusted": {
+  "eyebrow": "Trusted by",
+  "title": "Top experts who <em class=\"hl\">grew inside my projects</em>",
+  "subsWord": "K followers",
+  "who": [
+   {
+    "img": "who-diet-nutriciolog.png",
+    "n": "Dietitian &amp; nutritionist",
+    "s": "184"
+   },
+   {
+    "img": "who-probuzhdayushiy-couch.png",
+    "n": "Transformational coach",
+    "s": "413"
+   },
+   {
+    "img": "who-baronova-irina.png",
+    "n": "Irina Baronova",
+    "s": "691"
+   },
+   {
+    "img": "who-kvant-psiholog.png",
+    "n": "Quantum psychologist",
+    "s": "956"
+   },
+   {
+    "img": "who-dietolog.png",
+    "n": "Dietitian",
+    "s": "957"
+   },
+   {
+    "img": "who-zhenskoe-zdorovie.png",
+    "n": "Women's health expert",
+    "s": "32"
+   },
+   {
+    "img": "who-endokrinolog.png",
+    "n": "Endocrinologist",
+    "s": "169"
+   },
+   {
+    "img": "who-umniy-fitnes.png",
+    "n": "Smart fitness",
+    "s": "164"
+   },
+   {
+    "img": "who-zhivoy-collagen.png",
+    "n": "Living Collagen",
+    "s": "539"
+   },
+   {
+    "img": "who-dietolog-trener.png",
+    "n": "Dietitian &amp; trainer",
+    "s": "192"
+   }
+  ],
+  "growthLabel": "What drove the multiple growth?",
+  "growthText": "Content-led growth campaigns that attract the right audience and nurture it all the way to enquiries for the expert’s services and products.",
+  "proofs": [
+   {
+    "img": "case-money-1.jpg",
+    "alt": "Campaign report: new followers and channel activity"
+   },
+   {
+    "img": "case-money-2.jpg",
+    "alt": "Campaign report: audience engagement"
+   },
+   {
+    "img": "case-pohudei-1.jpg",
+    "alt": "Weight-loss school campaign report"
+   },
+   {
+    "img": "case-money-3.jpg",
+    "alt": "Money school campaign report"
+   },
+   {
+    "img": "case-pohudei-2.jpg",
+    "alt": "Weight-loss school campaign report"
+   },
+   {
+    "img": "case-protelo.jpg",
+    "alt": "PROtelo campaign report"
+   },
+   {
+    "img": "case-protrend.jpg",
+    "alt": "PROTrend Content campaign report"
+   },
+   {
+    "img": "case-financial-freedom.jpg",
+    "alt": "Financial Freedom course campaign report"
+   }
+  ]
+ },
+ "testimonials": {
+  "eyebrow": "Testimonials",
+  "title": "What <em class=\"hl\">clients say</em>",
+  "items": [
+   {
+    "q": "“Cost per lead dropped almost threefold and appointment conversion grew from 20% to 35% — for the first time we can see a transparent funnel from click to payment.”",
+    "w": "Medical centre",
+    "p": "Kemerovo"
+   },
+   {
+    "q": "“In 3 days we generated the revenue that used to take a month. Average order value grew 7× — and the audience was happy.”",
+    "w": "Food creator",
+    "p": "@mamangurman"
+   },
+   {
+    "q": "“Viktoria built a funnel that brings in the right followers on its own — without chaotic ad spend.”",
+    "w": "Expert",
+    "p": "Money psychology"
+   }
+  ]
+ },
+ "cases": {
+  "eyebrow": "Case Studies",
+  "title": "Challenge → <em class=\"hl\">approach</em> → outcome",
+  "lead": "The core of my work is growth frameworks adapted to the niche: from EdTech and psychology to healthcare and B2B.",
+  "tabs": [
+   {
+    "id": "all",
+    "l": "All cases"
+   },
+   {
+    "id": "psy",
+    "l": "Psychology & Coaching"
+   },
+   {
+    "id": "zozh",
+    "l": "Health & Nutrition"
+   },
+   {
+    "id": "fin",
+    "l": "Finance & Online education"
+   },
+   {
+    "id": "med",
+    "l": "Healthcare & Offline"
+   },
+   {
+    "id": "b2b",
+    "l": "B2B & Social media"
+   }
+  ],
+  "lbl": {
+   "challenge": "Growth challenge:",
+   "approach": "Approach:",
+   "readMore": "Read the full case study →"
+  },
+  "items": [
+   {
+    "cat": "med",
+    "pill": "Healthcare & HealthTech",
+    "t": "End-to-end analytics and growth strategy for a network of medical clinics",
+    "c": "an opaque funnel, inefficient traffic and a high cost per lead across two clinics.",
+    "a": "implementing end-to-end analytics, optimising ad channels and the customer journey.",
+    "i": [
+     {
+      "v": "−92%",
+      "l": "CAC (cost per lead) after optimisation"
+     },
+     {
+      "v": "35%",
+      "l": "CR (conversion to appointment), was 10–20%"
+     },
+     {
+      "v": "×3–13",
+      "l": "revenue growth per clinic, per month"
+     }
+    ],
+    "img": "proof-kemerovo.png",
+    "alt": "Clinic funnel dashboard",
+    "cap": "Funnel dashboard: cost per lead, conversion rates and revenue before/after",
+    "link": "medical-center.html"
+   },
+   {
+    "cat": "med",
+    "pill": "Healthcare & HealthTech",
+    "t": "“Online Clinic” growth system: content-led campaigns for doctors",
+    "c": "high CAC and low engagement of cold audiences in medical expert channels.",
+    "a": "a complete campaign architecture — from concept to a 1:5–1:10 ROI for participating experts.",
+    "i": [
+     {
+      "v": "7 715+",
+      "l": "new followers (main + reserve channel)"
+     },
+     {
+      "v": "30–50×",
+      "l": "lower CAC than the market benchmark"
+     },
+     {
+      "v": "748",
+      "l": "highly active loyal followers"
+     },
+     {
+      "v": "1:5–1:10",
+      "l": "ROI for participating experts"
+     }
+    ],
+    "img": "case-online-poliklinika-1.jpg",
+    "alt": "Before/after: follower growth of the online clinic channel",
+    "cap": "Before/after the campaign: follower growth and engagement of expert speakers",
+    "link": "doctors-marathon.html"
+   },
+   {
+    "cat": "zozh",
+    "pill": "Health & Nutrition",
+    "t": "LTV growth for food creator @mamangurman",
+    "c": "low ARPU (average revenue per user), a burnt-out subscriber base.",
+    "a": "customer development — an audience survey (3 800 responses) and the launch of a new high-ticket product.",
+    "i": [
+     {
+      "v": "×7",
+      "l": "ARPU (average order value) growth"
+     },
+     {
+      "v": "3 days",
+      "l": "to generate a previous full month of revenue"
+     },
+     {
+      "v": "41%",
+      "l": "CR (conversion) on the waiting list"
+     }
+    ],
+    "img": "proof-testimonial.png",
+    "alt": "Client feedback about the launch",
+    "cap": "Client feedback in the launch team’s Telegram chat",
+    "link": ""
+   },
+   {
+    "cat": "b2b",
+    "pill": "B2B / Social media",
+    "t": "Monetising a coaching expert from zero",
+    "c": "zero audience and zero revenue at the start.",
+    "a": "rapid assembly of an MVP funnel built on low-ticket products.",
+    "i": [
+     {
+      "v": "1.5 months",
+      "l": "from launch to first significant revenue"
+     },
+     {
+      "v": "0 → MRR",
+      "l": "from zero to recurring monthly revenue"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "zozh",
+    "pill": "Health & Online education",
+    "t": "“Weight-loss school” campaign: growth to 35.8K followers",
+    "c": "seasonal high CAC in the weight-loss niche and the risk of losing the audience if the main account is restricted.",
+    "a": "the same main + reserve channel architecture, non-cash giveaways and dietitians invited as expert speakers.",
+    "i": [
+     {
+      "v": "28.1K → 35.8K",
+      "l": "follower growth on the main account"
+     },
+     {
+      "v": "4 638",
+      "l": "followers on the reserve account"
+     },
+     {
+      "v": "33 041",
+      "l": "profile visits in 7 days"
+     }
+    ],
+    "img": "case-pohydei-do-posle-1.jpg",
+    "alt": "Before/after: follower growth of the weight-loss school channel",
+    "cap": "Before/after the campaign: follower growth and engagement",
+    "link": "pohydei-marathon.html"
+   },
+   {
+    "cat": "fin",
+    "pill": "Finance",
+    "t": "Proprietary product-led funnel (ROI case)",
+    "c": "a long sales cycle and expensive cold traffic.",
+    "a": "a micro-product funnel used as a traffic payback mechanism.",
+    "i": [
+     {
+      "v": "600%",
+      "l": "ROAS (return on ad spend)"
+     },
+     {
+      "v": "×6",
+      "l": "revenue against ad investment"
+     },
+     {
+      "v": "7–10 days",
+      "l": "payback period"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "b2b",
+    "pill": "B2B / Social media",
+    "t": "Reducing CAC in the social-media services niche",
+    "c": "an overheated auction with market CAC 2.5–4× higher.",
+    "a": "A/B testing of creatives and audiences.",
+    "i": [
+     {
+      "v": "2.5–4×",
+      "l": "lower CAC than the market benchmark"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychology · Coaching",
+    "t": "Product-led campaign “Purpose”",
+    "c": "low conversion of cold traffic and a high cost per lead.",
+    "a": "a viral mechanic built on a Telegram bot distributing traffic between participating experts.",
+    "i": [
+     {
+      "v": "1 477",
+      "l": "bot activations"
+     },
+     {
+      "v": "93%",
+      "l": "retention on day 7"
+     },
+     {
+      "v": "+1 323",
+      "l": "new channel followers"
+     }
+    ],
+    "img": "",
+    "alt": "",
+    "cap": "",
+    "link": ""
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychology · Coaching",
+    "t": "Nurture funnel “Money Psychology”",
+    "c": "audience drop-off at the nurturing stage.",
+    "a": "multi-channel media buying (Telegram, FB Ads) and onboarding optimisation.",
+    "i": [
+     {
+      "v": "1 016",
+      "l": "top-of-funnel leads"
+     },
+     {
+      "v": "low CAC",
+      "l": "well below niche benchmarks"
+     },
+     {
+      "v": "24.7%",
+      "l": "CR (conversion) to following the experts"
+     }
+    ],
+    "img": "proof-psych.png",
+    "alt": "Campaign report: Money Psychology",
+    "cap": "Report screenshot: new channel followers, cost per follower, audience activity",
+    "link": ""
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychology & Hypnotherapy",
+    "t": "Monetising a hypnotherapist: enquiries from day 4",
+    "c": "irregular content, zero new followers and zero enquiries from the expert channel (zero organic growth).",
+    "a": "an automated content funnel — a lead magnet with a tripwire, carousel posts and a Telegram bot on BotHelp with end-to-end analytics.",
+    "i": [
+     {
+      "v": "day 4",
+      "l": "time-to-value · first qualified enquiries"
+     },
+     {
+      "v": "171.9K",
+      "l": "views after the test week (from 59.9K)"
+     },
+     {
+      "v": "+250",
+      "l": "enquiries from 7 posts in one week"
+     }
+    ],
+    "img": "case-hypnosis-1.jpg",
+    "alt": "Before/after: growth in views and enquiries",
+    "cap": "Test week: growth in views, interactions and followers before/after",
+    "link": "hypnosis-expert.html"
+   },
+   {
+    "cat": "b2b",
+    "pill": "Offline events & Creative niches",
+    "t": "Dance expert: from zero enquiries to inbound requests in DMs",
+    "c": "millions of views on entertainment content — zero enquiries from the channel; group intake happened only through appearances at third-party venues.",
+    "a": "a funnel of “targeted carousels → free class → training landing page → sales script”.",
+    "i": [
+     {
+      "v": "0 → enquiries",
+      "l": "the channel became a sales channel for the first time"
+     },
+     {
+      "v": "€0",
+      "l": "ad budget — growth driven by content meaning"
+     },
+     {
+      "v": "inbound",
+      "l": "audience starts the conversation via a code word"
+     }
+    ],
+    "img": "case-relationships-do-posle.jpg",
+    "alt": "Before/after: entertainment content versus targeted posts",
+    "cap": "Before: comments only about visuals, zero enquiries. After: real discussions and inbound requests in DMs",
+    "link": "dance-expert.html"
+   },
+   {
+    "cat": "psy",
+    "pill": "Psychology & Personal brand & Offline events",
+    "t": "“Quantum Sessions”: launching a new offline event format from scratch",
+    "c": "a strong expert (10 years of practice, 5 000+ clients), but event sales ran chaotically through stories, with no audience base and no system.",
+    "a": "an original product concept — a “3D scan from three perspectives” — plus a funnel of “carousels → code words → Telegram bot” and a landing page with dynamic pricing.",
+    "i": [
+     {
+      "v": "~200",
+      "l": "qualified responses from the first 4 posts"
+     },
+     {
+      "v": "74–98",
+      "l": "code-word comments under a single post"
+     },
+     {
+      "v": "product from scratch",
+      "l": "concept, name and a team of 3 experts"
+     }
+    ],
+    "img": "case-kuzmich-infographic.jpg",
+    "alt": "Case infographic: collecting an engaged audience base via content and a Telegram bot",
+    "cap": "People leave code words in the comments and move into direct messages",
+    "link": "quantum-razbory.html"
+   }
+  ]
+ },
+ "highload": {
+  "eyebrow": "High-Load Experience",
+  "title": "Working with <em class=\"hl\">million-follower creators</em>",
+  "lead": "Not only startups — enterprise-level creator businesses, where a media-buying mistake is extremely costly.",
+  "items": [
+   {
+    "v": "956k",
+    "l": "Quantum psychologist"
+   },
+   {
+    "v": "957k",
+    "l": "Dietitian"
+   },
+   {
+    "v": "691k",
+    "l": "Irina Baronova"
+   },
+   {
+    "v": "539k",
+    "l": "Living Collagen"
+   },
+   {
+    "v": "413k",
+    "l": "Transformational coach"
+   }
+  ]
+ },
+ "product": {
+  "eyebrow": "Product Portfolio",
+  "title": "My own <em class=\"hl\">software products</em>",
+  "name": "TopKontent — B2C SaaS",
+  "desc": "A platform for finding viral content: parsing and analytics of posts by niche, with a freemium monetisation model. Plus an AI bot, <a href=\"https://t.me/TopKont_bot\" target=\"_blank\" rel=\"noopener\">@TopKont_bot</a>, on Telegram for automated content analysis.",
+  "stats": [
+   {
+    "v": "3.2M+",
+    "l": "posts analysed"
+   },
+   {
+    "v": "150+",
+    "l": "niches in the database"
+   },
+   {
+    "v": "8 400+",
+    "l": "users"
+   }
+  ]
+ },
+ "services": {
+  "eyebrow": "Services",
+  "title": "Ways <em class=\"hl\">to work together</em>",
+  "note": "Project scope and pricing are discussed individually.",
+  "items": [
+   {
+    "n": "Troubleshooting Session",
+    "p": "",
+    "d": "60 minutes. Finding the bottlenecks in your funnel and auditing current ad set-ups."
+   },
+   {
+    "n": "Growth Strategy Audit",
+    "p": "",
+    "d": "1.5–2 hours. A deep audit of the customer journey — so budget is not spent testing hypotheses that cannot work."
+   },
+   {
+    "n": "Full-Stack Growth Management",
+    "p": "",
+    "d": "Monetisation architecture from scratch: from media buying to automated retention funnels."
+   }
+  ]
+ },
+ "calc": {
+  "enabled": false
+ },
+ "contactBlock": {
+  "eyebrow": "Next step",
+  "title": "Need a clearer view of your <em class=\"hl\">acquisition funnel</em>?",
+  "text": "Share your project, current metrics and growth challenge. I will review the context and suggest the most useful next step.",
+  "button": "Discuss a project"
+ },
+ "final": {
+  "title": "Ready to reduce <em class=\"hl2\">CAC</em> and scale <em class=\"hl\">revenue</em>?",
+  "lead": "Share a link to your project, your current metrics and your challenge — I will reply with a funnel diagnosis.",
+  "fProject": "Link to your project",
+  "phProject": "instagram.com/... or website",
+  "fMetrics": "Current metrics (if any)",
+  "phMetrics": "CAC, reach, conversion rate...",
+  "fTask": "Your challenge",
+  "phTask": "What do you want to grow or fix?",
+  "submit": "Send via Telegram →",
+  "tgProject": "Project",
+  "tgMetrics": "Metrics",
+  "tgTask": "Challenge"
+ },
+ "contacts": {
+  "languages": "Languages: Russian — native; English — professional written communication; Polish — basic.",
+  "linkedin": "https://www.linkedin.com/in/viktoria-shchetinina-699017156/"
+ },
+ "footer": "© Viktoria Shchetinina · Growth Marketing Manager · <a href=\"https://www.linkedin.com/in/viktoria-shchetinina-699017156/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> · <a href=\"https://t.me/vikashet\" target=\"_blank\" rel=\"noopener\">Telegram</a>"
+}
