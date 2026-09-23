@@ -1,213 +1,263 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!--
+  Гайд «Claude Code в России» — контент Виктории Щетининой (из blog/claude-code.html),
+  переупакованный в механику степпера по ТЗ (guide-style-spec.md). Стиль и движок —
+  из workbook-stepper-template.html, цвета бренда (gold/sage/highlight). Контент не
+  сокращён и не выдуман — весь текст, команды, цены и кейсы перенесены дословно из
+  исходной статьи, только разбиты по шагам и переразмечены под компоненты.
+
+  Осознанные отступления от общего ТЗ воркбука (см. references к нему), под характер
+  именно ЭТОЙ статьи — это справочный гайд, а не курс с обязательствами:
+    - Гейтов (.gate, блокирующих «Дальше») нет вообще — в оригинале не было ни одного
+      обязательного действия для продолжения чтения, добавлять искусственный барьер
+      было бы отсебятиной.
+    - «С чего начать» (3 кнопки-пути) не прячет и не блокирует остальные шаги — как и
+      в оригинале, это подсказка порядка чтения через прыжки по карте, а не жёсткая
+      ветка с скрытием контента.
+    - Чек-лист первого дня и «Где теряют время» —بespoke-виджеты (не входят в
+      каноничную библиотеку ТЗ), переносят точное поведение оригинала: чек-лист
+      считает прогресс в localStorage без блокировки перехода, чипы раскрывают карточку
+      по клику.
+-->
+<!doctype html>
+<html lang="ru" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude Code для экспертов и психологов: установка, скиллы, аналоги в России — Виктория Щетинина</title>
-<meta name="description" content="Интерактивный гайд по Claude Code на русском: установка, CLAUDE.md, скиллы, MCP, аналоги для России и китайские ИИ с ценами, кейсы для психологов и экспертов.">
+<meta name="description" content="Интерактивный гайд-степпер по Claude Code на русском: установка, CLAUDE.md, скиллы, MCP, аналоги для России и китайские ИИ с ценами, кейсы для психологов и экспертов.">
 <link rel="canonical" href="https://viktoriashet-hue.github.io/vikashet/blog/claude-code.html">
 <link rel="alternate" hreflang="ru" href="https://viktoriashet-hue.github.io/vikashet/blog/claude-code.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://viktoriashet-hue.github.io/vikashet/blog/claude-code.html">
-<meta property="og:title" content="Claude Code для экспертов и психологов: интерактивный гайд">
+<meta property="og:title" content="Claude Code для экспертов и психологов: интерактивный гайд-степпер">
 <meta property="og:description" content="Установка, скиллы, аналоги для России, китайские ИИ с ценами и кейсы: как экономить время и получать заявки.">
 <meta property="og:image" content="https://viktoriashet-hue.github.io/vikashet/images/vika-hero-new.jpg">
 <meta property="article:published_time" content="2026-09-23">
+<meta property="article:modified_time" content="2026-09-23">
 <meta property="article:author" content="Виктория Щетинина">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Claude Code для экспертов и психологов: установка, скиллы, аналоги в России","description":"Интерактивный гайд по Claude Code на русском: установка, CLAUDE.md, скиллы, MCP, аналоги для России и китайские ИИ с ценами, кейсы для психологов и экспертов.","author":{"@type":"Person","name":"Виктория Щетинина","url":"https://viktoriashet-hue.github.io/vikashet/"},"datePublished":"2026-09-23","dateModified":"2026-09-23","inLanguage":"ru","mainEntityOfPage":"https://viktoriashet-hue.github.io/vikashet/blog/claude-code.html"}
+{"@context":"https://schema.org","@type":"Article","headline":"Claude Code для экспертов и психологов: установка, скиллы, аналоги в России","description":"Интерактивный гайд-степпер по Claude Code на русском: установка, CLAUDE.md, скиллы, MCP, аналоги для России и китайские ИИ с ценами, кейсы для психологов и экспертов.","author":{"@type":"Person","name":"Виктория Щетинина","url":"https://viktoriashet-hue.github.io/vikashet/"},"datePublished":"2026-09-23","dateModified":"2026-09-23","inLanguage":"ru","mainEntityOfPage":"https://viktoriashet-hue.github.io/vikashet/blog/claude-code.html"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://viktoriashet-hue.github.io/vikashet/"},{"@type":"ListItem","position":2,"name":"Блог","item":"https://viktoriashet-hue.github.io/vikashet/blog/"},{"@type":"ListItem","position":3,"name":"Гайд по Claude Code","item":"https://viktoriashet-hue.github.io/vikashet/blog/claude-code.html"}]}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.remove('no-js');</script>
 <style>
-:root{--bg:#101010;--card:#1A1A1A;--card2:#222222;--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);--accent:#E8372C;--accent-hover:#FF5A4E;--violet:#A855F7;--violet-dim:rgba(168,85,247,.12);--ok:#34D399;--text:#FFFFFF;--muted:#CCCCCC;--faint:#888888;color-scheme:dark}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
-.container{max-width:1120px;margin:0 auto;padding:0 32px}
-h1,h2,h3{font-weight:800;line-height:1.15;text-wrap:balance}
-.readbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:20;background:transparent}
-.readbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--accent))}
-.topbar{position:sticky;top:0;background:rgba(16,16,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
-.topbar .container{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
-.back{color:var(--muted);text-decoration:none;font:600 .85rem Manrope,system-ui,sans-serif}
-.back:hover{color:var(--text)}
-.topcta{font:700 .78rem Manrope,system-ui,sans-serif;color:#fff;background:var(--accent);padding:.55rem 1rem;border-radius:8px;text-decoration:none}
-.topcta:hover{background:var(--accent-hover)}
-.crumbs{color:var(--faint);font:600 .78rem Manrope,system-ui,sans-serif;margin-bottom:18px}
-.crumbs a{color:var(--faint);text-decoration:none}
-header.hero{padding:56px 0 36px}
-header.hero .container>*{max-width:820px}
-.pill{display:inline-flex;font:700 .68rem/1 Manrope,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:var(--violet-dim);border:1px solid rgba(168,85,247,.3);padding:.4rem .8rem;border-radius:100px;margin-bottom:20px}
-h1{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:20px}
-.lead{color:var(--muted);font-size:1.08rem;max-width:680px}
-.byline{color:var(--faint);font:600 .78rem Manrope,system-ui,sans-serif;margin-top:20px}
+:root{
+  --paper:#FBFBF9; --paper-2:#F3F3EF;
+  --ink-0:#0A0A0A; --ink-1:rgba(10,10,10,.74); --ink-2:rgba(10,10,10,.50); --ink-3:rgba(10,10,10,.30);
+  --line:rgba(10,10,10,.10); --line-2:rgba(10,10,10,.06);
+  --gold:#C8A96E; --sage:#7B9E87; --highlight:#DFC08A; --term:#0A0A0A;
+  --font-display:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+::selection{background:var(--highlight);color:var(--ink-0)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink-0);font:19px/1.6 var(--font-display);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+a{color:inherit}
+.kicker{display:flex;align-items:center;gap:10px;font:11px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.kicker .num{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 7px;border:1px solid var(--gold);border-radius:999px;font-size:10px}
+.kicker .ch{color:var(--ink-2)}
+.step{display:none;animation:rise .38s cubic-bezier(.2,.7,.3,1) both}
+.step.is-active{display:block}
+.no-js .step{display:block !important;animation:none}
+.no-js .cbar .cmap,.no-js .navdock,.no-js .map-wrap{display:none !important}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.step h2{font-size:clamp(28px,4.4vw,42px);font-weight:700;letter-spacing:-.04em;line-height:1.08;margin:18px 0 0;text-wrap:balance}
+.step h3{font-size:19px;font-weight:700;letter-spacing:-.02em;margin:30px 0 10px}
+.step .lede{font-size:19px;line-height:1.5;color:var(--ink-1);margin:18px 0 0;max-width:42em}
+.step p{font-size:17px;line-height:1.6;color:var(--ink-1);margin:14px 0 0;max-width:42em}
+.step ul,.step ol{margin:14px 0 0;padding-left:1.2em;color:var(--ink-1);font-size:17px;line-height:1.6;max-width:42em}
+.step li{margin-bottom:8px}
+.step strong{color:var(--ink-0)}
+.step code{font-family:var(--font-mono);font-size:.85em;background:var(--paper-2);border:1px solid var(--line-2);border-radius:4px;padding:1px 5px}
+.cover-badge{display:inline-block;font:600 0.68rem var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.28);padding:.4rem .8rem;border-radius:999px;margin-bottom:18px}
+.byline{margin-top:18px;font:500 14px var(--font-mono);color:var(--ink-3)}
 
-.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding-bottom:80px}
-@media (min-width:1080px){.layout{grid-template-columns:230px minmax(0,780px);justify-content:center}}
-.toc{align-self:start}
-@media (min-width:1080px){.toc{position:sticky;top:78px}}
-.toc-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
-.toc-box summary{cursor:pointer;font:800 .8rem Manrope,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);list-style:none}
-.toc-box summary::-webkit-details-marker{display:none}
-.toc ol{list-style:none;margin-top:12px;display:grid;gap:2px}
-.toc a{display:block;color:var(--faint);text-decoration:none;font:600 .84rem/1.35 Manrope,system-ui,sans-serif;padding:6px 10px;border-left:2px solid transparent;border-radius:0 6px 6px 0}
-.toc a:hover{color:var(--text)}
-.toc a.active{color:var(--text);border-left-color:var(--accent);background:rgba(232,55,44,.08)}
+.outcome{display:flex;gap:14px;margin:22px 0 0;padding:16px 20px;background:rgba(123,158,135,.09);border-left:2px solid var(--sage);border-radius:0 6px 6px 0;max-width:42em}
+.outcome p{margin:0;font-size:16px;color:var(--ink-1)}
+.note{margin:22px 0 0;padding:16px 20px;border-radius:6px;background:var(--paper-2);border:1px solid var(--line-2);font-size:16px;line-height:1.55;color:var(--ink-1);max-width:42em}
+.note .tag{display:block;font:10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px;color:var(--ink-2)}
+.note.tip{background:rgba(223,192,138,.35);border-color:var(--line);color:var(--ink-0)}
+.note.warn{background:rgba(200,169,110,.08);border-color:rgba(200,169,110,.28)}
+.note.warn .tag{color:var(--gold)}
+.note.sage{background:rgba(123,158,135,.09);border-color:rgba(123,158,135,.25)}
+.note.sage .tag{color:var(--sage)}
 
-article section{padding:8px 0 28px;border-bottom:1px solid var(--border);margin-bottom:28px}
-article h2{font-size:clamp(1.4rem,3vw,1.75rem);margin:20px 0 18px}
-article h3{font-size:1.12rem;margin:28px 0 10px}
-article p{color:var(--muted);margin-bottom:16px}
-article ul,article ol{color:var(--muted);margin:0 0 18px 22px}
-article li{margin-bottom:8px}
-article strong{color:var(--text)}
-.muted,p.muted{color:var(--faint);font-size:.95rem}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:var(--violet-dim);color:#D8B4FE;padding:.1em .4em;border-radius:4px}
-pre{position:relative;background:#0B0B0B;border:1px solid var(--border2);border-radius:10px;padding:16px 18px;margin:10px 0 20px;overflow-x:auto;font:400 .88rem/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#EDEDED}
-pre .os{display:block;font:700 .64rem/1 Manrope,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
-pre code{background:none;color:inherit;padding:0}
-.copy{position:absolute;top:10px;right:10px;background:var(--card2);border:1px solid var(--border2);color:var(--muted);font:700 .68rem/1 Manrope,system-ui,sans-serif;padding:.45rem .7rem;border-radius:6px;cursor:pointer}
-.copy:hover{color:#fff;border-color:var(--violet)}
+.ref{margin:22px 0 0;border:1px solid var(--line);border-radius:6px;overflow:hidden;max-width:42em}
+.ref .row{display:grid;grid-template-columns:11rem 1fr;gap:16px;padding:13px 18px;border-bottom:1px solid var(--line-2);font-size:15.5px;align-items:baseline}
+.ref .row:last-child{border-bottom:none}
+.ref .row:nth-child(odd){background:rgba(10,10,10,.016)}
+.ref .lb{font:11px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.ref .v{color:var(--ink-1)}
+@media(max-width:640px){.ref .row{grid-template-columns:1fr;gap:4px}}
 
-.note{background:var(--card);border-left:3px solid var(--violet);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
-.note.sage{border-left-color:var(--accent)}
-.note p{margin:0;font-size:.97rem}
-.table-wrap{overflow-x:auto;margin:6px 0 22px;border:1px solid var(--border);border-radius:12px}
-table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:520px}
-th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--muted)}
-th{font:800 .7rem/1.2 Manrope,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:var(--card)}
-tr:last-child td{border-bottom:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:10px 0 22px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
-.card h3{margin:0 0 6px;font-size:1rem}
-.card p{font-size:.9rem;margin:0}
-.tool{background:var(--card);border:1px solid var(--border);border-radius:14px;margin:12px 0}
-.tool>h3{margin:0;padding:18px 20px 0;font-size:1.15rem}
-.tool .by{color:var(--faint);font-size:.82rem;padding:2px 20px 16px}
-.tool dl{display:grid;grid-template-columns:9.5rem 1fr;gap:10px 18px;padding:0 20px 20px;border-top:1px solid var(--border);padding-top:16px}
-.tool dt{font:800 .66rem/1.7 Manrope,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--violet)}
-.tool dd{color:var(--muted);font-size:.95rem}
-@media (max-width:600px){.tool dl{grid-template-columns:1fr;gap:2px}.tool dd{margin-bottom:10px}}
-.case{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin:12px 0}
-.case h3{margin:0 0 12px}
-.case .row{display:grid;grid-template-columns:8.5rem 1fr;gap:8px 18px;font-size:.95rem;color:var(--muted)}
-.case .k{font:800 .66rem/1.8 Manrope,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--violet)}
-.case .k.res{color:var(--ok)}
-@media (max-width:600px){.case .row{grid-template-columns:1fr;gap:0}.case .row .v{margin-bottom:10px}}
-.inline-cta{margin:24px 0 6px;padding:22px;background:var(--card2);border:1px solid rgba(168,85,247,.3);border-radius:14px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-.inline-cta p{margin:0;max-width:430px}
-.inline-cta .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn,.cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font:700 .8rem/1 Manrope,system-ui,sans-serif;padding:.95rem 1.4rem;border-radius:8px;text-decoration:none;border:1px solid var(--accent)}
-.btn:hover,.cta:hover{background:var(--accent-hover)}
-.btn.ghost{background:transparent;color:var(--text);border-color:var(--border2)}
-.btn.ghost:hover{border-color:var(--violet);background:var(--violet-dim)}
+.tool-name{font-size:20px;font-weight:700;letter-spacing:-.02em;margin:26px 0 2px}
+.tool-by{font:12px var(--font-mono);color:var(--ink-3);margin-bottom:8px}
 
-/* path */
-.path{background:linear-gradient(160deg,#160c1f,#0d0d0d);border:1px solid rgba(168,85,247,.25)!important;border-radius:16px;padding:6px 22px 22px!important}
-.pathbtns{display:flex;flex-wrap:wrap;gap:10px}
-.pbtn,.chip,.tablist button{font:700 .85rem Manrope,system-ui,sans-serif;color:var(--muted);background:var(--card);border:1px solid var(--border2);border-radius:100px;padding:.6rem 1rem;cursor:pointer}
-.pbtn:hover,.chip:hover,.tablist button:hover{color:#fff;border-color:var(--violet)}
-.pbtn[aria-selected="true"],.chip[aria-pressed="true"],.tablist button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.pathout{margin-top:16px;background:rgba(0,0,0,.25);border-radius:12px;padding:16px 18px 4px}
-/* tabs */
-.tabs{margin:6px 0 20px}
-.tablist{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.tablist button{border-radius:8px}
-/* stuck */
-.hint{font-size:.92rem}
-.stuck{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.stuck-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px 4px;margin-bottom:24px}
-.stuck-card.empty{padding:16px 20px;color:var(--faint)}
-.stuck-card.empty p{margin:0;color:var(--faint)}
-.stuck-card .k{font:800 .66rem Manrope,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-.stuck-card .k.ok{color:var(--ok)}
-/* checklist */
-.progress-wrap{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.pbar{flex:1;height:8px;background:var(--card2);border-radius:100px;overflow:hidden}
-.pbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--ok));transition:width .3s}
-.pnum{font:700 .82rem Manrope,system-ui,sans-serif;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-.checklist{list-style:none;margin:0 0 16px!important;display:grid;gap:8px}
-.checklist li{margin:0}
-.checklist label{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;cursor:pointer;color:var(--muted)}
-.checklist input{margin-top:.35em;width:18px;height:18px;accent-color:var(--ok);flex-shrink:0}
-.checklist input:checked+span{color:var(--faint);text-decoration:line-through}
-.done-msg{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.3);border-radius:10px;padding:14px 16px}
+.pbox{margin:20px 0 0;border-radius:6px;overflow:hidden;background:var(--term);max-width:42em}
+.pbox-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.pbox-head .lbl{font:10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:rgba(251,251,249,.55)}
+.pcopy{font:10px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;background:rgba(255,255,255,.08);color:var(--paper);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 12px;transition:.15s}
+.pcopy.ok{background:var(--highlight);color:var(--term);border-color:var(--highlight)}
+.pbox pre{margin:0;padding:16px 18px;font:13.5px/1.65 var(--font-mono);color:#EDEDE8;white-space:pre-wrap;word-break:break-word}
 
-.tg-cta{background:var(--card2);border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:28px;margin:20px 0 28px}
-.tg-cta h3{color:var(--violet);margin:0 0 10px}
-.final{background:var(--card2);text-align:center;padding:48px 24px;border-radius:14px}
-.final h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin:0 0 14px}
-.sources{font-size:.82rem;color:var(--faint);margin-top:28px}
-.sources a{color:var(--faint)}
-@media(max-width:600px){.container{padding:0 16px}header.hero{padding:36px 0 24px}.path{padding:4px 16px 18px!important}.tg-cta{padding:22px}}
+.datatable{margin:22px 0 0;border:1px solid var(--line);border-radius:6px;overflow-x:auto;max-width:42em}
+.datatable table{width:100%;border-collapse:collapse;font-size:15px}
+.datatable th{text-align:left;font:11px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--paper-2);padding:12px 16px;border-bottom:1px solid var(--line)}
+.datatable td{padding:12px 16px;border-bottom:1px solid var(--line-2);color:var(--ink-1);vertical-align:top}
+.datatable tr:last-child td{border-bottom:none}
 
+.inside{margin:22px 0 0;display:grid;gap:12px;grid-template-columns:1fr 1fr;max-width:42em}
+.inside .it{padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:6px}
+.inside .it b{display:block;margin:0 0 4px;font-size:15px}
+.inside .it p{margin:0;font-size:13.5px;color:var(--ink-1)}
+@media(max-width:640px){.inside{grid-template-columns:1fr}}
+
+.jump-list{margin:20px 0 0;border:1px solid var(--line);border-radius:6px;padding:8px;max-width:42em;background:var(--paper-2)}
+.jump-list button{display:block;width:100%;text-align:left;background:none;border:none;padding:10px 12px;border-radius:4px;cursor:pointer;font:15px var(--font-display);color:var(--ink-1)}
+.jump-list button:hover{background:#fff}
+.jump-list button b{color:var(--gold);font:11px var(--font-mono);margin-right:8px}
+
+.choices2{display:grid;gap:12px;margin:22px 0 0;grid-template-columns:1fr 1fr 1fr;max-width:42em}
+.choice2{text-align:left;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;font:15px var(--font-display);color:var(--ink-0)}
+.choice2:hover{border-color:var(--ink-3)}
+.choice2.picked{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,169,110,.14)}
+@media(max-width:640px){.choices2{grid-template-columns:1fr}}
+
+.chips-row{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;max-width:42em}
+.chips-row button{font:12px var(--font-mono);letter-spacing:.04em;color:var(--ink-1);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:.55rem 1rem;cursor:pointer}
+.chips-row button[aria-pressed="true"]{background:var(--ink-0);color:var(--paper);border-color:var(--ink-0)}
+.stuck-panel{margin:14px 0 0;max-width:42em}
+.stuck-panel .card{padding:16px 20px;border-radius:6px;background:var(--paper-2);border:1px solid var(--line-2)}
+.stuck-panel .card .k{font:10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.stuck-panel .card .k.ok{color:var(--sage);margin-top:12px}
+.stuck-panel .card p{margin:0;font-size:15.5px;color:var(--ink-1)}
+.stuck-panel .empty{color:var(--ink-3);font-size:15px}
+
+.checklist-box{margin:20px 0 0;max-width:42em}
+.checklist-box .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.checklist-box .bar{flex:1;height:6px;background:var(--line);border-radius:999px;overflow:hidden}
+.checklist-box .bar span{display:block;height:100%;width:0;background:var(--sage);transition:width .3s}
+.checklist-box .num{font:12px var(--font-mono);color:var(--ink-2);white-space:nowrap}
+.checklist-box label{display:flex;gap:12px;align-items:flex-start;background:var(--paper-2);border:1px solid var(--line-2);border-radius:6px;padding:12px 14px;margin-bottom:8px;cursor:pointer}
+.checklist-box input{appearance:none;flex:0 0 auto;width:20px;height:20px;margin-top:1px;border:1.5px solid var(--ink-3);border-radius:5px;background:#fff;cursor:pointer;position:relative}
+.checklist-box input:checked{background:var(--sage);border-color:var(--sage)}
+.checklist-box input:checked::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg)}
+.checklist-box input:checked+span{color:var(--ink-2);text-decoration:line-through}
+.checklist-done{display:none;margin-top:8px;padding:14px 18px;background:rgba(123,158,135,.1);border:1px solid rgba(123,158,135,.3);border-radius:6px;font-size:15px}
+.checklist-done.show{display:block}
+
+.case-block{margin:24px 0 0;padding:18px 20px;border:1px solid var(--line);border-radius:6px;max-width:42em}
+.case-block h3{margin:0 0 10px;font-size:18px}
+
+.cta-block{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px clamp(1.25rem,4vw,2rem);margin:28px 0 0;max-width:42em}
+.cta-block h3{margin:0 0 8px;font-size:20px}
+.cta-block p{color:var(--ink-1)}
+.thanks-cta{display:inline-block;margin:14px 10px 0 0;padding:14px 22px;background:var(--ink-0);color:var(--paper)!important;text-decoration:none!important;border-radius:999px;font:11.5px var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
+.thanks-cta:hover{background:var(--gold)}
+.thanks-cta.ghost{background:none;color:var(--ink-0)!important;border:1px solid var(--line)}
+.sources{font-size:13px;color:var(--ink-3);margin-top:22px;max-width:42em}
+.sources a{color:var(--ink-2)}
+
+.cbar{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:14px;height:46px;padding:0 max(20px,calc(50% - 430px));background:rgba(251,251,249,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2)}
+.cbrand{font-weight:700;font-size:16px;letter-spacing:-.04em;text-decoration:none;color:var(--ink-0)} .cbrand .dot{color:var(--gold)}
+.cchap{flex:1;min-width:0;font:10.5px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cnum{font:11px var(--font-mono);letter-spacing:.06em}
+.cmap{width:30px;height:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;background:none;border:none;border-radius:6px;cursor:pointer}
+.cmap i{display:block;width:15px;height:1.5px;background:var(--ink-1)}
+.cprog{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--gold);transition:width .45s cubic-bezier(.2,.7,.3,1)}
+.stage{max-width:780px;margin:0 auto;padding:40px 24px 120px}
+.navdock{position:relative;display:flex;justify-content:center;align-items:center;margin:48px 0 0;padding-top:26px;border-top:1px solid var(--line-2)}
+.ndot{position:absolute;left:0;top:50%;margin-top:13px;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;background:none;border:1px solid var(--line);color:var(--ink-2);font:15px var(--font-mono);cursor:pointer}
+.ndot:disabled{opacity:0;pointer-events:none}
+.npill{height:52px;padding:0 40px;border-radius:999px;border:none;font:12.5px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;background:var(--ink-0);color:var(--paper);box-shadow:0 10px 26px -12px rgba(10,10,10,.5);cursor:pointer}
+.npill:hover{background:var(--gold)}
+.pagefoot{margin:16px auto 0;text-align:center;font:10.5px/1.7 var(--font-mono);color:var(--ink-3)}
+.map-wrap{position:fixed;inset:0;z-index:90;display:none} .map-wrap.open{display:block}
+.map-wrap .scrim{position:absolute;inset:0;background:rgba(10,10,10,.42);backdrop-filter:blur(3px)}
+.map{position:absolute;top:0;right:0;bottom:0;width:min(440px,92vw);background:var(--paper);border-left:1px solid var(--line);overflow-y:auto;padding:26px 26px 60px;animation:slidein .3s cubic-bezier(.2,.7,.3,1) both}
+@keyframes slidein{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.map .chp{font:10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin:20px 0 8px;padding-top:12px;border-top:1px solid var(--line-2)}
+.map .chp:first-child{margin-top:0;padding-top:0;border-top:none}
+.map button.jump{display:flex;gap:10px;width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:7px 10px;border-radius:5px;color:var(--ink-1);font:14.5px/1.35 var(--font-display)}
+.map button.jump .st{font:11px var(--font-mono);color:var(--ink-3);width:16px;flex:0 0 auto}
+.map button.jump.done .st{color:var(--sage)}
+.map button.jump.now{background:rgba(200,169,110,.1);color:var(--ink-0);font-weight:600}
+.map-foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--line-2);font-size:13px;color:var(--ink-2)}
+.map-foot .mlink{display:block;margin-top:9px;background:none;border:none;padding:0;text-align:left;font:12px var(--font-mono);color:var(--ink-1);cursor:pointer;text-decoration:underline}
+.map-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+footer.site-footer{margin-top:2rem;padding:2rem clamp(1.25rem,4vw,3rem);border-top:1px solid var(--line-2);color:var(--ink-3);font:500 13px var(--font-mono);text-align:center}
+
+@media(max-width:640px){
+  .cbar{height:44px} .cchap{display:none}
+  .stage{padding:26px 18px 96px}
+  .step h2{font-size:clamp(24px,8vw,32px)}
+  .pbox pre{font-size:12.5px}
+  .npill{height:50px;padding:0 32px} .ndot{width:40px;height:40px}
+  .choices2{grid-template-columns:1fr}
+}
 </style>
 </head>
-<body>
-<div class="readbar" aria-hidden="true"><span data-readbar></span></div>
-<div class="topbar"><div class="container"><a class="back" href="../index.html">← На главную</a><a class="topcta" href="https://t.me/vikashet" target="_blank" rel="noopener">Консультация</a></div></div>
+<body data-workbook-id="claude-code-guide-ru">
 
-<header class="hero">
-  <div class="container">
-    <p class="crumbs"><a href="../index.html">Главная</a> → <a href="index.html">Блог</a> → Гайд по Claude Code</p>
-    <span class="pill">Интерактивный гайд · ИИ-инструменты</span>
-    <h1>Claude Code для экспертов и психологов: установка, скиллы, аналоги в России</h1>
-    <p class="lead">Я маркетолог, не разработчик. Сайты, Telegram-боты, воронки и автоматизации для экспертов делаю с ИИ-агентами. Здесь — как начать с нуля, что настроить в первый день и какие процессы дают заявки и экономят время.</p>
-    <p class="byline">Виктория Щетинина · 23 сентября 2026 · ~20 минут</p>
-  </div>
+<header class="cbar">
+  <a class="cbrand" href="../index.html">viktoria<span class="dot">.</span></a>
+  <span class="cchap" data-chap-label></span>
+  <span class="cnum" data-step-num></span>
+  <button class="cmap" type="button" data-open-map aria-label="Карта гайда"><i></i><i></i><i></i></button>
+  <i class="cprog" data-progress></i>
 </header>
 
-<div class="container layout">
-  <aside class="toc" aria-label="Содержание">
-    <details class="toc-box" open>
-      <summary>Содержание</summary>
-      <ol>
-<li><a href="#path">С чего начать</a></li>
-<li><a href="#what">Что такое Claude Code</a></li>
-<li><a href="#before">Что нужно до установки</a></li>
-<li><a href="#russia">Если вы в России</a></li>
-<li><a href="#china">Китайские ИИ-агенты</a></li>
-<li><a href="#install">Установка</a></li>
-<li><a href="#login">Первый запуск</a></li>
-<li><a href="#commands">Команды</a></li>
-<li><a href="#claudemd">CLAUDE.md</a></li>
-<li><a href="#skills">Скиллы</a></li>
-<li><a href="#mcp">MCP</a></li>
-<li><a href="#checklist">Чек-лист первого дня</a></li>
-<li><a href="#cases">Кейсы для экспертов</a></li>
-<li><a href="#time">Как ускориться</a></li>
-      </ol>
-    </details>
-  </aside>
-  <article>
-<section id="path" class="path">
+<main class="stage">
+
+<!-- 00 · Куда идти -->
+<section class="step" id="s-cover" data-chapter="00 · Куда идти">
+  <span class="cover-badge">Интерактивный гайд · ИИ-инструменты</span>
+  <h2>Claude Code для экспертов и психологов: установка, скиллы, аналоги в России</h2>
+  <p class="lede">Я маркетолог, не разработчик. Сайты, Telegram-боты, воронки и автоматизации для экспертов делаю с ИИ-агентами. Здесь — как начать с нуля, что настроить в первый день и какие процессы дают заявки и экономят время.</p>
+  <p class="byline">Виктория Щетинина · 23 сентября 2026 · ~20 минут</p>
+</section>
+
+<section class="step" id="s-path" data-chapter="00 · Куда идти">
+  <p class="kicker"><span class="num">00</span> <span class="ch">Куда идти</span></p>
   <h2>С чего начать именно вам</h2>
-  <div class="pathbtns" role="tablist" aria-label="Ваша ситуация">
-    <button type="button" class="pbtn" data-path="a" aria-selected="false">Claude доступен в моей стране</button>
-    <button type="button" class="pbtn" data-path="b" aria-selected="false">Я в России</button>
-    <button type="button" class="pbtn" data-path="c" aria-selected="false">Хочу сразу результат</button>
+  <p class="lede">Выберите свою ситуацию — покажу короткий маршрут по шагам этого гайда.</p>
+  <div class="choices2" data-path-picker>
+    <button class="choice2" type="button" data-path="a">Claude доступен в моей стране</button>
+    <button class="choice2" type="button" data-path="b">Я в России</button>
+    <button class="choice2" type="button" data-path="c">Хочу сразу результат</button>
   </div>
-  <div class="pathout" data-pathout="a" hidden>
-    <ol><li><a href="#before">Проверьте требования и тариф</a></li><li><a href="#install">Установите Claude Code</a> или откройте веб-версию</li><li><a href="#claudemd">Заполните CLAUDE.md</a> и <a href="#skills">сделайте первый скилл</a></li><li><a href="#checklist">Пройдите чек-лист первого дня</a></li></ol>
+  <div class="jump-list" data-path-out="a" hidden>
+    <button data-jump="s-before"><b>1</b>Проверьте требования и тариф</button>
+    <button data-jump="s-install"><b>2</b>Установите Claude Code или откройте веб-версию</button>
+    <button data-jump="s-claudemd"><b>3</b>Заполните CLAUDE.md и сделайте первый скилл</button>
+    <button data-jump="s-checklist"><b>4</b>Пройдите чек-лист первого дня</button>
   </div>
-  <div class="pathout" data-pathout="b" hidden>
-    <ol><li><a href="#russia">Прочитайте, почему не стоит обходить блокировки</a></li><li><a href="#china">Выберите китайскую модель</a> под задачу и бюджет</li><li>Подключите её к OpenCode — логика <a href="#claudemd">CLAUDE.md</a> и <a href="#skills">скиллов</a> работает так же</li><li><a href="#checklist">Пройдите чек-лист первого дня</a></li></ol>
+  <div class="jump-list" data-path-out="b" hidden>
+    <button data-jump="s-russia"><b>1</b>Прочитайте, почему не стоит обходить блокировки</button>
+    <button data-jump="s-china-intro"><b>2</b>Выберите китайскую модель под задачу и бюджет</button>
+    <button data-jump="s-claudemd"><b>3</b>Подключите её к OpenCode — логика CLAUDE.md и скиллов та же</button>
+    <button data-jump="s-checklist"><b>4</b>Пройдите чек-лист первого дня</button>
   </div>
-  <div class="pathout" data-pathout="c" hidden>
-    <ol><li><a href="#cases">Посмотрите кейсы</a>: какие процессы дают заявки и экономят время</li><li><a href="#time">Узнайте, где новички теряют недели</a></li><li><a href="https://t.me/vikashet" target="_blank" rel="noopener">Напишите мне</a> — соберём план под ваш блог</li></ol>
+  <div class="jump-list" data-path-out="c" hidden>
+    <button data-jump="s-cases"><b>1</b>Посмотрите кейсы: какие процессы дают заявки и экономят время</button>
+    <button data-jump="s-time"><b>2</b>Узнайте, где новички теряют недели</button>
+    <button data-jump="s-final"><b>3</b>Напишите мне — соберём план под ваш блог</button>
   </div>
 </section>
 
-<section id="what">
+<!-- 01 · Основы -->
+<section class="step" id="s-what" data-chapter="01 · Основы">
+  <p class="kicker"><span class="num">01</span> <span class="ch">Основы</span></p>
   <h2>Что такое Claude Code и зачем он эксперту</h2>
   <p><strong>Claude Code</strong> — это ИИ-агент от Anthropic, который работает прямо с файлами на вашем компьютере. Обычный чат выдаёт текст, а дальше вы копируете, вставляете и собираете всё руками. Claude Code сам создаёт файлы, правит их, запускает команды и доводит задачу до конца.</p>
   <p>Для эксперта или маркетолога это значит простую вещь: задачи, за которые раньше платили разработчику, теперь можно поставить обычным языком.</p>
@@ -217,58 +267,61 @@ tr:last-child td{border-bottom:0}
     <li>оформить серию каруселей по готовому тексту;</li>
     <li>разобрать выгрузку заявок и найти, какие посты приносят клиентов.</li>
   </ul>
-  <div class="note"><p><strong>Главное:</strong> программировать не нужно. Достаточно открыть терминал и вставить команду. Ставить задачи можно на русском.</p></div>
+  <div class="note"><span class="tag">Главное</span>Программировать не нужно. Достаточно открыть терминал и вставить команду. Ставить задачи можно на русском.</div>
 </section>
 
-<section id="before">
+<section class="step" id="s-before" data-chapter="01 · Основы">
+  <p class="kicker"><span class="num">01</span> <span class="ch">Основы</span></p>
   <h2>Что нужно до установки</h2>
-  <div class="table-wrap">
-  <table>
-    <tr><th>Что</th><th>Требование</th></tr>
-    <tr><td>Система</td><td>macOS 13+, Windows 10 (1809+) или 11, Ubuntu 20.04+, Debian 10+</td></tr>
-    <tr><td>Компьютер</td><td>От 4 ГБ оперативной памяти, интернет</td></tr>
-    <tr><td>Аккаунт</td><td>Платная подписка Claude (Pro, Max, Team, Enterprise) или аккаунт Claude Console с оплатой по API</td></tr>
-    <tr><td>Страна</td><td>Одна из <a href="https://www.anthropic.com/supported-countries" target="_blank" rel="noopener">стран, где Anthropic официально работает</a></td></tr>
-  </table>
+  <div class="ref">
+    <div class="row"><span class="lb">Система</span><span class="v">macOS 13+, Windows 10 (1809+) или 11, Ubuntu 20.04+, Debian 10+</span></div>
+    <div class="row"><span class="lb">Компьютер</span><span class="v">От 4 ГБ оперативной памяти, интернет</span></div>
+    <div class="row"><span class="lb">Аккаунт</span><span class="v">Платная подписка Claude (Pro, Max, Team, Enterprise) или аккаунт Claude Console с оплатой по API</span></div>
+    <div class="row"><span class="lb">Страна</span><span class="v">Одна из <a href="https://www.anthropic.com/supported-countries" target="_blank" rel="noopener">стран, где Anthropic официально работает</a></span></div>
   </div>
-  <div class="note"><p><strong>Бесплатного тарифа недостаточно.</strong> Claude Code входит только в платные планы. Для старта хватит Pro. На Max стоит переходить, когда вы работаете в Claude Code каждый день и упираетесь в лимиты. Актуальные цены смотрите на <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a>.</p></div>
-  <p class="muted">Совет: если терминал пугает, начните с <a href="https://claude.com/download" target="_blank" rel="noopener">десктоп-приложения Claude</a>. Там Claude Code работает в привычном окне без командной строки. Когда освоитесь, переходите в терминал: там больше возможностей.</p>
+  <div class="note"><span class="tag">Бесплатного тарифа недостаточно</span>Claude Code входит только в платные планы. Для старта хватит Pro. На Max стоит переходить, когда вы работаете в Claude Code каждый день и упираетесь в лимиты. Актуальные цены смотрите на <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a>.</div>
+  <p style="font-size:15px;color:var(--ink-2)">Совет: если терминал пугает, начните с <a href="https://claude.com/download" target="_blank" rel="noopener">десктоп-приложения Claude</a>. Там Claude Code работает в привычном окне без командной строки. Когда освоитесь, переходите в терминал: там больше возможностей.</p>
 </section>
 
-<section id="russia">
-  <h2>Если вы в России: честно и по делу</h2>
+<!-- 02 · Если вы в России -->
+<section class="step" id="s-russia" data-chapter="02 · Если вы в России">
+  <p class="kicker"><span class="num">02</span> <span class="ch">Если вы в России</span></p>
+  <h2>Честно и по делу</h2>
   <p>Коротко: <strong>официально Claude Code в России недоступен</strong>, ни в терминале, ни в веб-версии. Anthropic работает только в <a href="https://www.anthropic.com/supported-countries" target="_blank" rel="noopener">странах из этого списка</a>, и России там нет.</p>
   <p>В Telegram можно встретить советы вроде «купите иностранную сим-карту» или «зайдите через GitHub». Я их не рекомендую. Это прямой обход правил сервиса: аккаунты за такое блокируют, часто вместе с уже оплаченной подпиской, и вернуть деньги потом сложно. Если вы строите на этом инструменте работу с клиентами, рисковать ей из-за одной сим-карты не стоит.</p>
-  <div class="note"><p><strong>Хорошая новость:</strong> сама логика работы — агент, который сам создаёт файлы, собирает сайты и ботов по задаче на русском — доступна и в России. Ниже инструменты, которыми можно пользоваться легально.</p></div>
-
+  <div class="note sage"><span class="tag">Хорошая новость</span>Сама логика работы — агент, который сам создаёт файлы, собирает сайты и ботов по задаче на русском — доступна и в России. Ниже инструменты, которыми можно пользоваться легально.</div>
   <h3>Вариант 1. OpenCode — самый близкий аналог</h3>
   <p><a href="https://opencode.ai" target="_blank" rel="noopener">OpenCode</a> — бесплатный агент с открытым кодом. Работает в терминале почти так же, как Claude Code: читает проект, правит файлы, запускает команды. Сама программа бесплатная, платите только за модель, которую к ней подключите.</p>
-<pre><span class="os">Mac / Linux</span><code>curl -fsSL https://opencode.ai/install | bash</code></pre>
-<pre><span class="os">Windows (или любая система с Node.js)</span><code>npm install -g opencode-ai</code></pre>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Mac / Linux</span><button class="pcopy" type="button">Копировать</button></div><pre>curl -fsSL https://opencode.ai/install | bash</pre></div>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Windows (или любая система с Node.js)</span><button class="pcopy" type="button">Копировать</button></div><pre>npm install -g opencode-ai</pre></div>
+</section>
+
+<section class="step" id="s-china-intro" data-chapter="02 · Если вы в России">
+  <p class="kicker"><span class="num">02</span> <span class="ch">Если вы в России</span></p>
+  <h2>Подключаем модель к OpenCode</h2>
   <p>Дальше перейдите в папку проекта, запустите <code>opencode</code> и введите <code>/connect</code>, чтобы подключить модель. Из России доступны, например:</p>
   <ul>
     <li><strong>российские облака с оплатой в рублях</strong> — например, Evolution Foundation Models от <a href="https://cloud.ru/blog/opencode" target="_blank" rel="noopener">Cloud.ru</a>, у них есть готовая инструкция именно для OpenCode;</li>
     <li><strong>DeepSeek</strong> — в <code>/connect</code> выбираете deepseek и вставляете API-ключ (<a href="https://api-docs.deepseek.com/quick_start/agent_integrations/opencode/" target="_blank" rel="noopener">официальная инструкция</a>);</li>
     <li><strong>локальные модели</strong> через Ollama или LM Studio: бесплатно, но нужен мощный компьютер.</li>
   </ul>
-  <p>Всё, что я писала выше про CLAUDE.md, работает и здесь. Команда <code>/init</code> создаёт файл <code>AGENTS.md</code> — это та же «память проекта»: туда пишете аудиторию, стиль и ссылки. Клавиша Tab включает режим планирования, где агент сначала показывает план и только потом делает.</p>
-
+  <p>Всё, что дальше сказано про CLAUDE.md, работает и здесь. Команда <code>/init</code> создаёт файл <code>AGENTS.md</code> — это та же «память проекта»: туда пишете аудиторию, стиль и ссылки. Клавиша Tab включает режим планирования, где агент сначала показывает план и только потом делает.</p>
   <h3>Вариант 2. Российские ИИ-ассистенты</h3>
-  <div class="cards">
-    <div class="card"><h3>GigaCode</h3><p>От Сбера. Работает с агентным режимом в VS Code и JetBrains, понимает задачи на русском.</p></div>
-    <div class="card"><h3>SourceCraft</h3><p>От Яндекса. Ассистент в VS Code и JetBrains: чат, генерация кода, публикация проекта.</p></div>
-    <div class="card"><h3>Koda</h3><p>Агент с консольной версией и плагином для редактора, умеет подключать разные модели.</p></div>
+  <div class="inside">
+    <div class="it"><b>GigaCode</b><p>От Сбера. Работает с агентным режимом в VS Code и JetBrains, понимает задачи на русском.</p></div>
+    <div class="it"><b>SourceCraft</b><p>От Яндекса. Ассистент в VS Code и JetBrains: чат, генерация кода, публикация проекта.</p></div>
+    <div class="it"><b>Koda</b><p>Агент с консольной версией и плагином для редактора, умеет подключать разные модели.</p></div>
   </div>
-  <p class="muted">Эти инструменты рассчитаны прежде всего на разработчиков и работают внутри редактора кода, а не в отдельном окне. Для лендинга или простого бота их хватит, но порог входа чуть выше, чем у OpenCode.</p>
-
-  <div class="note sage"><p><strong>Мой совет:</strong> начните с OpenCode и российского облака. Установка займёт 10 минут, а привычки, которые вы здесь наработаете (CLAUDE.md/AGENTS.md, одна задача на один диалог, скиллы), пригодятся в любом агенте, включая Claude Code, если окажетесь в стране, где он доступен.</p></div>
+  <p style="font-size:15px;color:var(--ink-2)">Эти инструменты рассчитаны прежде всего на разработчиков и работают внутри редактора кода, а не в отдельном окне. Для лендинга или простого бота их хватит, но порог входа чуть выше, чем у OpenCode.</p>
+  <div class="note sage"><span class="tag">Мой совет</span>Начните с OpenCode и российского облака. Установка займёт 10 минут, а привычки, которые вы здесь наработаете (CLAUDE.md/AGENTS.md, одна задача на один диалог, скиллы), пригодятся в любом агенте, включая Claude Code, если окажетесь в стране, где он доступен.</div>
 </section>
 
-<section id="china">
+<!-- 03 · Китайские ИИ -->
+<section class="step" id="s-china" data-chapter="03 · Китайские ИИ">
+  <p class="kicker"><span class="num">03</span> <span class="ch">Китайские ИИ</span></p>
   <h2>Китайские ИИ, которые умеют то же, что Claude Code</h2>
   <p>Китайские модели за последний год сильно подтянулись в программировании. Для задач эксперта и маркетолога — лендинг, бот, скрипт для таблицы, разбор выгрузки — их уровня обычно хватает. При этом они в разы дешевле, а сайты и API открываются из России напрямую.</p>
   <p>Схема та же, что у Claude Code: вы ставите задачу обычным языком, агент сам создаёт файлы, правит их и запускает команды. Отличается только «мозг» внутри.</p>
-
   <h3>Как пользоваться: общая схема для всех</h3>
   <ol>
     <li>Зарегистрируйтесь на сайте модели и получите API-ключ или оформите подписку (Coding Plan).</li>
@@ -277,213 +330,201 @@ tr:last-child td{border-bottom:0}
     <li>Поставьте задачу конкретно: что сделать, для кого, какие блоки, куда ведёт кнопка.</li>
     <li>Для больших задач сначала попросите план, проверьте его, потом дайте команду делать.</li>
   </ol>
+</section>
 
-  <div class="tool">
-    <h3>DeepSeek</h3>
-    <div class="by">DeepSeek · модели V4 и V4 Flash</div>
-    <dl>
-      <dt>Как пользоваться</dt><dd>Своего агента нет, модель подключается к OpenCode: <code>/connect</code> → deepseek → API-ключ из личного кабинета.</dd>
-      <dt>Для чего</dt><dd>Лендинги, скрипты, работа с большими текстами: модель держит в памяти до миллиона токенов, поэтому подходит для разбора длинных документов, выгрузок комментариев, транскрибаций.</dd>
-      <dt>Результат</dt><dd>Хорошее качество на типовых задачах за копейки. V4 Flash — быстрый и самый дешёвый вариант для рутины.</dd>
-      <dt>Стоимость</dt><dd>Без подписки, оплата за использование: около $0,14 за миллион входящих токенов. Лендинг обходится в центы, редко дороже $1.</dd>
-    </dl>
+<section class="step" id="s-china-tools1" data-chapter="03 · Китайские ИИ">
+  <p class="kicker"><span class="num">03</span> <span class="ch">Китайские ИИ</span></p>
+  <h2>Инструменты: DeepSeek и Qwen Code</h2>
+  <p class="tool-name">DeepSeek</p>
+  <p class="tool-by">DeepSeek · модели V4 и V4 Flash</p>
+  <div class="ref">
+    <div class="row"><span class="lb">Как пользоваться</span><span class="v">Своего агента нет, модель подключается к OpenCode: <code>/connect</code> → deepseek → API-ключ из личного кабинета.</span></div>
+    <div class="row"><span class="lb">Для чего</span><span class="v">Лендинги, скрипты, работа с большими текстами: модель держит в памяти до миллиона токенов, поэтому подходит для разбора длинных документов, выгрузок комментариев, транскрибаций.</span></div>
+    <div class="row"><span class="lb">Результат</span><span class="v">Хорошее качество на типовых задачах за копейки. V4 Flash — быстрый и самый дешёвый вариант для рутины.</span></div>
+    <div class="row"><span class="lb">Стоимость</span><span class="v">Без подписки, оплата за использование: около $0,14 за миллион входящих токенов. Лендинг обходится в центы, редко дороже $1.</span></div>
   </div>
-
-  <div class="tool">
-    <h3>Qwen Code</h3>
-    <div class="by">Alibaba · модели Qwen</div>
-    <dl>
-      <dt>Как пользоваться</dt><dd>Отдельный агент в терминале, внешне и по логике очень похож на Claude Code. Сама программа бесплатная, модель подключается через подписку или API-ключ.</dd>
-      <dt>Для чего</dt><dd>Длинные многошаговые задачи: собрать проект из нескольких файлов, доработать бота, переделать сайт целиком.</dd>
-      <dt>Результат</dt><dd>Один из сильнейших китайских вариантов для агентной работы, то есть для задач, где нужно много шагов подряд.</dd>
-      <dt>Стоимость</dt><dd>Бесплатный вход через аккаунт Qwen закрыли в апреле 2026. Сейчас Coding Plan стоит около $50 в месяц, либо можно платить за использование через API.</dd>
-    </dl>
+  <p class="tool-name">Qwen Code</p>
+  <p class="tool-by">Alibaba · модели Qwen</p>
+  <div class="ref">
+    <div class="row"><span class="lb">Как пользоваться</span><span class="v">Отдельный агент в терминале, внешне и по логике очень похож на Claude Code. Сама программа бесплатная, модель подключается через подписку или API-ключ.</span></div>
+    <div class="row"><span class="lb">Для чего</span><span class="v">Длинные многошаговые задачи: собрать проект из нескольких файлов, доработать бота, переделать сайт целиком.</span></div>
+    <div class="row"><span class="lb">Результат</span><span class="v">Один из сильнейших китайских вариантов для агентной работы, то есть для задач, где нужно много шагов подряд.</span></div>
+    <div class="row"><span class="lb">Стоимость</span><span class="v">Бесплатный вход через аккаунт Qwen закрыли в апреле 2026. Сейчас Coding Plan стоит около $50 в месяц, либо можно платить за использование через API.</span></div>
   </div>
+</section>
 
-  <div class="tool">
-    <h3>Kimi Code</h3>
-    <div class="by">Moonshot AI · модели Kimi K2</div>
-    <dl>
-      <dt>Как пользоваться</dt><dd>Собственный агент в терминале. Модель Kimi также подключается к OpenCode.</dd>
-      <dt>Для чего</dt><dd>Автоматизации и задачи, где агент долго работает сам: несколько связанных файлов, параллельные подзадачи, проверка и исправление своих ошибок.</dd>
-      <dt>Результат</dt><dd>В русскоязычных сравнениях Kimi часто называют лучшим китайским выбором для кода и агентов.</dd>
-      <dt>Стоимость</dt><dd>Подписка около $19 в месяц, лимиты обновляются каждые 5 часов и раз в неделю. Есть и оплата за использование API.</dd>
-    </dl>
+<section class="step" id="s-china-tools2" data-chapter="03 · Китайские ИИ">
+  <p class="kicker"><span class="num">03</span> <span class="ch">Китайские ИИ</span></p>
+  <h2>Инструменты: Kimi Code, GLM, MiniMax</h2>
+  <p class="tool-name">Kimi Code</p>
+  <p class="tool-by">Moonshot AI · модели Kimi K2</p>
+  <div class="ref">
+    <div class="row"><span class="lb">Как пользоваться</span><span class="v">Собственный агент в терминале. Модель Kimi также подключается к OpenCode.</span></div>
+    <div class="row"><span class="lb">Для чего</span><span class="v">Автоматизации и задачи, где агент долго работает сам: несколько связанных файлов, параллельные подзадачи, проверка и исправление своих ошибок.</span></div>
+    <div class="row"><span class="lb">Результат</span><span class="v">В русскоязычных сравнениях Kimi часто называют лучшим китайским выбором для кода и агентов.</span></div>
+    <div class="row"><span class="lb">Стоимость</span><span class="v">Подписка около $19 в месяц, лимиты обновляются каждые 5 часов и раз в неделю. Есть и оплата за использование API.</span></div>
   </div>
-
-  <div class="tool">
-    <h3>GLM</h3>
-    <div class="by">Zhipu AI (Z.ai) · модели GLM-5</div>
-    <dl>
-      <dt>Как пользоваться</dt><dd>Подписка GLM Coding Plan подключается к готовым агентам: OpenCode, Cline и другим.</dd>
-      <dt>Для чего</dt><dd>Повседневная работа: правки сайтов, небольшие скрипты, тексты для страниц, рефакторинг.</dd>
-      <dt>Результат</dt><dd>Хорошее соотношение цены и качества. Минус младшего тарифа: один запрос за раз, а в часы пик бывает медленно.</dd>
-      <dt>Стоимость</dt><dd>От $18 в месяц (Lite), при оплате за год дешевле.</dd>
-    </dl>
+  <p class="tool-name">GLM</p>
+  <p class="tool-by">Zhipu AI (Z.ai) · модели GLM-5</p>
+  <div class="ref">
+    <div class="row"><span class="lb">Как пользоваться</span><span class="v">Подписка GLM Coding Plan подключается к готовым агентам: OpenCode, Cline и другим.</span></div>
+    <div class="row"><span class="lb">Для чего</span><span class="v">Повседневная работа: правки сайтов, небольшие скрипты, тексты для страниц, рефакторинг.</span></div>
+    <div class="row"><span class="lb">Результат</span><span class="v">Хорошее соотношение цены и качества. Минус младшего тарифа: один запрос за раз, а в часы пик бывает медленно.</span></div>
+    <div class="row"><span class="lb">Стоимость</span><span class="v">От $18 в месяц (Lite), при оплате за год дешевле.</span></div>
   </div>
-
-  <div class="tool">
-    <h3>MiniMax</h3>
-    <div class="by">MiniMax · модели M2</div>
-    <dl>
-      <dt>Как пользоваться</dt><dd>Подписка или API-ключ, подключается к OpenCode и Cline.</dd>
-      <dt>Для чего</dt><dd>Быстрые правки и типовые задачи: вёрстка блоков, мелкие доработки бота, обработка таблиц.</dd>
-      <dt>Результат</dt><dd>Шустрая модель для рутины. Сложную архитектуру лучше отдавать Kimi или Qwen.</dd>
-      <dt>Стоимость</dt><dd>Около $20 в месяц, лимиты недельные.</dd>
-    </dl>
+  <p class="tool-name">MiniMax</p>
+  <p class="tool-by">MiniMax · модели M2</p>
+  <div class="ref">
+    <div class="row"><span class="lb">Как пользоваться</span><span class="v">Подписка или API-ключ, подключается к OpenCode и Cline.</span></div>
+    <div class="row"><span class="lb">Для чего</span><span class="v">Быстрые правки и типовые задачи: вёрстка блоков, мелкие доработки бота, обработка таблиц.</span></div>
+    <div class="row"><span class="lb">Результат</span><span class="v">Шустрая модель для рутины. Сложную архитектуру лучше отдавать Kimi или Qwen.</span></div>
+    <div class="row"><span class="lb">Стоимость</span><span class="v">Около $20 в месяц, лимиты недельные.</span></div>
   </div>
+  <div class="note"><span class="tag">Самый дешёвый способ попробовать всё сразу</span>Подписка OpenCode Go примерно за $10 в месяц. В неё входят DeepSeek, GLM, Kimi и другие открытые модели в одном агенте, и можно переключаться между ними под задачу.</div>
+</section>
 
-  <div class="note"><p><strong>Самый дешёвый способ попробовать всё сразу:</strong> подписка OpenCode Go примерно за $10 в месяц. В неё входят DeepSeek, GLM, Kimi и другие открытые модели в одном агенте, и можно переключаться между ними под задачу.</p></div>
-
-  <h3>Какие результаты реально ждать</h3>
-  <div class="table-wrap">
-  <table>
+<section class="step" id="s-china-results" data-chapter="03 · Китайские ИИ">
+  <p class="kicker"><span class="num">03</span> <span class="ch">Китайские ИИ</span></p>
+  <h2>Какие результаты реально ждать</h2>
+  <div class="datatable"><table>
     <tr><th>Задача</th><th>Справятся?</th><th>Что учесть</th></tr>
     <tr><td>Лендинг под запуск</td><td>Да</td><td>Тексты на русском лучше вычитать и докрутить самой</td></tr>
     <tr><td>Telegram-бот с лид-магнитом</td><td>Да</td><td>Давайте задачу по шагам: сначала бот, потом анкета, потом таблица</td></tr>
     <tr><td>Скрипт для каруселей и таблиц</td><td>Да</td><td>Просите проверить результат на одном примере, потом запускать на всё</td></tr>
     <tr><td>Сложная система из многих частей</td><td>Частично</td><td>Чаще путаются, чем Claude: дробите на маленькие задачи</td></tr>
-  </table>
-  </div>
-  <div class="note sage"><p><strong>Два важных момента.</strong> Цены на тарифы меняются часто, иногда несколько раз за год, поэтому перед оплатой сверяйтесь с сайтом сервиса (цифры здесь актуальны на сентябрь 2026). И данные проходят через серверы в Китае: не загружайте туда персональные данные клиентов, анкеты с телефонами и переписки.</p></div>
+  </table></div>
+  <div class="note sage"><span class="tag">Два важных момента</span>Цены на тарифы меняются часто, иногда несколько раз за год, поэтому перед оплатой сверяйтесь с сайтом сервиса (цифры здесь актуальны на сентябрь 2026). И данные проходят через серверы в Китае: не загружайте туда персональные данные клиентов, анкеты с телефонами и переписки.</div>
 </section>
 
-<section id="install">
+<!-- 04 · Установка -->
+<section class="step" id="s-install" data-chapter="04 · Установка">
+  <p class="kicker"><span class="num">04</span> <span class="ch">Установка</span></p>
   <h2>Как установить Claude Code на Windows и Mac</h2>
   <p>Рекомендуемый способ — официальный установщик. Одна команда, и дальше Claude Code обновляется сам.</p>
-
-  <h3>Выберите свою систему</h3>
-  <div class="tabs" data-tabs>
-    <div class="tablist" role="tablist" aria-label="Операционная система">
-      <button role="tab" aria-selected="true" data-tab="mac">macOS / Linux</button>
-      <button role="tab" aria-selected="false" data-tab="ps">Windows · PowerShell</button>
-      <button role="tab" aria-selected="false" data-tab="cmd">Windows · CMD</button>
-    </div>
-    <div class="tabpanel" data-panel="mac">
-      <p>Откройте «Терминал» (на Mac: Cmd + Пробел → «Терминал») и вставьте:</p>
-<pre><span class="os">Terminal</span><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
-    </div>
-    <div class="tabpanel" data-panel="ps" hidden>
-      <p>Нажмите Пуск, введите <code>PowerShell</code> и откройте его. Права администратора не нужны.</p>
-<pre><span class="os">PowerShell</span><code>irm https://claude.ai/install.ps1 | iex</code></pre>
-    </div>
-    <div class="tabpanel" data-panel="cmd" hidden>
-      <p>Если у вас открыта обычная командная строка (CMD):</p>
-<pre><span class="os">CMD</span><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></pre>
-    </div>
-  </div>
-  <div class="note sage"><p><strong>Как понять, где вы находитесь:</strong> если в начале строки написано <code>PS C:\</code>, это PowerShell. Если просто <code>C:\</code>, это CMD. Ошибка <code>'irm' is not recognized</code> значит, что вы в CMD. Ошибка про <code>&amp;&amp;</code> значит, что вы в PowerShell.</p></div>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Terminal · macOS / Linux</span><button class="pcopy" type="button">Копировать</button></div><pre>curl -fsSL https://claude.ai/install.sh | bash</pre></div>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">PowerShell · Windows</span><button class="pcopy" type="button">Копировать</button></div><pre>irm https://claude.ai/install.ps1 | iex</pre></div>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">CMD · Windows</span><button class="pcopy" type="button">Копировать</button></div><pre>curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd</pre></div>
+  <div class="note sage"><span class="tag">Как понять, где вы находитесь</span>Если в начале строки написано <code>PS C:\</code>, это PowerShell. Если просто <code>C:\</code>, это CMD. Ошибка <code>'irm' is not recognized</code> значит, что вы в CMD. Ошибка про <code>&amp;&amp;</code> значит, что вы в PowerShell.</div>
   <p>Для Windows ещё советую поставить <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener">Git for Windows</a>: с ним Claude Code работает стабильнее, а позже пригодится для публикации сайтов на GitHub Pages.</p>
-
   <h3>Альтернативные способы</h3>
-<pre><span class="os">Homebrew (Mac)</span><code>brew install --cask claude-code</code></pre>
-<pre><span class="os">WinGet (Windows)</span><code>winget install Anthropic.ClaudeCode</code></pre>
-  <p class="muted">При установке через Homebrew или WinGet автообновлений нет, обновлять придётся вручную (<code>brew upgrade claude-code</code> или <code>winget upgrade Anthropic.ClaudeCode</code>).</p>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Homebrew (Mac)</span><button class="pcopy" type="button">Копировать</button></div><pre>brew install --cask claude-code</pre></div>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">WinGet (Windows)</span><button class="pcopy" type="button">Копировать</button></div><pre>winget install Anthropic.ClaudeCode</pre></div>
+  <p style="font-size:15px;color:var(--ink-2)">При установке через Homebrew или WinGet автообновлений нет, обновлять придётся вручную (<code>brew upgrade claude-code</code> или <code>winget upgrade Anthropic.ClaudeCode</code>).</p>
+</section>
 
-  <h3>Без установки: веб-версия claude.ai/code</h3>
+<section class="step" id="s-webversion" data-chapter="04 · Установка">
+  <p class="kicker"><span class="num">04</span> <span class="ch">Установка</span></p>
+  <h2>Без установки: веб-версия claude.ai/code</h2>
   <p>Если ставить ничего не хочется или компьютер рабочий и чужой, откройте <a href="https://claude.ai/code" target="_blank" rel="noopener">claude.ai/code</a> в браузере. Это тот же Claude Code, только работает он не на вашем компьютере, а в облаке Anthropic.</p>
   <ul>
     <li><strong>Что нужно:</strong> тот же платный аккаунт Claude (Pro, Max или Team) и аккаунт на GitHub. Файлы проекта хранятся в репозитории, туда же Claude сохраняет результат.</li>
     <li><strong>Как начать:</strong> войдите в аккаунт, подключите GitHub, выберите репозиторий или создайте новый и напишите задачу.</li>
     <li><strong>Удобно:</strong> задача продолжает выполняться, даже если вы закрыли ноутбук. Проверить результат можно с телефона, во вкладке Code приложения Claude.</li>
   </ul>
-  <div class="note sage"><p><strong>Для кого это идеальный вариант:</strong> для лендингов и сайтов на GitHub Pages. Пишете задачу в браузере, Claude собирает сайт и сохраняет его в репозиторий, а GitHub сам публикует страницу. Терминал не нужен вообще.</p></div>
-
-  <h3>Проверка установки</h3>
-<pre><span class="os">Terminal</span><code>claude --version</code></pre>
-  <p>Если в ответ пришёл номер версии с припиской <code>(Claude Code)</code>, всё установилось. Если что-то пошло не так, запустите диагностику:</p>
-<pre><span class="os">Terminal</span><code>claude doctor</code></pre>
+  <div class="note sage"><span class="tag">Для кого это идеальный вариант</span>Для лендингов и сайтов на GitHub Pages. Пишете задачу в браузере, Claude собирает сайт и сохраняет его в репозиторий, а GitHub сам публикует страницу. Терминал не нужен вообще.</div>
 </section>
 
-<section id="login">
+<section class="step" id="s-checkinstall" data-chapter="04 · Установка">
+  <p class="kicker"><span class="num">04</span> <span class="ch">Установка</span></p>
+  <h2>Проверка установки</h2>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Terminal</span><button class="pcopy" type="button">Копировать</button></div><pre>claude --version</pre></div>
+  <p>Если в ответ пришёл номер версии с припиской <code>(Claude Code)</code>, всё установилось. Если что-то пошло не так, запустите диагностику:</p>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Terminal</span><button class="pcopy" type="button">Копировать</button></div><pre>claude doctor</pre></div>
+</section>
+
+<!-- 05 · Первый запуск -->
+<section class="step" id="s-login" data-chapter="05 · Первый запуск">
+  <p class="kicker"><span class="num">05</span> <span class="ch">Первый запуск</span></p>
   <h2>Первый запуск и вход в аккаунт</h2>
   <p>Создайте папку под проект, например <code>my-landing</code>, перейдите в неё и запустите Claude:</p>
-<pre><span class="os">Terminal</span><code>cd my-landing
-claude</code></pre>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Terminal</span><button class="pcopy" type="button">Копировать</button></div><pre>cd my-landing
+claude</pre></div>
   <p>При первом запуске откроется браузер: войдите в аккаунт Claude и подтвердите доступ. Больше вводить логин не придётся. Сменить аккаунт можно командой <code>/login</code> прямо внутри Claude Code.</p>
   <p>Дальше просто пишите задачу. Например:</p>
-<pre><span class="os">Промпт</span><code>Сделай одностраничный лендинг для психолога: оффер, 3 блока с болями,
-программа консультации, отзывы, кнопка записи в Telegram. Тёмный стиль, мобильная версия.</code></pre>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Промпт</span><button class="pcopy" type="button">Копировать</button></div><pre>Сделай одностраничный лендинг для психолога: оффер, 3 блока с болями,
+программа консультации, отзывы, кнопка записи в Telegram. Тёмный стиль, мобильная версия.</pre></div>
   <p>Перед изменением файлов или запуском команд Claude может спросить разрешение. Режимы разрешений переключаются клавишами <strong>Shift + Tab</strong>: от «спрашивать всё» до автоматического режима, когда Claude сам решает рутинные шаги.</p>
-  <div class="note"><p><strong>Мой совет:</strong> первые пару недель работайте в режиме с подтверждениями и читайте, что Claude собирается сделать. Так вы быстрее поймёте логику агента и научитесь ставить задачи точнее.</p></div>
+  <div class="note"><span class="tag">Мой совет</span>Первые пару недель работайте в режиме с подтверждениями и читайте, что Claude собирается сделать. Так вы быстрее поймёте логику агента и научитесь ставить задачи точнее.</div>
 </section>
 
-<section id="commands">
+<!-- 06 · Команды -->
+<section class="step" id="s-commands" data-chapter="06 · Команды">
+  <p class="kicker"><span class="num">06</span> <span class="ch">Команды</span></p>
   <h2>Команды, которые нужны каждый день</h2>
-  <div class="table-wrap">
-  <table>
-    <tr><th>Команда</th><th>Что делает</th></tr>
-    <tr><td><code>claude</code></td><td>Запустить Claude Code в текущей папке</td></tr>
-    <tr><td><code>claude -c</code></td><td>Продолжить последний диалог в этой папке</td></tr>
-    <tr><td><code>claude -r</code></td><td>Выбрать и продолжить один из прошлых диалогов</td></tr>
-    <tr><td><code>/init</code></td><td>Создать CLAUDE.md: Claude изучит проект и запишет главное</td></tr>
-    <tr><td><code>/clear</code></td><td>Очистить диалог и начать новую задачу с чистого листа</td></tr>
-    <tr><td><code>/mcp</code></td><td>Посмотреть и настроить подключённые сервисы</td></tr>
-    <tr><td><code>/help</code></td><td>Список всех команд</td></tr>
-    <tr><td><code>/</code></td><td>Показать доступные команды и скиллы</td></tr>
-    <tr><td>Shift + Tab</td><td>Переключить режим разрешений</td></tr>
-    <tr><td><code>/exit</code></td><td>Выйти</td></tr>
-  </table>
+  <div class="ref">
+    <div class="row"><span class="lb"><code>claude</code></span><span class="v">Запустить Claude Code в текущей папке</span></div>
+    <div class="row"><span class="lb"><code>claude -c</code></span><span class="v">Продолжить последний диалог в этой папке</span></div>
+    <div class="row"><span class="lb"><code>claude -r</code></span><span class="v">Выбрать и продолжить один из прошлых диалогов</span></div>
+    <div class="row"><span class="lb"><code>/init</code></span><span class="v">Создать CLAUDE.md: Claude изучит проект и запишет главное</span></div>
+    <div class="row"><span class="lb"><code>/clear</code></span><span class="v">Очистить диалог и начать новую задачу с чистого листа</span></div>
+    <div class="row"><span class="lb"><code>/mcp</code></span><span class="v">Посмотреть и настроить подключённые сервисы</span></div>
+    <div class="row"><span class="lb"><code>/help</code></span><span class="v">Список всех команд</span></div>
+    <div class="row"><span class="lb"><code>/</code></span><span class="v">Показать доступные команды и скиллы</span></div>
+    <div class="row"><span class="lb">Shift + Tab</span><span class="v">Переключить режим разрешений</span></div>
+    <div class="row"><span class="lb"><code>/exit</code></span><span class="v">Выйти</span></div>
   </div>
   <p>Правило, которое экономит больше всего лимитов: <strong>одна задача — один диалог</strong>. Закончили лендинг — <code>/clear</code>, и только потом берите бота. Длинная переписка тратит больше токенов и сбивает фокус агента.</p>
 </section>
 
-<section id="claudemd">
+<!-- 07 · CLAUDE.md -->
+<section class="step" id="s-claudemd" data-chapter="07 · CLAUDE.md">
+  <p class="kicker"><span class="num">07</span> <span class="ch">CLAUDE.md</span></p>
   <h2>CLAUDE.md — память проекта</h2>
   <p><strong>CLAUDE.md</strong> — это обычный текстовый файл в папке проекта. Claude читает его в начале каждой сессии. Всё, что вы устали повторять, пишите туда.</p>
   <p>Проще всего создать его командой <code>/init</code>, а потом дописать своё. Пример для эксперта:</p>
-<pre><span class="os">CLAUDE.md</span><code># Проект: лендинг мастер-группы
+  <div class="pbox"><div class="pbox-head"><span class="lbl">CLAUDE.md</span><button class="pcopy" type="button">Копировать</button></div><pre># Проект: лендинг мастер-группы
 - Автор: психолог, аудитория — женщины 30–45, запрос на отношения
 - Tone of voice: спокойно, без давления, без слов «трансформация» и «уникальный»
 - Стиль: тёмный фон #0D0D14, акцент #C8A96E, шрифты Cormorant Garamond + Manrope
 - Все кнопки ведут в Telegram: https://t.me/username
 - Всегда делать мобильную версию и проверять её
-- Отвечать мне на русском</code></pre>
-  <div class="note sage"><p><strong>Правило из практики:</strong> если Claude дважды ошибся в одном и том же, это строчка в CLAUDE.md. Сам файл держите коротким, до 200 строк. Длинные инструкции лучше вынести в скиллы.</p></div>
+- Отвечать мне на русском</pre></div>
+  <div class="note sage"><span class="tag">Правило из практики</span>Если Claude дважды ошибся в одном и том же, это строчка в CLAUDE.md. Сам файл держите коротким, до 200 строк. Длинные инструкции лучше вынести в скиллы.</div>
   <p>Кроме файла проекта есть личный CLAUDE.md, который действует во всех проектах. Он лежит в папке <code>~/.claude/</code>. Туда стоит записать общее: «отвечай на русском», «я не программист, объясняй простыми словами».</p>
 </section>
 
-<section id="skills">
+<!-- 08 · Скиллы -->
+<section class="step" id="s-skills-what" data-chapter="08 · Скиллы">
+  <p class="kicker"><span class="num">08</span> <span class="ch">Скиллы</span></p>
   <h2>Скиллы: как сделать свои инструкции по кнопке</h2>
   <p><strong>Скилл</strong> — это сохранённая инструкция для задачи, которую вы делаете снова и снова. Один раз описали, как вы пишете посты, проверяете лендинг или оформляете карусель, и дальше вызываете это одной командой: <code>/post</code>, <code>/landing-check</code>, <code>/carousel</code>.</p>
-  <div class="table-wrap">
-  <table>
+  <div class="datatable"><table>
     <tr><th></th><th>CLAUDE.md</th><th>Скилл</th></tr>
     <tr><td>Когда загружается</td><td>Всегда, в начале каждой сессии</td><td>Только когда нужен</td></tr>
     <tr><td>Что туда писать</td><td>Правила «всегда делай так»: аудитория, язык, стиль</td><td>Пошаговые процессы и справочники: как писать пост, как проверять сайт</td></tr>
     <tr><td>Как вызвать</td><td>Никак, работает сам</td><td>Командой <code>/название</code> или Claude подключает сам по описанию</td></tr>
-  </table>
-  </div>
+  </table></div>
   <p><strong>Когда пора делать скилл:</strong> вы в третий раз вставляете в чат одну и ту же длинную инструкцию. Это готовый скилл.</p>
-
   <h3>Где лежат скиллы</h3>
-  <div class="table-wrap">
-  <table>
-    <tr><th>Вид</th><th>Папка</th><th>Где работает</th></tr>
-    <tr><td>Личный</td><td><code>~/.claude/skills/название/SKILL.md</code></td><td>Во всех ваших проектах на этом компьютере</td></tr>
-    <tr><td>Проектный</td><td><code>.claude/skills/название/SKILL.md</code></td><td>Только в этой папке проекта, передаётся вместе с ним</td></tr>
-  </table>
+  <div class="ref">
+    <div class="row"><span class="lb">Личный</span><span class="v"><code>~/.claude/skills/название/SKILL.md</code> — во всех ваших проектах на этом компьютере</span></div>
+    <div class="row"><span class="lb">Проектный</span><span class="v"><code>.claude/skills/название/SKILL.md</code> — только в этой папке проекта, передаётся вместе с ним</span></div>
   </div>
-  <p class="muted">Бренд-гайд и стиль письма делайте личными скиллами, они нужны везде. Инструкции под конкретного клиента делайте проектными.</p>
+  <p style="font-size:15px;color:var(--ink-2)">Бренд-гайд и стиль письма делайте личными скиллами, они нужны везде. Инструкции под конкретного клиента делайте проектными.</p>
+</section>
 
-  <h3>Способ 1. Попросить Claude сделать скилл</h3>
+<section class="step" id="s-skills-make" data-chapter="08 · Скиллы">
+  <p class="kicker"><span class="num">08</span> <span class="ch">Скиллы</span></p>
+  <h2>Способ 1. Попросить Claude сделать скилл</h2>
   <p>Самый простой путь для тех, кто не пишет код. Прямо в Claude Code напишите:</p>
-<pre><span class="os">Промпт</span><code>Создай личный скилл post-threads. Он пишет пост для Threads по теме,
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Промпт</span><button class="pcopy" type="button">Копировать</button></div><pre>Создай личный скилл post-threads. Он пишет пост для Threads по теме,
 которую я передаю после команды. Правила: крючок в первой строке, до 500 символов,
 без слов «трансформация» и «уникальный», в конце вопрос к аудитории.
-Сделай 3 варианта на выбор.</code></pre>
+Сделай 3 варианта на выбор.</pre></div>
   <p>Claude сам создаст папку и файл в нужном месте. Если в сессии был удачный процесс, можно сказать проще: «Сохрани то, что мы сейчас делали, как скилл».</p>
-
   <h3>Способ 2. Сделать вручную</h3>
   <ol>
     <li>Создайте папку с названием скилла латиницей через дефис, например <code>~/.claude/skills/post-threads/</code>.</li>
     <li>Положите в неё файл <code>SKILL.md</code>. Это обычный текстовый файл, его можно написать в любом редакторе.</li>
     <li>Перезапустите Claude Code и проверьте командой <code>/skills</code>, что скилл появился в списке.</li>
   </ol>
+</section>
 
-  <h3>Из чего состоит SKILL.md</h3>
+<section class="step" id="s-skills-structure" data-chapter="08 · Скиллы">
+  <p class="kicker"><span class="num">08</span> <span class="ch">Скиллы</span></p>
+  <h2>Из чего состоит SKILL.md</h2>
   <p>Две части: шапка между линиями <code>---</code> и сама инструкция.</p>
-<pre><span class="os">~/.claude/skills/post-threads/SKILL.md</span><code>---
+  <div class="pbox"><div class="pbox-head"><span class="lbl">~/.claude/skills/post-threads/SKILL.md</span><button class="pcopy" type="button">Копировать</button></div><pre>---
 name: post-threads
 description: Пишет посты для Threads в стиле автора. Используй, когда просят
   пост, ветку или текст для Threads.
@@ -502,44 +543,40 @@ argument-hint: [тема поста]
 3 варианта, между ними пустая строка. Перед каждым — одной фразой, на что он давит.
 
 ## Примеры моих постов
-Смотри файл examples.md в папке скилла.</code></pre>
+Смотри файл examples.md в папке скилла.</pre></div>
   <p>Теперь пишете <code>/post-threads почему психологу не нужны охваты</code>, и тема подставляется вместо <code>$ARGUMENTS</code>.</p>
-
   <h3>Главные поля шапки</h3>
-  <div class="table-wrap">
-  <table>
-    <tr><th>Поле</th><th>Что делает</th></tr>
-    <tr><td><code>name</code></td><td>Название, оно же команда: <code>/post-threads</code></td></tr>
-    <tr><td><code>description</code></td><td>Самое важное поле. По нему Claude решает, когда подключить скилл сам</td></tr>
-    <tr><td><code>argument-hint</code></td><td>Подсказка, что писать после команды</td></tr>
-    <tr><td><code>disable-model-invocation: true</code></td><td>Скилл запускается только вашей командой. Ставьте для публикации сайтов и всего, что нельзя делать без спроса</td></tr>
-    <tr><td><code>context: fork</code></td><td>Скилл работает в отдельном «помощнике» и возвращает только итог. Удобно для исследований, чтобы не засорять диалог</td></tr>
-  </table>
+  <div class="ref">
+    <div class="row"><span class="lb"><code>name</code></span><span class="v">Название, оно же команда: <code>/post-threads</code></span></div>
+    <div class="row"><span class="lb"><code>description</code></span><span class="v">Самое важное поле. По нему Claude решает, когда подключить скилл сам</span></div>
+    <div class="row"><span class="lb"><code>argument-hint</code></span><span class="v">Подсказка, что писать после команды</span></div>
+    <div class="row"><span class="lb"><code>disable-model-invocation</code></span><span class="v">Скилл запускается только вашей командой. Ставьте для публикации сайтов и всего, что нельзя делать без спроса</span></div>
+    <div class="row"><span class="lb"><code>context: fork</code></span><span class="v">Скилл работает в отдельном «помощнике» и возвращает только итог. Удобно для исследований, чтобы не засорять диалог</span></div>
   </div>
-
   <h3>Как написать description, чтобы скилл срабатывал</h3>
   <ul>
     <li>Сначала что делает, потом когда использовать: «Пишет посты для Threads. Используй, когда просят пост или ветку».</li>
     <li>Добавьте слова, которыми вы обычно формулируете задачу: «пост», «ветка», «тред», «текст для соцсетей».</li>
     <li>Не делайте два скилла с похожими описаниями, иначе Claude будет путать их.</li>
   </ul>
+</section>
 
-  <h3>Дополнительные файлы: примеры и справочники</h3>
+<section class="step" id="s-skills-first" data-chapter="08 · Скиллы">
+  <p class="kicker"><span class="num">08</span> <span class="ch">Скиллы</span></p>
+  <h2>Дополнительные файлы и с каких скиллов начать</h2>
   <p>В папку скилла можно положить что угодно: примеры ваших лучших постов, бренд-гайд, шаблон лендинга, список болей аудитории. В SKILL.md просто укажите, когда их читать.</p>
-<pre><span class="os">Структура</span><code>post-threads/
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Структура</span><button class="pcopy" type="button">Копировать</button></div><pre>post-threads/
 ├── SKILL.md        ← инструкция (обязательно)
 ├── examples.md     ← 5–10 ваших лучших постов
-└── audience.md     ← боли и формулировки клиентов</code></pre>
-  <div class="note"><p><strong>Секрет качества:</strong> 5–10 реальных примеров дают больше, чем страница правил. Claude перенимает ритм, длину фраз и ваши словечки.</p></div>
-
+└── audience.md     ← боли и формулировки клиентов</pre></div>
+  <div class="note"><span class="tag">Секрет качества</span>5–10 реальных примеров дают больше, чем страница правил. Claude перенимает ритм, длину фраз и ваши словечки.</div>
   <h3>Какие скиллы я советую эксперту завести первыми</h3>
-  <div class="cards">
-    <div class="card"><h3>Бренд-гайд</h3><p>Цвета, шрифты, ссылки, tone of voice. Каждый новый сайт или визуал сразу получается в стиле.</p></div>
-    <div class="card"><h3>Пост в вашем стиле</h3><p>Правила, примеры и формат. Тема передаётся после команды.</p></div>
-    <div class="card"><h3>Чеклист лендинга</h3><p>SEO, мобильная версия, ссылки, кнопки — проверка перед публикацией.</p></div>
-    <div class="card"><h3>Публикация сайта</h3><p>Пошаговый деплой на GitHub Pages. Только ручной запуск.</p></div>
+  <div class="inside">
+    <div class="it"><b>Бренд-гайд</b><p>Цвета, шрифты, ссылки, tone of voice. Каждый новый сайт или визуал сразу получается в стиле.</p></div>
+    <div class="it"><b>Пост в вашем стиле</b><p>Правила, примеры и формат. Тема передаётся после команды.</p></div>
+    <div class="it"><b>Чеклист лендинга</b><p>SEO, мобильная версия, ссылки, кнопки — проверка перед публикацией.</p></div>
+    <div class="it"><b>Публикация сайта</b><p>Пошаговый деплой на GitHub Pages. Только ручной запуск.</p></div>
   </div>
-
   <h3>Как проверить и улучшить скилл</h3>
   <ol>
     <li>Проверяйте в <strong>новой</strong> сессии: в старой Claude и так помнит контекст, и скилл кажется лучше, чем он есть.</li>
@@ -547,136 +584,121 @@ argument-hint: [тема поста]
     <li>Результат не тот — не правьте в чате, а добавьте правило или пример в сам скилл. Так ошибка не повторится.</li>
     <li>Держите SKILL.md коротким, до 500 строк. Большие справочники выносите в отдельные файлы рядом.</li>
   </ol>
-  <p class="muted">Хорошая новость для тех, кто пользуется OpenCode и китайскими агентами: формат скиллов похож и там, так что ваши инструкции переносятся почти без правок.</p>
+  <p style="font-size:15px;color:var(--ink-2)">Хорошая новость для тех, кто пользуется OpenCode и китайскими агентами: формат скиллов похож и там, так что ваши инструкции переносятся почти без правок.</p>
 </section>
 
-<section id="mcp">
+<!-- 09 · MCP -->
+<section class="step" id="s-mcp" data-chapter="09 · MCP">
+  <p class="kicker"><span class="num">09</span> <span class="ch">MCP</span></p>
   <h2>MCP — подключение сервисов</h2>
   <p><strong>MCP</strong> (Model Context Protocol) — это способ подключить Claude Code к внешним сервисам: Notion, GitHub, Google Drive, базам данных, браузеру. После подключения Claude сам берёт оттуда данные и выполняет действия.</p>
   <p>Подключение онлайн-сервиса выглядит так:</p>
-<pre><span class="os">Terminal</span><code>claude mcp add --transport http notion https://mcp.notion.com/mcp</code></pre>
+  <div class="pbox"><div class="pbox-head"><span class="lbl">Terminal</span><button class="pcopy" type="button">Копировать</button></div><pre>claude mcp add --transport http notion https://mcp.notion.com/mcp</pre></div>
   <p>После этого внутри Claude Code наберите <code>/mcp</code>: там видно статус подключения, и там же проходит вход в сервис.</p>
-  <div class="table-wrap">
-  <table>
-    <tr><th>Где действует</th><th>Флаг</th><th>Когда использовать</th></tr>
-    <tr><td>Только этот проект</td><td><code>--scope local</code> (по умолчанию)</td><td>Сервис нужен в одном проекте</td></tr>
-    <tr><td>Все ваши проекты</td><td><code>--scope user</code></td><td>Notion или GitHub, которыми пользуетесь везде</td></tr>
-    <tr><td>Проект + команда</td><td><code>--scope project</code></td><td>Настройка сохраняется в файл и передаётся вместе с проектом</td></tr>
-  </table>
+  <div class="ref">
+    <div class="row"><span class="lb"><code>--scope local</code></span><span class="v">По умолчанию — сервис нужен только в этом проекте</span></div>
+    <div class="row"><span class="lb"><code>--scope user</code></span><span class="v">Все ваши проекты — Notion или GitHub, которыми пользуетесь везде</span></div>
+    <div class="row"><span class="lb"><code>--scope project</code></span><span class="v">Проект + команда — настройка сохраняется в файл и передаётся вместе с проектом</span></div>
   </div>
-  <div class="note"><p><strong>Не подключайте всё подряд.</strong> Хороший сигнал, что пора подключать сервис: вы в третий раз копируете данные из вкладки браузера в чат. Значит, этот сервис стоит подключить через MCP.</p></div>
+  <div class="note"><span class="tag">Не подключайте всё подряд</span>Хороший сигнал, что пора подключать сервис: вы в третий раз копируете данные из вкладки браузера в чат. Значит, этот сервис стоит подключить через MCP.</div>
 </section>
 
-<section id="checklist">
+<!-- 10 · Чек-лист -->
+<section class="step" id="s-checklist" data-chapter="10 · Чек-лист">
+  <p class="kicker"><span class="num">10</span> <span class="ch">Чек-лист</span></p>
   <h2>Чек-лист первого дня</h2>
   <p>Отмечайте шаги по ходу — прогресс сохранится в этом браузере.</p>
-  <div class="progress-wrap"><div class="pbar"><span data-pfill></span></div><span class="pnum" data-pnum>0 из 8</span></div>
-  <ul class="checklist" data-checklist>
-    <li><label><input type="checkbox" id="ck0" data-ck="0"><span>Оформить платную подписку Claude (или выбрать аналог для России)</span></label></li>
-    <li><label><input type="checkbox" id="ck1" data-ck="1"><span>Установить Claude Code или открыть десктоп-приложение</span></label></li>
-    <li><label><input type="checkbox" id="ck2" data-ck="2"><span>Создать папку проекта и запустить claude</span></label></li>
-    <li><label><input type="checkbox" id="ck3" data-ck="3"><span>Войти в аккаунт</span></label></li>
-    <li><label><input type="checkbox" id="ck4" data-ck="4"><span>Сделать CLAUDE.md командой /init и дописать аудиторию, стиль, ссылки</span></label></li>
-    <li><label><input type="checkbox" id="ck5" data-ck="5"><span>Поставить первую задачу по брифу: одна страница или один бот</span></label></li>
-    <li><label><input type="checkbox" id="ck6" data-ck="6"><span>Сохранить повторяющуюся инструкцию как скилл</span></label></li>
-    <li><label><input type="checkbox" id="ck7" data-ck="7"><span>Проверить результат на телефоне и опубликовать</span></label></li>
-  </ul>
-  <p class="done-msg" data-done hidden><strong>Готово.</strong> Базовая система настроена. Хотите докрутить её под свои задачи и заявки? <a href="https://t.me/vikashet" target="_blank" rel="noopener">Напишите мне</a>.</p>
+  <div class="checklist-box" data-checklist>
+    <div class="progress-row"><div class="bar"><span data-cl-fill></span></div><span class="num" data-cl-num>0 из 8</span></div>
+    <label><input type="checkbox" data-cl="0"><span>Оформить платную подписку Claude (или выбрать аналог для России)</span></label>
+    <label><input type="checkbox" data-cl="1"><span>Установить Claude Code или открыть десктоп-приложение</span></label>
+    <label><input type="checkbox" data-cl="2"><span>Создать папку проекта и запустить claude</span></label>
+    <label><input type="checkbox" data-cl="3"><span>Войти в аккаунт</span></label>
+    <label><input type="checkbox" data-cl="4"><span>Сделать CLAUDE.md командой /init и дописать аудиторию, стиль, ссылки</span></label>
+    <label><input type="checkbox" data-cl="5"><span>Поставить первую задачу по брифу: одна страница или один бот</span></label>
+    <label><input type="checkbox" data-cl="6"><span>Сохранить повторяющуюся инструкцию как скилл</span></label>
+    <label><input type="checkbox" data-cl="7"><span>Проверить результат на телефоне и опубликовать</span></label>
+    <div class="checklist-done" data-cl-done><strong>Готово.</strong> Базовая система настроена. Хотите докрутить её под свои задачи и заявки? <a href="https://t.me/vikashet" target="_blank" rel="noopener">Напишите мне</a>.</div>
+  </div>
 </section>
 
-<section id="cases">
+<!-- 11 · Кейсы -->
+<section class="step" id="s-cases" data-chapter="11 · Кейсы">
+  <p class="kicker"><span class="num">11</span> <span class="ch">Кейсы</span></p>
   <h2>Кейсы: что психолог или эксперт может настроить в Claude Code</h2>
   <p>Ниже процессы, которые я настраиваю экспертам помогающих профессий. У каждого две цели: <strong>освободить время</strong> и <strong>получать заявки без ручной работы</strong>.</p>
-  <div class="case">
-    <h3>Воронка по кодовому слову</h3>
-    <div class="row">
-      <div class="k">Процесс</div><div class="v">Подписчик пишет слово в комментариях или боту, получает лид-магнит, проходит короткую анкету.</div>
-      <div class="k">Что делает Claude</div><div class="v">Собирает Telegram-бота, сценарий, анкету и выгрузку заявок в таблицу.</div>
-      <div class="k res">Экономия</div><div class="v">Не нужно вручную отвечать каждому в директ и пересылать материалы.</div>
-      <div class="k res">Заявки</div><div class="v">Заявки приходят круглосуточно, уже с ответами анкеты: вы видите запрос до созвона. В моей практике такая связка дала около 200 целевых откликов с 4 постов у психолога.</div>
-    </div>
-  </div>
-  <div class="case">
-    <h3>Лид-магнит в виде теста или мини-гайда</h3>
-    <div class="row">
-      <div class="k">Процесс</div><div class="v">Тест «Что мешает вам выстроить опору на себя» или чек-лист на отдельной странице.</div>
-      <div class="k">Что делает Claude</div><div class="v">Делает страницу теста с результатами и кнопкой в Telegram, в вашем стиле и с мобильной версией.</div>
-      <div class="k res">Экономия</div><div class="v">Не нужен дизайнер и разработчик, правки занимают минуты.</div>
-      <div class="k res">Заявки</div><div class="v">Тест собирает контакты тёплой аудитории, которая уже узнала себя в результатах.</div>
-    </div>
-  </div>
-  <div class="case">
-    <h3>Лендинг под консультацию или группу</h3>
-    <div class="row">
-      <div class="k">Процесс</div><div class="v">Страница с оффером, болями, программой, отзывами и кнопкой записи.</div>
-      <div class="k">Что делает Claude</div><div class="v">Собирает страницу по вашему брифу и публикует её на GitHub Pages.</div>
-      <div class="k res">Экономия</div><div class="v">Страница готова за вечер, без недели ожидания подрядчика.</div>
-      <div class="k res">Заявки</div><div class="v">Одна понятная ссылка для шапки профиля, постов и рассылки.</div>
-    </div>
-  </div>
-  <div class="case">
-    <h3>Контент-завод в вашем стиле</h3>
-    <div class="row">
-      <div class="k">Процесс</div><div class="v">Из одной темы или эфира — серия постов, ветка для Threads, текст для карусели.</div>
-      <div class="k">Что делает Claude</div><div class="v">Работает по скиллу с вашими правилами и примерами лучших постов.</div>
-      <div class="k res">Экономия</div><div class="v">Контент на неделю собирается за один подход, а не пишется каждый день с нуля.</div>
-      <div class="k res">Заявки</div><div class="v">Регулярный контент под боли аудитории — то, что приводит людей в воронку.</div>
-    </div>
-  </div>
-  <div class="case">
-    <h3>Анализ комментариев и анкет</h3>
-    <div class="row">
-      <div class="k">Процесс</div><div class="v">Выгрузка комментариев, ответов анкеты и вопросов из директа.</div>
-      <div class="k">Что делает Claude</div><div class="v">Группирует боли и формулировки клиентов, предлагает темы постов и офферы.</div>
-      <div class="k res">Экономия</div><div class="v">Не нужно перечитывать сотни сообщений вручную.</div>
-      <div class="k res">Заявки</div><div class="v">Посты говорят словами клиентов, поэтому чаще попадают в запрос и приводят заявки.</div>
-    </div>
-  </div>
-  <div class="case">
-    <h3>Запись и напоминания</h3>
-    <div class="row">
-      <div class="k">Процесс</div><div class="v">Бот записи на консультацию: выбор времени, напоминание за день и за час.</div>
-      <div class="k">Что делает Claude</div><div class="v">Собирает бота и связку с календарём или таблицей.</div>
-      <div class="k res">Экономия</div><div class="v">Нет переписки «а когда вам удобно».</div>
-      <div class="k res">Заявки</div><div class="v">Меньше пропущенных сессий и потерянных клиентов между «хочу» и «записалась».</div>
-    </div>
-  </div>
-  <div class="note sage"><p><strong>Важно для психологов:</strong> в Claude и любые другие ИИ не загружайте записи сессий, имена клиентов и их истории. Для воронок и контента это и не нужно: работаете с темами, болями и формулировками без персональных данных.</p></div>
-  <div class="inline-cta">
-    <p><strong>Хотите такую систему у себя?</strong> Разберём ваш блог и покажу, какие процессы стоит автоматизировать первыми, чтобы пошли заявки.</p>
-    <div class="btns">
-      <a class="btn" href="https://t.me/vikashet" target="_blank" rel="noopener">Получить консультацию</a>
-      <a class="btn ghost" href="https://t.me/+bwxY3RmU43ZlYzJi" target="_blank" rel="noopener">Канал про ИИ</a>
-    </div>
+  <div class="case-block"><h3>Воронка по кодовому слову</h3><div class="ref">
+    <div class="row"><span class="lb">Процесс</span><span class="v">Подписчик пишет слово в комментариях или боту, получает лид-магнит, проходит короткую анкету.</span></div>
+    <div class="row"><span class="lb">Что делает Claude</span><span class="v">Собирает Telegram-бота, сценарий, анкету и выгрузку заявок в таблицу.</span></div>
+    <div class="row"><span class="lb">Экономия</span><span class="v">Не нужно вручную отвечать каждому в директ и пересылать материалы.</span></div>
+    <div class="row"><span class="lb">Заявки</span><span class="v">Заявки приходят круглосуточно, уже с ответами анкеты: вы видите запрос до созвона. В моей практике такая связка дала около 200 целевых откликов с 4 постов у психолога.</span></div>
+  </div></div>
+  <div class="case-block"><h3>Лид-магнит в виде теста или мини-гайда</h3><div class="ref">
+    <div class="row"><span class="lb">Процесс</span><span class="v">Тест «Что мешает вам выстроить опору на себя» или чек-лист на отдельной странице.</span></div>
+    <div class="row"><span class="lb">Что делает Claude</span><span class="v">Делает страницу теста с результатами и кнопкой в Telegram, в вашем стиле и с мобильной версией.</span></div>
+    <div class="row"><span class="lb">Экономия</span><span class="v">Не нужен дизайнер и разработчик, правки занимают минуты.</span></div>
+    <div class="row"><span class="lb">Заявки</span><span class="v">Тест собирает контакты тёплой аудитории, которая уже узнала себя в результатах.</span></div>
+  </div></div>
+  <div class="case-block"><h3>Лендинг под консультацию или группу</h3><div class="ref">
+    <div class="row"><span class="lb">Процесс</span><span class="v">Страница с оффером, болями, программой, отзывами и кнопкой записи.</span></div>
+    <div class="row"><span class="lb">Что делает Claude</span><span class="v">Собирает страницу по вашему брифу и публикует её на GitHub Pages.</span></div>
+    <div class="row"><span class="lb">Экономия</span><span class="v">Страница готова за вечер, без недели ожидания подрядчика.</span></div>
+    <div class="row"><span class="lb">Заявки</span><span class="v">Одна понятная ссылка для шапки профиля, постов и рассылки.</span></div>
+  </div></div>
+  <div class="case-block"><h3>Контент-завод в вашем стиле</h3><div class="ref">
+    <div class="row"><span class="lb">Процесс</span><span class="v">Из одной темы или эфира — серия постов, ветка для Threads, текст для карусели.</span></div>
+    <div class="row"><span class="lb">Что делает Claude</span><span class="v">Работает по скиллу с вашими правилами и примерами лучших постов.</span></div>
+    <div class="row"><span class="lb">Экономия</span><span class="v">Контент на неделю собирается за один подход, а не пишется каждый день с нуля.</span></div>
+    <div class="row"><span class="lb">Заявки</span><span class="v">Регулярный контент под боли аудитории — то, что приводит людей в воронку.</span></div>
+  </div></div>
+  <div class="case-block"><h3>Анализ комментариев и анкет</h3><div class="ref">
+    <div class="row"><span class="lb">Процесс</span><span class="v">Выгрузка комментариев, ответов анкеты и вопросов из директа.</span></div>
+    <div class="row"><span class="lb">Что делает Claude</span><span class="v">Группирует боли и формулировки клиентов, предлагает темы постов и офферы.</span></div>
+    <div class="row"><span class="lb">Экономия</span><span class="v">Не нужно перечитывать сотни сообщений вручную.</span></div>
+    <div class="row"><span class="lb">Заявки</span><span class="v">Посты говорят словами клиентов, поэтому чаще попадают в запрос и приводят заявки.</span></div>
+  </div></div>
+  <div class="case-block"><h3>Запись и напоминания</h3><div class="ref">
+    <div class="row"><span class="lb">Процесс</span><span class="v">Бот записи на консультацию: выбор времени, напоминание за день и за час.</span></div>
+    <div class="row"><span class="lb">Что делает Claude</span><span class="v">Собирает бота и связку с календарём или таблицей.</span></div>
+    <div class="row"><span class="lb">Экономия</span><span class="v">Нет переписки «а когда вам удобно».</span></div>
+    <div class="row"><span class="lb">Заявки</span><span class="v">Меньше пропущенных сессий и потерянных клиентов между «хочу» и «записалась».</span></div>
+  </div></div>
+  <div class="note sage"><span class="tag">Важно для психологов</span>В Claude и любые другие ИИ не загружайте записи сессий, имена клиентов и их истории. Для воронок и контента это и не нужно: работаете с темами, болями и формулировками без персональных данных.</div>
+  <div class="cta-block">
+    <h3>Хотите такую систему у себя?</h3>
+    <p>Разберём ваш блог и покажу, какие процессы стоит автоматизировать первыми, чтобы пошли заявки.</p>
+    <a class="thanks-cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Получить консультацию</a>
+    <a class="thanks-cta ghost" href="https://t.me/+bwxY3RmU43ZlYzJi" target="_blank" rel="noopener">Канал про ИИ</a>
   </div>
 </section>
 
-<section id="time">
+<!-- 12 · Где теряют время -->
+<section class="step" id="s-time" data-chapter="12 · Где теряют время">
+  <p class="kicker"><span class="num">12</span> <span class="ch">Где теряют время</span></p>
   <h2>На что уходит больше всего времени, если пробуешь впервые и в одиночку</h2>
   <p>Сам Claude работает быстро. Время уходит на всё вокруг него. Вот где новички застревают чаще всего:</p>
-  <p class="hint">Нажмите на то, где застряли, — покажу, как это ускорить.</p>
-  <div class="stuck" data-stuck>
-    <button type="button" class="chip" data-i="0" aria-pressed="false">Настройка</button>
-    <button type="button" class="chip" data-i="1" aria-pressed="false">Размытая задача</button>
-    <button type="button" class="chip" data-i="2" aria-pressed="false">Объяснение контекста заново</button>
-    <button type="button" class="chip" data-i="3" aria-pressed="false">Публикация</button>
-    <button type="button" class="chip" data-i="4" aria-pressed="false">Боты</button>
-    <button type="button" class="chip" data-i="5" aria-pressed="false">Тексты</button>
-    <button type="button" class="chip" data-i="6" aria-pressed="false">Лимиты</button>
-    <button type="button" class="chip" data-i="7" aria-pressed="false">Нет второго взгляда</button>
+  <p style="font-size:15px;color:var(--ink-2)">Нажмите на то, где застряли, — покажу, как это ускорить.</p>
+  <div class="chips-row" data-stuck-picker>
+    <button type="button" aria-pressed="false" data-i="0">Настройка</button>
+    <button type="button" aria-pressed="false" data-i="1">Размытая задача</button>
+    <button type="button" aria-pressed="false" data-i="2">Объяснение контекста заново</button>
+    <button type="button" aria-pressed="false" data-i="3">Публикация</button>
+    <button type="button" aria-pressed="false" data-i="4">Боты</button>
+    <button type="button" aria-pressed="false" data-i="5">Тексты</button>
+    <button type="button" aria-pressed="false" data-i="6">Лимиты</button>
+    <button type="button" aria-pressed="false" data-i="7">Нет второго взгляда</button>
   </div>
-  <div class="stuck-out" aria-live="polite">
-    <div class="stuck-card" data-i="0" hidden><div class="k">Что происходит</div><p>Терминал, установка, Git, непонятные ошибки — можно потерять вечер, ещё не начав.</p><div class="k ok">Как ускорить</div><p>Начните с десктоп-приложения или веб-версии: никакой установки. В терминал переходите, когда освоитесь.</p></div>
-    <div class="stuck-card" data-i="1" hidden><div class="k">Что происходит</div><p>«Сделай красиво» → шаблонный результат → десять кругов правок.</p><div class="k ok">Как ускорить</div><p>Пишите по брифу: для кого, цель, блоки, куда ведёт кнопка, стиль. Один абзац брифа экономит пять кругов правок.</p></div>
-    <div class="stuck-card" data-i="2" hidden><div class="k">Что происходит</div><p>В каждой сессии снова рассказываете про аудиторию, стиль и ссылки.</p><div class="k ok">Как ускорить</div><p>Один раз заполните CLAUDE.md — и больше не объясняете это никогда.</p></div>
-    <div class="stuck-card" data-i="3" hidden><div class="k">Что происходит</div><p>Сайт готов, а как выложить его в интернет и привязать домен — непонятно.</p><div class="k ok">Как ускорить</div><p>Сделайте скилл публикации на GitHub Pages: дальше это одна команда.</p></div>
-    <div class="stuck-card" data-i="4" hidden><div class="k">Что происходит</div><p>Токены, сервер, «бот молчит» — самая частая точка, где бросают.</p><div class="k ok">Как ускорить</div><p>Дробите задачу: сначала бот отвечает, потом лид-магнит, потом анкета, потом таблица. Проверяйте каждый шаг.</p></div>
-    <div class="stuck-card" data-i="5" hidden><div class="k">Что происходит</div><p>Код хороший, а тексты общие — приходится переписывать вручную.</p><div class="k ok">Как ускорить</div><p>Давайте свои тексты и примеры лучших постов в скилле. Claude оформляет и дорабатывает, ваш голос остаётся вашим.</p></div>
-    <div class="stuck-card" data-i="6" hidden><div class="k">Что происходит</div><p>Длинный диалог съедает лимит посреди задачи.</p><div class="k ok">Как ускорить</div><p>Одна задача — один диалог, между задачами /clear. Сначала план, потом работа.</p></div>
-    <div class="stuck-card" data-i="7" hidden><div class="k">Что происходит</div><p>Некому проверить кнопки, мобильную версию, понятность оффера.</p><div class="k ok">Как ускорить</div><p>Скилл-чеклист перед публикацией. Или разбор со мной на консультации.</p></div>
-    <div class="stuck-card empty" data-empty><p>Выберите пункт выше.</p></div>
+  <div class="stuck-panel">
+    <div class="card" data-i="0" hidden><div class="k">Что происходит</div><p>Терминал, установка, Git, непонятные ошибки — можно потерять вечер, ещё не начав.</p><div class="k ok">Как ускорить</div><p>Начните с десктоп-приложения или веб-версии: никакой установки. В терминал переходите, когда освоитесь.</p></div>
+    <div class="card" data-i="1" hidden><div class="k">Что происходит</div><p>«Сделай красиво» → шаблонный результат → десять кругов правок.</p><div class="k ok">Как ускорить</div><p>Пишите по брифу: для кого, цель, блоки, куда ведёт кнопка, стиль. Один абзац брифа экономит пять кругов правок.</p></div>
+    <div class="card" data-i="2" hidden><div class="k">Что происходит</div><p>В каждой сессии снова рассказываете про аудиторию, стиль и ссылки.</p><div class="k ok">Как ускорить</div><p>Один раз заполните CLAUDE.md — и больше не объясняете это никогда.</p></div>
+    <div class="card" data-i="3" hidden><div class="k">Что происходит</div><p>Сайт готов, а как выложить его в интернет и привязать домен — непонятно.</p><div class="k ok">Как ускорить</div><p>Сделайте скилл публикации на GitHub Pages: дальше это одна команда.</p></div>
+    <div class="card" data-i="4" hidden><div class="k">Что происходит</div><p>Токены, сервер, «бот молчит» — самая частая точка, где бросают.</p><div class="k ok">Как ускорить</div><p>Дробите задачу: сначала бот отвечает, потом лид-магнит, потом анкета, потом таблица. Проверяйте каждый шаг.</p></div>
+    <div class="card" data-i="5" hidden><div class="k">Что происходит</div><p>Код хороший, а тексты общие — приходится переписывать вручную.</p><div class="k ok">Как ускорить</div><p>Давайте свои тексты и примеры лучших постов в скилле. Claude оформляет и дорабатывает, ваш голос остаётся вашим.</p></div>
+    <div class="card" data-i="6" hidden><div class="k">Что происходит</div><p>Длинный диалог съедает лимит посреди задачи.</p><div class="k ok">Как ускорить</div><p>Одна задача — один диалог, между задачами /clear. Сначала план, потом работа.</p></div>
+    <div class="card" data-i="7" hidden><div class="k">Что происходит</div><p>Некому проверить кнопки, мобильную версию, понятность оффера.</p><div class="k ok">Как ускорить</div><p>Скилл-чеклист перед публикацией. Или разбор со мной на консультации.</p></div>
+    <p class="empty" data-stuck-empty>Выберите пункт выше.</p>
   </div>
-
   <h3>Как ускориться</h3>
   <ol>
     <li><strong>Начните без терминала.</strong> Десктоп-приложение или веб-версия снимают всю возню с установкой. В терминал переходите, когда освоитесь.</li>
@@ -689,100 +711,229 @@ argument-hint: [тема поста]
     <li><strong>Давайте свои тексты и примеры</strong>, а не просите «придумай». Claude отлично оформляет и дорабатывает, но ваш голос лучше вас никто не знает.</li>
     <li><strong>Не идите в одиночку.</strong> Самый быстрый путь — чтобы кто-то, кто уже прошёл эти грабли, настроил систему под ваши задачи.</li>
   </ol>
-  <div class="inline-cta">
-    <p><strong>Не хотите тратить недели на пробы?</strong> На консультации разберём ваши задачи и соберём план: что настроить, в каком порядке и где сэкономить время.</p>
-    <div class="btns">
-      <a class="btn" href="https://t.me/vikashet" target="_blank" rel="noopener">Получить консультацию</a>
-      <a class="btn ghost" href="https://t.me/+bwxY3RmU43ZlYzJi" target="_blank" rel="noopener">Канал про ИИ</a>
-    </div>
+  <div class="cta-block">
+    <h3>Не хотите тратить недели на пробы?</h3>
+    <p>На консультации разберём ваши задачи и соберём план: что настроить, в каком порядке и где сэкономить время.</p>
+    <a class="thanks-cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Получить консультацию</a>
+    <a class="thanks-cta ghost" href="https://t.me/+bwxY3RmU43ZlYzJi" target="_blank" rel="noopener">Канал про ИИ</a>
   </div>
 </section>
 
-  <div class="tg-cta">
+<!-- 13 · Что дальше -->
+<section class="step" id="s-final" data-chapter="13 · Что дальше">
+  <p class="kicker"><span class="num">13</span> <span class="ch">Что дальше</span></p>
+  <h2>Хотите такую систему под свой блог?</h2>
+  <p class="lede">На консультации разберём ваш блог и соберём план: что автоматизировать первым, чтобы экономить время и получать заявки.</p>
+  <div class="cta-block">
     <h3>Больше про ИИ для экспертов — в моём Telegram-канале</h3>
     <p>Разборы инструментов, промпты, схемы воронок и автоматизаций для психологов, коучей и экспертов.</p>
-    <a class="cta" href="https://t.me/+bwxY3RmU43ZlYzJi" target="_blank" rel="noopener">Перейти в канал →</a>
+    <a class="thanks-cta" href="https://t.me/+bwxY3RmU43ZlYzJi" target="_blank" rel="noopener">Перейти в канал →</a>
   </div>
-
-  <div class="final">
-    <h2>Хотите такую систему под свой блог?</h2>
-    <p class="lead" style="margin:0 auto 24px">На консультации разберём ваш блог и соберём план: что автоматизировать первым, чтобы экономить время и получать заявки.</p>
-    <a class="cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Получить консультацию →</a>
+  <div class="cta-block">
+    <h3>Получить консультацию</h3>
+    <p>Разберём ваш блог и соберём план: что автоматизировать первым.</p>
+    <a class="thanks-cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Написать в Telegram →</a>
   </div>
-
   <p class="sources">Команды и требования сверены с официальной документацией: <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">установка</a>, <a href="https://code.claude.com/docs/en/quickstart" target="_blank" rel="noopener">быстрый старт</a>, <a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">скиллы</a>, <a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">MCP</a>, <a href="https://opencode.ai/docs/" target="_blank" rel="noopener">OpenCode</a>. Цены на китайские сервисы — на сентябрь 2026.</p>
-  </article>
+</section>
+
+<div class="navdock">
+  <button class="ndot" type="button" data-prev aria-label="Назад">←</button>
+  <button class="npill" type="button" data-next>Дальше →</button>
 </div>
+<p class="pagefoot" data-pagefoot>Автор гайда: Виктория Щетинина</p>
+</main>
+
+<div class="map-wrap" data-map-wrap>
+  <div class="scrim" data-close-map></div>
+  <div class="map">
+    <button class="map-close" type="button" data-close-map aria-label="Закрыть">✕</button>
+    <p style="font:10px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin:0">Карта гайда</p>
+    <div data-map-list></div>
+    <div class="map-foot">
+      Твой прогресс живёт в этом браузере.
+      <button class="mlink" type="button" data-copy-resume>Скопировать ссылку-закладку</button>
+      <a class="mlink" href="index.html">← Все статьи блога</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">© 2026 Viktoria Shet · <a href="https://t.me/vikashet" target="_blank" rel="noopener noreferrer">Telegram</a></footer>
 
 <script>
 (function(){
-  // copy buttons
-  document.querySelectorAll('pre').forEach(function(pre){
-    var code=pre.querySelector('code'); if(!code) return;
-    var b=document.createElement('button'); b.className='copy'; b.type='button'; b.textContent='Копировать';
-    b.addEventListener('click',function(){
-      var t=code.innerText;
-      var ok=function(){b.textContent='Скопировано';setTimeout(function(){b.textContent='Копировать'},1500)};
-      if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok).catch(function(){sel(code)})}else{sel(code)}
-    });
-    pre.appendChild(b);
+"use strict";
+var WID = document.body.dataset.workbookId || "guide";
+var LS_KEY = "wbs:" + WID;
+var stage = document.querySelector(".stage");
+var allSteps = Array.prototype.slice.call(document.querySelectorAll(".step"));
+var storageOK = true;
+try { localStorage.setItem("__t","1"); localStorage.removeItem("__t"); } catch(e){ storageOK = false; }
+
+var state = { step: allSteps[0] ? allSteps[0].id : null };
+function loadState(){
+  if(!storageOK) return;
+  try{ var raw = localStorage.getItem(LS_KEY); if(raw){ var saved = JSON.parse(raw); for(var k in saved){ state[k]=saved[k]; } } }catch(e){}
+}
+function saveState(){ if(!storageOK) return; try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){} }
+
+function tryRestoreFromHash(){
+  var m = location.hash.match(/resume=([^&]+)/);
+  if(!m) return;
+  try{ var decoded = JSON.parse(decodeURIComponent(escape(atob(m[1])))); for(var k in decoded){ state[k]=decoded[k]; } saveState(); }catch(e){}
+  history.replaceState(null, "", location.pathname + location.search);
+}
+function bookmarkLink(){
+  var b64 = btoa(unescape(encodeURIComponent(JSON.stringify({step: state.step}))));
+  return location.origin + location.pathname + "#resume=" + b64;
+}
+
+function currentStepEl(){ return document.getElementById(state.step) || allSteps[0]; }
+
+function render(){
+  var cur = currentStepEl();
+  var idx = allSteps.indexOf(cur);
+  allSteps.forEach(function(s){ s.classList.toggle("is-active", s === cur); });
+
+  var chapLabel = document.querySelector("[data-chap-label]");
+  if(chapLabel){ var ch = (cur.dataset.chapter||"").split("·")[1]; chapLabel.textContent = ch ? ch.trim() : ""; }
+  var numEl = document.querySelector("[data-step-num]");
+  if(numEl) numEl.textContent = (idx+1) + "/" + allSteps.length;
+  var prog = document.querySelector("[data-progress]");
+  if(prog) prog.style.width = ((idx+1)/allSteps.length*100) + "%";
+
+  var prevBtn = document.querySelector("[data-prev]");
+  if(prevBtn) prevBtn.disabled = (idx===0);
+  var nextBtn = document.querySelector("[data-next]");
+  var isLast = idx === allSteps.length-1;
+  if(nextBtn) nextBtn.textContent = isLast ? "В начало ↺" : "Дальше →";
+  var pagefoot = document.querySelector("[data-pagefoot]");
+  if(pagefoot) pagefoot.style.display = isLast ? "none" : "";
+
+  buildMap(cur);
+  stage.scrollTo({top:0, behavior:"smooth"});
+  window.scrollTo({top:0, behavior:"smooth"});
+  saveState();
+}
+
+function buildMap(cur){
+  var list = document.querySelector("[data-map-list]");
+  if(!list) return;
+  list.innerHTML = "";
+  var lastChap = null;
+  allSteps.forEach(function(s){
+    var chap = s.dataset.chapter || "";
+    if(chap !== lastChap){
+      var h = document.createElement("p"); h.className="chp"; h.textContent = chap; list.appendChild(h); lastChap = chap;
+    }
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "jump";
+    var idx = allSteps.indexOf(s), curIdx = allSteps.indexOf(cur);
+    var isDone = idx < curIdx, isNow = s === cur;
+    b.classList.toggle("done", isDone);
+    b.classList.toggle("now", isNow);
+    var title = s.querySelector("h2");
+    b.innerHTML = '<span class="st">' + (isDone ? "✓" : (idx+1)) + '</span><span>' + (title? title.textContent : s.id) + '</span>';
+    b.addEventListener("click", function(){ goTo(s.id); closeMap(); });
+    list.appendChild(b);
   });
-  function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+}
 
-  // tabs
-  document.querySelectorAll('[data-tabs]').forEach(function(w){
-    var btns=w.querySelectorAll('[data-tab]');
-    btns.forEach(function(b){b.addEventListener('click',function(){
-      btns.forEach(function(x){x.setAttribute('aria-selected',x===b)});
-      w.querySelectorAll('[data-panel]').forEach(function(p){p.hidden=p.dataset.panel!==b.dataset.tab});
-    })});
-    if(/Win/.test(navigator.platform||'')){var ps=w.querySelector('[data-tab="ps"]'); ps&&ps.click();}
+function goTo(id){ state.step = id; render(); }
+function goNext(){
+  var idx = allSteps.indexOf(currentStepEl());
+  if(idx === allSteps.length-1){ state.step = allSteps[0].id; render(); return; }
+  state.step = allSteps[idx+1].id; render();
+}
+function goPrev(){
+  var idx = allSteps.indexOf(currentStepEl());
+  if(idx>0){ state.step = allSteps[idx-1].id; render(); }
+}
+function openMap(){ document.querySelector("[data-map-wrap]").classList.add("open"); }
+function closeMap(){ document.querySelector("[data-map-wrap]").classList.remove("open"); }
+
+function copyText(text, btn){
+  function ok(){ btn.classList.add("ok"); var old=btn.textContent; btn.textContent="Скопировано ✓"; setTimeout(function(){btn.classList.remove("ok"); btn.textContent=old;},1800); }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(ok, function(){ fallbackCopy(text, btn, ok); });
+  } else { fallbackCopy(text, btn, ok); }
+}
+function fallbackCopy(text, btn, ok){
+  try{
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    var success = document.execCommand("copy");
+    document.body.removeChild(ta);
+    if(success){ ok(); return; }
+  }catch(e){}
+  var old = btn.textContent; btn.textContent = "Нажми ⌘/Ctrl+C";
+  setTimeout(function(){ btn.textContent = old; }, 2200);
+}
+
+// path picker (soft — jump-lists only, doesn't hide steps)
+document.querySelectorAll("[data-path-picker] .choice2").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    document.querySelectorAll("[data-path-picker] .choice2").forEach(function(b){ b.classList.toggle("picked", b===btn); });
+    document.querySelectorAll("[data-path-out]").forEach(function(o){ o.hidden = o.dataset.pathOut !== btn.dataset.path; });
   });
+});
+document.querySelectorAll("[data-jump]").forEach(function(btn){
+  btn.addEventListener("click", function(){ goTo(btn.dataset.jump); });
+});
 
-  // path
-  var pb=document.querySelectorAll('.pbtn');
-  pb.forEach(function(b){b.addEventListener('click',function(){
-    pb.forEach(function(x){x.setAttribute('aria-selected',x===b)});
-    document.querySelectorAll('[data-pathout]').forEach(function(o){o.hidden=o.dataset.pathout!==b.dataset.path});
-  })});
+// stuck picker
+document.querySelectorAll("[data-stuck-picker] button").forEach(function(chip){
+  chip.addEventListener("click", function(){
+    document.querySelectorAll("[data-stuck-picker] button").forEach(function(c){ c.setAttribute("aria-pressed", c===chip); });
+    document.querySelectorAll(".stuck-panel .card").forEach(function(card){ card.hidden = card.dataset.i !== chip.dataset.i; });
+    var empty = document.querySelector("[data-stuck-empty]"); if(empty) empty.hidden = true;
+  });
+});
 
-  // stuck picker
-  var chips=document.querySelectorAll('.chip');
-  chips.forEach(function(c){c.addEventListener('click',function(){
-    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});
-    document.querySelectorAll('.stuck-card[data-i]').forEach(function(k){k.hidden=k.dataset.i!==c.dataset.i});
-    var e=document.querySelector('[data-empty]'); if(e) e.hidden=true;
-  })});
-
-  // checklist
-  var KEY='cc-guide-checklist', boxes=document.querySelectorAll('[data-ck]'), state={};
-  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+// checklist (non-blocking, own persistence)
+(function(){
+  var box = document.querySelector("[data-checklist]");
+  if(!box) return;
+  var CKEY = "wbs:" + WID + ":checklist";
+  var boxes = Array.prototype.slice.call(box.querySelectorAll("input[type=checkbox]"));
+  var state2 = {};
+  try{ state2 = JSON.parse(localStorage.getItem(CKEY) || "{}"); }catch(e){}
   function upd(){
-    var n=0; boxes.forEach(function(b){if(b.checked)n++});
-    var f=document.querySelector('[data-pfill]'), t=document.querySelector('[data-pnum]'), d=document.querySelector('[data-done]');
-    if(f) f.style.width=(n/boxes.length*100)+'%'; if(t) t.textContent=n+' из '+boxes.length; if(d) d.hidden=n!==boxes.length;
+    var n = boxes.filter(function(b){ return b.checked; }).length;
+    var fill = box.querySelector("[data-cl-fill]"), num = box.querySelector("[data-cl-num]"), done = box.querySelector("[data-cl-done]");
+    if(fill) fill.style.width = (n/boxes.length*100) + "%";
+    if(num) num.textContent = n + " из " + boxes.length;
+    if(done) done.classList.toggle("show", n === boxes.length);
   }
   boxes.forEach(function(b){
-    b.checked=!!state[b.dataset.ck];
-    b.addEventListener('change',function(){state[b.dataset.ck]=b.checked;try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){};upd()});
+    b.checked = !!state2[b.dataset.cl];
+    b.addEventListener("change", function(){ state2[b.dataset.cl] = b.checked; try{ localStorage.setItem(CKEY, JSON.stringify(state2)); }catch(e){}; upd(); });
   });
   upd();
-
-  // reading bar + scrollspy
-  var bar=document.querySelector('[data-readbar]');
-  var links=[].slice.call(document.querySelectorAll('.toc a'));
-  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
-  function onScroll(){
-    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
-    if(bar) bar.style.width=(max>0?h.scrollTop/max*100:0)+'%';
-    var cur=null; secs.forEach(function(s){if(s.getBoundingClientRect().top<120) cur=s.id});
-    links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
-  }
-  addEventListener('scroll',onScroll,{passive:true}); onScroll();
-  // collapse toc on mobile
-  if(matchMedia('(max-width:1079px)').matches){var d=document.querySelector('.toc-box'); if(d) d.open=false;}
 })();
 
+document.addEventListener("click", function(e){
+  var next = e.target.closest("[data-next]"); if(next){ goNext(); return; }
+  var prev = e.target.closest("[data-prev]"); if(prev){ goPrev(); return; }
+  var openMapBtn = e.target.closest("[data-open-map]"); if(openMapBtn){ openMap(); return; }
+  var closeMapBtn = e.target.closest("[data-close-map]"); if(closeMapBtn){ closeMap(); return; }
+  var copyResume = e.target.closest("[data-copy-resume]"); if(copyResume){ copyText(bookmarkLink(), copyResume); return; }
+  var pcopy = e.target.closest(".pcopy"); if(pcopy){ var pre = pcopy.closest(".pbox").querySelector("pre"); copyText(pre.textContent, pcopy); return; }
+});
+
+document.addEventListener("keydown", function(e){
+  if(["INPUT","TEXTAREA"].indexOf(document.activeElement.tagName)!==-1) return;
+  if(e.key==="ArrowRight") goNext();
+  else if(e.key==="ArrowLeft") goPrev();
+  else if(e.key==="Escape") closeMap();
+});
+
+loadState();
+tryRestoreFromHash();
+if(!document.getElementById(state.step)) state.step = allSteps[0].id;
+render();
+})();
 </script>
 </body>
 </html>
