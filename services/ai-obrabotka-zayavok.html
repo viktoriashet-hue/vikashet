@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИ-обработка заявок для застройщиков: ответ за минуту, 24/7 — Виктория Щетинина</title>
+<meta name="description" content="ИИ-бот в WhatsApp и Telegram отвечает на заявку с рекламы за минуту, квалифицирует, записывает на показ и передаёт в CRM. Стоимость запуска и сопровождения, себестоимость заявки, реактивация базы, кейсы рынка.">
+<link rel="canonical" href="https://viktoriashet-hue.github.io/vikashet/services/ai-obrabotka-zayavok.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101010;--card:#1A1A1A;--card2:#222222;--border:rgba(255,255,255,.08);--glow:#2D0A3F;--accent:#E8372C;--accent-hover:#FF5A4E;--violet:#A855F7;--text:#FFFFFF;--muted:#CCCCCC;--faint:#888888}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:Manrope,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:var(--accent)}
+.container{max-width:820px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-weight:800;line-height:1.15}
+em.hl{font-style:normal;color:var(--violet)}
+.topbar{position:sticky;top:0;background:rgba(16,16,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.topbar .container{display:flex;align-items:center;padding:18px 32px}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font:600 .85rem Manrope}
+.back:hover{color:var(--text)}
+header.hero{padding:64px 0 40px}
+.pill{display:inline-flex;align-items:center;gap:6px;font:700 .68rem/1 Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3);padding:.4rem .8rem;border-radius:100px;margin-bottom:20px}
+h1{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:20px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:680px}
+article{padding-bottom:80px}
+article h2{font-size:1.5rem;margin:52px 0 18px;color:var(--text)}
+article h2 span.num{color:var(--violet);margin-right:10px}
+article p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+article strong{color:var(--text)}
+.metric-row{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;flex:1;min-width:160px}
+.metric b{display:block;font:800 1.4rem Manrope;color:var(--violet);margin-bottom:4px}
+.metric span{font:600 .68rem Manrope;color:var(--faint);text-transform:uppercase}
+.sys-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0}
+.sys-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:20px}
+.sys-card b{display:block;color:var(--violet);font-size:.95rem;margin-bottom:8px}
+.sys-card span{color:var(--muted);font-size:.85rem}
+.funnel{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.funnel .stage{flex:1;min-width:150px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.funnel .stage b{display:block;color:var(--violet);font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.funnel .stage span{display:block;color:var(--muted);font-size:.85rem;margin-bottom:4px}
+.proof-shot{border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden;margin:20px 0 8px;cursor:zoom-in}
+.proof-shot img{width:100%;display:block}
+.proof-cap{font-size:.8rem;color:var(--faint);margin-bottom:20px}
+.proof-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ul.bullets{margin:0 0 16px 0;padding-left:20px;color:var(--muted)}
+ul.bullets li{margin-bottom:10px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:999;padding:40px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px}
+.final{background:var(--card2);text-align:center;border-top:1px solid var(--border);padding:64px 0;border-radius:14px}
+.final h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:16px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font:700 .8rem/1 Manrope;letter-spacing:.04em;padding:1rem 2rem;border-radius:8px;text-decoration:none}
+.cta:hover{background:var(--accent-hover)}
+@media(max-width:600px){.container{padding:0 20px}.metric-row,.sys-grid,.funnel,.proof-pair{flex-direction:column;grid-template-columns:1fr}}
+
+table.ch{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem}
+table.ch th{font:700 .66rem Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);text-align:left;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.14)}
+table.ch td{padding:12px 8px;border-bottom:1px solid var(--border);color:var(--muted)}
+table.ch td.n,table.ch th.n{text-align:right;white-space:nowrap}
+table.ch tr.best td{color:var(--text)}
+table.ch tr.best td:first-child{border-left:2px solid var(--violet);padding-left:10px}
+.tbl-wrap{overflow-x:auto}
+.funnel .stage.hot{border-color:rgba(168,85,247,.5);background:rgba(168,85,247,.08)}
+.imgslot{margin:24px 0 8px}
+</style>
+<style>
+.chat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;max-width:520px;margin:20px 0}
+.chat .b,.chat .u{padding:10px 14px;border-radius:12px;margin-bottom:10px;font-size:.92rem;max-width:88%}
+.chat .b{background:rgba(168,85,247,.14);border:1px solid rgba(168,85,247,.3);color:var(--text)}
+.chat .u{background:#2a2a2a;margin-left:auto;color:var(--text)}
+.chat .sys{font-size:.75rem;color:var(--faint);text-align:center;margin:6px 0}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.price{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px}
+.price.rec{border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.07)}
+.price b.n{display:block;font-size:1.1rem;margin-bottom:6px}
+.price .p{font:800 1.5rem Manrope;color:var(--violet)}
+.price .u2{font-size:.78rem;color:var(--faint);margin-bottom:12px}
+.price ul{padding-left:18px;color:var(--muted);font-size:.88rem}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+.cc b{display:block;color:var(--violet);margin-bottom:8px;font-size:.92rem}
+.cc ul{padding-left:18px;color:var(--muted);font-size:.86rem}
+.cc .s{font-size:.75rem;color:var(--faint);margin-top:8px}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.tl div{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+.tl b{display:block;color:var(--violet);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em}
+.tl strong{display:block;font-size:1.25rem;margin:6px 0}
+.tl span{font-size:.82rem;color:var(--muted)}
+.dl{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--text);padding:.8rem 1.4rem;border-radius:8px;text-decoration:none;font:700 .8rem Manrope;margin-top:12px}
+@media(max-width:700px){.prices,.case-grid,.tl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><a class="back" href="../index.html">← На главную</a></div></div>
+<header class="hero"><div class="container">
+<span class="pill">Услуга · для застройщиков и агентств недвижимости</span>
+<h1>ИИ-обработка заявок: <em class="hl">ответ за минуту, 24/7</em></h1>
+<p class="lead">Бот в WhatsApp или Telegram сам отвечает на заявку с рекламы, выясняет, что нужно человеку, записывает на показ и передаёт в CRM размеченный лид. Менеджер получает тех, с кем можно говорить о сделке.</p>
+<a class="dl" href="../files/kp-ai-obrabotka-zayavok.pdf" target="_blank" rel="noopener">Скачать коммерческое предложение (PDF) →</a>
+</div></header>
+<article class="container">
+<div class="metric-row">
+<div class="metric"><b>1 минута</b><span>ответ на заявку, ночью и в выходные</span></div>
+<div class="metric"><b>2–3 недели</b><span>от брифа до работы на живом трафике</span></div>
+<div class="metric"><b>45–80 ₸</b><span>себестоимость обработки заявки с 3-го месяца</span></div>
+</div>
+
+<h2><span class="num">01</span>Что делает бот</h2>
+<ul class="bullets">
+<li>Отвечает на заявку с рекламы, сайта или квиза за 1 минуту — днём, ночью и в выходные.</li>
+<li>Уточняет бюджет, комнатность, ЖК, ипотеку или рассрочку и сроки покупки.</li>
+<li>Отвечает на типовые вопросы по ЖК по вашей базе знаний и не придумывает цены.</li>
+<li>Предлагает время показа и записывает в календарь менеджера.</li>
+<li>Передаёт сделку в CRM с пометкой «горячий» или «тёплый» и кратким резюме диалога.</li>
+<li>Тем, кто замолчал, напоминает 3 раза: планировка → ход стройки → предложение.</li>
+<li>Говорит на русском и казахском, по запросу переводит на менеджера.</li>
+</ul>
+<div class="chat">
+<div class="sys">заявка с рекламы · 23:14</div>
+<div class="b">Здравствуйте! Я помощник отдела продаж. Вы смотрите квартиру для себя или как инвестицию?</div>
+<div class="u">Для себя, нужна двушка</div>
+<div class="b">На какой бюджет ориентируетесь — ипотека или рассрочка?</div>
+<div class="u">До 45 млн, рассрочка</div>
+<div class="b">Есть 3 планировки в двух ЖК, отправляю схемы. Шоурум в субботу в 11:00 или 15:00?</div>
+<div class="u">В 11</div>
+<div class="sys">→ CRM: «горячий», 2-комн., до 45 млн, рассрочка, показ сб 11:00</div>
+</div>
+
+<h2><span class="num">02</span>Как запускаем</h2>
+<div class="sys-grid">
+<div class="sys-card"><b>1. Бриф и аудит</b><span>Заявки, переписки менеджеров, критерии «горячего» лида.</span></div>
+<div class="sys-card"><b>2. База знаний</b><span>Прайсы, планировки, ипотека, рассрочка, ход стройки по каждому ЖК.</span></div>
+<div class="sys-card"><b>3. Сценарий</b><span>Квалификация, ответы на возражения, 3 дожимных касания.</span></div>
+<div class="sys-card"><b>4. Интеграции</b><span>WhatsApp и Telegram, amoCRM или Bitrix24, календарь показов.</span></div>
+<div class="sys-card"><b>5. Тестирование</b><span>2 недели на живом трафике с ежедневной правкой сценария.</span></div>
+<div class="sys-card"><b>6. Передача</b><span>Инструкция для отдела продаж, дашборд, регламент.</span></div>
+</div>
+<p><strong>Стек:</strong> WhatsApp Business API, Telegram Bot API, Claude API, n8n, amoCRM / Bitrix24, Looker Studio. Бот работает на вашем номере и в вашей CRM — данные остаются у вас.</p>
+
+<h2><span class="num">03</span>Стоимость: запуск разово, дальше дешевле</h2>
+<p>Самые дорогие работы — один раз на старте. Цена включает настройку и 2 недели тестирования на живом трафике.</p>
+<div class="prices">
+<div class="price"><b class="n">Старт</b><div class="p">550 000 ₸</div><div class="u2">≈ $1 220</div><ul><li>WhatsApp</li><li>1 ЖК в базе знаний</li><li>Квалификация + CRM</li><li>3 дожимных касания</li></ul></div>
+<div class="price rec"><b class="n">Оптимум</b><div class="p">800 000 ₸</div><div class="u2">≈ $1 780 · рекомендуем</div><ul><li>WhatsApp + Telegram</li><li>До 5 ЖК</li><li>Запись на показ в календарь</li><li>RU + KZ, дашборд</li></ul></div>
+<div class="price"><b class="n">Под ключ</b><div class="p">1 150 000 ₸</div><div class="u2">≈ $2 560</div><ul><li>Все ЖК и каналы</li><li>Голосовые сообщения</li><li>Реактивация старой базы</li><li>Контроль переписок менеджеров</li></ul></div>
+</div>
+<div class="tbl-wrap"><table class="ch">
+<tr><th>Сопровождение в месяц</th><th class="n">Месяцы 1–2</th><th class="n">С 3-го месяца</th></tr>
+<tr><td>Старт</td><td class="n">150 000 ₸</td><td class="n">100 000 ₸</td></tr>
+<tr class="best"><td>Оптимум</td><td class="n">220 000 ₸</td><td class="n">150 000 ₸</td></tr>
+<tr><td>Под ключ</td><td class="n">300 000 ₸</td><td class="n">200 000 ₸</td></tr>
+</table></div>
+
+<h2><span class="num">04</span>Себестоимость падает, заявка дешевеет</h2>
+<div class="tbl-wrap"><table class="ch">
+<tr><th>Технические расходы, ~1 000 заявок в месяц</th><th class="n">Месяц 1</th><th class="n">С 3-го месяца</th></tr>
+<tr><td>ИИ-модель (токены)</td><td class="n">≈ $100</td><td class="n">≈ $30</td></tr>
+<tr><td>Дожимы шаблонами WhatsApp</td><td class="n">$60–100</td><td class="n">$40–60</td></tr>
+<tr><td>Сервер и n8n</td><td class="n">$10–20</td><td class="n">$10–20</td></tr>
+<tr><td>Провайдер WhatsApp API</td><td class="n">≈ $75</td><td class="n">$0–75</td></tr>
+<tr><td><strong>Итого</strong></td><td class="n"><strong>110–135 тыс. ₸</strong></td><td class="n"><strong>35–85 тыс. ₸</strong></td></tr>
+</table></div>
+<div class="metric-row">
+<div class="metric"><b>≈ 125 ₸</b><span>обработка одной заявки в первый месяц</span></div>
+<div class="metric"><b>45–80 ₸</b><span>с 3-го месяца</span></div>
+<div class="metric"><b>−70%</b><span>расход на токены к 3-му месяцу</span></div>
+</div>
+<p>Постоянная часть запроса (база знаний, инструкции) кешируется и стоит 10% обычной цены, простые вопросы уходят на модель в 2–3 раза дешевле, сценарий становится короче. Заявки с рекламы с переходом в WhatsApp — 72 часа переписки бесплатно (тарифы Meta для Казахстана с 01.10.2026).</p>
+
+<h2><span class="num">05</span>Реактивация старой базы</h2>
+<p>Бот пишет тем, кто оставлял заявку месяцы и годы назад: новое предложение, свежие планировки, ход стройки. Ответивших квалифицирует и записывает на показ.</p>
+<div class="tbl-wrap"><table class="ch">
+<tr><th>Пример: база 2 000 старых контактов</th><th class="n">Первая кампания</th><th class="n">Повторная</th></tr>
+<tr><td>Настройка: сегменты, сценарий, шаблоны</td><td class="n">150 000 ₸</td><td class="n">—</td></tr>
+<tr><td>Сообщения: 2 касания × 2 000</td><td class="n">≈ 110 000 ₸</td><td class="n">≈ 110 000 ₸</td></tr>
+<tr><td>Вернулись в работу (2–5% базы)</td><td class="n">40–100</td><td class="n">40–100</td></tr>
+<tr class="best"><td>Цена вернувшегося клиента</td><td class="n">2 600–6 500 ₸</td><td class="n">1 100–2 750 ₸</td></tr>
+</table></div>
+<p>Для сравнения: новый лид из рекламы в Алматы по кейсам стоит 3 950–8 300 ₸, а вернувшийся клиент уже знает ваш ЖК.</p>
+
+<h2><span class="num">06</span>Чего ждать: эффект по месяцам</h2>
+<div class="tl">
+<div><b>Неделя 1</b><strong>30 сек</strong><span>ответ вместо 4 часов (застройщик, Тюмень)</span></div>
+<div><b>Месяц 1</b><strong>65% → 81%</strong><span>конверсия заявок (Тюмень)</span></div>
+<div><b>Месяц 2</b><strong>+30% сделок</strong><span>на риелтора (агентство, Казань)</span></div>
+<div><b>Месяц 3</b><strong>+38%</strong><span>конверсия в сделку (агентство, Москва)</span></div>
+</div>
+
+<h2><span class="num">07</span>Кейсы рынка недвижимости</h2>
+<div class="proof-shot" onclick="openLightbox(this)"><img src="../images/market-tyumen-ai.jpg" alt="Результаты застройщика из Тюмени после внедрения ИИ-менеджеров"></div>
+<div class="proof-cap">Застройщик, 4 ЖК, Тюмень, 2025: ФОТ 300 → 80 тыс. ₽/мес, конверсия заявок 65% → 81%, ответ 4 ч → 30 сек · <a href="https://aibotmanager.ru/ii-dlya-biznesa-v-stroitelnoj-kompanii/" target="_blank" rel="noopener nofollow">источник</a></div>
+<div class="proof-shot" onclick="openLightbox(this)"><img src="../images/market-moscow-ai.jpg" alt="Итоги AI-ассистента в агентстве недвижимости, Москва"></div>
+<div class="proof-cap">Агентство недвижимости, Москва, 2025: заявка за 1 минуту, 0 потерянных заявок, конверсия в сделку +38% · <a href="https://ifabrique.ru/cases/ai-assistent-dlya-agentstva-nedvizhimosti-automatizatsiya-amocrm" target="_blank" rel="noopener nofollow">источник</a></div>
+<div class="case-grid">
+<div class="cc"><b>Агентство недвижимости · Казань · 2026</b><ul><li>Сделок на риелтора: 14 → 18 в месяц</li><li>+1,4 млн ₽ выручки в месяц</li></ul><div class="s">2 месяца · <a href="https://aibotmanager.ru/keis-rieltor-ii-30-procentov-sdelok-keys/" target="_blank" rel="noopener nofollow">источник</a></div></div>
+<div class="cc"><b>PropTech · ОАЭ · 2025</b><ul><li>32% обращений → квалифицированный лид</li><li>Цена такого лида ×0,5</li></ul><div class="s">3 месяца · <a href="https://digitaldeveloper.ru/cases/tsifrovizatsiya/7234m0j8b1-keis-humaine-housebook-kak-ai-agent-char" target="_blank" rel="noopener nofollow">источник</a></div></div>
+<div class="cc"><b>Коттеджный посёлок · Ростов-на-Дону</b><ul><li>~2 000 спящих контактов</li><li>52 клиента вернулись в работу</li></ul><div class="s">одна кампания · <a href="https://chat2desk.com/blog/kejsyi/kak-reaktivirovat-spyashhix-klientov-v-nedvizhimosti-kejs-indigo-i-kottedzhnogo-poselka-donskoj" target="_blank" rel="noopener nofollow">источник</a></div></div>
+<div class="cc"><b>Застройщик · Юг РФ · 2024</b><ul><li>Telegram-бот: 175 заявок</li><li>Заявка 530 ₽ — в 5 раз дешевле других каналов</li></ul><div class="s">тестовый период · <a href="https://ruward.ru/cases/7608/" target="_blank" rel="noopener nofollow">источник</a></div></div>
+<div class="cc"><b>Застройщики · РФ · 2026</b><ul><li>Заявка → показ: 18% → 23%</li><li>Лидов на менеджера: ×1,8</li></ul><div class="s">окупаемость 7–10 дней · <a href="https://aibotmanager.ru/ii-dlya-otdela-prodazh-stroitelstva/" target="_blank" rel="noopener nofollow">источник</a></div></div>
+<div class="cc"><b>Недвижимость · РФ · 2024</b><ul><li>Конверсия: +180%</li><li>Запуск: 2 недели</li></ul><div class="s">3 месяца · <a href="https://botseller.ai/cases" target="_blank" rel="noopener nofollow">источник</a></div></div>
+</div>
+<p class="proof-cap">Цифры — из открытых кейсов рынка; это ориентир, не гарантия результата. Курс 1 $ ≈ 450 ₸.</p>
+
+<div class="final">
+<h2>Посчитаем запуск под ваш ЖК</h2>
+<a class="cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Написать в Telegram →</a>
+</div>
+</article>
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+<script>
+function openLightbox(el){document.getElementById('lightbox-img').src=el.querySelector('img').src;document.getElementById('lightbox').classList.add('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
+</script>
+</body>
+</html>

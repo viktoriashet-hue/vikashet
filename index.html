@@ -20,12 +20,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+.top-links{display:flex;gap:6px;pointer-events:auto}
+@media(max-width:600px){.top-links .hide-m{display:none}}
+.perf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.perf-grid .case-card{padding:24px;gap:12px}
+.perf-grid .case-card h3{font-size:1.12rem}
+.perf-grid .solution{color:var(--muted);font-size:.9rem}
+.perf-feature{background:linear-gradient(135deg,var(--glow),var(--card));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:32px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center;margin-bottom:24px}
+.perf-feature-copy{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.perf-feature-copy h3{font-size:1.4rem}
+.perf-feature-copy p{color:var(--muted)}
+.perf-more{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+@media(min-width:901px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+.perf-sub{font-size:1.3rem;margin:44px 0 20px}
+@media(max-width:900px){.perf-grid{grid-template-columns:1fr 1fr}.perf-feature{grid-template-columns:1fr}}
+@media(max-width:600px){.perf-grid{grid-template-columns:1fr}.perf-feature{padding:22px}.langbar{padding:12px 16px}.top-links .blog-link{padding:.3rem .7rem}}
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Виктория Щетинина","alternateName":"Viktoria Shchetinina","jobTitle":"Growth Marketing Manager","url":"https://viktoriashet-hue.github.io/vikashet/","image":"https://viktoriashet-hue.github.io/vikashet/images/vika-hero-new.jpg","sameAs":["https://www.linkedin.com/in/viktoria-shchetinina-699017156/","https://t.me/vikashet"]}
 </script>
 </head>
 <body>
-<div class="langbar"><a class="blog-link" href="blog/index.html">Блог</a><nav aria-label="Выбор языка сайта">
+<div class="langbar"><div class="top-links"><a class="blog-link" href="blog/index.html">Блог</a><a class="blog-link" href="#performance">Перфоманс</a><a class="blog-link hide-m" href="services/ai-obrabotka-zayavok.html">ИИ-заявки</a></div><nav aria-label="Выбор языка сайта">
 <a href="index.html" lang="ru" hreflang="ru" data-lang="ru" aria-label="Русский" aria-current="true">RU</a>
 <a href="en/index.html" lang="en" hreflang="en" data-lang="en" aria-label="English">EN</a>
 <a href="pl/index.html" lang="pl" hreflang="pl" data-lang="pl" aria-label="Polski">PL</a>
@@ -99,6 +116,18 @@
 <button class="tab" data-f="b2b" role="tab" aria-selected="false">B2B &amp; SMM</button>
 </div>
 <div class="cases-grid" id="cases">
+<div class="case-card reveal" data-n="fin">
+<div class="tag-row"><span class="pill">EdTech · IT-менторство</span></div>
+<h3>Автоворонка в Telegram для сообщества IT-менторов</h3>
+<p class="bottleneck"><b>Bottleneck (проблема):</b> дорогая услуга с постоплатой, холодная аудитория не доверяет и не оставляет заявки с одного поста.</p>
+<p class="solution"><b>Growth Solution (решение):</b> бот с 3 лонгридами, лид-магнитами по кодовым словам, дожимом историями и анкетой; закупка в TG-каналах, ботах и у блогеров; сквозная UTM-аналитика.</p>
+<div class="impact">
+<div class="r"><b>8,6%</b><span>вход → лид, норма 3,5%</span></div>
+<div class="r"><b>263₽</b><span>вход из Instagram</span></div>
+<div class="r"><b>85%</b><span>охвата за 24% бюджета</span></div>
+</div>
+<a class="cta ghost" href="cases/it-mentors.html">Читать кейс полностью →</a>
+</div>
 <div class="case-card reveal" data-n="med">
 <div class="tag-row"><span class="pill">Медицина &amp; HealthTech</span></div>
 <h3>Сквозная аналитика и Growth-стратегия для сети медицинских клиник</h3>
@@ -252,6 +281,165 @@
 <a class="cta ghost" href="cases/quantum-razbory.html">Читать кейс полностью →</a>
 </div>
 </div></div></section>
+<section id="performance"><div class="container">
+<div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">Performance — Реклама и трафик</span></div>
+<h2 class="section-title reveal">Перфоманс: <em class="hl">цифры по органике и рекламе</em></h2>
+<p class="section-lead reveal" style="--rev-delay:80ms">Аккаунты с нуля до 150–200 тыс., вирусные карусели и рилс с кодовым словом на воронку. Таргет в Instagram и Facebook, закупка в Telegram-каналах, реклама у блогеров. Тематические марафоны в психологии, эзотерике, ЗОЖ и финансах — с 2022 года по сегодня.</p>
+<div class="perf-feature reveal">
+<div class="perf-feature-copy">
+<span class="pill">2026 · Instagram → Telegram</span>
+<h3>Система «Клиенты из блога на автопилоте»: карусели как воронка</h3>
+<p>Высокоохватные посты-карусели с SEO под Google, кодовыми словами для автосбора заявок, ИИ-генерацией и бустом через партнёрские паблики. Подписчик идёт из Instagram в Telegram — там прогрев и продажа.</p>
+<a class="cta" href="https://viktoriashet-hue.github.io/karusel/sales-page.html" target="_blank" rel="noopener">Смотреть систему →</a>
+</div>
+<div class="impact">
+<div class="r"><b>до 2 336</b><span>подписчиков с одного поста</span></div>
+<div class="r"><b>+40…+138</b><span>подписчиков за тестовую неделю</span></div>
+<div class="r"><b>3+ недели</b><span>работает каждый пост</span></div>
+</div>
+</div>
+<h3 class="perf-sub reveal">Органика: аккаунты и посты, которые <em class="hl">я вырастила</em></h3>
+<div class="perf-grid">
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">Instagram · с нуля</span></div>
+<h3>@healthy_otnosheniya</h3>
+<div class="impact"><div class="r"><b>196 тыс.</b><span>подписчиков, выращено с нуля</span></div></div>
+<a class="cta ghost" href="https://www.instagram.com/healthy_otnosheniya/" target="_blank" rel="noopener">Смотреть аккаунт →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">Instagram · с нуля</span></div>
+<h3>@balance_8life</h3>
+<div class="impact"><div class="r"><b>151 тыс.</b><span>подписчиков, выращено с нуля</span></div></div>
+<a class="cta ghost" href="https://www.instagram.com/balance_8life/" target="_blank" rel="noopener">Смотреть аккаунт →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Пост-карусель · воронка</span></div>
+<h3>Карусель с кодовым словом</h3>
+<div class="impact"><div class="r"><b>6 000</b><span>лайков</span></div><div class="r"><b>450</b><span>комментариев — все в воронку</span></div></div>
+<a class="cta ghost" href="https://www.instagram.com/p/DUm8VgDiHZY/" target="_blank" rel="noopener">Смотреть пост →</a>
+</div>
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">Пост-карусель · воронка</span></div>
+<h3>Карусель на 100 тыс. охвата</h3>
+<div class="impact"><div class="r"><b>100 000</b><span>охват</span></div><div class="r"><b>3 000</b><span>лайков</span></div><div class="r"><b>137</b><span>кодовых слов в комментариях</span></div></div>
+<a class="cta ghost" href="https://www.instagram.com/p/DVxmcxjipP0/" target="_blank" rel="noopener">Смотреть пост →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">Reels-тест · вход в воронку</span></div>
+<h3>Рилс-тест</h3>
+<div class="impact"><div class="r"><b>1 500</b><span>комментариев — входов в воронку</span></div></div>
+<a class="cta ghost" href="https://www.instagram.com/reel/C8WXAknubYr/" target="_blank" rel="noopener">Смотреть рилс →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Reels-тест</span></div>
+<h3>Рилс-тест 2</h3>
+<div class="impact"><div class="r"><b>450</b><span>комментариев</span></div></div>
+<a class="cta ghost" href="https://www.instagram.com/reel/C9O15m7sKKq/" target="_blank" rel="noopener">Смотреть рилс →</a>
+</div>
+</div>
+<h3 class="perf-sub reveal">Платный трафик: <em class="hl">марафоны и реклама</em></h3>
+<div class="perf-grid">
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">Психология · Марафон</span></div>
+<h3>«Зажигай мечты»</h3>
+<div class="impact"><div class="r"><b>682</b><span>подписчика, до 20₽ за подписчика</span></div><div class="r"><b>992</b><span>входа в бот, до 80₽</span></div></div>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/tlSSHHWo6mk" target="_blank" rel="noopener">Кейс полностью →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">Психология · 2024</span></div>
+<h3>«Секрет отношений»</h3>
+<div class="impact"><div class="r"><b>912</b><span>подписчиков с нуля</span></div><div class="r"><b>до 35₽</b><span>за подписчика</span></div></div>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/W8bX5eahqQa" target="_blank" rel="noopener">Кейс полностью →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Психология денег</span></div>
+<h3>«Психология денег»</h3>
+<div class="impact"><div class="r"><b>1016</b><span>лидов</span></div><div class="r"><b>27–41₽</b><span>за подписчика · Telegram + FB Ads</span></div></div>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/6qpAAGmAAi_" target="_blank" rel="noopener">Кейс полностью →</a>
+</div>
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">Эзотерика · Таргет</span></div>
+<h3>«Предназначение»</h3>
+<p class="solution">Таргет в Instagram и Facebook + закупка в Telegram, распределение трафика между экспертами через бота.</p>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/mxgi4SuhaqX" target="_blank" rel="noopener">Кейс полностью →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">Эзотерика</span></div>
+<h3>«Предназначение 2»</h3>
+<div class="impact"><div class="r"><b>995</b><span>входов в бот</span></div><div class="r"><b>60₽</b><span>за подписчика</span></div></div>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/ley1o9MQfXR" target="_blank" rel="noopener">Кейс полностью →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Эзотерика</span></div>
+<h3>«Зажигай мечты 2»</h3>
+<div class="impact"><div class="r"><b>781</b><span>вход в бот</span></div><div class="r"><b>182</b><span>подписались на 15 экспертов</span></div></div>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/MOu2kckngLK" target="_blank" rel="noopener">Кейс полностью →</a>
+</div>
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">SMM · 2023</span></div>
+<h3>Реклама в нише SMM</h3>
+<div class="impact"><div class="r"><b>15–20₽</b><span>за подписчика при рынке 50–80₽</span></div></div>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">ЗОЖ · 2022</span></div>
+<h3>Марафон по питанию</h3>
+<p class="solution">Реклама у блогеров в Instagram + Telegram, марафон сразу в двух соцсетях.</p>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Лидген для психологов</span></div>
+<h3>Предсказуемый поток подписчиков</h3>
+<div class="impact"><div class="r"><b>15 000₽ → 250</b><span>целевых подписчиков</span></div><div class="r"><b>2-я неделя</b><span>первые результаты</span></div></div>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/3ihYbsO-vfB" target="_blank" rel="noopener">Как это работает →</a>
+</div>
+</div>
+<div class="perf-more reveal">
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/FDX_MOESIPa" target="_blank" rel="noopener">Все кейсы по рекламе →</a>
+<a class="cta ghost" href="https://teletype.in/@viktoria.shet/XvLVqfTGXdw" target="_blank" rel="noopener">Лидген для медицинских клиник →</a>
+</div>
+</div></section>
+<section id="ai"><div class="container">
+<div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">AI &amp; Automation — ИИ-кейсы</span></div>
+<h2 class="section-title reveal">ИИ-агенты и <em class="hl">автоматизация</em></h2>
+<p class="section-lead reveal" style="--rev-delay:80ms">Собираю на Claude боты, сайты и контент-заводы, которые работают без ручного труда. С любым инструментом разберусь и внедрю под вашу задачу.</p>
+<div class="perf-grid">
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">Telegram · SaaS</span></div>
+<h3>Бот-парсер с подписной моделью</h3>
+<p class="solution">Находит залетевший контент по нишам и анализирует его. Монетизация через подписку.</p>
+<a class="cta ghost" href="https://t.me/TopKont_bot" target="_blank" rel="noopener">@TopKont_bot →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">Сайт · Блог</span></div>
+<h3>Сайт-блог TopKontent</h3>
+<p class="solution">Контентный сайт с блогом под поисковый трафик.</p>
+<a class="cta ghost" href="https://topkontent.vercel.app/" target="_blank" rel="noopener">Открыть сайт →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Контент-завод</span></div>
+<h3>Автоматизация контента</h3>
+<p class="solution">Картинки, видео и подписи для Pinterest, Instagram и TikTok — агенты готовят и выкладывают по расписанию.</p>
+</div>
+<div class="case-card reveal">
+<div class="tag-row"><span class="pill">Инструмент</span></div>
+<h3>Калькулятор для маркетинга</h3>
+<p class="solution">Интерактивный квиз-калькулятор, который считает потенциал блога и собирает лиды.</p>
+<a class="cta ghost" href="https://viktoriashet-hue.github.io/blog-quiz/" target="_blank" rel="noopener">Попробовать →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:60ms">
+<div class="tag-row"><span class="pill">Сайты</span></div>
+<h3>Продающие страницы</h3>
+<p class="solution">Лендинги услуг под ключ: от текста до деплоя.</p>
+<a class="cta ghost" href="https://viktoriashet-hue.github.io/karusel/sales-page.html" target="_blank" rel="noopener">Пример →</a>
+</div>
+<div class="case-card reveal" style="--rev-delay:120ms">
+<div class="tag-row"><span class="pill">Сайт + оплата</span></div>
+<h3>Сайт с продажей лид-магнита</h3>
+<p class="solution">Страница со встроенной продажей лид-магнита — первые деньги с холодного трафика.</p>
+<a class="cta ghost" href="https://viktoriashet-hue.github.io/karusel/" target="_blank" rel="noopener">Пример →</a>
+</div>
+</div>
+<div class="perf-more reveal"><a class="cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Обсудить ИИ-агента под вашу задачу →</a></div>
+</div></section>
 <section><div class="container">
 <div class="section-eyebrow reveal"><span class="line"></span><span class="label-tag">High-Load Experience — Крупные аудитории</span></div>
 <h2 class="section-title reveal">Работа с <em class="hl">инфлюенсерами-миллионниками</em></h2>
@@ -283,6 +471,9 @@
 <div class="svc-card reveal" style="--rev-delay:60ms"><h3>Growth Strategy Audit</h3>
 <div class="svc-price">30 000₽</div>
 <p>1.5–2 часа. Глубокий аудит Customer Journey. Экономия до 200 000₽ на тестах нерабочих гипотез.</p></div>
+<a class="svc-card reveal" href="services/ai-obrabotka-zayavok.html" style="text-decoration:none;color:inherit;border-color:rgba(168,85,247,.45)"><h3>ИИ-обработка заявок</h3>
+<div class="svc-price">от 550 000 ₸</div>
+<p>Бот в WhatsApp и Telegram отвечает на заявку за минуту, квалифицирует, записывает на показ и передаёт в CRM. Подробнее и КП →</p></a>
 <div class="svc-card reveal" style="--rev-delay:120ms"><h3>Full-Stack Growth Management</h3>
 <div class="svc-price">По запросу</div>
 <p>Архитектура монетизации с нуля: от закупки трафика до автоматизации retention-воронок.</p></div>
