@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИ-агент «Карусели для психолога» — Виктория Щетинина</title>
+<meta name="description" content="ИИ-агент для психологов и коучей: пишет залётные карусели для Instagram на проверенных хуках, оформляет слайды в вашем дизайне, ведёт в Telegram-канал по кодовому слову и сам анализирует, что залетело. С автопостингом по желанию.">
+<meta property="og:title" content="ИИ-агент «Карусели для психолога»">
+<meta property="og:description" content="93 залётных хука, ваш голос и дизайн, кодовое слово в Telegram, самоанализ раз в 3 дня. Работает у вас в Claude.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://viktoriashet-hue.github.io/vikashet/karusel-agent/">
+<meta property="og:image" content="https://viktoriashet-hue.github.io/vikashet/karusel-agent/img/cover02.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF6F1; --bg2:#F5ECE4; --card:#FFFDFB;
+  --ink:#5B1526; --ink2:#7A2E3F; --muted:#8C6670;
+  --gold:#B8935A; --gold-soft:rgba(184,147,90,.14);
+  --line:rgba(91,21,38,.12); --line2:rgba(91,21,38,.22);
+  --shadow:0 20px 50px rgba(91,21,38,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.label{font:600 .7rem/1 Manrope;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--ink)}
+h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:.98;letter-spacing:-.01em}
+h2{font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.05;margin-bottom:22px}
+h3{font-size:1.6rem;line-height:1.15;margin-bottom:10px}
+em{font-style:italic;color:var(--gold)}
+p{color:var(--ink2)}
+.lead{font-size:1.15rem;color:var(--ink2);max-width:640px}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#FBF6F1;text-decoration:none;font:700 .78rem/1 Manrope;letter-spacing:.14em;text-transform:uppercase;padding:20px 34px;border-radius:2px;min-height:54px;transition:background .2s,transform .2s}
+.btn:hover{background:#74203A;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line2)}
+.btn.ghost:hover{background:var(--gold-soft)}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.gold:hover{background:#A5814A}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(251,246,241,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:600 1.35rem 'Cormorant Garamond',serif;text-decoration:none}
+.logo span{color:var(--gold)}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{text-decoration:none;font:500 .82rem Manrope;color:var(--muted)}
+nav .links a:hover{color:var(--ink)}
+nav .btn{padding:14px 22px;min-height:44px;font-size:.7rem}
+
+/* hero */
+.hero{padding:72px 0 88px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-200px;top:-150px;width:700px;height:700px;background:radial-gradient(circle,rgba(184,147,90,.16),transparent 65%);pointer-events:none}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{margin:6px 0 26px}
+.hero .lead{margin-bottom:34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-facts{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+.hero-facts b{display:block;font:500 2.2rem/1 'Cormorant Garamond',serif;color:var(--ink)}
+.hero-facts span{font-size:.82rem;color:var(--muted)}
+.fan{position:relative;height:540px}
+.fan img{position:absolute;width:62%;border-radius:6px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.fan img:nth-child(1){left:0;top:40px;transform:rotate(-6deg)}
+.fan img:nth-child(2){left:19%;top:0;z-index:2}
+.fan img:nth-child(3){right:0;top:60px;transform:rotate(6deg)}
+
+/* pains */
+.pains{background:var(--bg2)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:40px;box-shadow:0 10px 30px rgba(91,21,38,.04)}
+.card .n{font:500 1rem 'Cormorant Garamond',serif;color:var(--gold);display:block;margin-bottom:8px;font-style:italic}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.step b{font:500 3rem/1 'Cormorant Garamond',serif;color:var(--gold);display:block;margin-bottom:12px}
+
+/* scheme */
+.scheme{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}
+.scheme div{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:22px 18px}
+.scheme small{font:700 .66rem Manrope;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.scheme h4{font:500 1.2rem 'Cormorant Garamond',serif;margin:8px 0 6px;color:var(--ink)}
+.scheme p{font-size:.88rem}
+.strip{display:flex;gap:12px;overflow-x:auto;padding:28px 0 8px;scroll-snap-type:x mandatory}
+.strip img{width:216px;flex:none;border-radius:4px;border:1px solid var(--line);scroll-snap-align:start}
+
+/* features */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.feat .card{padding:34px}
+.feat h3{font-size:1.4rem}
+
+/* showcase */
+.show{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;align-items:start}
+.show figure{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:16px;box-shadow:var(--shadow)}
+.show figcaption{font-size:.85rem;color:var(--muted);padding:12px 4px 2px}
+
+/* cases */
+.cases{background:var(--ink);color:#F6ECE9}
+.cases h2,.cases h3{color:#F6ECE9}
+.cases p{color:#E2C9CD}
+.cases .label{color:#DDB77E}
+.cases .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.cases .c{border:1px solid rgba(246,236,233,.18);border-radius:4px;padding:36px}
+.cases .c b{font:500 3rem/1 'Cormorant Garamond',serif;color:#DDB77E;display:block;margin-bottom:10px}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:44px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.plan.best{border:1.5px solid var(--gold);position:relative}
+.plan.best::before{content:"Выбирают чаще";position:absolute;top:-13px;left:44px;background:var(--gold);color:#fff;font:700 .66rem Manrope;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:2px}
+.plan h3{font-size:2rem}
+.plan .price{font:500 3.2rem/1 'Cormorant Garamond',serif;color:var(--ink);margin:18px 0 6px}
+.plan .price s{font-size:1.4rem;color:var(--muted);margin-left:10px}
+.plan ul{list-style:none;margin:22px 0 30px;flex:1}
+.plan li{padding:10px 0 10px 28px;border-bottom:1px solid var(--line);position:relative;color:var(--ink2);font-size:.95rem}
+.plan li::before{content:"✦";position:absolute;left:0;top:10px;color:var(--gold);font-size:.8rem}
+.plan li.plus::before{content:"+";font-weight:700;font-size:1rem;top:8px}
+.plan .btn{width:100%}
+.need{margin-top:28px;background:var(--bg2);border-radius:4px;padding:28px 32px;font-size:.92rem;color:var(--ink2)}
+
+/* about */
+.about .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.about img{border-radius:4px;box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;width:100%}
+.regalia{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
+.regalia b{display:block;font:500 2.2rem/1 'Cormorant Garamond',serif}
+.regalia span{font-size:.82rem;color:var(--muted)}
+
+/* faq */
+.faq{background:var(--bg2)}
+details{background:var(--card);border:1px solid var(--line);border-radius:4px;margin-top:12px}
+summary{cursor:pointer;list-style:none;padding:24px 56px 24px 28px;font:500 1.25rem 'Cormorant Garamond',serif;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:28px;top:20px;font:400 1.6rem Manrope;color:var(--gold)}
+details[open] summary::after{content:"–"}
+details p{padding:0 28px 24px}
+
+/* final */
+.final{text-align:center}
+.final .lead{margin:0 auto 34px}
+footer{border-top:1px solid var(--line);padding:36px 0;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+
+@media (max-width:900px){
+  section{padding:72px 0}
+  .hero .grid,.about .grid,.show,.plans{grid-template-columns:1fr}
+  .fan{height:420px;max-width:440px;margin:0 auto;width:100%}
+  .cards,.feat,.steps,.cases .grid3{grid-template-columns:1fr}
+  .scheme{grid-template-columns:1fr 1fr}
+  nav .links a:not(.btn){display:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .card,.plan{padding:30px 24px}
+  .scheme{grid-template-columns:1fr}
+  .hero .cta .btn{width:100%}
+  .fan{height:340px}
+  .hero-facts{gap:22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Карусели <span>✦</span> ИИ</a>
+    <div class="links">
+      <a href="#how">Как работает</a>
+      <a href="#features">Что умеет</a>
+      <a href="#price">Пакеты</a>
+      <a href="#faq">Вопросы</a>
+      <a class="btn" href="#price">Выбрать пакет</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <span class="label">ИИ-агент для психологов, коучей и экспертов</span>
+      <h1>Залётные карусели <em>каждый день</em> — без контент-мейкера</h1>
+      <p class="lead">Агент берёт хуки, которые уже собрали тысячи лайков, пишет остальное вашим голосом, оформляет слайды в вашем дизайне и ведёт людей в ваш Telegram-канал. А раз в 3 дня сам разбирает, что залетело, и делает следующие посты сильнее.</p>
+      <div class="cta">
+        <a class="btn" href="#price">Выбрать пакет</a>
+        <a class="btn ghost" href="#how">Как это работает</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>93</b><span>залётных хука в банке</span></div>
+        <div><b>9–10</b><span>слайдов по проверенной схеме</span></div>
+        <div><b>14</b><span>вариантов дизайна под вас</span></div>
+      </div>
+    </div>
+    <div class="fan" aria-hidden="true">
+      <img src="img/cover01.jpg" alt="Пример обложки карусели в светлом стиле" loading="eager">
+      <img src="img/cover02.jpg" alt="Пример обложки карусели в стиле «Акцент»" loading="eager">
+      <img src="img/cover03.jpg" alt="Пример обложки карусели в стиле «Классика»" loading="eager">
+    </div>
+  </div>
+</header>
+
+<section class="pains">
+  <div class="wrap">
+    <span class="label">Знакомо?</span>
+    <h2>Вы хороший специалист.<br><em>Но блог не приводит клиентов</em></h2>
+    <div class="cards">
+      <div class="card"><span class="n">01</span><h3>Посты набирают 30 лайков</h3><p>Пишете полезно и глубоко, а алгоритм показывает только своим. Новые люди не приходят.</p></div>
+      <div class="card"><span class="n">02</span><h3>Нет времени и сил на контент</h3><p>После 5 консультаций за день писать посты — последнее, на что есть ресурс. Блог живёт рывками.</p></div>
+      <div class="card"><span class="n">03</span><h3>Нейросеть пишет «как робот»</h3><p>ChatGPT выдаёт гладкий текст без живого голоса и без хуков — такие посты пролистывают за секунду.</p></div>
+      <div class="card"><span class="n">04</span><h3>Охваты есть — заявок нет</h3><p>Даже когда пост залетает, люди лайкают и уходят: нет понятного пути в канал и на консультацию.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <span class="label">Как работает</span>
+    <h2>Проверенный хук + <em>ваш голос</em> + путь в канал</h2>
+    <p class="lead">Агент работает у вас в Claude — без ботов, серверов и чужих доступов. Вы пишете «сделай 5 каруселей» и получаете готовые картинки, подписи и график выкладки.</p>
+    <div class="scheme">
+      <div><small>Слайд 1</small><h4>Хук из банка</h4><p>Дословно из топ-поста ниши — это и даёт залёт.</p></div>
+      <div><small>Слайд 2</small><h4>Триггер</h4><p>Первый пункт топ-поста, тоже дословно: держит внимание.</p></div>
+      <div><small>Слайды 3–7</small><h4>Ваш голос</h4><p>Продолжение того же триггера вашими словами и примерами.</p></div>
+      <div><small>Слайд 8</small><h4>Ваш контекст</h4><p>Как это выглядит у ваших клиентов и почему так происходит.</p></div>
+      <div><small>Слайд 9</small><h4>Кодовое слово</h4><p>Вопрос в комментарии + слово, за которое человек получит ваш подарок.</p></div>
+    </div>
+    <div class="strip" aria-label="Пример карусели, которую делает агент">
+      <img src="img/slide01.jpg" alt="Слайд 1: хук" loading="lazy">
+      <img src="img/slide02.jpg" alt="Слайд 2" loading="lazy">
+      <img src="img/slide03.jpg" alt="Слайд 3" loading="lazy">
+      <img src="img/slide04.jpg" alt="Слайд 4" loading="lazy">
+      <img src="img/slide05.jpg" alt="Слайд 5" loading="lazy">
+      <img src="img/slide06.jpg" alt="Слайд 6" loading="lazy">
+      <img src="img/slide07.jpg" alt="Слайд 7" loading="lazy">
+      <img src="img/slide08.jpg" alt="Слайд 8" loading="lazy">
+      <img src="img/slide09.jpg" alt="Слайд 9: кодовое слово" loading="lazy">
+    </div>
+    <p class="muted" style="font-size:.85rem">Листайте вправо — пример карусели целиком, сделан агентом.</p>
+
+    <div class="steps">
+      <div class="card step"><b>1</b><h3>Настройка за вечер</h3><p>Распаковываете архив, пишете агенту «установи». Он сам всё проверит и задаст вопросы: ниша, голос, ваш канал, дизайн, фото.</p></div>
+      <div class="card step"><b>2</b><h3>Партия на день</h3><p>«Сделай 5 каруселей» — агент подберёт хуки по вашим темам, напишет, оформит и составит график выкладки.</p></div>
+      <div class="card step"><b>3</b><h3>Самоанализ раз в 3 дня</h3><p>Вы присылаете скрины статистики — агент разбирает залёты и предлагает, что усилить. Правила меняются только после вашего «да».</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="background:var(--bg2)">
+  <div class="wrap">
+    <span class="label">Что внутри</span>
+    <h2>10 навыков в <em>одном агенте</em></h2>
+    <div class="feat">
+      <div class="card"><h3>Банк залётных хуков</h3><p>93 хука из топ-каруселей ниши: отношения, мама и семья, самоценность, философия жизни. Каждый собрал от 2 000 до 40 000 лайков.</p></div>
+      <div class="card"><h3>Ваш голос</h3><p>Агент учится по вашим текстам и правкам: «ты» или «вы», мягко или прямо, любимые и запретные слова. Без «нейросетевых» оборотов.</p></div>
+      <div class="card"><h3>Кодовое слово → канал</h3><p>Описывает выгоду того, что вы даёте за слово, и усиливает желание хитами вашего Telegram-канала: постами, эфирами, подкастами.</p></div>
+      <div class="card"><h3>Ваш дизайн</h3><p>5 стилей, 9 палитр или ваши цвета. Вы выбираете из вариантов, агент ставит ваше фото на обложки — карусели не похожи на чужие.</p></div>
+      <div class="card"><h3>Переупаковка ваших постов</h3><p>Находит 5–10 ваших лучших постов и пересобирает их по структуре залёта, усиливая хук.</p></div>
+      <div class="card"><h3>Острые темы дня</h3><p>Ищет свежие поводы в новостях, исследованиях и соцсетях и подбирает к ним хук из банка. Без выдуманных фактов.</p></div>
+      <div class="card"><h3>Самоанализ</h3><p>Раз в 3 дня — какие хуки, темы, стили и время выкладки работают у вас. Правила улучшаются под вашу аудиторию.</p></div>
+      <div class="card"><h3>Дашборд и затраты</h3><p>Залёты, лучшие формулы и фоны, а рядом — затраты на работу агента и советы, как тратить меньше.</p></div>
+      <div class="card"><h3>Проверка перед выкладкой</h3><p>Типографика без висящих предлогов, никаких диагнозов читателю, выдуманных исследований и эзотерики.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="label">Как это выглядит</span>
+    <h2>Вы выбираете — <em>агент делает</em></h2>
+    <div class="show">
+      <figure><img src="img/design.jpg" alt="Варианты оформления, которые агент предлагает на выбор" loading="lazy"><figcaption>При настройке агент показывает варианты дизайна на настоящем хуке — вы выбираете свой.</figcaption></figure>
+      <figure><img src="img/dashboard.jpg" alt="Дашборд аналитики каруселей" loading="lazy"><figcaption>Дашборд: залёты, лучшие формулы, стили, фоны и затраты. Пример на тестовых данных.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cases">
+  <div class="wrap">
+    <span class="label">Результаты системы</span>
+    <h2>Агент собран на системе, <em>которая уже работает</em></h2>
+    <p class="lead">Эти правила и хуки выросли из моей работы с экспертами и собственных аккаунтов о психологии и отношениях.</p>
+    <div class="grid3">
+      <div class="c"><b>150 000+</b><h3>подписчиков с нуля</h3><p>в каждом из двух моих аккаунтов о психологии и отношениях — на текстовых каруселях.</p></div>
+      <div class="c"><b>254 000</b><h3>просмотров у одной карусели</h3><p>Формат «жёсткое утверждение + “Дочитай до конца”» — он есть в банке агента.</p></div>
+      <div class="c"><b>~200</b><h3>откликов из 4 постов</h3><p>у психолога Ирины после контента под боли и кодовых слов с переходом в Telegram.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <span class="label">Пакеты</span>
+    <h2>Выберите, <em>как вам удобнее</em></h2>
+    <div class="plans">
+      <div class="plan">
+        <span class="label">Пакет 1</span>
+        <h3>ИИ-агент</h3>
+        <p>Агент делает карусели, вы выкладываете сами — вручную или в любой планировщик.</p>
+        <div class="price">9 900 ₽</div>
+        <ul>
+          <li>Агент для Claude: Windows, Mac M1–M4 или Mac Intel</li>
+          <li>Банк из 93 залётных хуков ниши</li>
+          <li>10 навыков: тексты, дизайн, кодовое слово, острые темы, переупаковка ваших постов</li>
+          <li>Самоанализ раз в 3 дня и дашборд</li>
+          <li>Подробная инструкция на 13 страниц</li>
+          <li>Ничего не нужно устанавливать — всё внутри архива</li>
+        </ul>
+        <a class="btn ghost" href="https://t.me/vikashet" target="_blank" rel="noopener noreferrer">Купить пакет 1 — 9 900 ₽</a>
+      </div>
+      <div class="plan best">
+        <span class="label">Пакет 2</span>
+        <h3>Агент + автопостинг</h3>
+        <p>Карусели сами встают в очередь Instagram и TikTok по расписанию. Вы только говорите «выкладывай».</p>
+        <div class="price">19 900 ₽</div>
+        <ul>
+          <li>Всё из пакета 1</li>
+          <li class="plus">Модуль автопостинга через Outstand: Instagram-карусели и та же карусель в TikTok с отдельной подписью</li>
+          <li class="plus">Агент-настройщик: ведёт по шагам — аккаунт, подключение соцсетей, ключ, тестовый пост</li>
+          <li class="plus">Умное расписание: окно, интервалы, лимит в сутки, сильный хук — на вечер</li>
+          <li class="plus">Инструкция по автопостингу со скриншотами</li>
+          <li class="plus">7 дней моей поддержки в Telegram на запуск</li>
+        </ul>
+        <a class="btn" href="https://t.me/vikashet" target="_blank" rel="noopener noreferrer">Купить пакет 2 — 19 900 ₽</a>
+      </div>
+    </div>
+    <div class="need"><b>Что понадобится:</b> платная подписка Claude (Pro или выше) и приложение Claude на компьютере. Для пакета 2 — ещё аккаунт в сервисе Outstand (оплачивается отдельно, по его тарифам) и профессиональный аккаунт Instagram. Нужна настройка под ключ на созвоне — напишите, обсудим.</div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap grid">
+    <img src="../images/vika-portrait.jpg" alt="Виктория Щетинина" loading="lazy">
+    <div>
+      <span class="label">Автор агента</span>
+      <h2>Виктория <em>Щетинина</em></h2>
+      <p class="lead">Маркетолог экспертов помогающих профессий. Строю системы, в которых контент приводит клиентов, — и упаковываю их в ИИ-агентов, чтобы они работали без меня.</p>
+      <div class="regalia">
+        <div><b>9+ лет</b><span>в маркетинге</span></div>
+        <div><b>300 000+</b><span>подписчиков привлечено экспертам</span></div>
+        <div><b>50+</b><span>запусков в 7 нишах</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="label">Вопросы</span>
+    <h2>Частые <em>вопросы</em></h2>
+    <details><summary>Мне нужно уметь программировать?</summary><p>Нет. Вы распаковываете архив, открываете папку в Claude и пишете «установи». Дальше общаетесь с агентом обычными словами: «сделай 5 каруселей», «темы», «анализ».</p></details>
+    <details><summary>Что нужно, кроме агента?</summary><p>Платная подписка Claude (Pro или выше) и приложение Claude на компьютере с Windows или Mac. Python и всё остальное уже лежит в архиве. Для автопостинга — аккаунт Outstand и профессиональный аккаунт Instagram.</p></details>
+    <details><summary>Почему первые два слайда берутся из чужих постов?</summary><p>Это главный механизм залёта: хук и первый пункт уже доказали, что их читают тысячи людей. Всё остальное агент пишет вашим голосом, с вашим опытом и вашим призывом. Ваши собственные залёты агент тоже добавляет в банк.</p></details>
+    <details><summary>Мои карусели не будут похожи на чужие?</summary><p>Нет: вы выбираете стиль и цвета из вариантов, можно с вашими фото на обложках. Текст со 3-го слайда — ваш, призыв и канал — ваши.</p></details>
+    <details><summary>Агент сам выкладывает посты?</summary><p>В пакете 1 — нет: он отдаёт готовые картинки, подписи и график, выкладываете вы. В пакете 2 агент ставит посты в очередь Instagram и TikTok через Outstand — только после вашего «да» на партию.</p></details>
+    <details><summary>Подойдёт коучу, а не психологу?</summary><p>Да: банк охватывает отношения, семью, самоценность, внутреннюю опору и философию жизни. Голос, темы клиентов и призыв агент настраивает под вас.</p></details>
+    <details><summary>Сколько это стоит в работе?</summary><p>Агент работает в вашей подписке Claude — отдельной оплаты за каждую карусель нет. Дашборд показывает, какие задачи «тяжёлые», и подсказывает, как тратить меньше.</p></details>
+    <details><summary>Есть гарантия охватов?</summary><p>Гарантировать охваты не может никто: они зависят от аккаунта, регулярности и алгоритмов. Агент даёт систему, на которой мои аккаунты выросли до 150 000+, и сам подстраивает её под вашу аудиторию.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="label">Начать</span>
+    <h2>Пусть контент работает, <em>пока вы работаете с клиентами</em></h2>
+    <p class="lead">Напишите мне в Telegram, какой пакет выбираете, — пришлю оплату и архив для вашего компьютера.</p>
+    <a class="btn" href="https://t.me/vikashet" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Виктория Щетинина · TopKontent</span>
+    <span><a href="https://viktoriashet-hue.github.io/vikashet/" target="_blank" rel="noopener noreferrer">Сайт</a> · <a href="https://t.me/vikashet" target="_blank" rel="noopener noreferrer">Telegram</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
