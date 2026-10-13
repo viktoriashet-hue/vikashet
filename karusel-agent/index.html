@@ -129,6 +129,26 @@ nav .btn{padding:14px 22px;min-height:44px;font-size:.7rem}
 .costs td span{font-size:.82rem;color:var(--muted)}
 .costs .tot{margin-top:18px;font-size:.95rem}
 @media (max-width:640px){.costs{padding:22px 16px}.costs table,.costs tbody,.costs tr,.costs td{display:block}.costs th{display:none}.costs tr{padding:12px 0;border-bottom:1px solid var(--line)}.costs td{border:0;padding:2px 0}.costs td:last-child{font:700 .66rem Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}}
+/* stage bands (dark) */
+.stage{background:#220A15;color:#F6ECE9;position:relative;overflow:hidden}
+.stage h2,.stage h3{color:#F6ECE9}
+.stage p{color:#D9BFC6}
+.stage .label{color:#DDB77E}
+.stage em{color:#DDB77E}
+.stage .neon{position:absolute;right:24px;top:36px;width:440px;opacity:.85;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at center,#000 55%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 55%,transparent 75%)}
+.stage .wrap{position:relative}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.tile figure{margin:0}
+.tile img{width:100%;height:auto;display:block;-webkit-mask-image:radial-gradient(ellipse 72% 70% at center,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at center,#000 60%,transparent 100%)}
+.tile b{display:block;font:500 1.55rem/1.15 'Cormorant Garamond',serif;color:#F6ECE9;margin:10px 0 6px}
+.tile b i{font-style:normal;color:#DDB77E}
+.tile p{font-size:.93rem}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:start;margin-top:44px}
+.flow .arr{font:500 2.4rem/1 "Cormorant Garamond",serif;color:#DDB77E;align-self:center;padding-bottom:60px}
+.flow .tile img{max-height:190px;width:auto;max-width:100%}
+.stage .note2{margin-top:34px;font-size:.9rem;color:#B99AA3}
+.final .safe{width:220px;margin:0 auto 18px;display:block;border-radius:50%;-webkit-mask-image:radial-gradient(circle,#000 55%,transparent 72%);mask-image:radial-gradient(circle,#000 55%,transparent 72%)}
+@media (max-width:900px){.tiles,.flow{grid-template-columns:1fr}.flow .arr{transform:rotate(90deg);padding:0;justify-self:center}.stage .neon{width:300px;right:-60px;top:10px;opacity:.35}}
 /* pricing */
 .plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;align-items:stretch}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:44px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
@@ -238,6 +258,27 @@ footer a{text-decoration:none}
   </div>
 </section>
 
+<section class="stage" id="bank">
+  <img class="neon" src="img/el/st-neon.jpg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <span class="label">Внутри агента</span>
+    <h2>93 залётных хука — <em>в одном банке</em></h2>
+    <p class="lead">Агент не придумывает заголовки. Он берёт хуки из каруселей, которые уже собрали тысячи лайков в нише, и переносит слайды 1–2 слово в слово.</p>
+    <div class="tiles">
+      <div class="tile"><figure><img src="img/el/st-rel.jpg" alt="Темы: отношения и семья" loading="lazy" width="564" height="244"></figure><b>Отношения и семья <i>· 72</i></b><p>Мужчина и женщина, мама, дети, свекровь, развод.</p></div>
+      <div class="tile"><figure><img src="img/el/st-self.jpg" alt="Темы: самоценность" loading="lazy" width="564" height="244"></figure><b>Самоценность <i>· 13</i></b><p>Внутренняя опора, границы, «себе цену».</p></div>
+      <div class="tile"><figure><img src="img/el/st-phil.jpg" alt="Темы: философия жизни" loading="lazy" width="564" height="244"></figure><b>Философия жизни <i>· 8</i></b><p>Работа, возраст, поколения, смысл.</p></div>
+    </div>
+    <div class="flow">
+      <div class="tile"><figure><img src="img/el/st-likes.jpg" alt="Карточки авторов с лайками и комментариями" loading="lazy" width="1000" height="250"></figure><b>У каждого хука — цифры</b><p>Лайки и комментарии у автора: от 2 000 до 40 000 лайков.</p></div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div class="tile"><figure><img src="img/el/st-post-rel.jpg" alt="Карусель с хуком из банка" loading="lazy" width="514" height="304"></figure><b>Слайды 1–2 слово в слово</b><p>Дальше — ваш голос, ваш опыт и ваше кодовое слово.</p></div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div class="tile"><figure><img src="img/el/st-can.jpg" alt="Банк хуков пополняется" loading="lazy" width="800" height="424"></figure><b>Банк растёт</b><p>Ваши собственные залёты агент тоже добавляет в банк.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="how">
   <div class="wrap">
     <span class="label">Как работает</span>
@@ -287,6 +328,21 @@ footer a{text-decoration:none}
       <div class="card"><figure><img src="img/proof/08-dashboard.jpg" alt="Дашборд и затраты — как это выглядит" loading="lazy" width="1000" height="750"><figcaption>Дашборд на тестовых данных</figcaption></figure><h3>Дашборд и затраты</h3><p>Залёты по дням, лучшие формулы, темы и стили, а рядом — сколько стоит работа агента на один пост.</p></div>
       <div class="card"><figure><img src="img/proof/09-check.jpg" alt="Проверка перед выкладкой — как это выглядит" loading="lazy" width="1000" height="750"><figcaption>Настоящая проверка агента</figcaption></figure><h3>Проверка перед выкладкой</h3><p>Сверяет хук с банком, ловит эзотерику, диагнозы читателю и темы здоровья, висящие предлоги. Ошибки исправляет сама.</p></div>
       <div class="card"><figure><img src="img/proof/10-autopost.jpg" alt="Автопостинг — как это выглядит" loading="lazy" width="1000" height="750"><figcaption>Настоящий запуск на тестовом аккаунте</figcaption></figure><h3>Автопостинг <span class="pk">пакет 2</span></h3><p>Ставит партию в очередь Instagram и TikTok по расписанию: самый сильный хук — на вечер. Только после вашего «да».</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stage" id="voice">
+  <div class="wrap">
+    <span class="label">Ваш голос</span>
+    <h2>Агент учится <em>писать как вы</em></h2>
+    <p class="lead">Чтобы карусели звучали по-вашему, а не «как нейросеть», агент один раз узнаёт ваш стиль и дальше помнит его во всех постах.</p>
+    <div class="flow">
+      <div class="tile"><figure><img src="img/el/st-toggles.jpg" alt="Настройки голоса: обращение, тон, любимые и запретные слова" loading="lazy" width="530" height="262"></figure><b>Вы задаёте стиль</b><p>На «ты» или на «вы», мягко или прямо, любимые и запретные слова.</p></div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div class="tile"><figure><img src="img/el/st-edits.jpg" alt="Ваши тексты и ваши правки" loading="lazy" width="514" height="262"></figure><b>Агент читает ваши тексты</b><p>Берёт 1–2 ваших поста и запоминает каждую правку.</p></div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div class="tile"><figure><img src="img/el/st-pencil.jpg" alt="Одна правка в посте" loading="lazy" width="310" height="250"></figure><b>Одна правка — и везде так</b><p>Сказали «я так не говорю» — в следующих каруселях этого уже не будет.</p></div>
     </div>
   </div>
 </section>
@@ -403,6 +459,7 @@ footer a{text-decoration:none}
 
 <section class="final">
   <div class="wrap">
+    <img class="safe" src="img/el/st-safe.jpg" alt="" aria-hidden="true" loading="lazy">
     <span class="label">Начать</span>
     <h2>Пусть контент работает, <em>пока вы работаете с клиентами</em></h2>
     <p class="lead">Напишите мне в Telegram, какой пакет выбираете, — пришлю оплату и архив для вашего компьютера.</p>
