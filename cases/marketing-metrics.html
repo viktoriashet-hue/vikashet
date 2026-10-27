@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейсы маркетолога: воронки и юнит-экономика — Виктория Щетинина</title>
+<meta name="description" content="Кейсы маркетолога Виктории Щетининой в бизнес-метриках: воронка по этапам, CPC, CPL, CAC, ROMI, стек, сроки, команда и первые эффекты.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101010;--card:#1A1A1A;--card2:#222222;--border:rgba(255,255,255,.08);--accent:#E8372C;--accent-hover:#FF5A4E;--violet:#A855F7;--green:#34C38F;--text:#FFFFFF;--muted:#CCCCCC;--faint:#888888}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:Manrope,sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:var(--accent)}
+.container{max-width:900px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-weight:800;line-height:1.15}
+.topbar{position:sticky;top:0;background:rgba(16,16,16,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;padding:18px 32px}
+.back{color:var(--muted);text-decoration:none;font:600 .85rem Manrope}
+.back:hover{color:var(--text)}
+header.hero{padding:56px 0 24px}
+.pill{display:inline-flex;font:700 .68rem/1 Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3);padding:.4rem .8rem;border-radius:100px;margin-bottom:18px}
+h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:18px}
+.lead{color:var(--muted);font-size:1.05rem;max-width:720px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 8px}
+.toc a{font:600 .78rem Manrope;color:var(--muted);text-decoration:none;border:1px solid var(--border);background:var(--card);padding:.45rem .8rem;border-radius:100px}
+.toc a:hover{color:var(--text);border-color:var(--accent)}
+.note{font-size:.82rem;color:var(--faint);background:var(--card);border:1px solid var(--border);border-left:3px solid var(--violet);border-radius:8px;padding:12px 16px;margin:16px 0}
+.case{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;margin:36px 0}
+.case .tag{font:700 .68rem Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.case h2{font-size:1.45rem;margin:8px 0 12px}
+.case h3{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);margin:26px 0 12px}
+.case p{color:var(--muted);margin-bottom:10px}
+.case strong{color:var(--text)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+.kpi{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:16px}
+.kpi b{display:block;font:800 1.35rem Manrope;color:var(--accent)}
+.kpi span{font:600 .7rem Manrope;color:var(--faint);text-transform:uppercase;letter-spacing:.03em}
+.kpi.calc b{color:var(--violet)}
+.funnel{display:flex;flex-direction:column;gap:8px}
+.st{display:grid;grid-template-columns:170px 1fr;gap:12px;align-items:center}
+.st .lbl{font:600 .82rem Manrope;color:var(--muted)}
+.st .bar{position:relative;height:30px;background:var(--card2);border-radius:6px;overflow:hidden}
+.st .bar i{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,var(--accent),#ff7a6e);border-radius:6px}
+.st .bar i.c{background:linear-gradient(90deg,#7c3aed,var(--violet))}
+.st .bar em{position:relative;font:700 .8rem/30px Manrope;font-style:normal;padding-left:10px;color:#fff;white-space:nowrap}
+.legend{font-size:.75rem;color:var(--faint);margin-top:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 10px;vertical-align:middle}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:6px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border)}
+th{font:700 .7rem Manrope;text-transform:uppercase;color:var(--faint);letter-spacing:.04em}
+td{color:var(--muted)}
+td.n{white-space:nowrap;color:var(--text);font-weight:700}
+td.c{color:var(--violet);font-weight:700;white-space:nowrap}
+.tbl{overflow-x:auto}
+.stack{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.stack span{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:.4rem .7rem;font:600 .8rem Manrope;color:var(--text)}
+.stack b{color:var(--accent);font-weight:800}
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.tl div{background:var(--card2);border-radius:10px;padding:12px 14px;border-top:3px solid var(--accent);font-size:.84rem;color:var(--muted)}
+.tl b{display:block;color:var(--text);font-size:.82rem;margin-bottom:4px}
+ul.b{padding-left:20px;color:var(--muted)}
+ul.b li{margin-bottom:6px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.shot{border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden;cursor:zoom-in;background:#000}
+.shot img{width:100%;display:block}
+.cap{font-size:.75rem;color:var(--faint);padding:8px 10px;background:var(--card2)}
+.quote{border-left:3px solid var(--accent);padding:6px 0 6px 16px;color:var(--text);font-style:italic;margin:12px 0}
+.more{display:inline-block;margin-top:16px;font:700 .82rem Manrope;text-decoration:none}
+.method{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:26px;margin:36px 0}
+.method h2{font-size:1.2rem;margin-bottom:12px}
+.method p,.method li{color:var(--muted);font-size:.9rem}
+.final{background:var(--card2);text-align:center;border-radius:14px;padding:56px 24px;margin:40px 0 80px}
+.final h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin-bottom:16px}
+.cta{display:inline-flex;background:var(--accent);color:#fff;font:700 .85rem/1 Manrope;padding:1rem 2rem;border-radius:8px;text-decoration:none}
+.cta:hover{background:var(--accent-hover)}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:999;padding:24px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px}
+@media(max-width:640px){.container{padding:0 16px}.topbar .container{padding:14px 16px}.case{padding:20px 16px}.st{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><a class="back" href="../index.html#cases">← Все кейсы</a><a class="back" href="https://t.me/vikashet" target="_blank" rel="noopener">Telegram →</a></div></div>
+
+<header class="hero"><div class="container">
+<span class="pill">Маркетолог · воронки · аналитика · управление командой</span>
+<h1>Кейсы маркетолога: воронка от клика до оплаты в цифрах</h1>
+<p class="lead">Я отвечаю не за охваты, а за стоимость клиента и выручку. По каждому проекту: задача бизнеса, путь клиента, воронка по этапам, CPC, CPL, CAC, ROMI, стек, сроки, команда подрядчиков и первые эффекты.</p>
+<div class="toc">
+<a href="#med">Медклиники: CAC −95%</a>
+<a href="#it">IT-менторство: 8,6% в лид</a>
+<a href="#money">Психология денег: 1 016 лидов</a>
+<a href="#poli">Онлайн-поликлиника: ROI 1:5–1:10</a>
+<a href="#fin">Финансы: ROMI 500%</a>
+<a href="#food">Фудблогер: чек ×5</a>
+</div>
+<div class="note"><b style="color:var(--accent)">Красные</b> цифры — фактические из кабинетов, CRM и отчётов. <b style="color:var(--violet)">Фиолетовые</b> со знаком ≈ — рассчитаны из фактических по формулам, допущения указаны рядом. Методика внизу страницы.</div>
+</div></header>
+
+<main class="container">
+
+<!-- 1. МЕДИЦИНА -->
+<section class="case" id="med">
+<span class="tag">Медицина · 2 клиники · Кемерово и Ростов</span>
+<h2>Сквозная аналитика: стоимость пациента снизилась с 50 000 ₽ до ≈1 100 ₽</h2>
+<p><strong>Задача бизнеса.</strong> Реклама работала «вслепую»: клиники не знали, какой канал приводит пациентов, а какой только пустые заявки. В Ростове заявка стоила 5 000 ₽, до записи доходили 10%, то есть каждый новый пациент обходился в 50 000 ₽ при среднем чеке 15 000 ₽. Реклама работала в минус.</p>
+<div class="kpis">
+<div class="kpi"><b>5 000 → 380 ₽</b><span>CPL, Ростов (×13)</span></div>
+<div class="kpi"><b>10% → 35%</b><span>заявка → запись</span></div>
+<div class="kpi calc"><b>≈50 000 → 1 086 ₽</b><span>CAC пациента, Ростов</span></div>
+<div class="kpi calc"><b>≈1 280%</b><span>ROMI по выручке, Ростов</span></div>
+<div class="kpi"><b>1 680 000 ₽</b><span>выручка / мес, 2 клиники</span></div>
+</div>
+
+<h3>Воронка клиники в Ростове за месяц</h3>
+<div class="funnel">
+<div class="st"><span class="lbl">Клики на сайт</span><div class="bar"><i class="c" style="width:100%"></i><em>≈2 850 · CPC ≈15 ₽</em></div></div>
+<div class="st"><span class="lbl">Заявки</span><div class="bar"><i class="c" style="width:40%"></i><em>≈114 · CR 4% · CPL 380 ₽</em></div></div>
+<div class="st"><span class="lbl">Запись и визит</span><div class="bar"><i style="width:14%"></i><em>40 · 35%</em></div></div>
+<div class="st"><span class="lbl">Оплаты</span><div class="bar"><i style="width:14%"></i><em>40 пациентов · 600 000 ₽</em></div></div>
+</div>
+<p class="legend">Ширина полосы условная, для читаемости. <i style="background:var(--accent)"></i>факт <i style="background:var(--violet)"></i>расчёт</p>
+
+<h3>Юнит-экономика до и после</h3>
+<div class="tbl"><table>
+<tr><th>Показатель</th><th>Ростов до</th><th>Ростов после</th><th>Кемерово до</th><th>Кемерово после</th></tr>
+<tr><td>CPL, цена заявки</td><td class="n">5 000 ₽</td><td class="n">380 ₽</td><td class="n">1 800 ₽</td><td class="n">600 ₽</td></tr>
+<tr><td>Заявка → запись</td><td class="n">10%</td><td class="n">35%</td><td class="n">20%</td><td class="n">35%</td></tr>
+<tr><td>CAC пациента = CPL / CR</td><td class="c">≈50 000 ₽</td><td class="c">≈1 086 ₽</td><td class="c">≈9 000 ₽</td><td class="c">≈1 714 ₽</td></tr>
+<tr><td>Пациентов в месяц</td><td>—</td><td class="n">40</td><td>—</td><td class="c">≈72¹</td></tr>
+<tr><td>Рекламный бюджет / мес</td><td>—</td><td class="c">≈43 400 ₽</td><td>—</td><td class="c">≈123 400 ₽</td></tr>
+<tr><td>Выручка / мес</td><td>—</td><td class="n">600 000 ₽</td><td>—</td><td class="n">1 080 000 ₽</td></tr>
+<tr><td>ROMI по выручке</td><td class="c">−70%</td><td class="c">≈1 280%</td><td>—</td><td class="c">≈775%</td></tr>
+</table></div>
+<p class="legend">¹ При среднем чеке как в Ростове, 15 000 ₽ (600 000 ₽ / 40 оплат). CPC — оценка при конверсии сайта в заявку 4%, типичной для медицинских лендингов.</p>
+
+<h3>Путь пациента и стек</h3>
+<div class="stack"><span>VK Ads</span><span>Яндекс Директ</span><b>→</b><span>Сайт + онлайн-запись 24/7</span><b>→</b><span>Яндекс Метрика: цели, вебвизор</span><span>Коллтрекинг</span><b>→</b><span>CRM клиники</span><b>→</b><span>Скрипт администратора</span><b>→</b><span>Визит и оплата</span><b>→</b><span>Отзывы: 2ГИС, Яндекс Карты</span><b>→</b><span>Дашборд в Google Sheets</span></div>
+
+<h3>Команда и управление</h3>
+<ul class="b">
+<li>Наняла и вела подрядчиков: специалист по VK Ads и Яндекс Директу, интегратор CRM и коллтрекинга, копирайтер для статей и постов.</li>
+<li>Писала ТЗ, принимала работу по чек-листу, держала недельные спринты с отчётом по CPL и записи.</li>
+<li>Обучила администраторов новым скриптам и бандлам услуг, сверяла записи с CRM.</li>
+</ul>
+
+<h3>Сроки и первые эффекты</h3>
+<div class="tl">
+<div><b>Недели 1–2 · аудит</b>Каналы, CRM, звонки, отзывы. Отключили каналы с CAC выше чека.</div>
+<div><b>Недели 3–4 · аналитика</b>Цели в Метрике, коллтрекинг, UTM, связка с CRM, дашборд.</div>
+<div><b>Недели 5–6 · перезапуск</b>VK Ads и Директ, A/B-тесты креативов, онлайн-запись, скрипты.</div>
+<div><b>2-й месяц · эффект</b>CPL упала в 3–13 раз, запись выросла до 35%, реклама вышла в плюс.</div>
+</div>
+
+<h3>Доказательства</h3>
+<div class="shots">
+<div class="shot" onclick="lb(this)"><img src="../images/proof-rostov.png" alt="Дашборд воронки клиники в Ростове" loading="lazy"><div class="cap">Дашборд Ростова: цена заявки, конверсии, выручка</div></div>
+<div class="shot" onclick="lb(this)"><img src="../images/proof-kemerovo.png" alt="Дашборд воронки клиники в Кемерово" loading="lazy"><div class="cap">Дашборд Кемерово: до и после</div></div>
+</div>
+<p class="quote">«Цена заявки упала почти в 3 раза, а запись выросла с 20% до 35%. Впервые видим прозрачную воронку от клика до оплаты». Медицинский центр, Кемерово</p>
+<a class="more" href="medical-center.html">Полный кейс →</a>
+</section>
+
+<!-- 2. IT -->
+<section class="case" id="it">
+<span class="tag">EdTech · IT-менторство · холодный трафик</span>
+<h2>Автоворонка в Telegram: 8,6% входов становятся лидами при норме 3,5%</h2>
+<p><strong>Задача бизнеса.</strong> Сообщество IT-менторов (32 000 человек) продаёт дорогое сопровождение с оплатой после трудоустройства. Нужны не подписчики, а квалифицированные лиды из холодной аудитории.</p>
+<div class="kpis">
+<div class="kpi"><b>245 348 ₽</b><span>бюджет за 4 дня</span></div>
+<div class="kpi"><b>919 ₽</b><span>цена входа в бот</span></div>
+<div class="kpi"><b>8,6%</b><span>вход → лид, ×2,5 к норме</span></div>
+<div class="kpi calc"><b>≈10 670 ₽</b><span>CPL квалифицированного лида</span></div>
+<div class="kpi"><b>263 ₽</b><span>вход из Instagram, в 3,5 раза дешевле</span></div>
+</div>
+
+<h3>Воронка</h3>
+<div class="funnel">
+<div class="st"><span class="lbl">Показы</span><div class="bar"><i style="width:100%"></i><em>342 605 · CPM 716 ₽</em></div></div>
+<div class="st"><span class="lbl">Входы в бот по UTM</span><div class="bar"><i style="width:62%"></i><em>267 · CTR ≈0,08%</em></div></div>
+<div class="st"><span class="lbl">Прочитали 1-й лонгрид</span><div class="bar"><i class="c" style="width:44%"></i><em>≈144 · 54%, план 45%</em></div></div>
+<div class="st"><span class="lbl">Анкета и контакт</span><div class="bar"><i style="width:20%"></i><em>23 лида · 8,6% от входов</em></div></div>
+</div>
+
+<h3>Каналы</h3>
+<div class="tbl"><table>
+<tr><th>Канал</th><th>Бюджет</th><th>Входы</th><th>Цена входа</th><th>CPM</th></tr>
+<tr><td>Сторис блогеров в Instagram</td><td class="n">5 000 ₽</td><td class="n">19</td><td class="n">263 ₽</td><td class="n">6 250 ₽</td></tr>
+<tr><td>Рассылки в Telegram-ботах</td><td class="n">58 000 ₽</td><td class="n">75</td><td class="n">773 ₽</td><td class="n">200 ₽</td></tr>
+<tr><td>Посты в Telegram-каналах</td><td class="n">182 348 ₽</td><td class="n">172</td><td class="n">1 060 ₽</td><td class="n">3 513 ₽</td></tr>
+</table></div>
+<p>Вывод для бюджета: рассылки в ботах дали 85% охвата за 24% денег, Instagram — самый дешёвый вход. Следующий рубль клиент вложил туда.</p>
+
+<h3>Стек</h3>
+<div class="stack"><span>18 размещений</span><b>→</b><span>Deep-link + UTM на каждое</span><b>→</b><span>Python-бот: 12 состояний, 19 триггеров</span><b>→</b><span>3 лонгрида + кодовые слова</span><b>→</b><span>Дожим 24/48 ч, 7 историй</span><b>→</b><span>Анкета, 4 вопроса</span><b>→</b><span>Менеджер подбирает менторов</span><b>→</b><span>Отчёт по площадкам</span></div>
+
+<h3>Команда и управление</h3>
+<ul class="b">
+<li>Написала ТЗ для Python-разработчика бота: 12 состояний пользователя, 19 триггеров, поля базы данных. Принимала по сценариям, повторный старт не сбрасывает прогресс.</li>
+<li>Договорилась с 18 площадками и выбила скидку 16 177 ₽ от прайса. Сверяла выход постов с почасовой аналитикой.</li>
+<li>Написала инструкцию менеджеру по лидам: 5 шагов подбора и готовые ответы под 5 профилей.</li>
+</ul>
+
+<h3>Сроки и первые эффекты</h3>
+<div class="tl">
+<div><b>Неделя 1 · смыслы</b>Аудитория, 3 лонгрида, лид-магниты, сценарий дожима.</div>
+<div><b>Неделя 2 · сборка</b>ТЗ и бот у разработчика, UTM-ссылки, тест сценариев.</div>
+<div><b>4 дня · закупка</b>18 размещений, 267 входов, 23 лида.</div>
+<div><b>После · докрутка</b>4 уровня квалификации, план масштаба по лучшим каналам.</div>
+</div>
+<a class="more" href="it-mentors.html">Полный кейс со схемой бота →</a>
+</section>
+
+<!-- 3. ПСИХОЛОГИЯ ДЕНЕГ -->
+<section class="case" id="money">
+<span class="tag">Психология · онлайн-марафон · Meta Ads + Telegram</span>
+<h2>«Психология денег»: 1 016 лидов по 27–41 ₽, четверть дошла до экспертов</h2>
+<p><strong>Задача бизнеса.</strong> Собрать базу для марафона экспертов и не потерять людей на прогреве, где раньше был основной отток.</p>
+<div class="kpis">
+<div class="kpi"><b>1 016</b><span>лидов в канал марафона</span></div>
+<div class="kpi"><b>27–41 ₽</b><span>CPL</span></div>
+<div class="kpi calc"><b>≈27 400–41 700 ₽</b><span>рекламный бюджет</span></div>
+<div class="kpi"><b>24,7%</b><span>подписались на экспертов</span></div>
+<div class="kpi calc"><b>≈137 ₽</b><span>цена подписчика эксперта</span></div>
+</div>
+<h3>Воронка</h3>
+<div class="funnel">
+<div class="st"><span class="lbl">Лиды в канал</span><div class="bar"><i style="width:100%"></i><em>1 016 · 27–41 ₽</em></div></div>
+<div class="st"><span class="lbl">Подписка на экспертов</span><div class="bar"><i class="c" style="width:25%"></i><em>≈251 · 24,7%</em></div></div>
+</div>
+<h3>Стек</h3>
+<div class="stack"><span>Meta Ads + пиксель</span><span>Посевы в Telegram</span><b>→</b><span>Канал марафона</span><b>→</b><span>Онбординг в боте</span><b>→</b><span>Подписка на экспертов</span><b>→</b><span>Отчёт: цена подписчика, активность</span></div>
+<h3>Команда и управление</h3>
+<ul class="b"><li>Вела закупку у админов каналов и таргет, ставила задачи дизайнеру креативов, согласовывала расписание эфиров с экспертами, сдавала отчёт заказчику по дням.</li></ul>
+<div class="shots">
+<div class="shot" onclick="lb(this)"><img src="../images/case-money-1.jpg" alt="Отчёт: приход на канал и стоимость подписчика" loading="lazy"><div class="cap">Отчёт: приход на канал, цена подписчика</div></div>
+<div class="shot" onclick="lb(this)"><img src="../images/case-money-2.jpg" alt="Активность аудитории марафона" loading="lazy"><div class="cap">Активность аудитории</div></div>
+</div>
+</section>
+
+<!-- 4. ОНЛАЙН-ПОЛИКЛИНИКА -->
+<section class="case" id="poli">
+<span class="tag">Медицина · марафон врачей · Instagram</span>
+<h2>«Онлайн-поликлиника»: 7 715 подписчиков по 2,2–5,2 ₽ при рынке 150–300 ₽</h2>
+<p><strong>Задача бизнеса.</strong> Врачам-экспертам нужен поток целевой аудитории, а подписчик через таргет в медицинский блог стоил 150–300 ₽.</p>
+<div class="kpis">
+<div class="kpi"><b>7 715</b><span>новых подписчиков</span></div>
+<div class="kpi"><b>2,2–5,2 ₽</b><span>цена подписчика</span></div>
+<div class="kpi calc"><b>≈17 000–40 000 ₽</b><span>бюджет привлечения</span></div>
+<div class="kpi"><b>748</b><span>сверхактивных, ≈9,7% базы</span></div>
+<div class="kpi"><b>1:5–1:10</b><span>ROI для экспертов</span></div>
+</div>
+<h3>Воронка</h3>
+<div class="funnel">
+<div class="st"><span class="lbl">Новые подписчики</span><div class="bar"><i style="width:100%"></i><em>7 715 · основной + резерв</em></div></div>
+<div class="st"><span class="lbl">Активное ядро</span><div class="bar"><i style="width:10%"></i><em>748 · ≈9,7%</em></div></div>
+<div class="st"><span class="lbl">Отдача экспертам</span><div class="bar"><i style="width:10%"></i><em>каждый 1 ₽ → 5–10 ₽</em></div></div>
+</div>
+<h3>Стек</h3>
+<div class="stack"><span>Таргет + партнёрские сети</span><b>→</b><span>Основной аккаунт</span><span>Резервный аккаунт</span><b>→</b><span>Бот проверки подписок</span><b>→</b><span>Эфиры врачей</span><b>→</b><span>Email-база</span></div>
+<h3>Команда и управление</h3>
+<ul class="b"><li>Собрала и координировала врачей-спикеров, дизайнера, разработчика бота проверки подписок и модераторов. Отвечала за план эфиров и сроки запуска.</li></ul>
+<div class="shots">
+<div class="shot" onclick="lb(this)"><img src="../images/case-online-poliklinika-1.jpg" alt="Рост подписчиков онлайн-поликлиники" loading="lazy"><div class="cap">До и после: 3 601 → 9 092 подписчиков</div></div>
+</div>
+<a class="more" href="doctors-marathon.html">Полный кейс →</a>
+</section>
+
+<!-- 5. ФИНАНСЫ -->
+<section class="case" id="fin">
+<span class="tag">Финансы · продуктовая микроворонка</span>
+<h2>20 000 ₽ рекламы → 120 000 ₽ выручки за 7–10 дней</h2>
+<p><strong>Задача бизнеса.</strong> Долгий цикл сделки и дорогой холодный трафик: реклама окупалась месяцами.</p>
+<div class="kpis">
+<div class="kpi"><b>20 000 ₽</b><span>рекламный бюджет</span></div>
+<div class="kpi"><b>120 000 ₽</b><span>выручка</span></div>
+<div class="kpi"><b>600%</b><span>ROAS</span></div>
+<div class="kpi calc"><b>≈500%</b><span>ROMI по выручке</span></div>
+<div class="kpi"><b>7–10 дней</b><span>окупаемость</span></div>
+</div>
+<p>Решение: недорогой входной продукт окупает трафик сразу, а основной продукт продаётся уже тёплой базе. Каждый рубль рекламы возвращается в 6 раз за полторы недели.</p>
+</section>
+
+<!-- 6. ФУДБЛОГЕР -->
+<section class="case" id="food">
+<span class="tag">ЗОЖ · фудблогер @mamangurman · запуск продукта</span>
+<h2>Исследование аудитории → новый продукт: 290 000 ₽ за 3 дня</h2>
+<p><strong>Задача бизнеса.</strong> Чек 190–290 ₽ и уставшая база: блог не приносил денег.</p>
+<div class="kpis">
+<div class="kpi"><b>3 800</b><span>анкет custdev</span></div>
+<div class="kpi"><b>190–290 → 1 490 ₽</b><span>средний чек</span></div>
+<div class="kpi"><b>41%</b><span>предзапись → оплата</span></div>
+<div class="kpi calc"><b>≈195</b><span>покупок</span></div>
+<div class="kpi"><b>290 000 ₽</b><span>выручка за 3 дня</span></div>
+</div>
+<h3>Воронка</h3>
+<div class="funnel">
+<div class="st"><span class="lbl">Анкеты</span><div class="bar"><i style="width:100%"></i><em>3 800</em></div></div>
+<div class="st"><span class="lbl">Предзапись</span><div class="bar"><i class="c" style="width:30%"></i><em>≈475 · ≈12,5%</em></div></div>
+<div class="st"><span class="lbl">Оплаты</span><div class="bar"><i class="c" style="width:14%"></i><em>≈195 · 41% · 1 490 ₽</em></div></div>
+</div>
+<h3>Команда и управление</h3>
+<ul class="b"><li>Вела команду запуска в общем чате: блогер, дизайнер, технический специалист по оплатам и рассылке. Запуск за 3 дня по согласованному плану.</li></ul>
+<div class="shots"><div class="shot" onclick="lb(this)"><img src="../images/proof-testimonial.png" alt="Отзыв клиента в чате команды запуска" loading="lazy"><div class="cap">Отзыв клиента в чате команды</div></div></div>
+<p class="quote">«За 3 дня сделали выручку, на которую раньше уходил месяц. Средний чек вырос в 7 раз». @mamangurman</p>
+</section>
+
+<div class="method">
+<h2>Методика расчётов</h2>
+<ul class="b">
+<li><b>CPL</b> — цена заявки или лида: бюджет / количество лидов.</li>
+<li><b>CAC</b> — цена клиента: CPL / конверсия лида в оплату.</li>
+<li><b>Бюджет</b>, если его не было в отчёте: CPL × количество лидов.</li>
+<li><b>ROMI по выручке</b> — (выручка − рекламный бюджет) / бюджет. Без учёта себестоимости услуг.</li>
+<li><b>CPC и клики</b> — оценка при типичной конверсии сайта в заявку для ниши, указана рядом.</li>
+</ul>
+<p>Аналитика: Яндекс Метрика, Google Analytics, пиксель Meta, UTM и deep-link, коллтрекинг, CRM, дашборды в Google Sheets.</p>
+</div>
+
+<div class="final">
+<h2>Посчитаю вашу воронку так же</h2>
+<p style="color:var(--muted);margin-bottom:22px">За 30 минут покажу, на каком этапе теряются клиенты и сколько это стоит в деньгах.</p>
+<a class="cta" href="https://t.me/vikashet" target="_blank" rel="noopener">Написать в Telegram →</a>
+<p style="color:var(--faint);font-size:.85rem;margin-top:16px">viktoria.shet@gmail.com</p>
+</div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')"><img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+<script>
+function lb(el){document.getElementById('lightbox-img').src=el.querySelector('img').src;document.getElementById('lightbox').classList.add('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
+</script>
+</body>
+</html>
