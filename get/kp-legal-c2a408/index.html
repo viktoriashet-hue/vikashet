@@ -107,11 +107,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .lb.on{display:flex}.lb img{max-height:90vh;width:auto;border-radius:6px}
 @media(max-width:900px){.kpis{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.flow div::after{display:none}.shots,.reels,.grid3{grid-template-columns:1fr 1fr}.top nav{display:none}}
 @media(max-width:600px){body{font-size:16px}.grid2,.ins,.shots,.reels,.grid3,.flow{grid-template-columns:1fr}section{padding:56px 0}.pk{padding:24px 18px}.btn{width:100%}}
+
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end;margin-top:30px}
+.stp{background:var(--bg2);border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:6px;padding:16px 14px;font-size:.84rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.stp:nth-child(1){min-height:250px;border-top-color:#C9B2B5}.stp:nth-child(2){min-height:290px;border-top-color:#B88A92}.stp:nth-child(3){min-height:330px;border-top-color:#9C5866}.stp:nth-child(4){min-height:370px;border-top-color:#83303F}.stp:nth-child(5){min-height:410px;background:var(--acc);color:#EADBD5;border-color:var(--acc)}
+.stp i{font:800 .66rem Manrope;letter-spacing:.16em;color:var(--acc);font-style:normal}
+.stp:nth-child(5) i{color:#F1CDBE}
+.stp b{font:600 1.2rem/1.15 'Cormorant Garamond',serif;color:var(--text)}
+.stp:nth-child(5) b{color:#fff}
+.stp q{font-style:italic;color:var(--text)}.stp:nth-child(5) q{color:#fff}
+.stp .ch{margin-top:auto;padding-top:8px;border-top:1px dashed var(--line2);font-size:.8rem}
+.stp:nth-child(5) .ch{border-color:rgba(255,255,255,.3)}
+.bands{display:grid;grid-template-columns:4fr 1fr;gap:10px;margin-top:10px}
+.bands div{border-radius:6px;padding:12px 14px;font:700 .8rem/1.3 Manrope;text-align:center}
+.bands .c{background:var(--dim);border:1.5px dashed var(--acc);color:var(--acc)}
+.bands .k{background:var(--text);color:#F5EFE6}
+.pyr{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.pyr div{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:18px}
+.pyr b{display:block;font:600 2.6rem/1 'Cormorant Garamond',serif;color:var(--acc);font-variant-numeric:lining-nums}
+.pyr span{font-size:.88rem;color:var(--muted)}
+@media(max-width:900px){.pyr{grid-template-columns:1fr}.ladder{grid-template-columns:1fr;align-items:stretch}.stp{min-height:0!important}.bands{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap"><b>Контент-<span>завод</span></b>
-<nav><a href="#market">Конкуренты</a><a href="#examples">Примеры</a><a href="#start">Старт</a><a href="#plan">План</a><a href="#cases">Кейсы</a></nav>
+<nav><a href="#market">Конкуренты</a><a href="#demand">Спрос</a><a href="#examples">Примеры</a><a href="#start">Старт</a><a href="#plan">План</a><a href="#cases">Кейсы</a></nav>
 <a class="btn" style="min-height:40px;padding:0 16px;font-size:.66rem" href="https://t.me/vikashet" target="_blank" rel="noopener noreferrer">Обсудить</a></div></div>
 
 <header><div class="wrap">
@@ -170,6 +190,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <p class="small muted" style="margin-top:14px">В TikTok, Shorts и Threads автоответа по комментарию нет: там ссылка на WhatsApp стоит в профиле, со своей меткой для каждой сети.</p>
 </div></section>
 
+<section id="demand"><div class="wrap">
+<p class="lbl">Уровни спроса</p>
+<h2>Горячего спроса мало — <em>клиентов готовят заранее</em></h2>
+<p class="lead">По модели «пирамида покупателей» Чета Холмса, прямо сейчас готовы купить около 3% аудитории. Ещё 7% открыты к предложению, остальные 90% пока об услуге не думают. Контекстная реклама ловит эти 3% — и за них же борются все конкуренты.</p>
+<div class="pyr"><div><b>3%</b><span>готовы обратиться сейчас — их ловит контекст, за них идёт борьба ставками</span></div><div><b>7%</b><span>присматриваются — сравнивают, читают, сохраняют</span></div><div><b>90%</b><span>пока не думают об услуге — но многим она понадобится, когда изменятся правила или подойдут сроки</span></div></div>
+<h3 style="margin-top:44px">Лестница Ханта: как человек приходит к решению</h3>
+<p class="muted">Человек не прыгает сразу на верхнюю ступень. Он поднимается по ней неделями, и на каждой ступени нужен свой контент.</p>
+<div class="ladder">
+<div class="stp"><i>СТУПЕНЬ 1</i><b>Не видит проблемы</b><q>«Мне пока не нужно»</q><span>Цепляем новостью: «правила ВНЖ снова изменились»</span><span class="ch">рилс, ветки Threads</span></div>
+<div class="stp"><i>СТУПЕНЬ 2</i><b>Осознаёт проблему</b><q>«Это касается и меня?»</q><span>Разборы «кого касается и что будет, если не успеть»</span><span class="ch">карусели, ветки, рилс</span></div>
+<div class="stp"><i>СТУПЕНЬ 3</i><b>Ищет решение</b><q>«Какие документы нужны на ВНЖ?»</q><span>Инструкции, чек-листы, ответы в поиске и нейросетях</span><span class="ch">статьи, SEO и GEO, карусели</span></div>
+<div class="stp"><i>СТУПЕНЬ 4</i><b>Выбирает, кому доверить</b><q>«Кто поможет и не подведёт?»</q><span>Кейсы, отзывы, профиль, ответы юриста</span><span class="ch">упаковка профиля, 2ГИС, отзывы</span></div>
+<div class="stp"><i>СТУПЕНЬ 5</i><b>Готов обратиться</b><q>«Куда написать?»</q><span>Кодовое слово и WhatsApp менеджера</span><span class="ch">контекст + WhatsApp</span></div>
+</div>
+<div class="bands"><div class="c">Контент-завод и статьи — работают со ступенями 1–4 и поднимают людей наверх</div><div class="k">Контекст — ловит ступень 5</div></div>
+<ul class="ins" style="margin-top:26px">
+<li><b>Главная задача — видимость</b>Быть на слуху, когда человек ещё на 1–3 ступени. Тогда, дойдя до 5-й, он пишет вам, а не ищет заново и не кликает по рекламе конкурента.</li>
+<li><b>Почему от 3 месяцев</b>Путь от «правила изменились» до «куда написать» занимает недели. Первый месяц люди только встают на лестницу, на 2–3 месяце те же люди доходят до обращения — уже к вам.</li>
+<li><b>Контекст и контент вместе</b>Контекст не отключаем: он забирает готовых. Контент растит следующих готовых и делает рекламу дешевле — человек кликает по знакомому имени.</li>
+<li><b>Что считаем успехом в начале</b>Охват, сохранения, переходы в профиль и комментарии с кодовым словом. Это люди, которые встали на лестницу. Обращения растут следом.</li>
+</ul>
+<div class="caption" style="margin-top:22px"><b>Что говорят площадки о сроках</b>Instagram официально не называет срок, за который алгоритм «узнаёт» новый аккаунт. Глава Instagram Адам Моссери советует выбрать график, который вы сможете держать постоянно: частые публикации помогают охвату (<a href="https://routenote.com/blog/how-often-you-should-post-on-instagram/" target="_blank" rel="noopener noreferrer">разбор его видео, декабрь 2024</a>). Сервисы автопостинга, которые работают с API площадок, перед подключением просят 1–2 недели ручных публикаций в новом Instagram и 4 недели в новом TikTok (<a href="https://www.blotato.com/tools/social-media-posting-limits" target="_blank" rel="noopener noreferrer">Blotato</a>). Поэтому первый месяц — прогрев и разгон, а результат по обращениям оцениваем на 2–3 месяце.</div>
+<p class="src">Лестница Бена Ханта и пирамида покупателей Чета Холмса — маркетинговые модели, а не статистика конкретного рынка. Пропорции показывают порядок величин.</p>
+</div></section>
 <section id="examples"><div class="wrap">
 <p class="lbl">Примеры контента</p>
 <h2>Как будет выглядеть ваш контент — <em>на основе того, что работает у конкурентов</em></h2>
