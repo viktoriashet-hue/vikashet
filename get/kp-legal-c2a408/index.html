@@ -6,7 +6,7 @@
 <title>КП: контент-завод для компании по легализации — Виктория Шет</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Коммерческое предложение: контент-завод для компании по легализации в Казахстане. Threads, рилс без лица, кодовое слово и WhatsApp. Конкуренты, примеры контента, пакет «Старт» и план на 3 месяца.">
+<meta name="description" content="Коммерческое предложение: контент-завод для компании по легализации в Казахстане. Threads, рилс без лица, кодовое слово и WhatsApp. Конкуренты, примеры контента, тарифы «Стандарт» и «Базовый», план на 3 месяца.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -366,6 +366,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <tr><td>Сервис автоответов в директ</td><td colspan="3">около 18 000 ₸ в месяц по чеку</td></tr>
 </table></div>
 <p class="small muted">По договору цена фиксирована на все 3 месяца, а объём со 2-го месяца растёт с 244 до 420 уникальных единиц: каждый день 5 веток, 6 рилс и 3 карусели. Одна единица контента становится дешевле на 42%. Если считать 2-й месяц по цене первого, он стоил бы около 600 000 ₸, по договору — 350 000 ₸.</p>
+<h3 style="margin-top:40px">Свой микс со 2-го месяца</h3>
+<p class="muted">Со 2-го месяца объём можно собрать под себя — цена считается по формату каждой единицы. Первый месяц идёт по тарифу: в нём упаковка, настройка и разгон новых аккаунтов.</p>
+<div class="tbl"><table>
+<tr><th>Формат</th><th>Что входит</th><th>Цена за единицу</th></tr>
+<tr><td>Ветка Threads</td><td>тема по топ-контенту конкурентов, 5–7 постов, выкладка</td><td class="n">500 ₸</td></tr>
+<tr><td>Рилс</td><td>сценарий, монтаж на ваших фонах, описание, выкладка в Instagram, TikTok, YouTube Shorts и Facebook</td><td class="n">900 ₸</td></tr>
+<tr><td>Карусель</td><td>до 8 слайдов, текст и оформление, выкладка в Instagram, TikTok и Facebook</td><td class="n">700 ₸</td></tr>
+<tr><td>Ежемесячно</td><td>2 выезда на съёмку фонов, аналитика конкурентов, сопровождение WhatsApp, отчёт</td><td class="n">50 000 ₸</td></tr>
+</table></div>
+<div class="pk" id="mix" style="margin-top:20px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+<label class="small">Веток Threads в день<br><input type="number" id="mt" min="0" max="5" value="5" style="width:100%;padding:10px;font:inherit;border:1px solid var(--line);border-radius:4px;background:var(--bg)"></label>
+<label class="small">Рилс в день<br><input type="number" id="mr" min="0" max="6" value="6" style="width:100%;padding:10px;font:inherit;border:1px solid var(--line);border-radius:4px;background:var(--bg)"></label>
+<label class="small">Каруселей в день<br><input type="number" id="mc" min="0" max="3" value="3" style="width:100%;padding:10px;font:inherit;border:1px solid var(--line);border-radius:4px;background:var(--bg)"></label>
+</div>
+<div class="price" id="mp" style="margin-top:18px">350 000 ₸</div>
+<p class="small" id="md">в месяц · 420 уникальных единиц</p>
+<p class="small" id="mw" style="color:var(--acc);margin-top:8px"></p>
+<p class="small muted" style="margin-top:8px">Лимиты новых аккаунтов: до 5 веток, до 6 рилс и до 3 каруселей в день. Минимальный заказ — 250 000 ₸ в месяц. Без договора — +50 000 ₸.</p>
+</div>
+<script>
+(function(){
+var f=function(n){return n.toLocaleString('ru-RU').replace(/,/g,' ')+' ₸'};
+var g=function(id,mx){var v=parseInt(document.getElementById(id).value,10);if(isNaN(v)||v<0)v=0;if(v>mx)v=mx;return v};
+function r(){
+var t=g('mt',5),rl=g('mr',6),c=g('mc',3);
+var u=(t+rl+c)*30,sum=50000+t*30*500+rl*30*900+c*30*700,min=sum<250000;
+if(min)sum=250000;
+document.getElementById('mp').textContent=f(sum);
+document.getElementById('md').textContent='в месяц · '+u+' уникальных единиц'+(u?' · ~'+f(Math.round(sum/u))+' за единицу':'')+(min?' · применён минимальный заказ':'');
+document.getElementById('mw').textContent=(t<5||rl<5)?'Меньше 5 веток или 5 рилс в день — крайне мало для роста новых аккаунтов: охват будет расти медленнее.':'';
+}
+['mt','mr','mc'].forEach(function(id){document.getElementById(id).addEventListener('input',r)});r();
+})();
+</script>
 <h3 style="margin-top:40px">Оплата по договору</h3>
 <div class="tbl"><table>
 <tr><th></th><th>«Стандарт»</th><th>«Базовый»</th></tr>
