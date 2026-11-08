@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кейс: мультиканальная ИИ-лидогенерация — Виктория Щетинина</title>
+<meta name="description" content="GTM-кейс: база 400 компаний, ИИ-агенты в email, Telegram и hh.kz — 800+ персональных касаний, 15 ответов от бизнеса. Что сработало и что нет — с цифрами и скринами.">
+<meta property="og:title" content="800+ персональных касаний в трёх каналах без рекламного бюджета — кейс по ИИ-лидогенерации">
+<meta property="og:description" content="База 400 компаний, ИИ-агент, CRM. Персональный разбор отвечает почти в 6 раз лучше массового оффера.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0D14;--bg2:#13131F;--bg3:#1A1A2A;--border:rgba(255,255,255,.07);--border-md:rgba(255,255,255,.13);--text:#F0EDE8;--muted:#8A8499;--gold:#C8A96E;--gold-h:#DFC08A;--gold-dim:rgba(200,169,110,.10);--sage:#7B9E87}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}a:hover{color:var(--gold-h)}
+.wrap{max-width:960px;margin:0 auto;padding:0 1rem}
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(24px);background:rgba(13,13,20,.8);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:.8rem}
+nav .back{color:var(--muted)}
+.label{font:600 .68rem Manrope;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300}
+h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1;margin:1rem 0 1.5rem}
+h1 em,h2 em{font-style:italic;color:var(--gold)}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:.75rem 0 1.5rem}
+h3{font-size:1.4rem;font-weight:400;margin-bottom:.5rem}
+.hero{padding:5rem 0 4rem;background:radial-gradient(ellipse at 50% 0,rgba(200,169,110,.08) 0%,transparent 65%)}
+.lead{color:var(--muted);font-size:1.1rem;max-width:640px}
+section{padding:4rem 0;border-top:1px solid var(--border)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-top:2.5rem}
+.kpi{background:var(--bg2);padding:1.5rem}
+.kpi b{display:block;font:300 2.6rem/1 'Cormorant Garamond',serif;color:var(--gold);margin-bottom:.4rem}
+.kpi span{color:var(--muted);font-size:.85rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.card{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1.5rem}
+.card p,.card li{color:var(--muted);font-size:.95rem}
+ul.steps{list-style:none;counter-reset:s}
+ul.steps li{counter-increment:s;position:relative;padding:0 0 1.25rem 3rem;color:var(--muted)}
+ul.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;font:300 1.6rem/1 'Cormorant Garamond',serif;color:var(--gold)}
+ul.steps li b{color:var(--text);font-weight:600}
+.table{width:100%;border-collapse:collapse;font-size:.92rem}
+.table th,.table td{padding:.8rem .6rem;border-bottom:1px solid var(--border);text-align:left}
+.table th{font:600 .68rem Manrope;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.table td.n{text-align:right;font-variant-numeric:tabular-nums}
+.table tr.hl td{color:var(--gold)}
+.tbl-wrap{overflow-x:auto}
+.insight{border-left:2px solid var(--sage);background:var(--bg2);padding:1.5rem;border-radius:0 4px 4px 0;margin-top:2rem}
+.insight b{color:var(--sage)}
+figure{margin:0 0 1.5rem}
+figure img{width:100%;border:1px solid var(--border-md);border-radius:4px;display:block;background:var(--bg2)}
+figcaption{color:var(--muted);font-size:.82rem;margin-top:.5rem}
+.stack{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.stack span{border:1px solid var(--border-md);border-radius:2px;padding:.35rem .7rem;font-size:.8rem;color:var(--muted)}
+.cta{text-align:center;padding:5rem 0}
+.btn{display:inline-block;background:var(--gold);color:var(--bg);font:700 .75rem/1 Manrope;letter-spacing:.14em;text-transform:uppercase;padding:1rem 2rem;border-radius:2px;margin:.4rem}
+.btn:hover{background:var(--gold-h);color:var(--bg)}
+.ghost{display:inline-block;color:var(--muted);border-bottom:1px solid var(--border-md);font:500 .75rem Manrope;letter-spacing:.12em;text-transform:uppercase;padding:1rem .5rem;margin:.4rem}
+.note{color:var(--muted);font-size:.8rem;margin-top:1rem}
+footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="back" href="../">← Виктория Щетинина</a><a href="https://t.me/vikashet">Telegram</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="label">Кейс · GTM-автоматизация · сентябрь–ноябрь 2026</div>
+  <h1>800+ персональных касаний в трёх каналах — <em>без рекламного бюджета</em></h1>
+  <p class="lead">Собрала мультиканальную систему лидогенерации на ИИ-агентах: база компаний с ЛПР, разбор маркетинга каждой, персональные сообщения в email, Telegram и на hh.kz и единая CRM. Ниже — честные цифры: что сработало, что нет и что я поменяла.</p>
+  <div class="kpis">
+    <div class="kpi"><b>≈400</b><span>компаний в базе с ЛПР, БИН и разбором слабых мест</span></div>
+    <div class="kpi"><b>800+</b><span>персональных касаний: email, Telegram, hh.kz</span></div>
+    <div class="kpi"><b>3</b><span>канала в одной CRM</span></div>
+    <div class="kpi"><b>5</b><span>стран: Казахстан, Узбекистан, Кыргызстан, Грузия, ОАЭ</span></div>
+    <div class="kpi"><b>15</b><span>ответов от бизнеса в email и Telegram</span></div>
+    <div class="kpi"><b>×6</b><span>персональный разбор отвечает лучше массового оффера</span></div>
+    <div class="kpi"><b>0 ₸</b><span>рекламного бюджета</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="label">Задача</div>
+  <h2>Найти B2B-клиентов <em>без рекламы и без отдела продаж</em></h2>
+  <p class="lead">Я работаю одна. Нужно было системно выходить на клиники, стоматологии, вузы, застройщиков, SPA и агентства — так, чтобы каждое письмо выглядело написанным вручную, а не рассылкой.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Что построено</div>
+  <h2>Конвейер из четырёх агентов</h2>
+  <ul class="steps">
+    <li><b>Сбор базы.</b> Агент собирает компании из 2ГИС, сайтов и реестров: ЛПР, БИН, телефоны, WhatsApp, email, Instagram, рейтинг и отзывы.</li>
+    <li><b>Разбор маркетинга.</b> По каждой компании — слабые места (нет сайта, нет онлайн-записи, низкий рейтинг, нет TikTok) и аргумент «почему сейчас»: вакансия SMM на hh, новый филиал, сезон.</li>
+    <li><b>Персональное сообщение в нужном канале.</b> ИИ-агент пишет письмо или сообщение под конкретную компанию: её цифры, её проблема, релевантный кейс. Проверка на повторы — два письма не совпадают больше чем на 30%.</li>
+    <li><b>CRM и отчёты.</b> Каждое касание — в таблице со статусом и следующим шагом, утренняя сводка в Telegram.</li>
+  </ul>
+  <div class="stack"><span>Claude API</span><span>Telethon</span><span>Playwright</span><span>Python</span><span>Postgres</span><span>Railway</span><span>Google Sheets CRM</span><span>Gmail</span><span>Telegram-бот</span><span>2ГИС</span></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Каналы</div>
+  <h2>Три агента — <em>одна система</em></h2>
+  <div class="grid2">
+    <div class="card"><h3>Email · B2B-аутрич</h3><p>≈400 компаний в 5 странах: клиники, стоматологии, вузы, застройщики, SPA, агентства. ≈450 доставленных персональных писем за 4 недели (9 октября – 7 ноября).</p></div>
+    <div class="card"><h3>Telegram · поиск заказов</h3><p>Агент сканирует 15+ каналов с вакансиями и заказами. За 96 часов нашёл и оценил 27 релевантных запросов, подготовил под каждый персональный отклик и занёс в CRM.</p></div>
+    <div class="card"><h3>hh.kz · автоотклики</h3><p>Агент на Python и Playwright подбирает вакансии по критериям и пишет сопроводительное письмо под каждую. 353 персональных отклика.</p></div>
+    <div class="card"><h3>CRM и сигналы</h3><p>Единая таблица по всем каналам: статус, дата касания, следующий шаг. Вакансии SMM на hh используются как сигнал «компании нужен маркетинг прямо сейчас» — 68 таких компаний в базе.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Результаты email-аутрича · 9 октября – 7 ноября 2026</div>
+  <h2>Цифры <em>по каждому направлению</em></h2>
+  <div class="tbl-wrap"><table class="table">
+    <thead><tr><th>Направление</th><th>Писем</th><th>Ответов</th><th>Ответов, %</th></tr></thead>
+    <tbody>
+      <tr><td>Массовый оффер «контент-завод» для бизнеса в 5 странах</td><td class="n">≈350</td><td class="n">≈8</td><td class="n">≈2,3%</td></tr>
+      <tr><td>Digital-агентства Алматы</td><td class="n">≈48</td><td class="n">4</td><td class="n">≈8%</td></tr>
+      <tr><td>Отклики на вакансии</td><td class="n">≈40</td><td class="n">1</td><td class="n">≈2,5%</td></tr>
+      <tr class="hl"><td>Персональный разбор конкретной компании</td><td class="n">15</td><td class="n">2</td><td class="n">13%</td></tr>
+      <tr><td><b>Итого</b></td><td class="n"><b>≈450</b></td><td class="n"><b>15</b></td><td class="n"><b>≈3,3%</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Учтены только доставленные письма — без дублей и ошибочных адресов. Ответы считаются по почте и Telegram. Итоги воронки: 1 коммерческое предложение (миграционная компания), 1 запрос резюме от агентства, диалог с коучинговой школой в ОАЭ.</p>
+
+  <p style="margin-top:1.5rem"><a class="ghost" href="leadgen-dashboard.html">Открыть дашборд со всеми цифрами →</a></p>
+  <div class="insight"><b>Главный вывод.</b> Объём сам по себе не продаёт. Письмо с разбором конкретной компании получает ответ почти в 6 раз чаще, чем одинаковый оффер на всех. Поэтому во второй версии системы агент тратит больше времени на разбор и меньше — на количество.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Пруфы</div>
+  <h2>Скриншоты <em>из рабочей системы</em></h2>
+  <p class="lead" style="margin-bottom:2rem">Контакты и имена получателей скрыты.</p>
+  <figure><img src="img/leadgen/0-stats.png" alt="Таблица статистики аутрича по каналам: WhatsApp, Telegram, email, hh" loading="lazy"><figcaption>Статистика по каналам за 15.09–08.11: первые сообщения, живые и целевые ответы, созвоны и КП</figcaption></figure>
+  <figure><img src="img/leadgen/3-letter.png" alt="Пример персонального письма" loading="lazy"><figcaption>Пример письма: цифры компании, её проблема, релевантный кейс</figcaption></figure>
+  <figure><img src="img/leadgen/4-replies.png" alt="Ответ компании на персональное письмо" loading="lazy"><figcaption>Ответ компании: «Предложение интересное», просят кейсы по B2B SaaS</figcaption></figure>
+  <!-- Скриншоты ещё не добавлены — вернуть, когда появятся файлы:
+  <figure><img src="img/leadgen/1-crm.png" alt="CRM-таблица с базой компаний, ЛПР и статусами" loading="lazy"><figcaption>CRM: база компаний с ЛПР, разбором слабых мест и статусами</figcaption></figure>
+  <figure><img src="img/leadgen/2-sent.png" alt="Отправленные персональные письма в Gmail" loading="lazy"><figcaption>Отправленные: персональные письма под каждую компанию</figcaption></figure>
+  <figure><img src="img/leadgen/5-telegram-crm.png" alt="CRM Telegram-агента: найденные запросы и отклики" loading="lazy"><figcaption>Telegram-агент: найденные запросы, оценка и отклики в CRM</figcaption></figure>
+  <figure><img src="img/leadgen/6-hh.png" alt="Статистика откликов на hh.kz" loading="lazy"><figcaption>hh.kz: 353 персональных отклика</figcaption></figure>
+  -->
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Версия 2</div>
+  <h2>Что поменяла <em>по итогам теста</em></h2>
+  <div class="grid2">
+    <div class="card"><h3>Канал</h3><p>Первое касание — WhatsApp и Telegram, email вторым. В Казахстане бизнес отвечает в мессенджерах быстрее.</p></div>
+    <div class="card"><h3>Лимиты</h3><p>После 7 сообщений подряд Telegram ограничил аккаунт за спам. Теперь жёсткий лимит 10–15 первых сообщений в день, случайные паузы 6–20 минут и уникальный текст под каждого получателя.</p></div>
+    <div class="card"><h3>Оффер</h3><p>Вместо продажи услуги — бесплатный короткий разбор: где компания теряет клиентов. Без цен и пакетов в первом сообщении.</p></div>
+    <div class="card"><h3>Сегменты</h3><p>Фокус на нишах, где разбор ответил лучше: клиники, SPA, онлайн-школы, агентства. Меньше стран — больше глубины.</p></div>
+    <div class="card"><h3>Метрики</h3><p>Считаю не отправленные письма, а ответы, разговоры и КП по каждому сегменту — и отключаю то, что не работает.</p></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <div class="label">Для вашего бизнеса</div>
+  <h2>Соберу такую систему <em>под ваш рынок</em></h2>
+  <p class="lead" style="margin:0 auto 2rem">База, разбор, персональные сообщения в email и мессенджерах и CRM — чтобы отдел продаж говорил с тёплыми клиентами, а не искал их.</p>
+  <a class="btn" href="https://t.me/vikashet">Написать в Telegram</a>
+  <a class="ghost" href="mailto:viktoria.shet@gmail.com">viktoria.shet@gmail.com</a>
+</div></section>
+
+<footer>Виктория Щетинина · Growth &amp; GTM Automation · Алматы · <a href="https://t.me/vikashet">t.me/vikashet</a></footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дашборд ИИ-лидогенерации — Виктория Щетинина</title>
+<meta name="description" content="Мультиканальная ИИ-лидогенерация: email, Telegram, WhatsApp, hh.kz — касания, ответы и конверсия по каналам.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0D14;--bg2:#13131F;--bg3:#1A1A2A;--border:rgba(255,255,255,.07);--border-md:rgba(255,255,255,.13);--text:#F0EDE8;--muted:#8A8499;--faint:#3D3A4A;--gold:#C8A96E;--gold-dim:rgba(200,169,110,.35);--sage:#7B9E87}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 15px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:2.5rem 1rem 4rem}
+.label{font:600 .68rem Manrope;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1{font:300 clamp(2.2rem,5vw,3.6rem)/1.02 'Cormorant Garamond',Georgia,serif;margin:.6rem 0 .8rem}
+h1 em{color:var(--gold)}
+h2{font:400 1.45rem/1.2 'Cormorant Garamond',Georgia,serif;margin-bottom:.25rem}
+.sub{color:var(--muted);max-width:680px}
+.period{display:inline-block;margin-top:1rem;border:1px solid var(--border-md);border-radius:2px;padding:.35rem .7rem;font-size:.8rem;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:2rem 0}
+.tile{background:var(--bg2);padding:1.25rem 1.25rem 1.1rem}
+.tile .v{font:300 2.5rem/1 'Cormorant Garamond',serif;color:var(--text)}
+.tile .v.acc{color:var(--gold)}
+.tile .k{color:var(--muted);font-size:.82rem;margin-top:.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:1rem}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1.4rem}
+.panel .hint{color:var(--muted);font-size:.82rem;margin-bottom:1rem}
+.chart{position:relative}
+.row{display:grid;grid-template-columns:minmax(110px,38%) 1fr auto;align-items:center;gap:.75rem;padding:.42rem 0;cursor:default}
+.row .name{font-size:.86rem;color:var(--text);line-height:1.25}
+.row .name small{display:block;color:var(--muted);font-size:.74rem}
+.track{height:14px;position:relative}
+.bar{position:absolute;left:0;top:0;height:14px;border-radius:0 4px 4px 0;background:var(--gold-dim);transition:background .15s}
+.bar.hl{background:var(--gold)}
+.row:hover .bar{background:var(--gold)}
+.row .val{font-size:.86rem;color:var(--text);font-variant-numeric:tabular-nums;min-width:4.5em;text-align:right}
+.nodata{font-size:.76rem;color:var(--muted);border:1px dashed var(--border-md);border-radius:2px;padding:.1rem .45rem;white-space:nowrap}
+.funnel{display:grid;gap:.6rem}
+.fstep{display:grid;grid-template-columns:150px 1fr auto;gap:.75rem;align-items:center}
+.fstep .name{font-size:.86rem}
+.fstep .name small{display:block;color:var(--muted);font-size:.74rem}
+.fbar{height:26px;background:var(--gold-dim);border-radius:0 4px 4px 0;min-width:4px}
+.fstep:last-child .fbar{background:var(--gold)}
+.tbl-wrap{overflow-x:auto;margin-top:1rem}
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+th,td{padding:.7rem .55rem;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}
+th{font:600 .66rem Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+.tip{position:fixed;pointer-events:none;background:var(--bg3);border:1px solid var(--border-md);border-radius:4px;padding:.55rem .7rem;font-size:.8rem;color:var(--text);box-shadow:0 20px 50px rgba(0,0,0,.35);opacity:0;transition:opacity .1s;z-index:20;max-width:260px}
+.tip b{color:var(--gold);font-weight:600}
+.insight{margin-top:1rem;border-left:2px solid var(--sage);padding:.8rem 1rem;background:var(--bg3);border-radius:0 4px 4px 0;font-size:.88rem;color:var(--muted)}
+.insight b{color:var(--sage)}
+.foot{margin-top:2.5rem;color:var(--muted);font-size:.78rem}
+.cta{display:inline-block;margin-top:1.5rem;background:var(--gold);color:var(--bg);font:700 .72rem/1 Manrope;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 1.8rem;border-radius:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="label">Дашборд · GTM-автоматизация</div>
+  <h1>ИИ-лидогенерация <em>в цифрах</em></h1>
+  <p class="sub">Одна система, несколько каналов: база компаний с ЛПР, разбор маркетинга каждой, персональное сообщение под каждую и единая CRM. Рекламный бюджет — 0 ₸.</p>
+  <span class="period" id="period"></span>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Касания по каналам</h2>
+      <p class="hint">Сколько персональных сообщений отправлено в каждом канале</p>
+      <div class="chart" id="chTouches" role="img" aria-label="Касания по каналам"></div>
+    </div>
+    <div class="panel">
+      <h2>Доля ответов по подходу</h2>
+      <p class="hint">Email-аутрич: процент ответивших от доставленных писем</p>
+      <div class="chart" id="chRate" role="img" aria-label="Доля ответов по подходу"></div>
+      <div class="insight" id="insight"></div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:1rem">
+    <div class="panel">
+      <h2>Воронка B2B-аутрича</h2>
+      <p class="hint">От базы компаний до коммерческого предложения</p>
+      <div class="funnel" id="funnel"></div>
+    </div>
+    <div class="panel">
+      <h2>Таблица по каналам</h2>
+      <p class="hint">Все цифры одним списком</p>
+      <div class="tbl-wrap"><table id="tbl"></table></div>
+    </div>
+  </div>
+
+  <a class="cta" href="https://t.me/vikashet">Собрать такую систему для вашего бизнеса</a>
+  <p class="foot">Источники: Gmail (отправленные и ответы), CRM в Google Sheets, профиль hh.kz, логи Telegram-агента. Учтены только доставленные сообщения, без дублей и ошибочных адресов. Контакты получателей не публикуются. · Виктория Щетинина, <a href="https://t.me/vikashet">t.me/vikashet</a></p>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+/* ===== ДАННЫЕ. Обновлять только здесь. null = данных пока нет ===== */
+const DATA = {
+  period: "сентябрь – ноябрь 2026",
+  baseCompanies: 400,          // компаний в базе с ЛПР и разбором
+  countries: 5,
+  channels: [
+    // sent = персональных сообщений, replies = ответов, target = целевых ответов, deals = созвон/КП
+    { id:"email",  name:"Email",                note:"B2B-аутрич, 5 стран",            sent:450, replies:15,  target:null, deals:2 },
+    { id:"hh",     name:"hh.kz",                note:"персональные отклики",           sent:353, replies:null, target:null, deals:null },
+    { id:"tgjobs", name:"Telegram · заказы",    note:"агент нашёл 27 запросов за 96 ч", sent:7,   replies:null, target:null, deals:null },
+    { id:"tg",     name:"Telegram · рассылка",  note:"первые сообщения компаниям и авторам вакансий", sent:64, replies:16, target:8, deals:1 },
+    { id:"wa",     name:"WhatsApp · рассылка",  note:"первые сообщения компаниям",      sent:354, replies:19, target:11, deals:9 }
+  ],
+  approaches: [
+    { name:"Массовый оффер", note:"≈350 писем, 5 стран", rate:2.3 },
+    { name:"Отклики на вакансии", note:"≈40 писем", rate:2.5 },
+    { name:"Digital-агентства", note:"≈48 писем", rate:8.0 },
+    { name:"Персональный разбор", note:"15 писем", rate:13.3, hl:true }
+  ],
+  funnel: [
+    { name:"Компаний в базе", note:"ЛПР, БИН, слабые места", v:400 },
+    { name:"Писем доставлено", note:"оффер бизнесу", v:350 },
+    { name:"Ответов", note:"email + Telegram", v:8 },
+    { name:"Созвон / КП", note:"созвоны по email", v:2 }
+  ]
+};
+/* ===================================================================== */
+
+const fmt = n => n==null ? null : n.toLocaleString('ru-RU');
+const tip = document.getElementById('tip');
+function bindTip(el, html){
+  el.addEventListener('mousemove', e=>{ tip.innerHTML=html; tip.style.opacity=1;
+    const x=Math.min(e.clientX+14, innerWidth-280); tip.style.left=x+'px'; tip.style.top=(e.clientY+14)+'px'; });
+  el.addEventListener('mouseleave', ()=> tip.style.opacity=0);
+}
+
+document.getElementById('period').textContent = DATA.period;
+
+// Tiles
+const known = DATA.channels.filter(c=>c.sent!=null);
+const totalSent = known.reduce((s,c)=>s+c.sent,0);
+const totalReplies = DATA.channels.reduce((s,c)=>s+(c.replies||0),0);
+const best = DATA.approaches.find(a=>a.hl), mass = DATA.approaches[0];
+const tiles = [
+  {v:'≈'+fmt(DATA.baseCompanies), k:'компаний в базе с ЛПР'},
+  {v:fmt(totalSent)+'+', k:'персональных касаний', acc:true},
+  {v:known.length, k:'канала с данными'},
+  {v:fmt(totalReplies), k:'ответов от бизнеса'},
+  {v:'×'+Math.round(best.rate/mass.rate), k:'разбор отвечает лучше массового оффера', acc:true},
+  {v:'0 ₸', k:'рекламного бюджета'}
+];
+document.getElementById('tiles').innerHTML = tiles.map(t=>`<div class="tile"><div class="v${t.acc?' acc':''}">${t.v}</div><div class="k">${t.k}</div></div>`).join('');
+
+// Horizontal bar chart helper
+function hbars(elId, items, valKey, max, unit){
+  const el = document.getElementById(elId);
+  items.forEach(it=>{
+    const v = it[valKey];
+    const row = document.createElement('div'); row.className='row';
+    row.innerHTML = `<div class="name">${it.name}<small>${it.note||''}</small></div>
+      <div class="track">${v==null?'':`<div class="bar${it.hl?' hl':''}" style="width:${Math.max(1.5,v/max*100)}%"></div>`}</div>
+      <div class="val">${v==null?'<span class="nodata">данные собираются</span>':fmt(v)+unit}</div>`;
+    el.appendChild(row);
+    if(v!=null) bindTip(row, `${it.name}<br><b>${fmt(v)}${unit}</b>${it.note?'<br>'+it.note:''}`);
+  });
+}
+hbars('chTouches', DATA.channels, 'sent', Math.max(...known.map(c=>c.sent)), '');
+hbars('chRate', DATA.approaches, 'rate', Math.max(...DATA.approaches.map(a=>a.rate)), '%');
+document.getElementById('insight').innerHTML = `<b>Вывод:</b> письмо с разбором конкретной компании получает ответ в ${Math.round(best.rate/mass.rate)} раз чаще, чем одинаковый оффер на всех. Поэтому агент тратит время на разбор, а не на объём.`;
+
+// Funnel
+const fmax = Math.max(...DATA.funnel.map(f=>f.v));
+document.getElementById('funnel').innerHTML = DATA.funnel.map(f=>
+  `<div class="fstep"><div class="name">${f.name}<small>${f.note}</small></div><div><div class="fbar" style="width:${Math.max(1.5,f.v/fmax*100)}%"></div></div><div class="val" style="font-variant-numeric:tabular-nums">${fmt(f.v)}</div></div>`).join('');
+
+// Table
+const cell = v => v==null ? '<span class="nodata">—</span>' : fmt(v);
+const rate = c => (c.sent && c.replies!=null) ? (c.replies/c.sent*100).toFixed(1).replace('.',',')+'%' : '<span class="nodata">—</span>';
+document.getElementById('tbl').innerHTML =
+  `<thead><tr><th>Канал</th><th>Касаний</th><th>Ответов</th><th>%</th><th>КП</th></tr></thead><tbody>`+
+  DATA.channels.map(c=>`<tr><td>${c.name}</td><td class="n">${cell(c.sent)}</td><td class="n">${cell(c.replies)}</td><td class="n">${rate(c)}</td><td class="n">${cell(c.deals)}</td></tr>`).join('')+
+  `</tbody>`;
+</script>
+</body>
+</html>
