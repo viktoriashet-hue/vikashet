@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Automation Engineer — Виктория Щетинина</title>
+<meta name="description" content="Портфолио ИИ-агентов: лидогенерация, HR-агент, контент-завод, Threads-агенты, SaaS TopKontent. Python, Claude API, Postgres, Railway, Telethon, Playwright.">
+<meta property="og:title" content="AI Automation Engineer — портфолио ИИ-агентов Виктории Щетининой">
+<meta property="og:description" content="Агенты, которые находят клиентов, пишут и публикуют контент и ведут CRM. Реальные проекты с цифрами.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0D14;--bg2:#13131F;--bg3:#1A1A2A;--border:rgba(255,255,255,.07);--border-md:rgba(255,255,255,.13);--text:#F0EDE8;--muted:#8A8499;--gold:#C8A96E;--gold-h:#DFC08A;--sage:#7B9E87}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}a:hover{color:var(--gold-h)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1rem}
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(24px);background:rgba(13,13,20,.82);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:.82rem}
+nav .back{color:var(--muted)}
+.label{font:600 .68rem Manrope;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);line-height:.98;margin:1rem 0 1.4rem}
+h1 em,h2 em{font-style:italic;color:var(--gold)}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:.6rem 0 1.5rem}
+h3{font-size:1.55rem;font-weight:400;line-height:1.15}
+.hero{padding:5rem 0 3.5rem;background:radial-gradient(ellipse at 40% 0,rgba(200,169,110,.09) 0%,transparent 62%)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:660px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-top:2.5rem}
+.kpi{background:var(--bg2);padding:1.3rem}
+.kpi b{display:block;font:300 2.3rem/1 'Cormorant Garamond',serif;color:var(--gold);margin-bottom:.35rem}
+.kpi span{color:var(--muted);font-size:.82rem}
+section{padding:4rem 0;border-top:1px solid var(--border)}
+.stack{display:flex;flex-wrap:wrap;gap:.5rem}
+.stack span{border:1px solid var(--border-md);border-radius:2px;padding:.35rem .7rem;font-size:.8rem;color:var(--muted)}
+.projects{display:grid;gap:1rem}
+.proj{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1.6rem;display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:820px){.proj{grid-template-columns:1.1fr 1fr;gap:2rem}}
+.proj .num{font:600 .68rem Manrope;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.proj p{color:var(--muted);font-size:.93rem}
+.proj .what b{color:var(--text);font-weight:600}
+.flow{list-style:none;counter-reset:f;margin-top:.6rem}
+.flow li{counter-increment:f;position:relative;padding:0 0 .55rem 1.9rem;font-size:.9rem;color:var(--muted)}
+.flow li::before{content:counter(f);position:absolute;left:0;top:.05rem;width:1.25rem;height:1.25rem;border:1px solid var(--border-md);border-radius:2px;font-size:.7rem;display:grid;place-items:center;color:var(--gold)}
+.res{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin:.4rem 0 .9rem}
+.res div{background:var(--bg3);padding:.85rem}
+.res b{display:block;font:300 1.7rem/1 'Cormorant Garamond',serif;color:var(--text)}
+.res span{font-size:.76rem;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+.links a{font:600 .7rem Manrope;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--border-md);padding:.3rem 0;color:var(--muted)}
+.links a:hover{color:var(--gold)}
+.lesson{border-left:2px solid var(--sage);padding:.6rem .9rem;background:var(--bg3);border-radius:0 4px 4px 0;font-size:.86rem;color:var(--muted);margin-top:.6rem}
+.lesson b{color:var(--sage)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1.4rem}
+.card p{color:var(--muted);font-size:.92rem;margin-top:.4rem}
+.cta{text-align:center;padding:5rem 0}
+.btn{display:inline-block;background:var(--gold);color:var(--bg);font:700 .75rem/1 Manrope;letter-spacing:.14em;text-transform:uppercase;padding:1rem 2rem;border-radius:2px;margin:.4rem}
+.btn:hover{background:var(--gold-h);color:var(--bg)}
+.ghost{display:inline-block;color:var(--muted);border-bottom:1px solid var(--border-md);font:500 .75rem Manrope;letter-spacing:.12em;text-transform:uppercase;padding:1rem .5rem;margin:.4rem}
+footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="back" href="./">← Виктория Щетинина</a><a href="https://t.me/vikashet">Telegram</a></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="label">Портфолио · AI Automation Engineer</div>
+  <h1>Агенты, которые <em>находят клиентов</em>, пишут контент и ведут CRM</h1>
+  <p class="lead">Я маркетолог с 9+ годами опыта и сама собираю ИИ-агентов: от идеи и архитектуры до деплоя в облаке. Каждый проект ниже сделан под реальную задачу — мою или клиентскую.</p>
+  <div class="kpis">
+    <div class="kpi"><b>7</b><span>ИИ-систем в портфолио</span></div>
+    <div class="kpi"><b>800+</b><span>персональных касаний от агентов лидогенерации</span></div>
+    <div class="kpi"><b>8 400+</b><span>пользователей SaaS TopKontent</span></div>
+    <div class="kpi"><b>8–10</b><span>публикаций в день от контент-завода</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="label">Стек</div>
+  <h2>Чем <em>строю</em></h2>
+  <div class="stack">
+    <span>Claude API</span><span>Claude Code</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Railway</span><span>Render</span><span>Telethon</span><span>aiogram / Telegram Bot API</span><span>Playwright</span><span>Apify</span><span>Threads API</span><span>Outstand API</span><span>Google Sheets API</span><span>FFmpeg</span><span>Remotion</span><span>GitHub Pages</span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Проекты</div>
+  <h2>Что я <em>построила</em></h2>
+  <div class="projects">
+
+    <article class="proj">
+      <div>
+        <div class="num">01 · GTM / лидогенерация</div>
+        <h3>Мультиканальная ИИ-система лидогенерации</h3>
+        <p class="what"><b>Задача:</b> находить B2B-клиентов без рекламного бюджета и отдела продаж.</p>
+        <ol class="flow">
+          <li>Агент собирает компании из 2ГИС, сайтов и реестров: ЛПР, БИН, контакты, рейтинг</li>
+          <li>Разбирает маркетинг каждой: слабые места и сигнал «почему сейчас» (вакансия SMM, новый филиал)</li>
+          <li>Пишет персональное сообщение под компанию, проверка на повторы ≤30%</li>
+          <li>Всё уходит в CRM, утренняя сводка — в Telegram</li>
+        </ol>
+      </div>
+      <div>
+        <div class="res">
+          <div><b>≈400</b><span>компаний в базе, 5 стран</span></div>
+          <div><b>800+</b><span>касаний: email, Telegram, hh.kz</span></div>
+          <div><b>13%</b><span>ответов на персональный разбор</span></div>
+          <div><b>×6</b><span>лучше массового оффера</span></div>
+        </div>
+        <div class="stack"><span>Claude API</span><span>Python</span><span>Google Sheets CRM</span><span>Gmail</span></div>
+        <div class="links"><a href="cases/leadgen-gtm.html">Кейс</a><a href="cases/leadgen-dashboard.html">Дашборд</a><a data-repo="leadgen" href="">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <div class="num">02 · HR-автоматизация</div>
+        <h3>HR-агент: поиск вакансий и персональные отклики</h3>
+        <p class="what"><b>Задача:</b> закрыть рутину поиска работы и заказов — найти, отфильтровать, написать отклик, вести учёт.</p>
+        <ol class="flow">
+          <li>hh.kz: агент на Playwright подбирает вакансии по критериям и пишет письмо под каждую</li>
+          <li>Telegram: агент на Telethon сканирует 15+ каналов, оценивает запрос по шкале и готовит отклик</li>
+          <li>Отклик уходит на согласование кнопками в Telegram-боте, потом — отправка</li>
+          <li>Postgres хранит историю, отчёты и таблица собеседований — в боте</li>
+        </ol>
+        <div class="lesson"><b>Урок:</b> после 7 сообщений подряд Telegram ограничил аккаунт. Добавила жёсткий лимит 10–15 первых сообщений в день, паузы 6–20 минут и проверку уникальности текста.</div>
+      </div>
+      <div>
+        <div class="res">
+          <div><b>353</b><span>персональных отклика на hh.kz</span></div>
+          <div><b>27</b><span>запросов найдено за 96 часов</span></div>
+          <div><b>15+</b><span>Telegram-каналов под мониторингом</span></div>
+          <div><b>12/день</b><span>лимит первых сообщений</span></div>
+        </div>
+        <div class="stack"><span>Python</span><span>Playwright</span><span>Telethon</span><span>aiogram</span><span>PostgreSQL</span><span>Railway</span><span>Claude API</span></div>
+        <div class="links"><a data-repo="hh-agent" href="">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <div class="num">03 · Контент-завод</div>
+        <h3>Автопилот Instagram-каруселей</h3>
+        <p class="what"><b>Задача:</b> вести несколько аккаунтов без SMM-команды.</p>
+        <ol class="flow">
+          <li>Скрин залетевшей карусели отправляется в Telegram-бота</li>
+          <li>Агент вытаскивает текст и смыслы в банк идей</li>
+          <li>Пишет карусель голосом автора, сохраняя триггеры первых слайдов</li>
+          <li>Согласование кнопками → автопубликация через Outstand API в Instagram, TikTok, Threads</li>
+        </ol>
+        <div class="lesson"><b>Урок:</b> у платформ есть свои потолки — новый Instagram пропускает не больше ~6 рилс в день, Threads — ~5 веток. Расписание строится под эти лимиты.</div>
+      </div>
+      <div>
+        <div class="res">
+          <div><b>8–10</b><span>публикаций в день</span></div>
+          <div><b>3+</b><span>площадки из одного источника</span></div>
+          <div><b>150K+</b><span>подписчиков на аккаунтах автора</span></div>
+          <div><b>0</b><span>людей в контент-команде</span></div>
+        </div>
+        <div class="stack"><span>Telegram Bot API</span><span>Claude API</span><span>Outstand API</span><span>Railway</span></div>
+        <div class="links"><a data-repo="content-factory" href="">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <div class="num">04 · Threads-агенты</div>
+        <h3>Конвейер вирусных веток Threads</h3>
+        <p class="what"><b>Задача:</b> ежедневные ветки на нескольких аккаунтах с повтором того, что выстрелило.</p>
+        <ol class="flow">
+          <li>Анализ залетевших веток: хуки, ссылки, картинки</li>
+          <li>Агент-копирайтер пишет ветку, агент-редактор усиливает черновик</li>
+          <li>Публикация цепочкой через официальный Threads API</li>
+          <li>Отчёт по просмотрам; каждые 3 дня — повтор топовых веток</li>
+        </ol>
+      </div>
+      <div>
+        <div class="res">
+          <div><b>3</b><span>аккаунта</span></div>
+          <div><b>3/день</b><span>ветки на аккаунт</span></div>
+        </div>
+        <div class="stack"><span>Threads API</span><span>Claude API</span><span>Python</span></div>
+        <div class="links"><a data-repo="threads-agents" href="">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <div class="num">05 · SaaS</div>
+        <h3>TopKontent — сервис поиска вирусного контента</h3>
+        <p class="what"><b>Задача:</b> за пару кликов находить топовые посты в нише и забирать их на разбор.</p>
+        <ol class="flow">
+          <li>Telegram-бот ищет топовые посты Threads и Instagram по нише</li>
+          <li>Даёт скачать их для анализа</li>
+          <li>Freemium-модель с подпиской</li>
+        </ol>
+      </div>
+      <div>
+        <div class="res">
+          <div><b>8 400+</b><span>пользователей</span></div>
+          <div><b>3,2 млн+</b><span>постов проанализировано</span></div>
+          <div><b>150+</b><span>ниш</span></div>
+          <div><b>B2C</b><span>freemium + подписка</span></div>
+        </div>
+        <div class="stack"><span>Telegram Bot API</span><span>Python</span></div>
+        <div class="links"><a href="https://t.me/TopKont_bot">Открыть бота</a><a data-repo="topkontent" href="">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <div class="num">06 · Видео</div>
+        <h3>Пайплайн автомонтажа видео</h3>
+        <p class="what"><b>Задача:</b> резать длинные видео на ролики без ручного монтажа.</p>
+        <ol class="flow">
+          <li>ИИ размечает видео и собирает план монтажа в JSON (EDL)</li>
+          <li>FFmpeg рендерит ролики по плану</li>
+          <li>Remotion — титры и графика</li>
+        </ol>
+      </div>
+      <div>
+        <div class="stack"><span>FFmpeg</span><span>Remotion</span><span>Claude API</span><span>Python</span></div>
+        <div class="links"><a data-repo="video-pipeline" href="">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <div class="num">07 · Исследования</div>
+        <h3>Scout.Threads — радар вирусного контента</h3>
+        <p class="what"><b>Задача:</b> автоматически собирать залетевший контент Threads для анализа.</p>
+        <ol class="flow">
+          <li>Apify собирает посты по нишам</li>
+          <li>FastAPI отдаёт отобранные топы</li>
+        </ol>
+      </div>
+      <div>
+        <div class="stack"><span>Apify</span><span>FastAPI</span><span>Render</span></div>
+        <div class="links"><a data-repo="scout-threads" href="">GitHub</a></div>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">Как я работаю</div>
+  <h2>От задачи бизнеса <em>до агента в облаке</em></h2>
+  <div class="grid3">
+    <div class="card"><h3>Сначала деньги</h3><p>Начинаю с вопроса, какую метрику агент должен сдвинуть: заявки, время ответа, стоимость контента.</p></div>
+    <div class="card"><h3>Человек в контуре</h3><p>Агент готовит, человек согласует кнопкой в Telegram. Автопилот включается, когда качество проверено.</p></div>
+    <div class="card"><h3>Лимиты и безопасность</h3><p>Учитываю правила площадок, лимиты отправки и храню ключи только в переменных окружения.</p></div>
+    <div class="card"><h3>Отчёты</h3><p>Каждый агент пишет, что сделал. Утренняя сводка в Telegram, данные — в CRM или Postgres.</p></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <div class="label">Для бизнеса и команд</div>
+  <h2>Нужен агент <em>под вашу задачу?</em></h2>
+  <p class="lead" style="margin:0 auto 2rem">Лидогенерация, обработка заявок, контент, отчёты. Расскажите задачу — предложу архитектуру и срок.</p>
+  <a class="btn" href="https://t.me/vikashet">Написать в Telegram</a>
+  <a class="ghost" href="mailto:viktoria.shet@gmail.com">viktoria.shet@gmail.com</a>
+</div></section>
+
+<footer>Виктория Щетинина · AI Automation Engineer · Growth Marketing · Алматы · <a href="https://www.linkedin.com/in/vikashet/">LinkedIn</a></footer>
+
+<script>
+/* Ссылки на GitHub: вписать URL публичных репозиториев. Пустая ссылка скрывается. */
+const REPOS = {
+  "leadgen": "",
+  "hh-agent": "",
+  "content-factory": "",
+  "threads-agents": "",
+  "topkontent": "",
+  "video-pipeline": "",
+  "scout-threads": ""
+};
+document.querySelectorAll('a[data-repo]').forEach(a=>{
+  const url = REPOS[a.dataset.repo];
+  if(url){ a.href = url; a.target = '_blank'; a.rel = 'noopener'; } else { a.remove(); }
+});
+</script>
+</body>
+</html>

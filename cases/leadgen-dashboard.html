@@ -105,11 +105,11 @@ const DATA = {
   countries: 5,
   channels: [
     // sent = персональных сообщений, replies = ответов, target = целевых ответов, deals = созвон/КП
-    { id:"email",  name:"Email",                note:"B2B-аутрич, 5 стран",            sent:450, replies:15,  target:null, deals:2 },
+    { id:"email",  name:"Email",                note:"B2B-аутрич, 5 стран",            sent:450, replies:15,  target:null, deals:1 },
     { id:"hh",     name:"hh.kz",                note:"персональные отклики",           sent:353, replies:null, target:null, deals:null },
     { id:"tgjobs", name:"Telegram · заказы",    note:"агент нашёл 27 запросов за 96 ч", sent:7,   replies:null, target:null, deals:null },
-    { id:"tg",     name:"Telegram · рассылка",  note:"первые сообщения компаниям и авторам вакансий", sent:64, replies:16, target:8, deals:1 },
-    { id:"wa",     name:"WhatsApp · рассылка",  note:"первые сообщения компаниям",      sent:354, replies:19, target:11, deals:9 }
+    { id:"tg",     name:"Telegram · рассылка",  note:"первые сообщения компаниям",      sent:null, replies:null, target:null, deals:null },
+    { id:"wa",     name:"WhatsApp · рассылка",  note:"первые сообщения компаниям",      sent:null, replies:null, target:null, deals:null }
   ],
   approaches: [
     { name:"Массовый оффер", note:"≈350 писем, 5 стран", rate:2.3 },
@@ -121,7 +121,7 @@ const DATA = {
     { name:"Компаний в базе", note:"ЛПР, БИН, слабые места", v:400 },
     { name:"Писем доставлено", note:"оффер бизнесу", v:350 },
     { name:"Ответов", note:"email + Telegram", v:8 },
-    { name:"Созвон / КП", note:"созвоны по email", v:2 }
+    { name:"Созвон / КП", note:"", v:1 }
   ]
 };
 /* ===================================================================== */
