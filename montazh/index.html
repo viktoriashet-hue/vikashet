@@ -36,7 +36,7 @@ section{padding:4.5rem 0;border-top:1px solid var(--border)}
 .ex.rev{grid-template-columns:1fr minmax(240px,320px)}
 .ex.rev .phone{order:2}
 .phone{position:relative;border:1px solid var(--border-md);border-radius:28px;padding:8px;background:var(--bg2);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-.phone video{display:block;width:100%;aspect-ratio:9/16;border-radius:20px;background:#000;object-fit:cover}
+.phone video{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;display:block;width:100%;aspect-ratio:9/16;border-radius:20px;background:#000;object-fit:cover}
 .num{font:300 4rem/1 'Cormorant Garamond',serif;color:var(--faint,#3D3A4A)}
 .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 .5rem}
 .tags span{border:1px solid var(--border-md);border-radius:2px;padding:.3rem .65rem;font-size:.78rem;color:var(--muted)}
@@ -78,7 +78,7 @@ footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);font
 </div></header>
 
 <section><div class="wrap ex">
-  <div class="phone"><video src="obuchenie.mp4" poster="obuchenie.jpg" controls playsinline preload="none"></video></div>
+  <div class="phone"><video src="obuchenie.mp4" poster="obuchenie.jpg" controls playsinline preload="none" controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture disableremoteplayback oncontextmenu="return false" draggable="false"></video></div>
   <div>
     <div class="label">Пример 01 · задача — заявки</div>
     <h2>Рилс-воронка <em>на консультацию</em></h2>
@@ -94,7 +94,7 @@ footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);font
 </div></section>
 
 <section><div class="wrap ex rev">
-  <div class="phone"><video src="dokazatelstva.mp4" poster="dokazatelstva.jpg" controls playsinline preload="none"></video></div>
+  <div class="phone"><video src="dokazatelstva.mp4" poster="dokazatelstva.jpg" controls playsinline preload="none" controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture disableremoteplayback oncontextmenu="return false" draggable="false"></video></div>
   <div>
     <div class="label">Пример 02 · задача — доверие</div>
     <h2>Рилс <em>с доказательствами</em></h2>
@@ -111,7 +111,7 @@ footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);font
 </div></section>
 
 <section><div class="wrap ex">
-  <div class="phone"><video src="mif-krem.mp4" poster="mif-krem.jpg" controls playsinline preload="none"></video></div>
+  <div class="phone"><video src="mif-krem.mp4" poster="mif-krem.jpg" controls playsinline preload="none" controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture disableremoteplayback oncontextmenu="return false" draggable="false"></video></div>
   <div>
     <div class="label">Пример 03 · задача — охват</div>
     <h2>Охватный рилс <em>на научных фактах</em></h2>
@@ -141,5 +141,13 @@ footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted);font
 
 
 <footer><div class="wrap">© Виктория Щетинина · маркетинг и контент-системы для экспертов</div></footer>
+<script>
+document.querySelectorAll('video').forEach(function(v){
+  v.addEventListener('contextmenu',function(e){e.preventDefault()});
+  v.addEventListener('dragstart',function(e){e.preventDefault()});
+  v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})});
+});
+document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s')e.preventDefault()});
+</script>
 </body>
 </html>
