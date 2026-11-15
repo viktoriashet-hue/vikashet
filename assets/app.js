@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js-anim');setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});},2500);
 document.querySelectorAll('.reveal').forEach(el=>{const d=el.style.getPropertyValue('--rev-delay');if(d)el.style.transitionDelay=d;});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('in');}else{io.observe(el);}});
