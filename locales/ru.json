@@ -4,8 +4,8 @@
  "locale": "ru-RU",
  "currency": "₽",
  "meta": {
-  "title": "Виктория — Growth Marketing Manager",
-  "desc": "Портфолио Виктории: growth-маркетинг, привлечение, конверсия и контент-стратегия для сервисных бизнесов и экспертных брендов."
+  "title": "Виктория Щет — Growth Marketing Manager",
+  "desc": "Портфолио Виктории Щет: growth-маркетинг, привлечение, конверсия и контент-стратегия для сервисных бизнесов и экспертных брендов."
  },
  "switcher": {
   "aria": "Выбор языка сайта"
@@ -594,5 +594,5 @@
   "languages": "",
   "linkedin": ""
  },
- "footer": "© Виктория · Growth Marketing Manager · <a href=\"https://teletype.in/@viktoria.shet\" target=\"_blank\" rel=\"noopener\">teletype.in/@viktoria.shet</a>"
+ "footer": "© Виктория Щет · Growth Marketing Manager · <a href=\"https://teletype.in/@viktoria.shet\" target=\"_blank\" rel=\"noopener\">teletype.in/@viktoria.shet</a>"
 }
