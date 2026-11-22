@@ -93,3 +93,12 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', showBanner);
   else showBanner();
 })();
+
+/* Цели: клик по кнопке с data-goal (например, покупка агента) */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('[data-goal]');
+  if (!a) return;
+  var goal = a.getAttribute('data-goal');
+  try { if (window.gtag) gtag('event', goal, { link_url: a.href }); } catch (er) {}
+  try { if (window.ym) ym(114270520, 'reachGoal', goal); } catch (er) {}
+}, true);
