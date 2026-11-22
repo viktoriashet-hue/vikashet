@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Скачать ИИ-агентов для каруселей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0D14;--bg2:#13131F;--bg3:#1A1A2A;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);--text:#F0EDE8;--muted:#9A94A8;--gold:#C8A96E;--gold-h:#DFC08A;--wine:#8E1F2F;--sage:#7B9E87}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 30px;border-bottom:1px solid var(--line)}
+.label{font:700 .68rem/1.3 Manrope,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1{font:400 clamp(2.2rem,5vw,3.4rem)/1.05 "Cormorant Garamond",Georgia,serif;margin:14px 0 14px}
+h1 em{color:var(--gold)}
+h2{font:400 2rem/1.1 "Cormorant Garamond",Georgia,serif;margin:0 0 18px}
+p{color:var(--muted)}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+.cards{display:grid;gap:16px}
+.card{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.card h3{font:600 1.15rem Manrope,Arial,sans-serif;margin-bottom:6px}
+.card p{font-size:.92rem}
+.tag{display:inline-block;font:700 .6rem Manrope,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);border:1px solid var(--sage);border-radius:2px;padding:3px 7px;margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg);font:800 .78rem Manrope,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:14px 20px;border-radius:2px;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--gold-h)}
+.btn.off{background:var(--bg3);color:var(--muted);pointer-events:none}
+.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.tabs button{background:transparent;color:var(--muted);border:1px solid var(--line2);border-radius:2px;padding:10px 16px;font:600 .88rem Manrope,Arial,sans-serif;cursor:pointer}
+.tabs button.on{border-color:var(--gold);color:var(--gold-h);background:rgba(200,169,110,.1)}
+ol.steps{list-style:none;counter-reset:s;display:grid;gap:12px}
+ol.steps li{counter-increment:s;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:16px 18px 16px 58px;position:relative;color:var(--text)}
+ol.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--wine);display:grid;place-items:center;font:700 .85rem Manrope,Arial,sans-serif}
+ol.steps li small{display:block;color:var(--muted);font-size:.86rem;margin-top:4px}
+code{font-family:ui-monospace,Consolas,monospace;background:var(--bg3);border:1px solid var(--line2);border-radius:4px;padding:2px 6px;color:var(--gold-h);font-size:.88em}
+.note{background:var(--bg3);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 18px;margin-top:18px}
+.note p{color:var(--text);font-size:.93rem}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:16px 0;font:600 1rem Manrope,Arial,sans-serif}
+summary::-webkit-details-marker{display:none}
+details p{padding-bottom:16px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:.85rem}
+footer a{color:var(--gold)}
+@media(max-width:620px){.card{grid-template-columns:1fr}.btn{justify-content:center}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="label">Доступ после покупки</div>
+<h1>Спасибо за покупку. <em>Скачайте своих агентов</em></h1>
+<p>Здесь лежат архивы ИИ-агентов. Скачайте тот, который купили, и установите по шагам ниже. Агенты работают в Claude и в ChatGPT Codex. Эта страница доступна только по ссылке, не пересылайте её.</p>
+</div></header>
+
+<section><div class="wrap">
+<h2>1. Скачайте архив</h2>
+<div class="cards">
+ <div class="card"><div><span class="tag">Вариант 1</span><h3>Карусели для психолога</h3><p>Банк залётных хуков, ваш голос, текст на ваше фото, подпись с SEO и кодовое слово.</p></div><a class="btn off" id="z1" href="#">Скоро</a></div>
+ <div class="card"><div><span class="tag">Вариант 2</span><h3>Трендовые карусели</h3><p>Бегущая иконка, пройди по линии, зажми точки и живая карусель под вашу нишу.</p></div><a class="btn off" id="z2" href="#">Скоро</a></div>
+ <div class="card"><div><span class="tag">Вариант 3 · комбо</span><h3>Оба агента</h3><p>Если вы купили комбо, скачайте оба архива выше. Ставятся в одну папку, друг другу не мешают.</p></div></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>2. Установите агента</h2>
+<div class="tabs" role="tablist"><button class="on" data-t="claude">Claude</button><button data-t="codex">ChatGPT Codex</button></div>
+<div data-p="claude">
+<ol class="steps">
+ <li>Установите приложение Claude для компьютера и войдите в свой аккаунт.<small>Нужна подписка Claude Pro или выше.</small></li>
+ <li>Создайте на компьютере новую папку, например <code>Карусели</code>, и положите туда скачанный zip. Распаковывать не нужно.</li>
+ <li>Откройте Claude, вкладку Code, и выберите эту папку как рабочую.</li>
+ <li>Напишите в чат: <code>установи</code><small>Агент сам распакует архив, проверит, что всё на месте, и задаст пару вопросов: ниша, тон, кодовое слово, ваш Telegram-канал.</small></li>
+ <li>Когда агент скажет «готово», напишите: <code>сделай 3 карусели</code></li>
+</ol>
+</div>
+<div data-p="codex" hidden>
+<ol class="steps">
+ <li>Установите приложение ChatGPT Codex для компьютера и войдите в аккаунт ChatGPT.<small>Нужна подписка ChatGPT Plus или выше.</small></li>
+ <li>Создайте на компьютере новую папку, например <code>Карусели</code>, и положите туда скачанный zip. Распаковывать не нужно.</li>
+ <li>Откройте Codex и выберите эту папку как проект.</li>
+ <li>Напишите в чат: <code>установи</code><small>Агент сам распакует архив и задаст пару вопросов: ниша, тон, кодовое слово, ваш Telegram-канал.</small></li>
+ <li>Когда агент скажет «готово», напишите: <code>сделай 3 карусели</code></li>
+</ol>
+</div>
+<div class="note"><p>Если что-то пошло не так, ничего не удаляйте. Сделайте скриншот и напишите в закрытый чат покупателей: помогу разобраться.</p></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Частые вопросы</h2>
+<details><summary>Архив не скачивается</summary><p>Попробуйте другой браузер или скачайте с компьютера, а не с телефона. Если не выходит, напишите в закрытый чат.</p></details>
+<details><summary>Можно поставить на второй компьютер?</summary><p>Да, на свои устройства. Передавать архив другим людям нельзя.</p></details>
+<details><summary>Придут ли обновления?</summary><p>Да. Новые хуки и трендовые форматы я выкладываю в закрытый чат, а архивы на этой странице обновляются.</p></details>
+<details><summary>Claude недоступен в моей стране</summary><p>Ставьте версию для ChatGPT Codex, архив тот же. Если нужен OpenCode, напишите в закрытый чат.</p></details>
+</div></section>
+
+<footer><div class="wrap">© 2026 Виктория Щет · <a href="https://t.me/vikashet" target="_blank" rel="noopener">Написать в Telegram</a></div></footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+ document.querySelectorAll('[data-p]').forEach(function(p){p.hidden=p.dataset.p!==b.dataset.t});
+})});
+</script>
+</body>
+</html>
