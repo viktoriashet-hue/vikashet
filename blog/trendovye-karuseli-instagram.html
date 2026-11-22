@@ -49,7 +49,6 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.01em}
 
 /* hero */
 header.hero{position:relative;padding:0 0 30px;overflow:hidden}
-header.hero::before{content:"";position:absolute;right:-140px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#C2185B,#7A1239);opacity:.92;z-index:0}
 header.hero .container{position:relative;z-index:1}
 .pill{display:inline-block;background:var(--dark);color:#fff;font:800 .74rem/1 Manrope,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;border-radius:99px;margin-bottom:18px}
 h1{font-size:clamp(2.1rem,5.4vw,3.4rem);margin-bottom:18px}
@@ -186,8 +185,7 @@ html.mo .rv.in{opacity:1;transform:none}
  .fnav span{font-size:.74rem}
  .lenta img{width:auto;height:200px;max-width:none}
  .row2{grid-template-columns:1fr}
- header.hero::before{width:220px;height:220px;right:-90px;top:-80px}
-}
+ }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <script>try{if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('mo')}catch(e){}</script>
