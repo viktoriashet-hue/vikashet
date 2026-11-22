@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://viktoriashet-hue.github.io/vikashet/sitemap.xml
+Sitemap: https://vikashet.com/sitemap.xml

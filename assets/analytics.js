@@ -5,7 +5,7 @@
   var GA_ID = 'G-ZQ5NM312RY';
   var YM_ID = 114270520; // номер счётчика Яндекс Метрики
   var KEY = 'vs_cookie_consent'; // 'granted' | 'denied'
-  var BASE = '/vikashet/';
+  var BASE = '/';
 
   function getChoice() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function setChoice(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
