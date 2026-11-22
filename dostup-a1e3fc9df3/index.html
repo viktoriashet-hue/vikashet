@@ -1,107 +1,109 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <title>Скачать ИИ-агентов для каруселей</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0D0D14;--bg2:#13131F;--bg3:#1A1A2A;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);--text:#F0EDE8;--muted:#9A94A8;--gold:#C8A96E;--gold-h:#DFC08A;--wine:#8E1F2F;--sage:#7B9E87}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font:400 1rem/1.65 Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:880px;margin:0 auto;padding:0 20px}
-header{padding:56px 0 30px;border-bottom:1px solid var(--line)}
-.label{font:700 .68rem/1.3 Manrope,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-h1{font:400 clamp(2.2rem,5vw,3.4rem)/1.05 "Cormorant Garamond",Georgia,serif;margin:14px 0 14px}
-h1 em{color:var(--gold)}
-h2{font:400 2rem/1.1 "Cormorant Garamond",Georgia,serif;margin:0 0 18px}
-p{color:var(--muted)}
-section{padding:44px 0;border-bottom:1px solid var(--line)}
-.cards{display:grid;gap:16px}
-.card{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
-.card h3{font:600 1.15rem Manrope,Arial,sans-serif;margin-bottom:6px}
-.card p{font-size:.92rem}
-.tag{display:inline-block;font:700 .6rem Manrope,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);border:1px solid var(--sage);border-radius:2px;padding:3px 7px;margin-bottom:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg);font:800 .78rem Manrope,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:14px 20px;border-radius:2px;text-decoration:none;white-space:nowrap}
-.btn:hover{background:var(--gold-h)}
-.btn.off{background:var(--bg3);color:var(--muted);pointer-events:none}
-.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.tabs button{background:transparent;color:var(--muted);border:1px solid var(--line2);border-radius:2px;padding:10px 16px;font:600 .88rem Manrope,Arial,sans-serif;cursor:pointer}
-.tabs button.on{border-color:var(--gold);color:var(--gold-h);background:rgba(200,169,110,.1)}
-ol.steps{list-style:none;counter-reset:s;display:grid;gap:12px}
-ol.steps li{counter-increment:s;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:16px 18px 16px 58px;position:relative;color:var(--text)}
-ol.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--wine);display:grid;place-items:center;font:700 .85rem Manrope,Arial,sans-serif}
-ol.steps li small{display:block;color:var(--muted);font-size:.86rem;margin-top:4px}
-code{font-family:ui-monospace,Consolas,monospace;background:var(--bg3);border:1px solid var(--line2);border-radius:4px;padding:2px 6px;color:var(--gold-h);font-size:.88em}
-.note{background:var(--bg3);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 18px;margin-top:18px}
-.note p{color:var(--text);font-size:.93rem}
-details{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;padding:16px 0;font:600 1rem Manrope,Arial,sans-serif}
-summary::-webkit-details-marker{display:none}
-details p{padding-bottom:16px}
-footer{padding:30px 0 50px;color:var(--muted);font-size:.85rem}
-footer a{color:var(--gold)}
-@media(max-width:620px){.card{grid-template-columns:1fr}.btn{justify-content:center}}
+:root{--bg:#FBF6F1;--bg2:#F5ECE4;--card:#FFFDFB;--ink:#5B1526;--ink2:#7A2E3F;--muted:#8C6670;--gold:#B8935A;--line:rgba(91,21,38,.12);--line2:rgba(91,21,38,.22);--shadow:0 20px 50px rgba(91,21,38,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 30px}
+.label{font:600 .7rem/1 Manrope;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--ink)}
+h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1}
+h1 em,h2 em{font-style:italic;color:var(--gold)}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.05;margin:46px 0 18px}
+.lead{font-size:1.1rem;color:var(--ink2);max-width:640px;margin-top:18px}
+.ok{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:40px;padding:8px 16px;font-size:.88rem;color:var(--ink2);margin-bottom:22px}
+.ok i{width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;font-style:normal;display:grid;place-items:center;font-size:.8rem}
+.step{font:700 .66rem Manrope;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:40px 0 12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.opt{background:var(--card);border:1.5px solid var(--line);border-radius:6px;padding:22px;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:border-color .15s,box-shadow .15s;display:flex;flex-direction:column;gap:8px}
+.opt:hover{border-color:var(--line2)}
+.opt[aria-pressed=true]{border-color:var(--gold);box-shadow:var(--shadow)}
+.opt b{font:500 1.45rem/1.1 'Cormorant Garamond',serif;color:var(--ink)}
+.opt .bd{align-self:flex-start;font:700 .6rem Manrope;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--gold);padding:4px 8px;border-radius:2px}
+.opt p{font-size:.88rem;color:var(--ink2)}
+.opt small{font-size:.78rem;color:var(--muted)}
+.result{margin-top:34px;background:var(--ink);color:#F6ECE9;border-radius:6px;padding:34px;display:none}
+.result.on{display:block}
+.result h3{color:#F6ECE9;font-size:1.9rem;margin-bottom:6px}
+.result p{color:#E2C9CD}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#fff;text-decoration:none;font:700 .8rem/1 Manrope;letter-spacing:.12em;text-transform:uppercase;padding:20px 30px;border-radius:2px;margin:20px 0 6px}
+.btn:hover{filter:brightness(1.07)}
+.result ol{margin:22px 0 0 20px;color:#F6ECE9}
+.result li{margin:6px 0}
+.result .need{margin-top:16px;font-size:.9rem;color:#DDB77E}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:28px;margin-top:16px}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th{font:700 .64rem Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:left;padding:0 10px 10px 0;border-bottom:1px solid var(--line2)}
+td{padding:12px 10px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td a{color:var(--ink);font-weight:600}
+td span{display:block;font-size:.78rem;color:var(--muted)}
+ul.inc{list-style:none;display:grid;gap:8px}
+ul.inc li{padding-left:22px;position:relative;color:var(--ink2)}
+ul.inc li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.8rem;top:3px}
+.warn{font-size:.85rem;color:var(--muted);margin-top:14px}
+footer{padding:50px 0 40px;font-size:.82rem;color:var(--muted)}
+footer a{color:var(--ink2)}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}.result{padding:24px}table,tbody,tr,td{display:block}th{display:none}tr{padding:10px 0;border-bottom:1px solid var(--line)}td{border:0;padding:2px 0}}
 </style>
-</head>
-<body>
+<style>.tr{margin-top:12px}.soon{opacity:.9}.tar{display:grid;gap:10px;margin:18px 0 6px}.tar div{border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:12px 14px;font-size:.92rem}.tar b{color:inherit}</style>
+</head><body>
 <header><div class="wrap">
-<div class="label">Доступ после покупки</div>
-<h1>Спасибо за покупку. <em>Скачайте своих агентов</em></h1>
-<p>Здесь лежат архивы ИИ-агентов. Скачайте тот, который купили, и установите по шагам ниже. Агенты работают в Claude и в ChatGPT Codex. Эта страница доступна только по ссылке, не пересылайте её.</p>
+<span class="ok"><i>✓</i>Оплата прошла — спасибо!</span>
+<span class="label">ИИ-агенты для каруселей</span>
+<h1>Скачайте <em>своих агентов</em></h1>
+<p class="lead">Найдите свой вариант ниже, выберите, где будет работать агент и какой у вас компьютер, — появится нужный архив. Вопросы и обновления — в закрытом чате покупателей.</p>
+<div class="tar">
+<div><b>Вариант 1 · Карусели для психолога</b> — скачайте архив в блоке 1.</div>
+<div><b>Вариант 2 · Трендовые карусели</b> — архив в блоке 2.</div>
+<div><b>Вариант 3 · Комбо</b> — скачайте оба архива: блок 1 и блок 2. Ставятся в разные папки, друг другу не мешают.</div>
+</div>
 </div></header>
+<main class="wrap">
+<h2>1. Карусели <em>для психолога</em></h2>
+<p class="lead tr">Для вариантов 1 и 3.</p>
+<div class="step">Шаг 1 · Где будет работать агент</div>
+<div class="grid3" id="p"><button class="opt" type="button" data-k="p" data-v="claude" aria-pressed="false"><span class="bd">Лучшее качество текстов</span><b>Claude</b><p>Если Claude работает в вашей стране и вы хотите самые живые тексты. Агент создавался и тестировался в Claude.</p><small>Подписка Claude Pro — $20 в месяц, приложение Claude на компьютере (раздел Code).</small></button><button class="opt" type="button" data-k="p" data-v="codex" aria-pressed="false"><span class="bd">Если у вас уже есть ChatGPT</span><b>ChatGPT Codex</b><p>Если вы уже платите за ChatGPT Plus и не хотите вторую подписку.</p><small>Подписка ChatGPT Plus или выше — $20 в месяц, Codex на компьютере.</small></button><button class="opt" type="button" data-k="p" data-v="ru" aria-pressed="false"><span class="bd">Оплата рублями, без VPN</span><b>Для России: OpenCode + Яндекс</b><p>Если вы в России: Claude и ChatGPT там официально не работают. Нейросеть — в Yandex Cloud, оплата рублями за использование.</p><small>Аккаунт Yandex Cloud с платёжным аккаунтом (карта российского банка) и бесплатная программа OpenCode (opencode.ai).</small></button></div>
+<div class="step">Шаг 2 · Ваш компьютер</div>
+<div class="grid3" id="o"><button class="opt" type="button" data-k="o" data-v="win" aria-pressed="false"><b>Windows</b><small>Windows 10 или 11</small></button><button class="opt" type="button" data-k="o" data-v="mac-arm" aria-pressed="false"><b>Mac M1–M4</b><small>Mac на Apple-чипе: меню  → «Об этом Mac» → чип Apple M1, M2, M3 или M4</small></button><button class="opt" type="button" data-k="o" data-v="mac-intel" aria-pressed="false"><b>Mac Intel</b><small>Mac с процессором Intel (обычно до 2021 года)</small></button></div>
+<div class="result" id="r" aria-live="polite"></div>
 
-<section><div class="wrap">
-<h2>1. Скачайте архив</h2>
-<div class="cards">
- <div class="card"><div><span class="tag">Вариант 1</span><h3>Карусели для психолога</h3><p>Банк залётных хуков, ваш голос, текст на ваше фото, подпись с SEO и кодовое слово.</p></div><a class="btn off" id="z1" href="#">Скоро</a></div>
- <div class="card"><div><span class="tag">Вариант 2</span><h3>Трендовые карусели</h3><p>Бегущая иконка, пройди по линии, зажми точки и живая карусель под вашу нишу.</p></div><a class="btn off" id="z2" href="#">Скоро</a></div>
- <div class="card"><div><span class="tag">Вариант 3 · комбо</span><h3>Оба агента</h3><p>Если вы купили комбо, скачайте оба архива выше. Ставятся в одну папку, друг другу не мешают.</p></div></div>
-</div>
-</div></section>
 
-<section><div class="wrap">
-<h2>2. Установите агента</h2>
-<div class="tabs" role="tablist"><button class="on" data-t="claude">Claude</button><button data-t="codex">ChatGPT Codex</button></div>
-<div data-p="claude">
-<ol class="steps">
- <li>Установите приложение Claude для компьютера и войдите в свой аккаунт.<small>Нужна подписка Claude Pro или выше.</small></li>
- <li>Создайте на компьютере новую папку, например <code>Карусели</code>, и положите туда скачанный zip. Распаковывать не нужно.</li>
- <li>Откройте Claude, вкладку Code, и выберите эту папку как рабочую.</li>
- <li>Напишите в чат: <code>установи</code><small>Агент сам распакует архив, проверит, что всё на месте, и задаст пару вопросов: ниша, тон, кодовое слово, ваш Telegram-канал.</small></li>
- <li>Когда агент скажет «готово», напишите: <code>сделай 3 карусели</code></li>
-</ol>
-</div>
-<div data-p="codex" hidden>
-<ol class="steps">
- <li>Установите приложение ChatGPT Codex для компьютера и войдите в аккаунт ChatGPT.<small>Нужна подписка ChatGPT Plus или выше.</small></li>
- <li>Создайте на компьютере новую папку, например <code>Карусели</code>, и положите туда скачанный zip. Распаковывать не нужно.</li>
- <li>Откройте Codex и выберите эту папку как проект.</li>
- <li>Напишите в чат: <code>установи</code><small>Агент сам распакует архив и задаст пару вопросов: ниша, тон, кодовое слово, ваш Telegram-канал.</small></li>
- <li>Когда агент скажет «готово», напишите: <code>сделай 3 карусели</code></li>
-</ol>
-</div>
-<div class="note"><p>Если что-то пошло не так, ничего не удаляйте. Сделайте скриншот и напишите в закрытый чат покупателей: помогу разобраться.</p></div>
-</div></section>
+<h2>Что <em>внутри</em></h2>
+<div class="box"><ul class="inc"><li>ИИ-агент с банком из 93 залётных хуков ниши и 10 навыками</li><li>Python и библиотеки уже внутри архива — ничего не нужно устанавливать</li><li>«СТАРТ_ЗДЕСЬ.txt» и подробная «Инструкция.pdf»</li></ul>
+<p class="warn">Не знаете, что выбрать? Если вы не в России — берите Claude. Если в России — версию «OpenCode + Яндекс». Ошиблись с выбором — просто скачайте другой архив, это входит в покупку.</p></div>
 
-<section><div class="wrap">
-<h2>Частые вопросы</h2>
-<details><summary>Архив не скачивается</summary><p>Попробуйте другой браузер или скачайте с компьютера, а не с телефона. Если не выходит, напишите в закрытый чат.</p></details>
-<details><summary>Можно поставить на второй компьютер?</summary><p>Да, на свои устройства. Передавать архив другим людям нельзя.</p></details>
-<details><summary>Придут ли обновления?</summary><p>Да. Новые хуки и трендовые форматы я выкладываю в закрытый чат, а архивы на этой странице обновляются.</p></details>
-<details><summary>Claude недоступен в моей стране</summary><p>Ставьте версию для ChatGPT Codex, архив тот же. Если нужен OpenCode, напишите в закрытый чат.</p></details>
-</div></section>
 
-<footer><div class="wrap">© 2026 Виктория Щет · <a href="https://t.me/vikashet" target="_blank" rel="noopener">Написать в Telegram</a></div></footer>
+<h2>Все <em>файлы</em></h2>
+<div class="box"><table><tr><th>Где работает</th><th>Компьютер</th><th>Архив</th></tr><tr><td>Claude</td><td>Windows</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_claude_win.zip" download>Скачать</a><span>23 МБ</span></td></tr><tr><td>Claude</td><td>Mac M1–M4</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_claude_mac-arm.zip" download>Скачать</a><span>26 МБ</span></td></tr><tr><td>Claude</td><td>Mac Intel</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_claude_mac-intel.zip" download>Скачать</a><span>26 МБ</span></td></tr><tr><td>ChatGPT Codex</td><td>Windows</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_codex_win.zip" download>Скачать</a><span>23 МБ</span></td></tr><tr><td>ChatGPT Codex</td><td>Mac M1–M4</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_codex_mac-arm.zip" download>Скачать</a><span>26 МБ</span></td></tr><tr><td>ChatGPT Codex</td><td>Mac Intel</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_codex_mac-intel.zip" download>Скачать</a><span>26 МБ</span></td></tr><tr><td>Для России: OpenCode + Яндекс</td><td>Windows</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_ru_win.zip" download>Скачать</a><span>23 МБ</span></td></tr><tr><td>Для России: OpenCode + Яндекс</td><td>Mac M1–M4</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_ru_mac-arm.zip" download>Скачать</a><span>26 МБ</span></td></tr><tr><td>Для России: OpenCode + Яндекс</td><td>Mac Intel</td><td><a href="../get/lnnmgvpdtki/files/karuseli-agent_p1_ru_mac-intel.zip" download>Скачать</a><span>26 МБ</span></td></tr></table></div>
 
+
+<h2 id="trend">2. Трендовые <em>карусели</em></h2>
+<p class="lead tr">Для вариантов 2 и 3.</p>
+<div class="box soon"><p>Бегущая иконка, пройди по линии, зажми точки и живая карусель. Архив появится на этой странице, а ссылку я продублирую в закрытом чате покупателей.</p></div>
+<h2>Закрытый <em>чат</em></h2>
+<div class="box"><p>Помощь с установкой, новые хуки и трендовые форматы: <a href="https://t.me/+Zx9fAosp3Ok4YzFi" target="_blank" rel="noopener">вступить в чат покупателей</a>.</p></div>
+</main>
+<footer><div class="wrap"><p style="margin-bottom:10px">Ссылка личная. Архивы, банк хуков и инструкции защищены лицензией (файл «ЛИЦЕНЗИЯ.txt» в архиве) — пожалуйста, не передавайте их другим. Всё, что агент создаст для вас, — ваше.</p>© 2026 Виктория Щет · <a href="https://vikashet.com/" target="_blank" rel="noopener noreferrer">сайт</a></div></footer>
 <script>
-document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
- document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
- document.querySelectorAll('[data-p]').forEach(function(p){p.hidden=p.dataset.p!==b.dataset.t});
-})});
+const DATA={"claude|win": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_claude_win.zip", "size": "23 МБ"}, "claude|mac-arm": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_claude_mac-arm.zip", "size": "26 МБ"}, "claude|mac-intel": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_claude_mac-intel.zip", "size": "26 МБ"}, "codex|win": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_codex_win.zip", "size": "23 МБ"}, "codex|mac-arm": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_codex_mac-arm.zip", "size": "26 МБ"}, "codex|mac-intel": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_codex_mac-intel.zip", "size": "26 МБ"}, "ru|win": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_ru_win.zip", "size": "23 МБ"}, "ru|mac-arm": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_ru_mac-arm.zip", "size": "26 МБ"}, "ru|mac-intel": {"href": "../get/lnnmgvpdtki/files/karuseli-agent_p1_ru_mac-intel.zip", "size": "26 МБ"}},META={"claude": {"title": "Claude", "need": "Подписка Claude Pro — $20 в месяц, приложение Claude на компьютере (раздел Code).", "steps": ["Распакуйте архив в обычную папку, например «Документы».", "Откройте приложение Claude → раздел Code → выберите эту папку.", "Напишите одно слово: <b>установи</b>. Дальше агент ведёт сам."]}, "codex": {"title": "ChatGPT Codex", "need": "Подписка ChatGPT Plus или выше — $20 в месяц, Codex на компьютере.", "steps": ["Распакуйте архив в обычную папку.", "Откройте Codex и добавьте папку как проект. На вопрос «доверять папке?» ответьте «да», права — Auto.", "Напишите одно слово: <b>установи</b>."]}, "ru": {"title": "Для России: OpenCode + Яндекс", "need": "Аккаунт Yandex Cloud с платёжным аккаунтом (карта российского банка) и бесплатная программа OpenCode (opencode.ai).", "steps": ["Распакуйте архив. Создайте в Yandex Cloud API-ключ — по «Инструкции.pdf», раздел 3.", "Запустите в папке файл <b>НАСТРОИТЬ_ЯНДЕКС</b> и вставьте каталог и ключ.", "Откройте папку в OpenCode и напишите: <b>установи</b>."]}},OSN={"win": "Windows", "mac-arm": "Mac M1–M4", "mac-intel": "Mac Intel"};
+const st={p:null,o:null};
+try{const ua=navigator.userAgent;if(/Windows/.test(ua))st.o='win';}catch(e){}
+function draw(){
+  document.querySelectorAll('.opt').forEach(b=>b.setAttribute('aria-pressed',String(st[b.dataset.k]===b.dataset.v)));
+  const r=document.getElementById('r');
+  if(!st.p||!st.o){r.classList.remove('on');r.innerHTML='';return;}
+  const f=DATA[st.p+'|'+st.o],m=META[st.p];
+  r.innerHTML='<h3>'+m.title+' · '+OSN[st.o]+'</h3><p>Архив '+f.size+'. Скачайте и следуйте трём шагам.</p>'+
+    '<a class="btn" href="'+f.href+'" download>Скачать архив</a>'+
+    '<ol>'+m.steps.map(s=>'<li>'+s+'</li>').join('')+'</ol>'+
+    '<p class="need">Понадобится: '+m.need+'</p>';
+  r.classList.add('on');
+}
+document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{st[b.dataset.k]=b.dataset.v;draw();if(st.p&&st.o)document.getElementById('r').scrollIntoView({behavior:'smooth',block:'center'});}));
+draw();
 </script>
-</body>
-</html>
+</body></html>
